@@ -7,17 +7,17 @@ declare global {
   var updateDOM: () => void;
 }
 
-type ColorSchemePreference = "system" | "dark" | "light";
+// Updated to only have two modes
+type ColorSchemePreference = "dark" | "light";
 
 const STORAGE_KEY = "nextjs-blog-starter-theme";
-const modes: ColorSchemePreference[] = ["system", "dark", "light"];
-
-/** to reuse updateDOM function defined inside injected script */
+// Removed "system" from modes array
+const modes: ColorSchemePreference[] = ["dark", "light"];
 
 /** function to be injected in script tag for avoiding FOUC (Flash of Unstyled Content) */
 export const NoFOUCScript = (storageKey: string) => {
   /* can not use outside constants or function as this script will be injected in a different context */
-  const [SYSTEM, DARK, LIGHT] = ["system", "dark", "light"];
+  const [DARK, LIGHT] = ["dark", "light"];
 
   /** Modify transition globally to avoid patched transitions */
   const modifyTransition = () => {
@@ -33,22 +33,18 @@ export const NoFOUCScript = (storageKey: string) => {
     };
   };
 
-  const media = matchMedia(`(prefers-color-scheme: ${DARK})`);
-
   /** function to add remove dark class */
   window.updateDOM = () => {
     const restoreTransitions = modifyTransition();
-    const mode = localStorage.getItem(storageKey) ?? SYSTEM;
-    const systemMode = media.matches ? DARK : LIGHT;
-    const resolvedMode = mode === SYSTEM ? systemMode : mode;
+    // Default to light mode if no preference is stored
+    const mode = localStorage.getItem(storageKey) ?? LIGHT;
     const classList = document.documentElement.classList;
-    if (resolvedMode === DARK) classList.add(DARK);
+    if (mode === DARK) classList.add(DARK);
     else classList.remove(DARK);
     document.documentElement.setAttribute("data-mode", mode);
     restoreTransitions();
   };
   window.updateDOM();
-  media.addEventListener("change", window.updateDOM);
 };
 
 let updateDOM: () => void;
@@ -61,7 +57,7 @@ const Switch = () => {
     () =>
       ((typeof localStorage !== "undefined" &&
         localStorage.getItem(STORAGE_KEY)) ??
-        "system") as ColorSchemePreference,
+        "light") as ColorSchemePreference, // Default to light instead of system
   );
 
   useEffect(() => {
@@ -78,11 +74,11 @@ const Switch = () => {
     updateDOM();
   }, [mode]);
 
-  /** toggle mode */
+  /** Simple toggle between dark and light */
   const handleModeSwitch = () => {
-    const index = modes.indexOf(mode);
-    setMode(modes[(index + 1) % modes.length]);
+    setMode(mode === "dark" ? "light" : "dark");
   };
+
   return (
     <button
       suppressHydrationWarning
