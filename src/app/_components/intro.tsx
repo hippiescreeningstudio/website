@@ -6,21 +6,23 @@ export function Intro() {
     <section className="flex-col md:flex-row flex items-start md:items-center md:justify-between mt-16 mb-16 md:mb-12">
       <div className="flex items-start">
         {/* Logo for light mode (black logo on white background) */}
-        <Link href="/" className="mr-4 block dark:hidden hover:opacity-80 transition-opacity">
+        <Link href="/" className="mr-3 md:mr-4 block dark:hidden hover:opacity-80 transition-opacity">
           <Image
             src="/assets/logo-white-bg.svg"
             alt="HSS Logo"
-            width={80}
-            height={80}
+            width={60}
+            height={60}
+            className="md:w-20 md:h-20"
           />
         </Link>
         {/* Logo for dark mode (white logo on black background) */}
-        <Link href="/" className="mr-4 hidden dark:block hover:opacity-80 transition-opacity">
+        <Link href="/" className="mr-3 md:mr-4 hidden dark:block hover:opacity-80 transition-opacity">
           <Image
             src="/assets/logo-black-bg.svg"
             alt="HSS Logo"
-            width={80}
-            height={80}
+            width={60}
+            height={60}
+            className="md:w-20 md:h-20"
           />
         </Link>
         <div className="flex flex-col mt-3">
