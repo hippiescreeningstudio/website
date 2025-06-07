@@ -3,7 +3,6 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
-import { Navigation } from "./_components/navigation";
 import Container from "@/app/_components/container";
 
 import "./globals.css";
@@ -61,9 +60,6 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-black dark:text-white")}
       >
-        <Container>
-          <Navigation />
-        </Container>
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>
