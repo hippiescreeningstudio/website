@@ -34,11 +34,7 @@ export function Navigation() {
 
             {/* Mobile Navigation */}
             <div className="md:hidden flex items-center justify-end space-x-2">
-                <div className="relative mr-2">
-                    <div style={{ position: 'relative', right: 'auto', top: 'auto', marginRight: '2px' }}>
-                        <ThemeSwitcher />
-                    </div>
-                </div>
+                <ThemeSwitcher />
                 {/* Hamburger Button */}
                 <button
                     onClick={toggleMenu}

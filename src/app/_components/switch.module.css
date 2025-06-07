@@ -3,41 +3,27 @@
   position: absolute;
   right: 20px;
   top: 70px;
-  display: inline-block;
-  color: currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  border: 1px dashed currentColor;
   cursor: pointer;
-  --size: 24px;
+  --size: 32px;
   height: var(--size);
   width: var(--size);
   transition: all 0.3s ease-in-out 0s !important;
 }
 
 [data-mode="light"] .switch {
-  box-shadow: 0 0 8px 0 rgba(255, 255, 0, 0.8);
-  background-color: yellow;
-  border: 1px solid orangered;
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 [data-mode="dark"] .switch {
-  box-shadow: 0 0 8px 0 rgba(255, 255, 255, 1);
-  border: 1px solid #fff;
-  background: #333;
-  animation: n linear 0.5s;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
 }
 
-@keyframes n {
-  40% {
-    transform: rotate(-15deg);
-  }
-
-  80% {
-    transform: rotate(10deg);
-  }
-
-  0%,
-  100% {
-    transform: rotate(0);
-  }
+.switch:hover {
+  transform: scale(1.1);
 }
