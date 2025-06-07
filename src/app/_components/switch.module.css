@@ -11,14 +11,7 @@
   transition: all 0.3s ease-in-out 0s !important;
 }
 
-/* Desktop positioning */
-@media (min-width: 768px) {
-  .switch {
-    position: absolute;
-    right: 20px;
-    top: 70px;
-  }
-}
+/* Removed desktop positioning to allow flex alignment */
 
 [data-mode="light"] .switch {
   color: #000000;

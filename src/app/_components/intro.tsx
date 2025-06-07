@@ -71,9 +71,7 @@ export function Intro() {
       <nav className="relative" ref={navRef}>
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          <div className="mr-4">
-            <ThemeSwitcher />
-          </div>
+          <ThemeSwitcher />
           <Link
             href="/about"
             className="text-[22px] text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
