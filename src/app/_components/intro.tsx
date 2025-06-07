@@ -2,15 +2,35 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ThemeSwitcher } from "./theme-switcher";
 
 export function Intro() {
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <section className="flex items-center justify-between mt-16 mb-16 md:mb-12">
@@ -41,14 +61,14 @@ export function Intro() {
               Hippie Screnning Studio
             </h1>
           </Link>
-          <h4 className="text-left text-xs md:text-left md:text-base mt-1">
+          <h4 className="text-left text-[12px] md:text-left md:text-base mt-1">
             bring Asian arthouse films to you in Munich
           </h4>
         </div>
       </div>
 
       {/* Navigation */}
-      <nav className="relative">
+      <nav className="relative" ref={navRef}>
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="mr-4">
@@ -56,13 +76,13 @@ export function Intro() {
           </div>
           <Link
             href="/about"
-            className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            className="text-[22px] text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
           >
             About
           </Link>
           <Link
             href="/team"
-            className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            className="text-[22px] text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
           >
             Team
           </Link>
@@ -124,6 +144,14 @@ export function Intro() {
           )}
         </div>
       </nav>
+
+      {/* Overlay for mobile menu - click to close */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-0 md:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
     </section>
   );
 }
