@@ -4,14 +4,14 @@ import Link from "next/link";
 export function Intro() {
   return (
     <section className="flex-col md:flex-row flex items-start md:items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <div className="flex items-start">
+      <div className="flex items-center">
         {/* Logo for light mode (black logo on white background) */}
         <Link href="/" className="mr-3 md:mr-4 block dark:hidden hover:opacity-80 transition-opacity">
           <Image
             src="/assets/logo-white-bg.svg"
             alt="HSS Logo"
-            width={60}
-            height={60}
+            width={50}
+            height={50}
             className="md:w-20 md:h-20"
           />
         </Link>
@@ -20,12 +20,12 @@ export function Intro() {
           <Image
             src="/assets/logo-black-bg.svg"
             alt="HSS Logo"
-            width={60}
-            height={60}
+            width={50}
+            height={50}
             className="md:w-20 md:h-20"
           />
         </Link>
-        <div className="flex flex-col mt-3">
+        <div className="flex flex-col">
           <Link href="/" className="hover:opacity-80 transition-opacity">
             <h1 className="text-[22px] md:text-3xl font-bold tracking-tighter leading-tight">
               Hippie Screnning Studio

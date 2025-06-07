@@ -12,9 +12,12 @@ export function Navigation() {
     };
 
     return (
-        <nav className="fixed top-20 right-8 z-50">
+        <nav className="relative top-0 right-0 mb-8">
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6">
+            <div className="hidden md:flex items-center justify-end space-x-6">
+                <div className="mr-4">
+                    <ThemeSwitcher />
+                </div>
                 <Link
                     href="/about"
                     className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
@@ -27,9 +30,6 @@ export function Navigation() {
                 >
                     Team
                 </Link>
-                <div className="ml-4">
-                    <ThemeSwitcher />
-                </div>
             </div>
 
             {/* Mobile Navigation */}
