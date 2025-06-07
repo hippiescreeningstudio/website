@@ -1,8 +1,5 @@
 .switch {
   all: unset;
-  position: absolute;
-  right: 20px;
-  top: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,14 +11,23 @@
   transition: all 0.3s ease-in-out 0s !important;
 }
 
+/* Desktop positioning */
+@media (min-width: 768px) {
+  .switch {
+    position: absolute;
+    right: 20px;
+    top: 70px;
+  }
+}
+
 [data-mode="light"] .switch {
   color: #000000;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 [data-mode="dark"] .switch {
   color: #ffffff;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .switch:hover {
