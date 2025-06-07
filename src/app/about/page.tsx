@@ -12,9 +12,13 @@ export default function About() {
                     </h1>
                     <div className="prose prose-lg dark:prose-invert max-w-none">
                         <p className="text-lg leading-relaxed mb-6">
-                            Hippie Screening Studio is dedicated to bringing the finest Asian arthouse films
-                            to Munich audiences. We believe in the power of cinema to bridge cultures and
-                            create meaningful connections through storytelling.
+                            Hippie Screening Studio e.V. works with a variety of arthouse cinemas, film organizations,
+                            and film festivals in Munich and around Germany to curate high-quality,
+                            independent, and creative films for our monthly schedule.
+                            We host film screenings and retrospectives in Munich as well as other film-related
+                            activities like film salons and cinema visits. Our goal is to provide high-quality
+                            film screenings and conversations for the Munich audience while also promoting cultural \
+                            interchange between the Chinese and German cinephiles.
                         </p>
                         <p className="text-lg leading-relaxed mb-6">
                             Our mission is to curate exceptional films that showcase the diversity,

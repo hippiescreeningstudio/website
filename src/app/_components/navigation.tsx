@@ -33,8 +33,12 @@ export function Navigation() {
             </div>
 
             {/* Mobile Navigation */}
-            <div className="md:hidden flex items-center space-x-4">
-                <ThemeSwitcher />
+            <div className="md:hidden flex items-center justify-end space-x-2">
+                <div className="relative mr-2">
+                    <div style={{ position: 'relative', right: 'auto', top: 'auto', marginRight: '2px' }}>
+                        <ThemeSwitcher />
+                    </div>
+                </div>
                 {/* Hamburger Button */}
                 <button
                     onClick={toggleMenu}

@@ -25,11 +25,11 @@ export function Intro() {
         </Link>
         <div className="flex flex-col mt-3">
           <Link href="/" className="hover:opacity-80 transition-opacity">
-            <h1 className="text-3xl md:text-3xl font-bold tracking-tighter leading-tight">
+            <h1 className="text-[22px] md:text-3xl font-bold tracking-tighter leading-tight">
               Hippie Screnning Studio
             </h1>
           </Link>
-          <h4 className="text-left md:text-left text-base mt-1">
+          <h4 className="text-left text-xs md:text-left md:text-base mt-1">
             bring Asian arthouse films to you in Munich
           </h4>
         </div>
