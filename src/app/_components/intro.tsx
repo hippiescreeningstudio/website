@@ -20,19 +20,12 @@ export function Intro() {
           height={80}
           className="mr-4 hidden dark:block"
         />
-        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-          HSS.
+        <h1 className="text-3xl md:text-2xl font-bold tracking-tighter leading-tight md:pr-8">
+          Hippie Screnning Studio
         </h1>
       </div>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{" "}
-        <a
-          href="https://nextjs.org/"
-          className="underline hover:text-blue-600 duration-200 transition-colors"
-        >
-          Next.js
-        </a>{" "}
-        and Markdown.
+        presents Asian arthouse films to you in Munich
       </h4>
     </section>
   );
