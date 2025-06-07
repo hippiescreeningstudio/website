@@ -15,15 +15,15 @@
 }
 
 [data-mode="light"] .switch {
-  box-shadow: 0 0 5px 5px yellow;
+  box-shadow: 0 0 8px 0 rgba(255, 255, 0, 0.8);
   background-color: yellow;
   border: 1px solid orangered;
 }
 
 [data-mode="dark"] .switch {
-  box-shadow: calc(var(--size) / 4) calc(var(--size) / -4) calc(var(--size) / 8) inset #fff;
-  border: none;
-  background: transparent;
+  box-shadow: 0 0 8px 0 rgba(255, 255, 255, 1);
+  border: 1px solid #fff;
+  background: #333;
   animation: n linear 0.5s;
 }
 
@@ -38,6 +38,6 @@
 
   0%,
   100% {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
 }
