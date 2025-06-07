@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+    <section className="flex-col md:flex-row flex items-start md:items-center md:justify-between mt-16 mb-16 md:mb-12">
       <div className="flex items-start">
         {/* Logo for light mode (black logo on white background) */}
         <Image
@@ -21,10 +21,10 @@ export function Intro() {
           className="mr-4 hidden dark:block"
         />
         <div className="flex flex-col mt-3">
-          <h1 className="text-4xl md:text-3xl font-bold tracking-tighter leading-tight">
+          <h1 className="text-3xl md:text-3xl font-bold tracking-tighter leading-tight">
             Hippie Screnning Studio
           </h1>
-          <h4 className="text-center md:text-left text-base mt-1">
+          <h4 className="text-left md:text-left text-base mt-1">
             bring Asian arthouse films to you in Munich
           </h4>
         </div>
