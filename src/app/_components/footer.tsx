@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-black">
+    <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700">
       <Container>
-        <div className="py-16 lg:py-28 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:gap-20 gap-12">
+        <div className="py-8 lg:py-12 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:gap-40 gap-12">
           <div className="flex flex-col items-center w-full lg:w-auto">
-            <h3 className="text-2xl font-normal tracking-tighter leading-tight mb-6">
+            <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-6">
               Follow us on
             </h3>
             <div className="flex flex-row gap-6 items-center justify-center">
@@ -53,15 +53,15 @@ export function Footer() {
             </div>
           </div>
           <div className="flex flex-col items-center w-full lg:w-auto">
-            <h3 className="text-2xl font-normal tracking-tighter leading-tight mb-6">
+            <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-6">
               Contact
             </h3>
             <div className="flex items-center justify-center">
-              <p className="text-lg">info@hss-munich.com</p>
+              <p className="text-sm lg:text-lg">info@hss-munich.com</p>
             </div>
           </div>
         </div>
-        <div className="border-t border-neutral-200 dark:border-neutral-800 py-6 mt-8 lg:mt-16">
+        <div className="border-t border-neutral-200 dark:border-neutral-700 py-3 mt-2">
           <div className="text-center text-sm text-neutral-600 dark:text-neutral-400">
             © {new Date().getFullYear()} Hippie Screening Studio. All rights reserved.
           </div>

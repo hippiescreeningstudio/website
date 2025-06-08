@@ -62,7 +62,7 @@ export function Intro() {
             </h1>
           </Link>
           <h4 className="text-left text-[12px] md:text-left md:text-base mt-1">
-            bring Asian arthouse films to you in Munich
+            bring you Asian arthouse films in Munich
           </h4>
         </div>
       </div>
