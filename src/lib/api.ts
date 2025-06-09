@@ -20,6 +20,18 @@ function getBaseSlugFromFilename(filename: string): string {
   return filename.replace(/\.(en|zh)\.md$/, "").replace(/\.md$/, "");
 }
 
+// Check if a post exists in both languages
+export function isPostBilingual(slug: string): { hasEn: boolean; hasZh: boolean } {
+  const enPath = join(postsDirectory, `${slug}.md`);
+  const enExplicitPath = join(postsDirectory, `${slug}.en.md`);
+  const zhPath = join(postsDirectory, `${slug}.zh.md`);
+
+  return {
+    hasEn: fs.existsSync(enPath) || fs.existsSync(enExplicitPath),
+    hasZh: fs.existsSync(zhPath)
+  };
+}
+
 export function getPostBySlug(slug: string, language?: "en" | "zh") {
   // If language is specified, try to find the language-specific file first
   if (language) {
