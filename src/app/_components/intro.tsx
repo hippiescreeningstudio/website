@@ -14,16 +14,31 @@ export function Intro() {
     setIsOpen(!isOpen);
   };
 
-  // Track scroll position
+  // Track scroll position with hysteresis to prevent flickering
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50); // Collapse after scrolling 50px
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollPosition = window.scrollY;
+
+          // Use different thresholds for collapsing vs expanding to prevent flickering
+          if (!isScrolled && scrollPosition > 120) {
+            setIsScrolled(true); // Collapse after scrolling 120px
+          } else if (isScrolled && scrollPosition < 60) {
+            setIsScrolled(false); // Expand when scrolling back up to 60px
+          }
+
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isScrolled]);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -79,11 +94,11 @@ export function Intro() {
             {!isScrolled && (
               <div className="flex flex-col transition-all duration-300">
                 <Link href="/" className="hover:opacity-80 transition-opacity">
-                  <h1 className="text-base md:text-2xl font-bold tracking-tighter leading-tight">
+                  <h1 className="text-lg md:text-2xl font-bold tracking-tighter leading-tight">
                     Hippie Screnning Studio
                   </h1>
                 </Link>
-                <h4 className="text-[9px] md:text-sm mt-1">
+                <h4 className="text-[10px] md:text-sm mt-1">
                   bring you Asian arthouse films in Munich
                 </h4>
               </div>
