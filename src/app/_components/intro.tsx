@@ -56,9 +56,9 @@ export function Intro() {
               <Image
                 src="/assets/logo-white-bg.svg"
                 alt="HSS Logo"
-                width={isScrolled ? 20 : 40}
-                height={isScrolled ? 20 : 40}
-                className={`transition-all duration-300 ${isScrolled ? 'md:w-6 md:h-6' : 'md:w-16 md:h-16'
+                width={isScrolled ? 28 : 40}
+                height={isScrolled ? 28 : 40}
+                className={`transition-all duration-300 ${isScrolled ? 'md:w-8 md:h-8' : 'md:w-16 md:h-16'
                   }`}
               />
             </Link>
@@ -68,9 +68,9 @@ export function Intro() {
               <Image
                 src="/assets/logo-black-bg.svg"
                 alt="HSS Logo"
-                width={isScrolled ? 20 : 40}
-                height={isScrolled ? 20 : 40}
-                className={`transition-all duration-300 ${isScrolled ? 'md:w-6 md:h-6' : 'md:w-16 md:h-16'
+                width={isScrolled ? 28 : 40}
+                height={isScrolled ? 28 : 40}
+                className={`transition-all duration-300 ${isScrolled ? 'md:w-8 md:h-8' : 'md:w-16 md:h-16'
                   }`}
               />
             </Link>
@@ -79,11 +79,11 @@ export function Intro() {
             {!isScrolled && (
               <div className="flex flex-col transition-all duration-300">
                 <Link href="/" className="hover:opacity-80 transition-opacity">
-                  <h1 className="text-lg md:text-2xl font-bold tracking-tighter leading-tight">
+                  <h1 className="text-base md:text-2xl font-bold tracking-tighter leading-tight">
                     Hippie Screnning Studio
                   </h1>
                 </Link>
-                <h4 className="text-[10px] md:text-sm mt-1">
+                <h4 className="text-[9px] md:text-sm mt-1">
                   bring you Asian arthouse films in Munich
                 </h4>
               </div>
@@ -93,19 +93,19 @@ export function Intro() {
           {/* Navigation */}
           <nav className="relative" ref={navRef}>
             {/* Desktop Navigation */}
-            <div className={`hidden md:flex items-center transition-all duration-300 ${isScrolled ? 'space-x-2' : 'space-x-6'
+            <div className={`hidden md:flex items-center transition-all duration-300 ${isScrolled ? 'space-x-3' : 'space-x-6'
               }`}>
               <ThemeSwitcher />
               <Link
                 href="/about"
-                className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'text-xs leading-none' : 'text-lg'
+                className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                   }`}
               >
                 About
               </Link>
               <Link
                 href="/team"
-                className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'text-xs leading-none' : 'text-lg'
+                className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                   }`}
               >
                 Team
@@ -113,18 +113,18 @@ export function Intro() {
             </div>
 
             {/* Mobile Navigation */}
-            <div className={`md:hidden flex items-center transition-all duration-300 ${isScrolled ? 'space-x-0.5' : 'space-x-2'
+            <div className={`md:hidden flex items-center transition-all duration-300 ${isScrolled ? 'space-x-1.5' : 'space-x-2'
               }`}>
               <ThemeSwitcher />
               {/* Hamburger Button */}
               <button
                 onClick={toggleMenu}
-                className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'p-0.5' : 'p-2'
+                className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'p-1' : 'p-2'
                   }`}
                 aria-label="Toggle menu"
               >
                 <svg
-                  className={`fill-none stroke-current transition-all duration-300 ${isScrolled ? 'w-3 h-3' : 'w-6 h-6'
+                  className={`fill-none stroke-current transition-all duration-300 ${isScrolled ? 'w-4 h-4' : 'w-6 h-6'
                     }`}
                   viewBox="0 0 24 24"
                 >

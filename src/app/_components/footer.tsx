@@ -7,7 +7,7 @@ export function Footer() {
       <Container>
         <div className="py-8 lg:py-12 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:gap-40 gap-12">
           <div className="flex flex-col items-center w-full lg:w-auto">
-            <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-6">
+            <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-3">
               Follow us on
             </h3>
             <div className="flex flex-row gap-6 items-center justify-center">
@@ -53,7 +53,7 @@ export function Footer() {
             </div>
           </div>
           <div className="flex flex-col items-center w-full lg:w-auto">
-            <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-6">
+            <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-3">
               Contact
             </h3>
             <div className="flex items-center justify-center">
