@@ -1,14 +1,19 @@
+"use client";
+
 import Container from "@/app/_components/container";
 import Image from "next/image";
+import { useLanguage } from "@/contexts/language-context";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-neutral-50 border-t border-neutral-200 dark:bg-neutral-800 dark:border-neutral-700">
       <Container>
         <div className="py-8 lg:py-12 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:gap-40 gap-12">
           <div className="flex flex-col items-center w-full lg:w-auto">
             <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-3">
-              Follow us on
+              {t("footer.follow")}
             </h3>
             <div className="flex flex-row gap-6 items-center justify-center">
               <a
@@ -54,7 +59,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col items-center w-full lg:w-auto">
             <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-3">
-              Contact
+              {t("footer.contact")}
             </h3>
             <div className="flex items-center justify-center">
               <p className="text-sm lg:text-lg">info@hss-munich.com</p>
@@ -63,7 +68,7 @@ export function Footer() {
         </div>
         <div className="border-t border-neutral-200 dark:border-neutral-700 py-3 mt-2">
           <div className="text-center text-sm text-neutral-600 dark:text-neutral-400">
-            © {new Date().getFullYear()} Hippie Screening Studio. All rights reserved.
+            © {new Date().getFullYear()} {t("footer.copyright")}
           </div>
         </div>
       </Container>

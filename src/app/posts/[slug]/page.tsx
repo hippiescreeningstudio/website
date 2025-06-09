@@ -1,22 +1,90 @@
-import { Metadata } from "next";
+"use client";
+
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
-import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
 import Header from "@/app/_components/header";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
+import { useLanguage } from "@/contexts/language-context";
+import { useEffect, useState } from "react";
+import { Post } from "@/interfaces/post";
 
-export default async function Post(props: Params) {
-  const params = await props.params;
-  const post = getPostBySlug(params.slug);
+type Params = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
 
-  if (!post) {
-    return notFound();
+export default function PostPage(props: Params) {
+  const { language } = useLanguage();
+  const [post, setPost] = useState<Post | null>(null);
+  const [content, setContent] = useState<string>("");
+  const [loading, setLoading] = useState(true);
+  const [slug, setSlug] = useState<string>("");
+  const [notFoundError, setNotFoundError] = useState(false);
+
+  useEffect(() => {
+    const getParams = async () => {
+      const params = await props.params;
+      setSlug(params.slug);
+    };
+    getParams();
+  }, [props.params]);
+
+  useEffect(() => {
+    if (!slug) return;
+
+    const loadPost = async () => {
+      setLoading(true);
+      setNotFoundError(false);
+
+      try {
+        const response = await fetch(`/api/posts/${slug}?language=${language}`);
+
+        if (response.status === 404) {
+          setNotFoundError(true);
+          setLoading(false);
+          return;
+        }
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch post");
+        }
+
+        const foundPost = await response.json();
+        const htmlContent = await markdownToHtml(foundPost.content || "");
+        setPost(foundPost);
+        setContent(htmlContent);
+      } catch (error) {
+        console.error("Error loading post:", error);
+        setNotFoundError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadPost();
+  }, [slug, language]);
+
+  if (loading) {
+    return (
+      <main>
+        <Container>
+          <Header />
+          <div className="text-center py-8">
+            <p className="text-lg text-gray-600 dark:text-gray-400">
+              {language === "en" ? "Loading..." : "加载中..."}
+            </p>
+          </div>
+        </Container>
+      </main>
+    );
   }
 
-  const content = await markdownToHtml(post.content || "");
+  if (notFoundError || !post) {
+    return notFound();
+  }
 
   return (
     <main>
@@ -34,37 +102,4 @@ export default async function Post(props: Params) {
       </Container>
     </main>
   );
-}
-
-type Params = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
-
-export async function generateMetadata(props: Params): Promise<Metadata> {
-  const params = await props.params;
-  const post = getPostBySlug(params.slug);
-
-  if (!post) {
-    return notFound();
-  }
-
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
-
-  return {
-    title,
-    openGraph: {
-      title,
-      images: [post.ogImage.url],
-    },
-  };
-}
-
-export async function generateStaticParams() {
-  const posts = getAllPosts();
-
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
 }

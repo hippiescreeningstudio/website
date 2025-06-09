@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 import Container from "@/app/_components/container";
+import { LanguageProvider } from "@/contexts/language-context";
 
 import "./globals.css";
 
@@ -60,8 +61,10 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "dark:bg-black dark:text-white")}
       >
-        <div className="min-h-screen">{children}</div>
-        <Footer />
+        <LanguageProvider>
+          <div className="min-h-screen">{children}</div>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

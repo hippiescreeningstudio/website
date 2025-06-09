@@ -4,11 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { ThemeSwitcher } from "./theme-switcher";
+import { LanguageSwitcher } from "./language-switcher";
+import { useLanguage } from "@/contexts/language-context";
 
 export function Intro() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -95,11 +98,11 @@ export function Intro() {
               <div className="flex flex-col transition-all duration-300">
                 <Link href="/" className="hover:opacity-80 transition-opacity">
                   <h1 className="text-lg md:text-2xl font-bold tracking-tighter leading-tight">
-                    Hippie Screnning Studio
+                    {t("site.title")}
                   </h1>
                 </Link>
                 <h4 className="text-[10px] md:text-sm mt-1">
-                  bring you Asian arthouse films in Munich
+                  {t("site.subtitle")}
                 </h4>
               </div>
             )}
@@ -111,19 +114,20 @@ export function Intro() {
             <div className={`hidden md:flex items-center transition-all duration-300 ${isScrolled ? 'space-x-3' : 'space-x-6'
               }`}>
               <ThemeSwitcher />
+              <LanguageSwitcher />
               <Link
                 href="/about"
                 className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                   }`}
               >
-                About
+                {t("nav.about")}
               </Link>
               <Link
                 href="/team"
                 className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                   }`}
               >
-                Team
+                {t("nav.team")}
               </Link>
             </div>
 
@@ -131,6 +135,7 @@ export function Intro() {
             <div className={`md:hidden flex items-center transition-all duration-300 ${isScrolled ? 'space-x-1.5' : 'space-x-2'
               }`}>
               <ThemeSwitcher />
+              <LanguageSwitcher />
               {/* Hamburger Button */}
               <button
                 onClick={toggleMenu}
@@ -170,14 +175,14 @@ export function Intro() {
                       className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
-                      About
+                      {t("nav.about")}
                     </Link>
                     <Link
                       href="/team"
                       className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
-                      Team
+                      {t("nav.team")}
                     </Link>
                   </div>
                 </div>
