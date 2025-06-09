@@ -22,7 +22,7 @@ const translations = {
         "footer.follow": "Follow us on",
         "footer.contact": "Contact",
         "footer.copyright": "Hippie Screening Studio. All rights reserved.",
-        "posts.more": "More Stories",
+        "posts.more": "More Films",
         "post.read": "Read More",
     },
     zh: {
@@ -33,7 +33,7 @@ const translations = {
         "footer.follow": "关注我们",
         "footer.contact": "联系我们",
         "footer.copyright": "嬉皮放映室。保留所有权利。",
-        "posts.more": "更多故事",
+        "posts.more": "更多影片",
         "post.read": "阅读更多",
     },
 };

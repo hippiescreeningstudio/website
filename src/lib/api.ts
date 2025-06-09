@@ -33,6 +33,10 @@ export function isPostBilingual(slug: string): { hasEn: boolean; hasZh: boolean 
 }
 
 export function getPostBySlug(slug: string, language?: "en" | "zh") {
+  // Check if this post is bilingual
+  const bilingualInfo = isPostBilingual(slug);
+  const isBilingual = bilingualInfo.hasEn && bilingualInfo.hasZh;
+
   // If language is specified, try to find the language-specific file first
   if (language) {
     const languageSpecificPath = join(postsDirectory, `${slug}.${language}.md`);
@@ -51,6 +55,19 @@ export function getPostBySlug(slug: string, language?: "en" | "zh") {
     return { ...data, slug, content, language: "en" } as Post;
   }
 
+  // For single-language posts, if the requested language doesn't exist,
+  // fall back to whichever language version is available
+  if (!isBilingual) {
+    // Try the other language
+    const otherLanguage = language === "en" ? "zh" : "en";
+    const otherLanguagePath = join(postsDirectory, `${slug}.${otherLanguage}.md`);
+    if (fs.existsSync(otherLanguagePath)) {
+      const fileContents = fs.readFileSync(otherLanguagePath, "utf8");
+      const { data, content } = matter(fileContents);
+      return { ...data, slug, content, language: otherLanguage } as Post;
+    }
+  }
+
   return null;
 }
 
@@ -63,28 +80,43 @@ export function getAllPosts(language?: "en" | "zh"): Post[] {
     const fileLanguage = extractLanguageFromFilename(filename);
     const baseSlug = getBaseSlugFromFilename(filename);
 
-    // If we're filtering by language and this file doesn't match, skip it
-    if (language && fileLanguage !== language) {
-      return;
-    }
-
     // If we already processed this slug, skip it
     if (processedSlugs.has(baseSlug)) {
       return;
     }
 
-    const fullPath = join(postsDirectory, filename);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data, content } = matter(fileContents);
+    // Check if this post is bilingual
+    const bilingualInfo = isPostBilingual(baseSlug);
+    const isBilingual = bilingualInfo.hasEn && bilingualInfo.hasZh;
 
-    posts.push({
-      ...data,
-      slug: baseSlug,
-      content,
-      language: fileLanguage,
-    } as Post);
+    // If post is bilingual, only show the version that matches the current language
+    if (isBilingual && language) {
+      const languageSpecificPath = join(postsDirectory, `${baseSlug}.${language}.md`);
+      if (fs.existsSync(languageSpecificPath)) {
+        const fileContents = fs.readFileSync(languageSpecificPath, "utf8");
+        const { data, content } = matter(fileContents);
+        posts.push({
+          ...data,
+          slug: baseSlug,
+          content,
+          language: language,
+        } as Post);
+        processedSlugs.add(baseSlug);
+      }
+    } else {
+      // If post is not bilingual, show it in all language modes
+      const fullPath = join(postsDirectory, filename);
+      const fileContents = fs.readFileSync(fullPath, "utf8");
+      const { data, content } = matter(fileContents);
 
-    processedSlugs.add(baseSlug);
+      posts.push({
+        ...data,
+        slug: baseSlug,
+        content,
+        language: fileLanguage,
+      } as Post);
+      processedSlugs.add(baseSlug);
+    }
   });
 
   // Sort posts by date in descending order

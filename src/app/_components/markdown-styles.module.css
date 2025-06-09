@@ -16,3 +16,43 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+.markdown img {
+  @apply max-w-sm mx-auto my-6 block;
+}
+
+/* Custom image size classes */
+.markdown .img-small {
+  @apply w-48 mx-auto my-6 block;
+}
+
+.markdown .img-medium {
+  @apply w-80 mx-auto my-6 block;
+}
+
+.markdown .img-large {
+  @apply w-96 mx-auto my-6 block;
+}
+
+.markdown .img-full {
+  @apply w-full mx-auto my-6 block;
+}
+
+/* Table styles */
+.markdown table {
+  @apply w-full my-6 border-collapse;
+  border-spacing: 0;
+}
+
+.markdown table th,
+.markdown table td {
+  @apply border border-gray-300 dark:border-gray-600 px-4 py-2 text-left;
+}
+
+.markdown table th {
+  @apply bg-gray-50 dark:bg-gray-800 font-semibold;
+}
+
+.markdown table tr:nth-child(even) {
+  @apply bg-gray-50 dark:bg-gray-900;
+}

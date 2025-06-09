@@ -19,7 +19,7 @@ export default function About() {
                         {language === "en" ? (
                             <>
                                 <p className="text-lg leading-relaxed mb-6">
-                                    Hippie Screening Studio e.V. is a registered non-profit organization that works with a variety of arthouse cinemas, film organizations,
+                                    Founded in 2022, Hippie Screening Studio e.V. is a registered non-profit organization that works with a variety of arthouse cinemas, film organizations,
                                     and film festivals in Munich and around Germany to curate high-quality, independent, and creative Asian films for our monthly schedule.
                                     We host film screenings and retrospectives in Munich as well as other film-related  activities like film salons and cinema visits. Our goal is to provide high-quality
                                     film screenings and conversations for the Munich audience while also promoting cultural
@@ -34,7 +34,7 @@ export default function About() {
                         ) : (
                             <>
                                 <p className="text-lg leading-relaxed mb-6">
-                                    嬉皮放映室协会 (Hippie Screening Studio e.V.) 是一个在慕尼黑注册的非营利组织，在慕尼黑定期举办亚洲电影放映、“焦点影人”回顾展等各类电影相关的交流活动，致力
+                                    成立于2022年，嬉皮放映室协会 (Hippie Screening Studio e.V.) 是一个在慕尼黑注册的非营利组织，在慕尼黑定期举办亚洲电影放映、“焦点影人”回顾展等各类电影相关的交流活动，致力
                                     于为影迷朋友提供高质量的观影和交流体验，促进中德电影爱好者之间的文化交流。
 
                                 </p>
