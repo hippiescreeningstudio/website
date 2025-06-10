@@ -10,3 +10,141 @@
         overflow: hidden;
     }
 }
+
+@layer components {
+    .rainbow-text {
+        font-weight: bold !important;
+        display: inline-block !important;
+    }
+
+    .rainbow-c {
+        color: #e40303 !important;
+        /* Red */
+        font-weight: bold !important;
+    }
+
+    .rainbow-s {
+        color: #ff8c00 !important;
+        /* Orange */
+        font-weight: bold !important;
+    }
+
+    .rainbow-d {
+        color: #008018 !important;
+        /* Green */
+        font-weight: bold !important;
+    }
+
+    .blue-link-text {
+        color: #003d82 !important;
+        font-weight: bold !important;
+        text-decoration: underline !important;
+    }
+
+    /* Table styling for light and dark modes */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1rem 0;
+        table-layout: fixed;
+    }
+
+    table th,
+    table td {
+        border: 1px solid #e5e7eb;
+        padding: 0.75rem;
+        text-align: left;
+    }
+
+    table td:first-child,
+    table th:first-child {
+        width: 30%;
+    }
+
+    table td:last-child,
+    table th:last-child {
+        width: 70%;
+    }
+
+    table th {
+        background-color: #f9fafb;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f9fafb;
+    }
+
+    /* Dark mode table styling */
+    :root.dark table th,
+    :root.dark table td {
+        border-color: #747474;
+    }
+
+    :root.dark table th {
+        background-color: #000000;
+        color: #f9fafb;
+    }
+
+    :root.dark table tr:nth-child(even) {
+        background-color: #000000;
+    }
+
+    :root.dark table tr:nth-child(odd) {
+        background-color: #000000;
+    }
+
+    :root.dark table td {
+        color: #f9fafb;
+    }
+
+    /* Figure and caption styling */
+    figure {
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    figure img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* Responsive image sizing */
+    @media (min-width: 640px) {
+        figure img {
+            width: 90%;
+        }
+    }
+
+    @media (min-width: 768px) {
+        figure img {
+            width: 80%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        figure img {
+            width: 70%;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        figure img {
+            width: 60%;
+        }
+    }
+
+    figcaption {
+        margin-top: 0.5rem;
+        font-style: italic;
+        color: #6b7280;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    :root.dark figcaption {
+        color: #9ca3af;
+    }
+}
