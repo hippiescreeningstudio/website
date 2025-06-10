@@ -58,12 +58,12 @@
 
     table td:first-child,
     table th:first-child {
-        width: 30%;
+        width: 40%;
     }
 
     table td:last-child,
     table th:last-child {
-        width: 70%;
+        width: 60%;
     }
 
     table th {

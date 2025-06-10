@@ -24,7 +24,7 @@ In celebration of Pride Month 🌈, join us for a special CSD screening and Q&A 
 | Screening Info | |
 |---|---|
 | Time | Sunday, June 22, 13:00 |
-| Cinema | Neues Rottmann ((Rottmannstraße 15, 80333 München)) |
+| Cinema | Neues Rottmann (Rottmannstraße 15, 80333 München) |
 | Ticket Price | 13€, 12€ for students |
 | Tickets | Buy [<strong style="color: #003d82; text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness) or at the box office |
 
