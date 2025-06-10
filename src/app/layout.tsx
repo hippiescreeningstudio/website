@@ -3,7 +3,6 @@ import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
-import Container from "@/app/_components/container";
 import { LanguageProvider } from "@/contexts/language-context";
 
 import "./globals.css";
@@ -11,8 +10,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: `Hippie Screening Studio`,
+  description: `Hippie Screening Studio is a non-profit screening organization that screens independent Asian films in Munich.`,
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
   },
@@ -29,24 +28,24 @@ export default function RootLayout({
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
+          href="/favicon/logo_white_l.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon/favicon-32x32.png"
+          href="/favicon/logo_white_32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon/favicon-16x16.png"
+          href="/favicon/logo_white_16.png"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link
           rel="mask-icon"
-          href="/favicon/safari-pinned-tab.svg"
+          href="/favicon/logo-black-bg.svg"
           color="#000000"
         />
         <link rel="shortcut icon" href="/favicon/favicon.ico" />
