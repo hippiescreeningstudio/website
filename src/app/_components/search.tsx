@@ -18,7 +18,11 @@ type SearchResult = {
     language?: "en" | "zh";
 };
 
-export function Search() {
+type SearchProps = {
+    onStateChange?: (isOpen: boolean) => void;
+};
+
+export function Search({ onStateChange }: SearchProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState("");
     const [results, setResults] = useState<SearchResult[]>([]);
@@ -26,6 +30,11 @@ export function Search() {
     const { language, t } = useLanguage();
     const searchRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
+
+    // Notify parent of state changes
+    useEffect(() => {
+        onStateChange?.(isOpen);
+    }, [isOpen, onStateChange]);
 
     // Close search when clicking outside
     useEffect(() => {
