@@ -123,14 +123,14 @@ export function Intro() {
                 <LanguageSwitcher />
                 <Link
                   href="/about"
-                  className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
+                  className={`text-black dark:text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                     }`}
                 >
                   {t("nav.about")}
                 </Link>
                 <Link
                   href="/team"
-                  className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
+                  className={`text-black dark:text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                     }`}
                 >
                   {t("nav.team")}
@@ -178,18 +178,18 @@ export function Intro() {
 
             {/* Mobile Dropdown Menu */}
             {isOpen && (
-              <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-black rounded-md shadow-lg border border-gray-200 dark:border-gray-700 z-10">
+              <div className="absolute right-0 top-full w-30 bg-white dark:bg-black shadow-lg -mt-1 border border-white dark:border-black z-10">
                 <div className="py-1">
                   <Link
                     href="/about"
-                    className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 hover:scale-105 transition-all duration-300"
                     onClick={() => setIsOpen(false)}
                   >
                     {t("nav.about")}
                   </Link>
                   <Link
                     href="/team"
-                    className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 hover:scale-105 transition-all duration-300"
                     onClick={() => setIsOpen(false)}
                   >
                     {t("nav.team")}
