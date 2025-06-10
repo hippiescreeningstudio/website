@@ -17,6 +17,7 @@ In celebration of Pride Month 🌈, join us for a special CSD screening and Q&A 
 | Title| The Last Year of Darkness 午夜出走|
 | Director | Ben Mullinkosson |
 | Genre| Documentary |
+| Year| 2023 |
 | Runtime| 95 minutes |
 | Language| Chinese with English subtitles (OmeU) |
 
@@ -25,7 +26,7 @@ In celebration of Pride Month 🌈, join us for a special CSD screening and Q&A 
 | Time | Sunday, June 22, 13:00 |
 | Cinema | Neues Rottmann ((Rottmannstraße 15, 80333 München)) |
 | Ticket Price | 13€, 12€ for students |
-| Tickets | [Buy <strong style="color: #003d82; text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness) or at the box office |
+| Tickets | Buy [<strong style="color: #003d82; text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness) or at the box office |
 
 <figure>
   <img src="/assets/blog/last_night/poster.jpg" alt="The Last Year of Darkness" />
@@ -48,7 +49,7 @@ youth—from love to loss, from throwing up to growing up.
 
 <figure>
   <img src="/assets/blog/last_night/BenMullinkosson.JPG" alt="Ben Mullinkosson" />
-  <figcaption>Director Ben Mullinkosson</figcaption>
+  <figcaption>Ben Mullinkosson</figcaption>
 </figure>
 
 This is Ben's second feature length documentary and 6th year coming back to Chengdu. He
