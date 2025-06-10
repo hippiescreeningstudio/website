@@ -1,5 +1,5 @@
 ---
-title: "Monthly Program 2023/9: Lu Yao, Spring Fever"
+title: "Monthly Program 2023/9: Lou Ye, Spring Fever"
 excerpt: "Hired to spy on a philandering husband, Luo Haitao soon becomes entangled in a clandestine affair with the other man. Along with Luo's girlfriend, they succumb to the delirium of drunken nights, but how long can their tryst last?"
 coverImage: "/assets/blog/images/chunfeng.jpg"
 date: "2023-09-30T"

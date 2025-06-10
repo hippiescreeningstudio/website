@@ -26,10 +26,10 @@ const translations = {
         "post.read": "Read More",
     },
     zh: {
-        "nav.about": "关于",
-        "nav.team": "团队",
+        "nav.about": "关于我们",
+        "nav.team": "团队成员",
         "site.title": "嬉皮放映室",
-        "site.subtitle": "向您在慕尼黑呈现亚洲艺术电影",
+        "site.subtitle": "向慕尼黑观众呈现亚洲艺术电影",
         "footer.follow": "关注我们",
         "footer.contact": "联系我们",
         "footer.copyright": "嬉皮放映室。保留所有权利。",

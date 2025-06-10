@@ -69,12 +69,12 @@ export function Intro() {
   }, [isOpen]);
 
   return (
-    <section className="sticky top-0 z-50 bg-white dark:bg-black transition-all duration-300">
+    <section className="sticky top-0 z-50 bg-white dark:bg-black transition-all duration-300 -ml-5 -mr-5">
       <div className="relative">
         <div className="container mx-auto px-5">
           <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-0.5 min-h-[32px]' : 'py-4 md:py-6'
             }`}>
-            <div className={`flex items-center transition-all duration-300 ${isScrolled ? '-ml-2' : '-ml-3'}`}>
+            <div className={`flex items-center transition-all duration-300`}>
               {/* Logo for light mode */}
               <Link href="/" className={`block dark:hidden hover:opacity-80 transition-all duration-300 ${isScrolled ? 'mr-1.5' : 'mr-3 md:mr-4'
                 }`}>
@@ -102,13 +102,13 @@ export function Intro() {
 
               {/* Title and subtitle - conditionally render */}
               {!isScrolled && (
-                <div className="flex flex-col transition-all duration-300">
+                <div className="flex flex-col transition-all duration-300 -ml-2">
                   <Link href="/" className="hover:opacity-80 transition-opacity">
                     <h1 className="text-lg md:text-2xl font-bold tracking-tighter leading-tight">
                       {t("site.title")}
                     </h1>
                   </Link>
-                  <h4 className="text-[10px] md:text-sm mt-1">
+                  <h4 className="text-[10px] md:text-sm mt-0">
                     {t("site.subtitle")}
                   </h4>
                 </div>
@@ -117,7 +117,7 @@ export function Intro() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:block relative" ref={desktopNavRef}>
-              <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-3' : 'space-x-6'
+              <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-3' : 'space-x-4'
                 }`}>
                 <ThemeSwitcher />
                 <LanguageSwitcher />
@@ -142,7 +142,7 @@ export function Intro() {
 
         {/* Mobile Navigation - positioned absolutely to reach the edge */}
         <nav className="md:hidden absolute top-0 right-0 h-full flex items-center" ref={mobileNavRef}>
-          <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-1.5 -mr-2' : 'space-x-2 -mr-3'
+          <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-1.5 -mr-1' : 'space-x-1 -mr-1'
             }`}>
             <ThemeSwitcher />
             <LanguageSwitcher />
