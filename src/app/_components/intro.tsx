@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { ThemeSwitcher } from "./theme-switcher";
 import { LanguageSwitcher } from "./language-switcher";
+import { Search } from "./search";
 import { useLanguage } from "@/contexts/language-context";
 
 export function Intro() {
@@ -121,6 +122,7 @@ export function Intro() {
                 }`}>
                 <ThemeSwitcher />
                 <LanguageSwitcher />
+                <Search />
                 <Link
                   href="/about"
                   className={`text-black dark:text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
@@ -146,6 +148,7 @@ export function Intro() {
             }`}>
             <ThemeSwitcher />
             <LanguageSwitcher />
+            <Search />
             {/* Hamburger Button */}
             <button
               onClick={toggleMenu}

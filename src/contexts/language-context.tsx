@@ -24,6 +24,10 @@ const translations = {
         "footer.copyright": "Hippie Screening Studio. All rights reserved.",
         "posts.more": "More Films",
         "post.read": "Read More",
+        "search.button": "Search",
+        "search.placeholder": "Search posts...",
+        "search.loading": "Searching...",
+        "search.noResults": "No results found",
     },
     zh: {
         "nav.about": "关于我们",
@@ -35,6 +39,10 @@ const translations = {
         "footer.copyright": "嬉皮放映室。保留所有权利。",
         "posts.more": "更多影片",
         "post.read": "阅读更多",
+        "search.button": "搜索",
+        "search.placeholder": "搜索文章...",
+        "search.loading": "搜索中...",
+        "search.noResults": "未找到相关结果",
     },
 };
 
