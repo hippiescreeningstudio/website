@@ -1,6 +1,6 @@
 ---
 title: "Monthly Program 2023/5: Tan Chui Mui's Love Conquers All"
-excerpt: "A screening of the 2006 Malaysian film Love Conquers All, directed by Tan Chui Mui, as part of our monthly program featuring exceptional Asian cinema."
+excerpt: "In this 90-minute film, Malaysian director Tan Chui Mui tells a story about love, choice, and the loss of choice in love."
 coverImage: "/assets/blog/images/aiqing.jpg"
 date: "2023-05-20T22:43:26.000Z"
 ogImage:
