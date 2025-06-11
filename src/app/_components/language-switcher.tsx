@@ -23,10 +23,8 @@ export const LanguageSwitcher = () => {
 
             if (!hasTargetLanguage) {
                 // Show notification that post is only available in current language
-                const currentLangName = language === "en" ? "English" : "中文";
-                const message = language === "en"
-                    ? `This post is only available in ${currentLangName}`
-                    : `此文章仅提供${currentLangName}版本`;
+                const currentLangName = language === "en" ? "English" : "Chinese";
+                const message = `This post is only available in ${currentLangName}`;
 
                 if (onLanguageUnavailable) {
                     onLanguageUnavailable(message);
