@@ -60,6 +60,11 @@ export default function Team() {
             nameZh: "Ze Huang",
             photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
         },
+        {
+            name: "Yimeng",
+            nameZh: "Yimeng",
+            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
+        },
     ];
 
     return (
