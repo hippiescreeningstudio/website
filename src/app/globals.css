@@ -26,11 +26,10 @@
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
+/* Utilities */
 @layer utilities {
     .text-balance {
         text-wrap: balance;
@@ -44,18 +43,18 @@ body {
     }
 }
 
-/* Global styles for blog content */
-/* Ensure images in markdown content are responsive */
-article img {
+/* Blog content styling */
+article {
+    line-height: 1.6;
+}
+
+article img,
+figure img,
+article .responsive-image {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
-}
-
-/* Base styling for blog content */
-article {
-    line-height: 1.6;
+    margin: 1.5rem auto;
 }
 
 article h1,
@@ -69,13 +68,14 @@ article h6 {
     font-weight: 600;
 }
 
-article p {
+article p,
+article ul,
+article ol {
     margin-bottom: 1em;
 }
 
 article ul,
 article ol {
-    margin-bottom: 1em;
     padding-left: 1.5em;
 }
 
@@ -96,59 +96,70 @@ article blockquote {
     color: #9ca3af;
 }
 
-/* Strong/Bold text styling */
 article strong {
     font-weight: 700;
 }
 
 /* Table styling */
-article table {
+article table,
+table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
+    table-layout: fixed;
+    font-size: 0.9rem;
 }
 
 article th,
-article td {
-    border: 1px solid #e5e7eb;
-    padding: 0.75rem;
+article td,
+table th,
+
+table td {
+    border: transparent;
+    padding: 0.5rem;
     text-align: left;
-}
-
-:root.dark article th,
-:root.dark article td {
-    border-color: #374151;
-}
-
-article th {
-    background-color: #f9fafb;
+    background-color: transparent;
     font-weight: normal;
 }
 
-:root.dark article th {
-    background-color: #1f2937;
+table td:first-child,
+table th:first-child {
+    width: 30%;
 }
 
-/* Responsive images */
-article .responsive-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1.5rem auto;
+table td:last-child,
+table th:last-child {
+    width: 70%;
 }
 
-/* Special content styling */
-article figure {
-    margin: 2rem 0;
+table tr:nth-child(even),
+table tr:nth-child(odd),
+:root.dark table tr:nth-child(even),
+:root.dark table tr:nth-child(odd) {
+    background-color: transparent;
+}
+
+
+:root.dark table th {
+    background-color: transparent;
+}
+
+/* Figure and caption styling */
+figure {
+    margin: 1.5rem 0;
     text-align: center;
 }
 
-figure img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    width: 100%;
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #6b7280;
+}
+
+:root.dark figcaption {
+    color: #9ca3af;
 }
 
 /* Responsive image sizing */
@@ -176,98 +187,11 @@ figure img {
     }
 }
 
-figcaption {
-    margin-top: 0.5rem;
-    font-style: italic;
-    color: #6b7280;
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-:root.dark figcaption {
-    color: #9ca3af;
-}
-
+/* Link styling */
 @layer components {
     .blue-link-text {
         color: #003d82 !important;
         font-weight: bold !important;
         text-decoration: underline !important;
-    }
-
-    /* Table styling for light and dark modes */
-    table {
-        border-collapse: collapse;
-        width: 100%;
-        margin: 1rem 0;
-        table-layout: fixed;
-    }
-
-    table th,
-    table td {
-        border: 1px solid #fcfcfc00;
-        padding: 0.75rem;
-        text-align: left;
-    }
-
-    table td:first-child,
-    table th:first-child {
-        width: 40%;
-    }
-
-    table td:last-child,
-    table th:last-child {
-        width: 60%;
-    }
-
-    table th {
-        background-color: #f9fafb;
-        font-weight: normal;
-    }
-
-    table tr:nth-child(even) {
-        background-color: #f9fafb;
-    }
-
-    /* Dark mode table styling */
-    :root.dark table th,
-    :root.dark table td {
-        border-color: #747474;
-    }
-
-    :root.dark table th {
-        background-color: #000000;
-        color: #f9fafb;
-        font-weight: normal;
-    }
-
-    :root.dark table tr:nth-child(even) {
-        background-color: #000000;
-    }
-
-    :root.dark table tr:nth-child(odd) {
-        background-color: #000000;
-    }
-
-    :root.dark table td {
-        color: #f9fafb;
-    }
-
-    /* Figure and caption styling */
-    figure {
-        margin: 1.5rem 0;
-        text-align: center;
-    }
-
-    figcaption {
-        margin-top: 0.5rem;
-        font-style: italic;
-        color: #6b7280;
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    :root.dark figcaption {
-        color: #9ca3af;
     }
 }
