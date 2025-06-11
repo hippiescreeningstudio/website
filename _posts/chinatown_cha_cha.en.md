@@ -17,7 +17,7 @@ coverImages:
   - "/assets/blog/chinatown_cha/12.jpg"
   - "/assets/blog/chinatown_cha/13.jpg"
   
-date: "2025-04-10T"
+date: "2025-04-10T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/chinatown_cha/00.jpg" 
 ---

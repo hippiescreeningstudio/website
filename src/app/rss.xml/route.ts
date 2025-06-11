@@ -11,6 +11,14 @@ export async function GET() {
         const siteTitle = 'Hippie Screening Studio';
         const siteDescription = 'Bringing you Asian arthouse films in Munich';
 
+        // Get the most recent post date for channel pubDate
+        const mostRecentPostDate = allPosts.length > 0
+            ? (() => {
+                const date = new Date(allPosts[0].date);
+                return isNaN(date.getTime()) ? new Date().toUTCString() : date.toUTCString();
+            })()
+            : new Date().toUTCString();
+
         // Generate RSS XML
         const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -21,12 +29,26 @@ export async function GET() {
     <atom:link href="${siteUrl}/rss.xml" rel="self" type="application/rss+xml"/>
     <language>en</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-    <pubDate>${new Date().toUTCString()}</pubDate>
+    <pubDate>${mostRecentPostDate}</pubDate>
     <ttl>60</ttl>
     ${allPosts.map(post => {
             const postUrl = post.language === 'zh'
                 ? `${siteUrl}/zh/posts/${post.slug}`
                 : `${siteUrl}/posts/${post.slug}`;
+
+            // Handle invalid dates
+            const parseDate = (dateString: string) => {
+                const date = new Date(dateString);
+                if (isNaN(date.getTime())) {
+                    // If the date string ends with just "T", append time
+                    if (dateString.endsWith('T')) {
+                        return new Date(dateString + '00:00:00.000Z');
+                    }
+                    // Fallback to current date if still invalid
+                    return new Date();
+                }
+                return date;
+            };
 
             return `
     <item>
@@ -34,7 +56,7 @@ export async function GET() {
       <description><![CDATA[${post.excerpt}]]></description>
       <link>${postUrl}</link>
       <guid isPermaLink="true">${postUrl}</guid>
-      <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+      <pubDate>${parseDate(post.date).toUTCString()}</pubDate>
       ${post.author ? `<author>${post.author.name}</author>` : ''}
       <category>${post.language === 'zh' ? 'Chinese' : 'English'}</category>
     </item>`;
