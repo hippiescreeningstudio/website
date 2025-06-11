@@ -11,6 +11,11 @@ export async function GET() {
         const siteTitle = 'Hippie Screening Studio';
         const siteDescription = 'Bringing you Asian arthouse films in Munich';
 
+        // Get the most recent post date for channel pubDate
+        const mostRecentPostDate = allPosts.length > 0
+            ? new Date(allPosts[0].date).toUTCString()
+            : new Date().toUTCString();
+
         // Generate RSS XML
         const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -21,7 +26,7 @@ export async function GET() {
     <atom:link href="${siteUrl}/api/rss" rel="self" type="application/rss+xml"/>
     <language>en</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
-    <pubDate>${new Date().toUTCString()}</pubDate>
+    <pubDate>${mostRecentPostDate}</pubDate>
     <ttl>60</ttl>
     ${allPosts.map(post => {
             const postUrl = post.language === 'zh'
