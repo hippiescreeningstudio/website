@@ -40,6 +40,7 @@ who they really are, whilst they run away from their problems during the day.
 With construction cranes looming from an encroaching metro station, the friends are forced to
 face what brought them to the party in the first place and make the most of their remaining time
 there.
+
 THE LAST YEAR OF DARKNESS is a coming-of-age film that celebrates the ephemerality of
 youth—from love to loss, from throwing up to growing up.
 
@@ -64,16 +65,19 @@ The Last Year of Darkness is a coming of age documentary about five of the frien
 while drinking and dancing in the underground party scene in Chengdu, China. The film is a
 celebration of life and a love letter to this wonderful community I've been so lucky to be a part
 of.
+
 This film is really personal to me. Funkytown is where I go to escape my problems, even if only
 for the night. It's the epicenter of the underground community in Chengdu where everyone who
 doesn't fit into conventional society can feel wild and free. Funkytown has saved our lives.
 Techno music has saved our lives. My goal for this project was to create a portrait of a
 temporary utopia and share this intimate space with a larger audience.
+
 I connect deeply with the journeys of my main characters and I hope that folks all around the
 world will too. Battling depression, questioning your sexuality, the exhaustion that comes from
 living as an artist, the struggles you face just trying to keep the lights on: these issues have
 played a part in the defining moments of my life thus far and they're central to the coming of age
 stories of each character in the documentary.
+
 By the end of the film, this magical era of Funkytown has come to an end. For reasons out of
 our protagonists' control, they have all been pushed into the next stage of their life and this film
 is meant to be a time capsule dedicated to all of the Funkytown emotion of the past. I hope that
