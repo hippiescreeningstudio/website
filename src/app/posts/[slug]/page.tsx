@@ -19,7 +19,7 @@ type Params = {
 };
 
 export default function PostPage(props: Params) {
-  const { language } = useLanguage();
+  const { language, setLanguage } = useLanguage();
   const [post, setPost] = useState<Post | null>(null);
   const [content, setContent] = useState<string>("");
   const [loading, setLoading] = useState(true);
@@ -33,6 +33,11 @@ export default function PostPage(props: Params) {
     hasEn: boolean;
     hasZh: boolean;
   }>({ hasEn: false, hasZh: false });
+
+  // Set language to English when component mounts
+  useEffect(() => {
+    setLanguage("en");
+  }, [setLanguage]);
 
   useEffect(() => {
     const getParams = async () => {

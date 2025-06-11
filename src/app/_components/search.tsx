@@ -72,7 +72,7 @@ export function Search({ onStateChange }: SearchProps) {
 
         setLoading(true);
         try {
-            const response = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}&language=${language}`);
+            const response = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}`);
             if (response.ok) {
                 const searchResults = await response.json();
                 setResults(searchResults);
@@ -178,24 +178,31 @@ export function Search({ onStateChange }: SearchProps) {
 
                         {!loading && results.length > 0 && (
                             <div className="py-2">
-                                {results.map((result) => (
-                                    <Link
-                                        key={result.slug}
-                                        href={`/posts/${result.slug}`}
-                                        onClick={handleResultClick}
-                                        className="block px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                                    >
-                                        <div className="text-sm font-medium text-black dark:text-white mb-1">
-                                            {result.title}
-                                        </div>
-                                        <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
-                                            <DateFormatter dateString={result.date} />
-                                        </div>
-                                        <div className="text-xs text-gray-600 dark:text-gray-300 line-clamp-2">
-                                            {result.excerpt}
-                                        </div>
-                                    </Link>
-                                ))}
+                                {results.map((result) => {
+                                    // Generate language-specific URL
+                                    const postUrl = result.language === "zh"
+                                        ? `/zh/posts/${result.slug}`
+                                        : `/posts/${result.slug}`;
+
+                                    return (
+                                        <Link
+                                            key={`${result.slug}-${result.language}`}
+                                            href={postUrl}
+                                            onClick={handleResultClick}
+                                            className="block px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                        >
+                                            <div className="text-sm font-medium text-black dark:text-white mb-1">
+                                                {result.title}
+                                            </div>
+                                            <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                                                <DateFormatter dateString={result.date} />
+                                            </div>
+                                            <div className="text-xs text-gray-600 dark:text-gray-300 line-clamp-2">
+                                                {result.excerpt}
+                                            </div>
+                                        </Link>
+                                    );
+                                })}
                             </div>
                         )}
                     </div>

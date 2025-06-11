@@ -3,10 +3,16 @@
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
 import { useLanguage } from "@/contexts/language-context";
+import { useEffect } from "react";
 import Image from "next/image";
 
 export default function Team() {
-    const { language } = useLanguage();
+    const { setLanguage } = useLanguage();
+
+    // Set language to English when component mounts
+    useEffect(() => {
+        setLanguage("en");
+    }, [setLanguage]);
 
     const teamMembers = [
         {
@@ -54,8 +60,6 @@ export default function Team() {
             nameZh: "Ze Huang",
             photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
         },
-
-
     ];
 
     return (
@@ -64,14 +68,11 @@ export default function Team() {
                 <Intro />
                 <section className="mb-32">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight mb-8">
-                        {language === "en" ? "Our Team" : "我们的团队"}
+                        Our Team
                     </h1>
                     <div className="prose prose-lg dark:prose-invert max-w-none">
                         <p className="text-lg leading-relaxed mb-12">
-                            {language === "en"
-                                ? "Meet the passionate individuals behind Hippie Screening Studio."
-                                : "认识嬉皮放映室的团队成员"
-                            }
+                            Meet the passionate individuals behind Hippie Screening Studio.
                         </p>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 not-prose">
@@ -96,7 +97,7 @@ export default function Team() {
                                         </div>
                                     </div>
                                     <h3 className="text-lg font-bold mb-1">
-                                        {language === "en" ? member.name : member.nameZh}
+                                        {member.name}
                                     </h3>
                                 </div>
                             ))}

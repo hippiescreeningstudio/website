@@ -2,13 +2,16 @@
 
 import { useLanguage } from "@/contexts/language-context";
 import { usePost } from "@/contexts/post-context";
+import { useRouter, usePathname } from "next/navigation";
 
 /**
  * Language switcher component that toggles between English and Chinese
  */
 export const LanguageSwitcher = () => {
-    const { language, setLanguage } = useLanguage();
+    const { language } = useLanguage();
     const { bilingualInfo, onLanguageUnavailable } = usePost();
+    const router = useRouter();
+    const pathname = usePathname();
 
     /** Toggle between English and Chinese */
     const handleLanguageSwitch = () => {
@@ -18,9 +21,7 @@ export const LanguageSwitcher = () => {
         if (bilingualInfo) {
             const hasTargetLanguage = targetLanguage === "en" ? bilingualInfo.hasEn : bilingualInfo.hasZh;
 
-            if (hasTargetLanguage) {
-                setLanguage(targetLanguage);
-            } else {
+            if (!hasTargetLanguage) {
                 // Show notification that post is only available in current language
                 const currentLangName = language === "en" ? "English" : "中文";
                 const message = language === "en"
@@ -30,10 +31,30 @@ export const LanguageSwitcher = () => {
                 if (onLanguageUnavailable) {
                     onLanguageUnavailable(message);
                 }
+                return;
+            }
+        }
+
+        // Navigate to the correct URL based on target language
+        if (targetLanguage === "zh") {
+            // Switching to Chinese
+            if (pathname.startsWith("/zh")) {
+                // Already on Chinese route, no change needed
+                return;
+            } else {
+                // Navigate to Chinese version
+                router.push(`/zh${pathname}`);
             }
         } else {
-            // Normal language switching when not in a post
-            setLanguage(targetLanguage);
+            // Switching to English
+            if (pathname.startsWith("/zh")) {
+                // Remove /zh prefix to go to English version
+                const englishPath = pathname.replace("/zh", "") || "/";
+                router.push(englishPath);
+            } else {
+                // Already on English route, no change needed
+                return;
+            }
         }
     };
 

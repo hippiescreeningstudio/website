@@ -1,9 +1,12 @@
+"use client";
+
 import Avatar from "@/app/_components/avatar";
 import CoverImage from "@/app/_components/cover-image";
 import { ImageCarousel } from "./image-carousel";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
+import { useLanguage } from "@/contexts/language-context";
 
 type Props = {
   title: string;
@@ -22,14 +25,18 @@ export function HeroPost({
   author,
   slug,
 }: Props) {
+  const { language } = useLanguage();
   const shouldUseCarousel = coverImages && coverImages.length > 1;
   const coverImage = coverImages?.[0] || "/default-cover.jpg"; // First image as cover
+
+  // Generate language-specific URL
+  const postUrl = language === "zh" ? `/zh/posts/${slug}` : `/posts/${slug}`;
 
   return (
     <section>
       <div className="mb-8 md:mb-16">
         {shouldUseCarousel ? (
-          <Link href={`/posts/${slug}`} aria-label={title}>
+          <Link href={postUrl} aria-label={title}>
             <ImageCarousel
               images={coverImages.map(img => ({ src: img, alt: title }))}
               autoplayInterval={6000}
@@ -43,7 +50,7 @@ export function HeroPost({
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
           <h3 className="mb-4 text-2xl lg:text-3xl leading-tight">
-            <Link href={`/posts/${slug}`} className="hover:underline">
+            <Link href={postUrl} className="hover:underline">
               {title}
             </Link>
           </h3>

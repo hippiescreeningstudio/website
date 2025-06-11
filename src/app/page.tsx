@@ -9,15 +9,20 @@ import { useEffect, useState } from "react";
 import { Post } from "@/interfaces/post";
 
 export default function Index() {
-  const { language } = useLanguage();
+  const { language, setLanguage } = useLanguage();
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
+
+  // Set language to English when component mounts
+  useEffect(() => {
+    setLanguage("en");
+  }, [setLanguage]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`/api/posts?language=${language}`);
+        const response = await fetch(`/api/posts?language=en`);
         if (response.ok) {
           const fetchedPosts = await response.json();
           setPosts(fetchedPosts);
@@ -34,7 +39,7 @@ export default function Index() {
     };
 
     fetchPosts();
-  }, [language]);
+  }, []);
 
   if (loading) {
     return (

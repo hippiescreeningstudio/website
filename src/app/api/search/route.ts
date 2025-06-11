@@ -4,14 +4,14 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const query = searchParams.get("q");
-    const language = searchParams.get("language") as "en" | "zh" | null;
 
     if (!query || query.trim() === "") {
         return NextResponse.json([]);
     }
 
     try {
-        const allPosts = getAllPosts(language || undefined);
+        // Get all posts without language filtering
+        const allPosts = getAllPosts();
         const searchQuery = query.toLowerCase().trim();
 
         const filteredPosts = allPosts.filter(post => {

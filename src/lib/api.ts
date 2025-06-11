@@ -110,21 +110,106 @@ export function getAllPosts(language?: "en" | "zh"): Post[] {
     const bilingualInfo = isPostBilingual(baseSlug);
     const isBilingual = bilingualInfo.hasEn && bilingualInfo.hasZh;
 
-    // If post is bilingual, only show the version that matches the current language
-    if (isBilingual && language) {
-      const languageSpecificPath = join(postsDirectory, `${baseSlug}.${language}.md`);
-      if (fs.existsSync(languageSpecificPath)) {
-        const fileContents = fs.readFileSync(languageSpecificPath, "utf8");
+    // If no language specified, include all posts
+    if (!language) {
+      // For bilingual posts, include both versions
+      if (isBilingual) {
+        // Add English version
+        if (bilingualInfo.hasEn) {
+          const enPath = join(postsDirectory, `${baseSlug}.en.md`);
+          const defaultPath = join(postsDirectory, `${baseSlug}.md`);
+          const pathToUse = fs.existsSync(enPath) ? enPath : defaultPath;
+
+          if (fs.existsSync(pathToUse)) {
+            const fileContents = fs.readFileSync(pathToUse, "utf8");
+            const { data, content } = matter(fileContents);
+            const postData: any = {
+              ...data,
+              slug: baseSlug,
+              content,
+              language: "en",
+            };
+            if (!postData.coverImage && postData.coverImages?.length > 0) {
+              postData.coverImage = postData.coverImages[0];
+            }
+            posts.push(postData as Post);
+          }
+        }
+
+        // Add Chinese version
+        if (bilingualInfo.hasZh) {
+          const zhPath = join(postsDirectory, `${baseSlug}.zh.md`);
+          if (fs.existsSync(zhPath)) {
+            const fileContents = fs.readFileSync(zhPath, "utf8");
+            const { data, content } = matter(fileContents);
+            const postData: any = {
+              ...data,
+              slug: baseSlug, // Keep the same slug
+              content,
+              language: "zh",
+            };
+            if (!postData.coverImage && postData.coverImages?.length > 0) {
+              postData.coverImage = postData.coverImages[0];
+            }
+            posts.push(postData as Post);
+          }
+        }
+      } else {
+        // For single-language posts, just add the available version
+        const fullPath = join(postsDirectory, filename);
+        const fileContents = fs.readFileSync(fullPath, "utf8");
         const { data, content } = matter(fileContents);
 
         const postData: any = {
           ...data,
           slug: baseSlug,
           content,
-          language: language,
+          language: fileLanguage,
         };
 
-        // Ensure coverImage is available from coverImages
+        if (!postData.coverImage && postData.coverImages?.length > 0) {
+          postData.coverImage = postData.coverImages[0];
+        }
+
+        posts.push(postData as Post);
+      }
+      processedSlugs.add(baseSlug);
+    } else {
+      // Original language-specific logic
+      // If post is bilingual, only show the version that matches the current language
+      if (isBilingual && language) {
+        const languageSpecificPath = join(postsDirectory, `${baseSlug}.${language}.md`);
+        if (fs.existsSync(languageSpecificPath)) {
+          const fileContents = fs.readFileSync(languageSpecificPath, "utf8");
+          const { data, content } = matter(fileContents);
+
+          const postData: any = {
+            ...data,
+            slug: baseSlug,
+            content,
+            language: language,
+          };
+
+          if (!postData.coverImage && postData.coverImages?.length > 0) {
+            postData.coverImage = postData.coverImages[0];
+          }
+
+          posts.push(postData as Post);
+          processedSlugs.add(baseSlug);
+        }
+      } else {
+        // If post is not bilingual, show it in all language modes
+        const fullPath = join(postsDirectory, filename);
+        const fileContents = fs.readFileSync(fullPath, "utf8");
+        const { data, content } = matter(fileContents);
+
+        const postData: any = {
+          ...data,
+          slug: baseSlug,
+          content,
+          language: fileLanguage,
+        };
+
         if (!postData.coverImage && postData.coverImages?.length > 0) {
           postData.coverImage = postData.coverImages[0];
         }
@@ -132,26 +217,6 @@ export function getAllPosts(language?: "en" | "zh"): Post[] {
         posts.push(postData as Post);
         processedSlugs.add(baseSlug);
       }
-    } else {
-      // If post is not bilingual, show it in all language modes
-      const fullPath = join(postsDirectory, filename);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data, content } = matter(fileContents);
-
-      const postData: any = {
-        ...data,
-        slug: baseSlug,
-        content,
-        language: fileLanguage,
-      };
-
-      // Ensure coverImage is available from coverImages
-      if (!postData.coverImage && postData.coverImages?.length > 0) {
-        postData.coverImage = postData.coverImages[0];
-      }
-
-      posts.push(postData as Post);
-      processedSlugs.add(baseSlug);
     }
   });
 
