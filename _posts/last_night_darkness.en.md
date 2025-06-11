@@ -6,11 +6,9 @@ date: "2025-06-10T"
 ogImage:
   url: "/assets/blog/last_night/tlyod_1.jpg"
 ---
-In celebration of Pride Month 🌈, join us for a special CSD screening and Q&A with the director Ben Mullinkosson.
+In celebration of Pride Month, join us for a special <span class="pride-month-rainbow">CSD</span> screening and Q&A with the director Ben Mullinkosson.
 
-## About the film
-
-
+**About the film**
 
 | Film Details| |
 |---|---|
@@ -23,7 +21,7 @@ In celebration of Pride Month 🌈, join us for a special CSD screening and Q&A 
 
 | Screening Info | |
 |---|---|
-| Time | Sunday, June 22, 13:00 |
+| Time | Sun June 22 13:00 |
 | Cinema | Neues Rottmann (Rottmannstraße 15, 80333 München) |
 | Ticket Price | 13€, 12€ for students |
 | Tickets | Buy [<strong style="color: #003d82; text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness) or at the box office |

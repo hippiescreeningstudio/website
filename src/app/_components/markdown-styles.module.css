@@ -56,3 +56,19 @@
 .markdown table tr:nth-child(even) {
   @apply bg-gray-50 dark:bg-gray-900;
 }
+
+/* Rainbow Pride Month styling */
+.markdown .pride-month-rainbow {
+  background: linear-gradient(45deg,
+      #e40303 0%,
+      #ff8c00 16.66%,
+      #ffed00 33.33%,
+      #008018 50%,
+      #0066ff 66.66%,
+      #8b00ff 83.33%,
+      #e40303 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}

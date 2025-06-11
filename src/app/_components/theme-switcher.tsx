@@ -86,7 +86,7 @@ const Switch = () => {
       onClick={handleModeSwitch}
       aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
     >
-      {mode === "dark" ? (
+      {mode === "light" ? (
         // Moon icon for dark mode
         <svg
           className="w-5 h-5"

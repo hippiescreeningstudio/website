@@ -84,9 +84,9 @@ export function Intro() {
       <section className="sticky top-0 z-50 bg-white dark:bg-black transition-all duration-300 -ml-5 -mr-5">
         <div className="relative">
           <div className="container mx-auto px-5">
-            <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-0.5 min-h-[32px]' : 'py-4 md:py-6'
+            <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-1 min-h-[32px]' : 'py-2 md:py-2'
               }`}>
-              <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'pl-2 md:-ml-2' : 'pl-3 md:-ml-3'}`}>
+              <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'pl-2 md:-ml-2' : 'pl-1 md:-ml-3'}`}>
                 {/* Logo for light mode */}
                 <Link href="/" className={`block dark:hidden hover:opacity-80 transition-all duration-300 ${isScrolled ? 'mr-1.5' : 'mr-3 md:mr-4'
                   }`}>
@@ -155,7 +155,7 @@ export function Intro() {
 
           {/* Mobile Navigation - positioned absolutely to reach the edge */}
           <nav className="md:hidden absolute top-0 right-0 h-full flex items-center" ref={mobileNavRef}>
-            <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-1.5 -mr-1' : 'space-x-1 -mr-1'
+            <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-1.5 mr-1' : 'space-x-1 mr-1'
               }`}>
               {/* Hamburger Button */}
               <button

@@ -7,9 +7,9 @@ ogImage:
   url: "/assets/blog/last_night/tlyod_1.jpg"
 ---
 
-我们邀请您观看CSD🌈特别放映，并与导演Ben Mullinkosson映后交流。
+我们邀请您观看<span class="pride-month-rainbow">CSD</span>特别放映，并与导演Ben Mullinkosson映后交流。
 
-## 关于影片
+**关于影片**
 
 
 

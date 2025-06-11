@@ -2,7 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global rainbow pride styling */
+.pride-month-rainbow {
+    background: linear-gradient(45deg,
+            #e40303 0%,
+            #ff8c00 16.66%,
+            #ffed00 33.33%,
+            #008018 50%,
+            #0066ff 66.66%,
+            #8b00ff 83.33%,
+            #e40303 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: normal;
+    display: inline;
+}
+
+/* Dark mode adjustments */
+:root.dark {
+    color-scheme: dark;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
 @layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
     .line-clamp-2 {
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -11,30 +44,151 @@
     }
 }
 
+/* Global styles for blog content */
+/* Ensure images in markdown content are responsive */
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Base styling for blog content */
+article {
+    line-height: 1.6;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+article p {
+    margin-bottom: 1em;
+}
+
+article ul,
+article ol {
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+}
+
+article li {
+    margin-bottom: 0.25em;
+}
+
+article blockquote {
+    border-left: 4px solid #e5e7eb;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #6b7280;
+}
+
+:root.dark article blockquote {
+    border-left-color: #374151;
+    color: #9ca3af;
+}
+
+/* Strong/Bold text styling */
+article strong {
+    font-weight: 700;
+}
+
+/* Table styling */
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+article th,
+article td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+:root.dark article th,
+:root.dark article td {
+    border-color: #374151;
+}
+
+article th {
+    background-color: #f9fafb;
+    font-weight: normal;
+}
+
+:root.dark article th {
+    background-color: #1f2937;
+}
+
+/* Responsive images */
+article .responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+/* Special content styling */
+article figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Responsive image sizing */
+@media (min-width: 640px) {
+    figure img {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    figure img {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    figure img {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1280px) {
+    figure img {
+        width: 60%;
+    }
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+:root.dark figcaption {
+    color: #9ca3af;
+}
+
 @layer components {
-    .rainbow-text {
-        font-weight: bold !important;
-        display: inline-block !important;
-    }
-
-    .rainbow-c {
-        color: #e40303 !important;
-        /* Red */
-        font-weight: bold !important;
-    }
-
-    .rainbow-s {
-        color: #ff8c00 !important;
-        /* Orange */
-        font-weight: bold !important;
-    }
-
-    .rainbow-d {
-        color: #008018 !important;
-        /* Green */
-        font-weight: bold !important;
-    }
-
     .blue-link-text {
         color: #003d82 !important;
         font-weight: bold !important;
@@ -51,7 +205,7 @@
 
     table th,
     table td {
-        border: 1px solid #e5e7eb;
+        border: 1px solid #fcfcfc00;
         padding: 0.75rem;
         text-align: left;
     }
@@ -68,6 +222,7 @@
 
     table th {
         background-color: #f9fafb;
+        font-weight: normal;
     }
 
     table tr:nth-child(even) {
@@ -83,6 +238,7 @@
     :root.dark table th {
         background-color: #000000;
         color: #f9fafb;
+        font-weight: normal;
     }
 
     :root.dark table tr:nth-child(even) {
@@ -101,39 +257,6 @@
     figure {
         margin: 1.5rem 0;
         text-align: center;
-    }
-
-    figure img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    /* Responsive image sizing */
-    @media (min-width: 640px) {
-        figure img {
-            width: 90%;
-        }
-    }
-
-    @media (min-width: 768px) {
-        figure img {
-            width: 80%;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        figure img {
-            width: 70%;
-        }
-    }
-
-    @media (min-width: 1280px) {
-        figure img {
-            width: 60%;
-        }
     }
 
     figcaption {

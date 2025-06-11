@@ -7,5 +7,7 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkGfm)
     .use(html, { sanitize: false })
     .process(markdown);
-  return result.toString();
+
+
+  return result.toString()
 }
