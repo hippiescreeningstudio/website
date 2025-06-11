@@ -3,8 +3,23 @@
   "short_name": "HSS",
   "icons": [
     {
-      "src": "/favicons/logo_white_l.png",
-      "sizes": "205x205",
+      "src": "/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/apple-touch-icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/logo_white_32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon/logo_white_16.png",
+      "sizes": "16x16",
       "type": "image/png"
     }
   ],
