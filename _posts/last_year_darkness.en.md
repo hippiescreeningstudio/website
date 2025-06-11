@@ -1,14 +1,14 @@
 ---
-title: "Special CSD Screening: The Last Year of Darkness"
+title: "Special CSD Screening: The Last Year of Darkness 午夜出走"
 excerpt: "A vibrant documentary exploring five years inside Chengdu's underground club scene. Through the lens of DJs, drag queens, skaters, and artists at the legendary Funky Town, this film captures a generation's pursuit of identity, freedom, and connection-against the backdrop of a rapidly transforming city."
 coverImages:
-  - "/assets/blog/last_night/tlyod_1.jpg"
-  - "/assets/blog/last_night/tlyod_2.jpg"
-  - "/assets/blog/last_night/tlyod_3.jpg"
-  - "/assets/blog/last_night/tlyod_4.jpg"
+  - "/assets/blog/last_year/tlyod_1.jpg"
+  - "/assets/blog/last_year/tlyod_2.jpg"
+  - "/assets/blog/last_year/tlyod_3.jpg"
+  - "/assets/blog/last_year/tlyod_4.jpg"
 date: "2025-06-10T"
 ogImage:
-  url: "/assets/blog/last_night/tlyod_1.jpg"
+  url: "/assets/blog/last_year/tlyod_1.jpg"
 ---
 In celebration of Pride Month, join us for a special <span class="pride-month-rainbow">CSD</span> screening and Q&A with the director Ben Mullinkosson.
 
@@ -21,17 +21,17 @@ In celebration of Pride Month, join us for a special <span class="pride-month-ra
 | Genre| Documentary |
 | Year| 2023 |
 | Runtime| 95 minutes |
-| Language| Chinese with English subtitles (OmeU) |
 
 | Screening Info | |
 |---|---|
 | Time | Sun June 22 13:00 |
 | Cinema | Neues Rottmann (Rottmannstraße 15, 80333 München) |
+| Language| Chinese with English subtitles (OmeU) |
 | Ticket Price | 13€, 12€ for students |
 | Tickets | Buy [<strong style="color: #003d82; text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness) or at the box office |
 
 <figure>
-  <img src="/assets/blog/last_night/poster.jpg" alt="The Last Year of Darkness" />
+  <img src="/assets/blog/last_year/poster.jpg" alt="The Last Year of Darkness" />
   <figcaption>The Last Year of Darkness</figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ youth—from love to loss, from throwing up to growing up.
 **About the director**
 
 <figure>
-  <img src="/assets/blog/last_night/BenMullinkosson.JPG" alt="Ben Mullinkosson" />
+  <img src="/assets/blog/last_year/BenMullinkosson.JPG" alt="Ben Mullinkosson" />
   <figcaption>Ben Mullinkosson</figcaption>
 </figure>
 

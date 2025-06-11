@@ -2,13 +2,13 @@
 title: "CSD特别放映: 午夜出走"
 excerpt: "本片聚焦成都地下俱乐部「方糖Funky Town」，记录五年间一群年轻人——DJ、变装皇后、滑板少年、音乐人——在城市夜色中寻找自我、释放情绪、建立联系的真实故事。在迷幻灯光与电子音乐中，他们体验青春的张力，也直面城市变迁带来的文化冲击与空间压缩。"
 coverImages:
-  - "/assets/blog/last_night/tlyod_1.jpg"
-  - "/assets/blog/last_night/tlyod_2.jpg"
-  - "/assets/blog/last_night/tlyod_3.jpg"
-  - "/assets/blog/last_night/tlyod_4.jpg"
+  - "/assets/blog/last_year/tlyod_1.jpg"
+  - "/assets/blog/last_year/tlyod_2.jpg"
+  - "/assets/blog/last_year/tlyod_3.jpg"
+  - "/assets/blog/last_year/tlyod_4.jpg"
 date: "2025-06-10T"
 ogImage:
-  url: "/assets/blog/last_night/tlyod_1.jpg"
+  url: "/assets/blog/last_year/tlyod_1.jpg"
 ---
 
 我们邀请您观看<span class="pride-month-rainbow">CSD</span>特别放映，并与导演Ben Mullinkosson映后交流。
@@ -22,17 +22,17 @@ ogImage:
 | 类型| 纪录片 |
 | 年份 | 2023 |
 | 时长| 95分钟 |
-| 语言| 中声英字 (OmeU) |
 
 | 放映信息 | |
 |---|---|
 | 时间 | 周日，6月22日，13:00 |
 | 影院 | Neues Rottmann (Rottmannstraße 15, 80333 München) |
+| 语言| 中声英字 (OmeU) |
 | 票价 | 13€， 学生票12€|
 | 购票 | [<strong style="color: #003d82; text-decoration: underline;">在线购票</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness)或现场购票 |
 
 <figure>
-  <img src="/assets/blog/last_night/poster.jpg" alt="The Last Year of Darkness" />
+  <img src="/assets/blog/last_year/poster.jpg" alt="The Last Year of Darkness" />
   <figcaption>午夜出走</figcaption>
 </figure>
 
@@ -51,7 +51,7 @@ ogImage:
 **关于导演**
 
 <figure>
-  <img src="/assets/blog/last_night/BenMullinkosson.JPG" alt="Ben Mullinkosson" />
+  <img src="/assets/blog/last_year/BenMullinkosson.JPG" alt="Ben Mullinkosson" />
   <figcaption>Ben Mullinkosson</figcaption>
 </figure>
 
