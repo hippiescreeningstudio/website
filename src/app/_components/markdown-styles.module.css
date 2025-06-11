@@ -72,3 +72,12 @@
   background-clip: text;
   font-weight: bold;
 }
+
+/* Carousel styling */
+.markdown .image-carousel {
+  @apply my-8;
+}
+
+.markdown .image-carousel figure {
+  @apply m-0;
+}

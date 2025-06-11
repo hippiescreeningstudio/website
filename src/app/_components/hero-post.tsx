@@ -1,12 +1,13 @@
 import Avatar from "@/app/_components/avatar";
 import CoverImage from "@/app/_components/cover-image";
+import { ImageCarousel } from "./image-carousel";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
 
 type Props = {
   title: string;
-  coverImage: string;
+  coverImages: string[];
   date: string;
   excerpt: string;
   author?: Author;
@@ -15,16 +16,29 @@ type Props = {
 
 export function HeroPost({
   title,
-  coverImage,
+  coverImages,
   date,
   excerpt,
   author,
   slug,
 }: Props) {
+  const shouldUseCarousel = coverImages && coverImages.length > 1;
+  const coverImage = coverImages?.[0] || "/default-cover.jpg"; // First image as cover
+
   return (
     <section>
       <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
+        {shouldUseCarousel ? (
+          <Link href={`/posts/${slug}`} aria-label={title}>
+            <ImageCarousel
+              images={coverImages.map(img => ({ src: img, alt: title }))}
+              autoplayInterval={6000}
+              className="rounded-lg overflow-hidden hover:opacity-90 transition-opacity duration-200"
+            />
+          </Link>
+        ) : (
+          <CoverImage title={title} src={coverImage} slug={slug} />
+        )}
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>

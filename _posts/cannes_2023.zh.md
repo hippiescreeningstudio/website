@@ -1,10 +1,11 @@
 ---
 title: "2023年第76届戛纳电影节精选片单"
 excerpt: "我们从看过的几十部影片中精心为大家挑选了一些展映影片，每部推荐影片均附有评分及推荐语"
-coverImage: "/assets/blog/images/cannes_23.jpg"
+coverImages:
+- "/assets/blog/images/cannes_23.jpg"
 date: "2023-05-16T"
 ogImage:
-  url: "/assets/blog/images/cannes_23.jpg"
+  url: "/assets/blog/images/cannes_23.jpg" 
 ---
 
 2023年第76届戛纳电影节已于5月16日至5月27日在法国海滨小城戛纳(Cannes)顺利举行。"706慕尼黑×嬉皮公社"嬉皮放映室选片组的几位成员有幸部分或全程参与了此次电影节。我们从看过的几十部影片中精心为大家挑选了一些展映影片，每部推荐影片均附有评分及推荐语。

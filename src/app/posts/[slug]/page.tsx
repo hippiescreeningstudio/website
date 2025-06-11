@@ -142,7 +142,7 @@ export default function PostPage(props: Params) {
         <article className="mb-32">
           <PostHeader
             title={post.title}
-            coverImage={post.coverImage}
+            coverImages={post.coverImages}
             date={post.date}
             author={post.author}
           />

@@ -1,7 +1,11 @@
 ---
 title: "Special CSD Screening: The Last Year of Darkness"
 excerpt: "A vibrant documentary exploring five years inside Chengdu's underground club scene. Through the lens of DJs, drag queens, skaters, and artists at the legendary Funky Town, this film captures a generation's pursuit of identity, freedom, and connection-against the backdrop of a rapidly transforming city."
-coverImage: "/assets/blog/last_night/tlyod_1.jpg"
+coverImages:
+  - "/assets/blog/last_night/tlyod_1.jpg"
+  - "/assets/blog/last_night/tlyod_2.jpg"
+  - "/assets/blog/last_night/tlyod_3.jpg"
+  - "/assets/blog/last_night/tlyod_4.jpg"
 date: "2025-06-10T"
 ogImage:
   url: "/assets/blog/last_night/tlyod_1.jpg"
@@ -26,10 +30,6 @@ In celebration of Pride Month, join us for a special <span class="pride-month-ra
 | Ticket Price | 13€, 12€ for students |
 | Tickets | Buy [<strong style="color: #003d82; text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness) or at the box office |
 
-<figure>
-  <img src="/assets/blog/last_night/poster.jpg" alt="The Last Year of Darkness" />
-  <figcaption>The Last Year of Darkness</figcaption>
-</figure>
 
 **Synopsis**
 

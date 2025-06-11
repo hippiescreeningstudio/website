@@ -1,7 +1,8 @@
 ---
 title: "Monthly Program 2023/10&12: Hu Bo, An Elephant Sitting Still"
 excerpt: "Four people in a Chinese city live through a complicated day as their lives intersect."
-coverImage: "/assets/blog/images/elephant.jpg"
+coverImages:
+  - "/assets/blog/images/elephant.jpg"
 date: "2023-10-14T"
 ogImage:
   url: "/assets/blog/images/elephant.jpg"

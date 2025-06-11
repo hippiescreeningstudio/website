@@ -75,7 +75,7 @@ export default function Index() {
         <Intro />
         <HeroPost
           title={heroPost.title}
-          coverImage={heroPost.coverImage}
+          coverImages={heroPost.coverImages}
           date={heroPost.date}
           author={heroPost.author}
           slug={heroPost.slug}

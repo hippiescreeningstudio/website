@@ -6,7 +6,7 @@ import DateFormatter from "./date-formatter";
 
 type Props = {
   title: string;
-  coverImage: string;
+  coverImages: string[];
   date: string;
   excerpt: string;
   author?: Author;
@@ -15,12 +15,14 @@ type Props = {
 
 export function PostPreview({
   title,
-  coverImage,
+  coverImages,
   date,
   excerpt,
   author,
   slug,
 }: Props) {
+  const coverImage = coverImages?.[0] || "/default-cover.jpg"; // First image as cover
+
   return (
     <div>
       <div className="mb-5">

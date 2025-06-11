@@ -43,7 +43,14 @@ export function getPostBySlug(slug: string, language?: "en" | "zh") {
     if (fs.existsSync(languageSpecificPath)) {
       const fileContents = fs.readFileSync(languageSpecificPath, "utf8");
       const { data, content } = matter(fileContents);
-      return { ...data, slug, content, language } as Post;
+
+      // Ensure coverImage is available from coverImages
+      const postData: any = { ...data, slug, content, language };
+      if (!postData.coverImage && postData.coverImages?.length > 0) {
+        postData.coverImage = postData.coverImages[0];
+      }
+
+      return postData as Post;
     }
   }
 
@@ -52,7 +59,14 @@ export function getPostBySlug(slug: string, language?: "en" | "zh") {
   if (fs.existsSync(defaultPath)) {
     const fileContents = fs.readFileSync(defaultPath, "utf8");
     const { data, content } = matter(fileContents);
-    return { ...data, slug, content, language: "en" } as Post;
+
+    // Ensure coverImage is available from coverImages
+    const postData: any = { ...data, slug, content, language: "en" };
+    if (!postData.coverImage && postData.coverImages?.length > 0) {
+      postData.coverImage = postData.coverImages[0];
+    }
+
+    return postData as Post;
   }
 
   // For single-language posts, if the requested language doesn't exist,
@@ -64,7 +78,14 @@ export function getPostBySlug(slug: string, language?: "en" | "zh") {
     if (fs.existsSync(otherLanguagePath)) {
       const fileContents = fs.readFileSync(otherLanguagePath, "utf8");
       const { data, content } = matter(fileContents);
-      return { ...data, slug, content, language: otherLanguage } as Post;
+
+      // Ensure coverImage is available from coverImages
+      const postData: any = { ...data, slug, content, language: otherLanguage };
+      if (!postData.coverImage && postData.coverImages?.length > 0) {
+        postData.coverImage = postData.coverImages[0];
+      }
+
+      return postData as Post;
     }
   }
 
@@ -95,12 +116,20 @@ export function getAllPosts(language?: "en" | "zh"): Post[] {
       if (fs.existsSync(languageSpecificPath)) {
         const fileContents = fs.readFileSync(languageSpecificPath, "utf8");
         const { data, content } = matter(fileContents);
-        posts.push({
+
+        const postData: any = {
           ...data,
           slug: baseSlug,
           content,
           language: language,
-        } as Post);
+        };
+
+        // Ensure coverImage is available from coverImages
+        if (!postData.coverImage && postData.coverImages?.length > 0) {
+          postData.coverImage = postData.coverImages[0];
+        }
+
+        posts.push(postData as Post);
         processedSlugs.add(baseSlug);
       }
     } else {
@@ -109,12 +138,19 @@ export function getAllPosts(language?: "en" | "zh"): Post[] {
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data, content } = matter(fileContents);
 
-      posts.push({
+      const postData: any = {
         ...data,
         slug: baseSlug,
         content,
         language: fileLanguage,
-      } as Post);
+      };
+
+      // Ensure coverImage is available from coverImages
+      if (!postData.coverImage && postData.coverImages?.length > 0) {
+        postData.coverImage = postData.coverImages[0];
+      }
+
+      posts.push(postData as Post);
       processedSlugs.add(baseSlug);
     }
   });

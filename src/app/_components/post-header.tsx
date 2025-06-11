@@ -1,17 +1,22 @@
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
+import { ImageCarousel } from "./image-carousel";
 import DateFormatter from "./date-formatter";
 import { PostTitle } from "@/app/_components/post-title";
 import { type Author } from "@/interfaces/author";
 
 type Props = {
   title: string;
-  coverImage: string;
+  coverImages: string[];
   date: string;
   author?: Author;
 };
 
-export function PostHeader({ title, coverImage, date, author }: Props) {
+export function PostHeader({ title, coverImages, date, author }: Props) {
+  // Use carousel if multiple images are provided
+  const shouldUseCarousel = coverImages && coverImages.length > 1;
+  const coverImage = coverImages?.[0] || "/default-cover.jpg"; // First image as cover
+
   return (
     <>
       <div className="mt-8 md:mt-12">
@@ -23,7 +28,15 @@ export function PostHeader({ title, coverImage, date, author }: Props) {
         </div>
       )}
       <div className="mb-4 md:mb-8 sm:mx-0">
-        <CoverImage title={title} src={coverImage} />
+        {shouldUseCarousel ? (
+          <ImageCarousel
+            images={coverImages.map(img => ({ src: img, alt: title }))}
+            autoplayInterval={5000}
+            className="rounded-lg overflow-hidden"
+          />
+        ) : (
+          <CoverImage title={title} src={coverImage} />
+        )}
       </div>
       <div className="max-w-2xl mx-auto">
         {author && (

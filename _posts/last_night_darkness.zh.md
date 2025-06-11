@@ -1,7 +1,11 @@
 ---
 title: "CSD特殊放映: 午夜出走"
 excerpt: "本片聚焦成都地下俱乐部「方糖Funky Town」，记录五年间一群年轻人——DJ、变装皇后、滑板少年、音乐人——在城市夜色中寻找自我、释放情绪、建立联系的真实故事。在迷幻灯光与电子音乐中，他们体验青春的张力，也直面城市变迁带来的文化冲击与空间压缩。"
-coverImage: "/assets/blog/last_night/tlyod_1.jpg"
+coverImages:
+  - "/assets/blog/last_night/tlyod_1.jpg"
+  - "/assets/blog/last_night/tlyod_2.jpg"
+  - "/assets/blog/last_night/tlyod_3.jpg"
+  - "/assets/blog/last_night/tlyod_4.jpg"
 date: "2025-06-10T"
 ogImage:
   url: "/assets/blog/last_night/tlyod_1.jpg"
