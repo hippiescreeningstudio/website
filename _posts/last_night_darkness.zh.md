@@ -38,6 +38,9 @@ ogImage:
   <figcaption>午夜出走</figcaption>
 </figure>
 
+**观看预告**
+
+<div class="youtube-embed" data-video-id="NtGIKQHlRvU" data-title="The Last Year of Darkness - Official Trailer"></div>
 **剧情简介**
 
 随着成都城市面貌的不断变化，备受喜爱的夜店「方糖 Funky Town」命运未卜。这里曾是地下派对的避风港，一群DJ、变装皇后、恋人、狂欢者和滑板少年在此闪耀夜色，释放自我，摆脱白天的束缚。

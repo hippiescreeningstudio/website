@@ -18,7 +18,6 @@ export function YouTubeEmbed({
     width = 560,
     height = 315,
     autoplay = false,
-    showTitle = true,
     className = ""
 }: Props) {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -61,8 +60,8 @@ export function YouTubeEmbed({
 
     if (hasError) {
         return (
-            <div className={`my-6 ${className}`}>
-                <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-8 text-center">
+            <div className={`${className}`}>
+                <div className="bg-transparent rounded-lg p-8 text-center">
                     <div className="text-gray-500 dark:text-gray-400 mb-2">
                         <svg className="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -76,23 +75,19 @@ export function YouTubeEmbed({
     }
 
     return (
-        <div className={`my-6 ${className}`}>
-            {showTitle && title && (
-                <h3 className="text-lg font-semibold mb-3 text-center">{title}</h3>
-            )}
-
-            <div className="relative w-full" style={{ aspectRatio: `${width}/${height}` }}>
+        <div className={`${className}`}>
+            <div className="relative w-full bg-transparent" style={{ aspectRatio: `${width}/${height}` }}>
                 {!isLoaded ? (
                     // Thumbnail with play button overlay
-                    <div className="relative w-full h-full bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden cursor-pointer group">
+                    <div className="relative w-full h-full bg-transparent overflow-hidden cursor-pointer group">
                         <img
                             src={thumbnailUrl}
                             alt={title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover bg-transparent"
                             onError={handleError}
                         />
                         {/* Dark overlay */}
-                        <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-200" />
+                        <div className="absolute inset-0  bg-transparent group-hover:bg-opacity-20 transition-all duration-200" />
 
                         {/* Play button */}
                         <button
@@ -122,7 +117,7 @@ export function YouTubeEmbed({
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
-                        className="rounded-lg"
+                        className="rounded-lg bg-transparent"
                     />
                 )}
             </div>
@@ -135,7 +130,6 @@ export function YouTubeEmbed({
                     rel="noopener noreferrer"
                     className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
                 >
-                    Watch on YouTube ↗
                 </a>
             </div>
         </div>

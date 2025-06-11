@@ -68,7 +68,7 @@ export function ImageCarousel({
     return (
         <figure className={`relative ${className}`}>
             {/* Main carousel container */}
-            <div className="relative overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800">
+            <div className="relative overflow-hidden rounded-lg bg-transparent">
                 {/* Images container */}
                 <div
                     className="flex transition-transform duration-500 ease-in-out"

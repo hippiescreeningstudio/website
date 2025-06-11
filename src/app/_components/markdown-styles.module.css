@@ -75,9 +75,24 @@
 
 /* Carousel styling */
 .markdown .image-carousel {
-  @apply my-8;
+  @apply my-0;
 }
 
 .markdown .image-carousel figure {
   @apply m-0;
+}
+
+/* YouTube embed styling */
+.markdown .youtube-embed {
+  @apply my-0;
+}
+
+.markdown .youtube-embed iframe {
+  @apply w-full rounded-lg;
+}
+
+/* Override global figure margins for embedded media */
+.markdown figure:has(.image-carousel),
+.markdown .youtube-embed {
+  margin: 0 !important;
 }
