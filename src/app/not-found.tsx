@@ -37,7 +37,7 @@ export default function NotFound() {
                         <div className="flex items-center justify-center text-black dark:text-white mb-4">
                             <span className="font-bold text-3xl md:text-3xl">404</span>
                             <div className="h-10 w-px bg-black dark:bg-white mx-4"></div>
-                            <span className="text-lg md:text-lg">{language === "en" ? "Page Not Found" : "页面未找到"}</span>
+                            <span className="text-lg md:text-lg">{"Page Not Found"}</span>
                         </div>
                     </div>
 
@@ -45,13 +45,10 @@ export default function NotFound() {
                     <div className="bg-transparent">
                         <div className="flex items-center justify-center gap-2 text-black dark:text-white text-lg md:text-lg">
                             <span>
-                                {language === "en"
-                                    ? "Redirecting to homepage in"
-                                    : "将在以下时间后跳转到首页"
-                                }
+                                {"Redirecting to homepage in"}
                             </span>
                             <span>{countdown}</span>
-                            <span>{language === "en" ? "seconds" : "秒"}</span>
+                            <span>{"seconds"}</span>
                         </div>
                     </div>
 
