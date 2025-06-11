@@ -55,6 +55,19 @@ export function Footer() {
                   height={24}
                 />
               </a>
+              <a
+                href="/rss.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:opacity-75 transition-opacity"
+              >
+                <Image
+                  src="/favicon/rss_logo.svg"
+                  alt="RSS Feed"
+                  width={24}
+                  height={24}
+                />
+              </a>
             </div>
           </div>
           <div className="flex flex-col items-center w-full lg:w-auto">

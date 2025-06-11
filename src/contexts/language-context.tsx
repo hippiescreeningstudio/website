@@ -28,6 +28,10 @@ const translations = {
         "search.placeholder": "Search posts...",
         "search.loading": "Searching...",
         "search.noResults": "No results found",
+        "rss.subscribe": "Subscribe to RSS",
+        "rss.description": "Get notified of new posts via RSS feed",
+        "rss.button": "Subscribe",
+        "rss.copy": "Copy RSS URL",
     },
     zh: {
         "nav.about": "关于我们",
@@ -43,6 +47,10 @@ const translations = {
         "search.placeholder": "搜索文章...",
         "search.loading": "搜索中...",
         "search.noResults": "未找到相关结果",
+        "rss.subscribe": "订阅 RSS",
+        "rss.description": "通过 RSS 订阅获取最新文章通知",
+        "rss.button": "订阅",
+        "rss.copy": "复制 RSS 链接",
     },
 };
 

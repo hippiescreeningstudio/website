@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ThemeSwitcher } from "./theme-switcher";
+import { LanguageSwitcher } from "./language-switcher";
+import { RSSIcon } from "./rss-icon";
 
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +17,9 @@ export function Navigation() {
         <nav className="relative top-0 right-0 mb-8">
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center justify-end space-x-6">
-                <div className="mr-4">
+                <div className="flex items-center space-x-2 mr-4">
+                    <RSSIcon />
+                    <LanguageSwitcher />
                     <ThemeSwitcher />
                 </div>
                 <Link
@@ -34,6 +38,8 @@ export function Navigation() {
 
             {/* Mobile Navigation */}
             <div className="md:hidden flex items-center justify-end space-x-2">
+                <RSSIcon />
+                <LanguageSwitcher />
                 <ThemeSwitcher />
                 {/* Hamburger Button */}
                 <button
