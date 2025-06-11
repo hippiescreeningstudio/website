@@ -18,24 +18,24 @@
 }
 
 .markdown img {
-  @apply max-w-sm mx-auto my-6 block;
+  @apply max-w-full h-auto mx-auto my-6 block;
 }
 
 /* Custom image size classes */
 .markdown .img-small {
-  @apply w-48 mx-auto my-6 block;
+  @apply max-w-sm mx-auto my-6 block h-auto;
 }
 
 .markdown .img-medium {
-  @apply w-80 mx-auto my-6 block;
+  @apply max-w-md mx-auto my-6 block h-auto;
 }
 
 .markdown .img-large {
-  @apply w-96 mx-auto my-6 block;
+  @apply max-w-2xl mx-auto my-6 block h-auto;
 }
 
 .markdown .img-full {
-  @apply w-full mx-auto my-6 block;
+  @apply w-full mx-auto my-6 block h-auto;
 }
 
 /* Table styles */
