@@ -3,7 +3,7 @@ title: "Monthly Program 2023/11: Lou Ye, Suzhou River, 4K digital "
 excerpt: "「Beim Drehen von ‚Suzhou River‘ hatte ich zum ersten Mal das Gefühl von Freiheit. Ich konnte alle technischen Probleme und Ausdrucksprobleme vergessen und mich nur auf die Erzählung selbst, nur auf die interessanten Details konzentrieren…」— Lou Ye"
 coverImages:
 - "/assets/blog/images/suzhou_river.jpg"
-date: "2023-11-25T"
+date: "2023-11-25T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/images/suzhou_river.jpg"
 ---

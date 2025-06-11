@@ -3,7 +3,7 @@ title: "月度放映-2023/10&12: 胡波《大象席地而坐》"
 excerpt: "「满州里动物园有一头大象，每天坐在那里。」"
 coverImages:
   - "/assets/blog/images/elephant.jpg"
-date: "2023-10-14T"
+date: "2023-10-14T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/images/elephant.jpg"
 ---
