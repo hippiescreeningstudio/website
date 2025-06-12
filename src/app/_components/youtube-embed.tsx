@@ -75,19 +75,20 @@ export function YouTubeEmbed({
     }
 
     return (
-        <div className={`${className}`}>
-            <div className="relative w-full bg-transparent" style={{ aspectRatio: `${width}/${height}` }}>
+        <div className={`${className} m-0 p-0`} style={{ margin: 0, padding: 0 }}>
+            <div className="relative w-full bg-transparent m-0 p-0" style={{ aspectRatio: `${width}/${height}`, margin: 0, padding: 0 }}>
                 {!isLoaded ? (
                     // Thumbnail with play button overlay
-                    <div className="relative w-full h-full bg-transparent overflow-hidden cursor-pointer group">
+                    <div className="relative w-full h-full bg-transparent overflow-hidden cursor-pointer group m-0 p-0" style={{ margin: 0, padding: 0 }}>
                         <img
                             src={thumbnailUrl}
                             alt={title}
-                            className="w-full h-full object-cover bg-transparent"
+                            className="w-full h-full object-cover bg-transparent m-0 p-0"
+                            style={{ margin: 0, padding: 0, display: 'block' }}
                             onError={handleError}
                         />
                         {/* Dark overlay */}
-                        <div className="absolute inset-0  bg-transparent group-hover:bg-opacity-20 transition-all duration-200" />
+                        <div className="absolute inset-0 bg-transparent group-hover:bg-opacity-20 transition-all duration-200" />
 
                         {/* Play button */}
                         <button
@@ -117,20 +118,10 @@ export function YouTubeEmbed({
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
-                        className="rounded-lg bg-transparent"
+                        className="bg-transparent m-0 p-0"
+                        style={{ margin: 0, padding: 0, display: 'block' }}
                     />
                 )}
-            </div>
-
-            {/* Video info */}
-            <div className="mt-3 text-center">
-                <a
-                    href={`https://www.youtube.com/watch?v=${cleanVideoId}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
-                >
-                </a>
             </div>
         </div>
     );

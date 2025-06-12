@@ -85,10 +85,26 @@
 /* YouTube embed styling */
 .markdown .youtube-embed {
   @apply my-0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .markdown .youtube-embed iframe {
   @apply w-full rounded-lg;
+}
+
+/* Override any inherited margins/padding for YouTube embeds */
+.markdown .youtube-embed,
+.markdown .youtube-embed * {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.markdown .youtube-embed img {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
 }
 
 /* Override global figure margins for embedded media */
