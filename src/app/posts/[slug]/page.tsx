@@ -11,6 +11,7 @@ import { PostProvider } from "@/contexts/post-context";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
 import { Post } from "@/interfaces/post";
+import { Footer } from "@/app/_components/footer";
 
 type Params = {
   params: Promise<{
@@ -136,26 +137,27 @@ export default function PostPage(props: Params) {
   }
 
   return (
-    <main style={{ backgroundColor: post.backgroundColor || undefined }}>
-      <Container>
-        <PostProvider
-          slug={slug}
-          backgroundColor={post.backgroundColor}
-          bilingualInfo={bilingualInfo}
-          onLanguageUnavailable={handleLanguageUnavailable}
-        >
+    <main style={{ backgroundColor: post.backgroundColor || undefined, minHeight: '100vh' }}>
+      <PostProvider
+        slug={slug}
+        backgroundColor={post.backgroundColor}
+        bilingualInfo={bilingualInfo}
+        onLanguageUnavailable={handleLanguageUnavailable}
+      >
+        <Container>
           <Intro />
-        </PostProvider>
-        <article className="mb-32">
-          <PostHeader
-            title={post.title}
-            coverImages={post.coverImages}
-            date={post.date}
-            author={post.author}
-          />
-          <PostBody content={content} />
-        </article>
-      </Container>
+          <article className="mb-32">
+            <PostHeader
+              title={post.title}
+              coverImages={post.coverImages}
+              date={post.date}
+              author={post.author}
+            />
+            <PostBody content={content} />
+          </article>
+        </Container>
+        <Footer />
+      </PostProvider>
       <Notification
         message={notification.message}
         isVisible={notification.isVisible}

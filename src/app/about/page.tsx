@@ -2,6 +2,7 @@
 
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
+import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect } from "react";
 
@@ -37,6 +38,7 @@ export default function About() {
                     </div>
                 </section>
             </Container>
+            <Footer />
         </main>
     );
 } 

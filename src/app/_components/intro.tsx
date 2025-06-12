@@ -88,7 +88,7 @@ export function Intro() {
       )}
 
       <section
-        className="sticky top-0 z-50 transition-all duration-300 -ml-5 -mr-5"
+        className="sticky top-0 z-50 transition-all duration-300"
         style={{ backgroundColor: headerBgColor }}
       >
         <div className="relative">

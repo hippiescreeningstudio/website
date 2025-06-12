@@ -67,9 +67,9 @@
       #0066ff 66.66%,
       #8b00ff 83.33%,
       #e40303 100%);
-  -webkit-background-clip: text;
+  -webkit-background-clip: transparent;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: transparent;
   font-weight: bold;
 }
 

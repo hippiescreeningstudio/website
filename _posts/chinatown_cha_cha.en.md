@@ -28,8 +28,8 @@ ogImage:
 
 | Film Details| |
 |---|---|
-| Title|<a href="https://www.chinatownchacha.com" class="text-black dark:text-white  hover:underline duration-200">Chinatown Cha-Cha 女人世界</a> |
-| Director | <a href="https://www.lukayangworks.com/" class="text-black dark:text-white  hover:underline duration-200">Luka Yuanyuan Yang 杨圆圆</a> |
+| Title|<a href="https://www.chinatownchacha.com" class="text-white  hover:underline duration-200">Chinatown Cha-Cha 女人世界</a> |
+| Director | <a href="https://www.lukayangworks.com/" class="text-white  hover:underline duration-200">Luka Yuanyuan Yang 杨圆圆</a> |
 | Language| Madarin, Cantonese, English |
 | Year| 2024 |
 | Duration| 85 minutes |

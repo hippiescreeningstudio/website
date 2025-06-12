@@ -137,14 +137,17 @@ table th:last-child {
     width: 70%;
 }
 
-table tr:nth-child(even),
-table tr:nth-child(odd) {
-    background-color: transparent;
+/* Remove background from all rows */
+table tr {
+    background-color: transparent !important;
 }
 
-table th {
-    background-color: transparent;
+/* Remove background from headers and cells */
+table th,
+table td {
+    background-color: transparent !important;
 }
+
 
 /* Figure and caption styling */
 figure {

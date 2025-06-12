@@ -2,6 +2,7 @@
 
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
+import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect } from "react";
 import Image from "next/image";
@@ -110,6 +111,7 @@ export default function Team() {
                     </div>
                 </section>
             </Container>
+            <Footer />
         </main>
     );
 } 

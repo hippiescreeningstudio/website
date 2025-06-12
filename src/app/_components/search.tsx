@@ -125,7 +125,7 @@ export function Search({ onStateChange }: SearchProps) {
                 <svg
                     className="w-5 h-5"
                     fill="none"
-                    stroke="currentColor"
+                    stroke="white"
                     viewBox="0 0 24 24"
                 >
                     <path
