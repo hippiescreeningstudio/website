@@ -56,7 +56,7 @@ ogImage:
   <figcaption>Ben Mullinkosson</figcaption>
 </figure>
 
-《午夜出走》是 Ben 的第二部长篇纪录片，也是他第六次回到成都。他能说中文。他的首作DON'T BE A DICK ABOUT IT曾获得 2018 年 IDFA 观众奖，由 Oscilloscope 发行。Ben 目前从事广告和音乐录影带拍摄工作，其作品曾获戛纳银狮奖，入选 Vimeo Staff Picks 及纽约时报Op-Docs，部分影片播放量超过数百万。他的短片也曾入围超过 50 个国际电影节，包括翠贝卡（GNARLY IN PINK）与圣丹斯（WHAT I HATE ABOUT MYSELF）。
+《午夜出走》是 Ben 的第二部长篇纪录片，也是他第六次回到成都。他能说中文。他的首作DON'T BE A DICK ABOUT IT曾获得 2018 年 IDFA 观众奖。Ben 目前从事广告和音乐录影带拍摄工作，其作品曾获戛纳银狮奖，入选 Vimeo Staff Picks 及纽约时报Op-Docs，部分影片播放量超过数百万。他的短片也曾入围超过 50 个国际电影节，包括翠贝卡（GNARLY IN PINK）与圣丹斯（WHAT I HATE ABOUT MYSELF）。
 
 
 **导演自述**

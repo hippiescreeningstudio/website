@@ -1,8 +1,10 @@
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "@/lib/constants";
+import { HOME_OG_IMAGE_URL } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 import { LanguageProvider } from "@/contexts/language-context";
+import { Analytics } from '@vercel/analytics/next';
+
 
 import "./globals.css";
 
@@ -73,6 +75,7 @@ export default function RootLayout({
         <LanguageProvider>
           <div className="min-h-screen">{children}</div>
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );

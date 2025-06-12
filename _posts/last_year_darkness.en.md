@@ -63,7 +63,7 @@ youth—from love to loss, from throwing up to growing up.
 
 This is Ben's second feature length documentary and 6th year coming back to Chengdu. He
 speaks Chinese. His first feature DON'T BE A DICK ABOUT IT won the 2018 Audience Award
-at IDFA and is being distributed by Oscilloscope. He now works directing commercials and
+at IDFA. He now works directing commercials and
 music videos. His works include Cannes Silver Lion Advertising award, Vimeo Staff Picks, NYT
 Op-Docs, and some of his films have millions of views. His previous short films have gotten into
 50+ festivals around the world including Tribeca (GNARLY IN PINK) and Slamdance (WHAT I
