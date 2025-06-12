@@ -24,16 +24,15 @@ export default function About() {
                     </h1>
                     <div className="prose prose-lg dark:prose-invert max-w-none">
                         <p className="text-base leading-relaxed mb-6">
-                            Founded in 2022, Hippie Screening Studio e.V. is a registered non-profit organization that works with a variety of arthouse cinemas, film organizations,
-                            and film festivals in Munich and around Germany to curate high-quality, independent, and creative Asian films for our monthly schedule.
-                            We host film screenings and retrospectives in Munich as well as other film-related  activities like film salons and cinema visits. Our goal is to provide high-quality
-                            film screenings and conversations for the Munich audience while also promoting cultural
-                            interchange between the Chinese and German cinephiles.
+                            Founded in 2022, Hippie Screening Studio e.V. is a registered non-profit organization dedicated
+                            to screening independent Singophone and Asian films in Munich. We partner with arthouse cinemas,
+                            film organizations, and festivals in Munich and throughout Germany to curate a monthly selection
+                            of high-quality, creative, and thought-provoking films from the Sinophone and broader Asian world.
                         </p>
 
                         <p className="text-base leading-relaxed mb-6">
-                            Join us in exploring the rich landscape of Asian cinema and discover stories
-                            that will stay with you long after the credits roll.
+                            Join us in exploring the vibrant world of Asian cinema—
+                            and discover stories that resonate long after the credits roll.
                         </p>
                     </div>
                 </section>
