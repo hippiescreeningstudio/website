@@ -90,7 +90,11 @@ export function ImageCarousel({
 
                 {/* Navigation arrows */}
                 <button
-                    onClick={goToPrevious}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        goToPrevious();
+                    }}
                     className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 opacity-80 hover:opacity-100"
                     aria-label="Previous image"
                 >
@@ -99,7 +103,11 @@ export function ImageCarousel({
                     </svg>
                 </button>
                 <button
-                    onClick={goToNext}
+                    onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        goToNext();
+                    }}
                     className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 opacity-80 hover:opacity-100"
                     aria-label="Next image"
                 >
@@ -107,6 +115,25 @@ export function ImageCarousel({
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
+            </div>
+
+            {/* Dot indicators */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2">
+                {images.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            goToSlide(index);
+                        }}
+                        className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex
+                            ? 'bg-white opacity-100'
+                            : 'bg-white/50 hover:bg-white/75'
+                            }`}
+                        aria-label={`Go to image ${index + 1}`}
+                    />
+                ))}
             </div>
 
 
