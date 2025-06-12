@@ -87,8 +87,8 @@ export function Intro() {
         <div className="fixed inset-0 backdrop-blur-sm bg-black/20 z-40 transition-all duration-300" />
       )}
 
-      {/* Full-width header with border above */}
-      <section className="sticky top-0 z-50 transition-all duration-300 border-t border-neutral-700">
+      {/* Full-width header */}
+      <section className="sticky top-0 z-50 transition-all duration-300">
         <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen" style={{ backgroundColor: headerBgColor }}>
           <div className="container mx-auto px-5">
             <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-1 min-h-[32px]' : 'py-2 md:py-2'
