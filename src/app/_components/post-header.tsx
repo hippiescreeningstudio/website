@@ -33,7 +33,7 @@ export function PostHeader({ title, coverImages, date, author }: Props) {
         {shouldUseCarousel ? (
           <ImageCarousel
             images={coverImages.map(img => ({ src: img, alt: title }))}
-            autoplayInterval={5000}
+            autoplayInterval={4000}
             className="rounded-none overflow-hidden m-0"
           />
         ) : (

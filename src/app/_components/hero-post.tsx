@@ -42,7 +42,7 @@ export function HeroPost({
           <Link href={postUrl} aria-label={title}>
             <ImageCarousel
               images={coverImages.map(img => ({ src: img, alt: title }))}
-              autoplayInterval={6000}
+              autoplayInterval={4000}
               className="rounded-none overflow-hidden hover:opacity-90 transition-opacity duration-200"
             />
           </Link>
