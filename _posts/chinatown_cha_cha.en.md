@@ -36,8 +36,8 @@ ogImage:
 
 | Screening Info | |
 |---|---|
-| Date | Sun Apr 27 13:00 |
-| Cinema | Neues Rottmann (Rottmannstraße 15, 80333 München) |
+| Time | Sun Apr 27 13:00 |
+| Venue | Neues Rottmann Kino, Rottmannstr. 15, 80333, München |
 
 
 

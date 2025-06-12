@@ -26,9 +26,9 @@ In celebration of Pride Month, join us for a special <span class="pride-month-ra
 | Screening Info | |
 |---|---|
 | Time | Sun June 22 13:00 |
-| Cinema | Neues Rottmann (Rottmannstraße 15, 80333 München) |
+| Venue | Neues Rottmann Kino, Rottmannstr. 15, 80333, München |
 | Language| Chinese with English subtitles (OmeU) |
-| Ticket Price | 13€, 12€ for students |
+| Prices | 13€, 12€ for students |
 | Tickets | Buy [<strong style="color:rgb(255, 255, 255); text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness) or at the box office |
 
 <figure>
