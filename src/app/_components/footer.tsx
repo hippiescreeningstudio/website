@@ -89,7 +89,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-neutral-700 py-3 mt-2">
+        <div className="py-3 mt-2">
           <div className="text-center text-sm text-neutral-400">
             © {new Date().getFullYear()} {t("footer.copyright")}
           </div>

@@ -87,11 +87,9 @@ export function Intro() {
         <div className="fixed inset-0 backdrop-blur-sm bg-black/20 z-40 transition-all duration-300" />
       )}
 
-      <section
-        className="sticky top-0 z-50 transition-all duration-300"
-        style={{ backgroundColor: headerBgColor }}
-      >
-        <div className="relative">
+      {/* Full-width header with border above */}
+      <section className="sticky top-0 z-50 transition-all duration-300 border-t border-neutral-700">
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen" style={{ backgroundColor: headerBgColor }}>
           <div className="container mx-auto px-5">
             <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-1 min-h-[32px]' : 'py-2 md:py-2'
               }`}>
@@ -151,7 +149,7 @@ export function Intro() {
 
           {/* Mobile Navigation - positioned absolutely to reach the edge */}
           <nav className="md:hidden absolute top-0 right-0 h-full flex items-center" ref={mobileNavRef}>
-            <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-1.5 mr-1' : 'space-x-1 mr-1'
+            <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-1.5 mr-2' : 'space-x-1 mr-2'
               }`}>
               {/* Hamburger Button */}
               <button

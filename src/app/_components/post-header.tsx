@@ -27,17 +27,22 @@ export function PostHeader({ title, coverImages, date, author }: Props) {
           <Avatar name={author.name} picture={author.picture} />
         </div>
       )}
-      <div className="mb-4 md:mb-8 sm:mx-0">
+
+      {/* Full-width image carousel that breaks out of container */}
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-4 md:mb-8">
         {shouldUseCarousel ? (
           <ImageCarousel
             images={coverImages.map(img => ({ src: img, alt: title }))}
             autoplayInterval={5000}
-            className="rounded-lg overflow-hidden m-0"
+            className="rounded-none overflow-hidden m-0"
           />
         ) : (
-          <CoverImage title={title} src={coverImage} />
+          <div className="px-5 max-w-7xl mx-auto">
+            <CoverImage title={title} src={coverImage} />
+          </div>
         )}
       </div>
+
       <div className="max-w-2xl mx-auto">
         {author && (
           <div className="block md:hidden mb-6">

@@ -36,17 +36,20 @@ export function HeroPost({
 
   return (
     <section className="p-6 rounded-lg transition-colors duration-200">
-      <div className="mb-8 md:mb-16">
+      {/* Full-width image carousel that breaks out of container */}
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-8 md:mb-16">
         {shouldUseCarousel ? (
           <Link href={postUrl} aria-label={title}>
             <ImageCarousel
               images={coverImages.map(img => ({ src: img, alt: title }))}
               autoplayInterval={6000}
-              className="rounded-lg overflow-hidden hover:opacity-90 transition-opacity duration-200"
+              className="rounded-none overflow-hidden hover:opacity-90 transition-opacity duration-200"
             />
           </Link>
         ) : (
-          <CoverImage title={title} src={coverImage} slug={slug} />
+          <div className="px-5 max-w-7xl mx-auto">
+            <CoverImage title={title} src={coverImage} slug={slug} />
+          </div>
         )}
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
