@@ -16,7 +16,7 @@ export function Footer() {
 
   return (
     <footer
-      className="border-t border-neutral-700"
+      className="border-t border-transparent"
       style={{ backgroundColor: footerBgColor }}
     >
       <Container>

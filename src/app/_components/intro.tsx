@@ -184,11 +184,11 @@ export function Intro() {
               {/* Mobile Dropdown Menu */}
               {isOpen && (
                 <div
-                  className="absolute right-0 top-full w-30 shadow-lg -mt-1 border border-gray-600 z-50"
+                  className="absolute right-0 top-full w-30 shadow-lg -mt-1 z-50"
                   style={{ backgroundColor: headerBgColor }}
                 >
                   {/* First row: Language switcher, Search */}
-                  <div className="flex items-center justify-center space-x-6 px-4 py-3 border-b border-gray-700">
+                  <div className="flex items-center justify-center space-x-6 px-4 py-3">
                     <LanguageSwitcher />
                     <Search onStateChange={handleSearchStateChange} />
                   </div>

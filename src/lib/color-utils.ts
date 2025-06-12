@@ -63,9 +63,9 @@ export function lightenColor(hex: string, percent: number): string {
 export function generateColorPalette(baseColor: string) {
     return {
         base: baseColor,
-        header: darkenColor(baseColor, 15), // Slightly darker for header
+        header: darkenColor(baseColor, 15), // Darker for header
         navigation: darkenColor(baseColor, 10), // Slightly darker for nav
-        footer: darkenColor(baseColor, 20), // Darker for footer
+        footer: darkenColor(baseColor, 15), // Same darkness as header
         accent: lightenColor(baseColor, 10), // Lighter for accents
     };
 } 
