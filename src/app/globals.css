@@ -19,14 +19,18 @@
     display: inline;
 }
 
-/* Dark mode adjustments */
-:root.dark {
+/* Force dark mode globally */
+:root {
     color-scheme: dark;
 }
 
+html {
+    background-color: #000000;
+}
+
 body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    color: #ffffff;
+    background-color: #000000;
 }
 
 /* Utilities */
@@ -46,6 +50,7 @@ body {
 /* Blog content styling */
 article {
     line-height: 1.6;
+    color: #ffffff;
 }
 
 article img,
@@ -66,12 +71,14 @@ article h6 {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
     font-weight: 600;
+    color: #ffffff;
 }
 
 article p,
 article ul,
 article ol {
     margin-bottom: 1em;
+    color: #ffffff;
 }
 
 article ul,
@@ -84,15 +91,10 @@ article li {
 }
 
 article blockquote {
-    border-left: 4px solid #e5e7eb;
+    border-left: 4px solid #374151;
     padding-left: 1rem;
     margin: 1.5rem 0;
     font-style: italic;
-    color: #6b7280;
-}
-
-:root.dark article blockquote {
-    border-left-color: #374151;
     color: #9ca3af;
 }
 
@@ -122,6 +124,7 @@ table td {
     background-color: transparent;
     font-weight: normal;
     line-height: 1.1;
+    color: #ffffff;
 }
 
 table td:first-child,
@@ -135,14 +138,11 @@ table th:last-child {
 }
 
 table tr:nth-child(even),
-table tr:nth-child(odd),
-:root.dark table tr:nth-child(even),
-:root.dark table tr:nth-child(odd) {
+table tr:nth-child(odd) {
     background-color: transparent;
 }
 
-
-:root.dark table th {
+table th {
     background-color: transparent;
 }
 
@@ -157,10 +157,6 @@ figcaption {
     font-style: italic;
     font-size: 0.9rem;
     text-align: center;
-    color: #6b7280;
-}
-
-:root.dark figcaption {
     color: #9ca3af;
 }
 
@@ -192,7 +188,7 @@ figcaption {
 /* Link styling */
 @layer components {
     .blue-link-text {
-        color: #003d82 !important;
+        color: #60a5fa !important;
         font-weight: bold !important;
         text-decoration: underline !important;
     }

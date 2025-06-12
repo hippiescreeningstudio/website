@@ -58,7 +58,7 @@ export const LanguageSwitcher = () => {
 
     return (
         <button
-            className="flex items-center justify-center rounded-full cursor-pointer h-8 w-8 transition-all duration-300 ease-in-out hover:scale-110 text-black dark:text-white"
+            className="flex items-center justify-center rounded-full cursor-pointer h-8 w-8 transition-all duration-300 ease-in-out hover:scale-110 text-white"
             onClick={handleLanguageSwitch}
             aria-label={`Switch to ${language === "en" ? "Chinese" : "English"}`}
         >

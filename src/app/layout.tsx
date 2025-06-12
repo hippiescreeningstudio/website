@@ -69,7 +69,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="Hippie Screening Studio RSS Feed" href="/rss.xml" />
       </head>
       <body
-        className={cn(inter.className, "dark:bg-black dark:text-white")}
+        className={cn(inter.className, "bg-black text-white")}
       >
         <LanguageProvider>
           <div className="min-h-screen">{children}</div>

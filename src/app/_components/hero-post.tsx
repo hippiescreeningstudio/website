@@ -15,6 +15,7 @@ type Props = {
   excerpt: string;
   author?: Author;
   slug: string;
+  backgroundColor?: string;
 };
 
 export function HeroPost({
@@ -24,6 +25,7 @@ export function HeroPost({
   excerpt,
   author,
   slug,
+  backgroundColor,
 }: Props) {
   const { language } = useLanguage();
   const shouldUseCarousel = coverImages && coverImages.length > 1;
@@ -33,7 +35,7 @@ export function HeroPost({
   const postUrl = language === "zh" ? `/zh/posts/${slug}` : `/posts/${slug}`;
 
   return (
-    <section>
+    <section className="p-6 rounded-lg transition-colors duration-200">
       <div className="mb-8 md:mb-16">
         {shouldUseCarousel ? (
           <Link href={postUrl} aria-label={title}>
@@ -49,7 +51,7 @@ export function HeroPost({
       </div>
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
-          <h3 className="mb-4 text-2xl lg:text-3xl leading-tight">
+          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
             <Link href={postUrl} className="hover:underline">
               {title}
             </Link>

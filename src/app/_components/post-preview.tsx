@@ -14,6 +14,7 @@ type Props = {
   excerpt: string;
   author?: Author;
   slug: string;
+  backgroundColor?: string;
 };
 
 export function PostPreview({
@@ -23,19 +24,22 @@ export function PostPreview({
   excerpt,
   author,
   slug,
+  backgroundColor,
 }: Props) {
   const { language } = useLanguage();
-  const coverImage = coverImages?.[0] || "/default-cover.jpg"; // First image as cover
 
-  // Generate language-specific URL
   const postUrl = language === "zh" ? `/zh/posts/${slug}` : `/posts/${slug}`;
 
   return (
-    <div>
+    <div className="p-4 rounded-lg transition-colors duration-200">
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
+        <CoverImage
+          slug={slug}
+          title={title}
+          src={coverImages[0]}
+        />
       </div>
-      <h3 className="text-xl mb-3 leading-snug">
+      <h3 className="text-3xl mb-3 leading-snug">
         <Link href={postUrl} className="hover:underline">
           {title}
         </Link>

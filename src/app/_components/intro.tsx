@@ -3,10 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { ThemeSwitcher } from "./theme-switcher";
 import { LanguageSwitcher } from "./language-switcher";
 import { Search } from "./search";
 import { useLanguage } from "@/contexts/language-context";
+import { usePost } from "@/contexts/post-context";
+import { generateColorPalette } from "@/lib/color-utils";
 
 export function Intro() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,11 @@ export function Intro() {
   const desktopNavRef = useRef<HTMLDivElement>(null);
   const mobileNavRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
+  const { backgroundColor } = usePost();
+
+  // Generate color palette based on post background color
+  const colorPalette = backgroundColor ? generateColorPalette(backgroundColor) : null;
+  const headerBgColor = colorPalette ? colorPalette.header : '#000000';
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -78,32 +84,23 @@ export function Intro() {
     <>
       {/* Blur Backdrop */}
       {(isOpen || isSearchOpen) && (
-        <div className="fixed inset-0 backdrop-blur-sm bg-black/10 dark:bg-black/20 z-40 transition-all duration-300" />
+        <div className="fixed inset-0 backdrop-blur-sm bg-black/20 z-40 transition-all duration-300" />
       )}
 
-      <section className="sticky top-0 z-50 bg-white dark:bg-black transition-all duration-300 -ml-5 -mr-5">
+      <section
+        className="sticky top-0 z-50 transition-all duration-300 -ml-5 -mr-5"
+        style={{ backgroundColor: headerBgColor }}
+      >
         <div className="relative">
           <div className="container mx-auto px-5">
             <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-1 min-h-[32px]' : 'py-2 md:py-2'
               }`}>
               <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'pl-2 md:-ml-2' : 'pl-1 md:-ml-3'}`}>
-                {/* Logo for light mode */}
-                <Link href="/" className={`block dark:hidden hover:opacity-80 transition-all duration-300 ${isScrolled ? 'mr-1.5' : 'mr-3 md:mr-4'
+                {/* Logo for dark mode only */}
+                <Link href="/" className={`hover:opacity-80 transition-all duration-300 ${isScrolled ? 'mr-1.5' : 'mr-3 md:mr-4'
                   }`}>
                   <Image
-                    src="/assets/logo-white-bg.svg"
-                    alt="HSS Logo"
-                    width={isScrolled ? 28 : 40}
-                    height={isScrolled ? 28 : 40}
-                    className={`transition-all duration-300 ${isScrolled ? 'md:w-8 md:h-8' : 'md:w-16 md:h-16'
-                      }`}
-                  />
-                </Link>
-                {/* Logo for dark mode */}
-                <Link href="/" className={`hidden dark:block hover:opacity-80 transition-all duration-300 ${isScrolled ? 'mr-1.5' : 'mr-3 md:mr-4'
-                  }`}>
-                  <Image
-                    src="/assets/logo-black-bg.svg"
+                    src="/favicon/logo_white.png"
                     alt="HSS Logo"
                     width={isScrolled ? 28 : 40}
                     height={isScrolled ? 28 : 40}
@@ -116,11 +113,11 @@ export function Intro() {
                 {!isScrolled && (
                   <div className="flex flex-col transition-all duration-300 -ml-2">
                     <Link href="/" className="hover:opacity-80 transition-opacity">
-                      <h1 className="text-lg md:text-2xl font-bold tracking-tighter leading-tight">
+                      <h1 className="text-lg md:text-2xl font-bold tracking-tighter leading-tight text-white">
                         {t("site.title")}
                       </h1>
                     </Link>
-                    <h4 className="text-[10px] md:text-sm mt-0">
+                    <h4 className="text-[10px] md:text-sm mt-0 text-white">
                       {t("site.subtitle")}
                     </h4>
                   </div>
@@ -131,19 +128,18 @@ export function Intro() {
               <nav className="hidden md:block relative" ref={desktopNavRef}>
                 <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-3' : 'space-x-4'
                   }`}>
-                  <ThemeSwitcher />
                   <LanguageSwitcher />
                   <Search onStateChange={handleSearchStateChange} />
                   <Link
                     href="/about"
-                    className={`text-black dark:text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
+                    className={`text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                       }`}
                   >
                     {t("nav.about")}
                   </Link>
                   <Link
                     href="/team"
-                    className={`text-black dark:text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
+                    className={`text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                       }`}
                   >
                     {t("nav.team")}
@@ -160,7 +156,7 @@ export function Intro() {
               {/* Hamburger Button */}
               <button
                 onClick={toggleMenu}
-                className={`text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'p-1' : 'p-2'
+                className={`text-white hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'p-1' : 'p-2'
                   }`}
                 aria-label="Toggle menu"
               >
@@ -189,10 +185,12 @@ export function Intro() {
 
               {/* Mobile Dropdown Menu */}
               {isOpen && (
-                <div className="absolute right-0 top-full w-30 bg-white dark:bg-black shadow-lg -mt-1 border border-white dark:border-black z-50">
-                  {/* First row: Theme switcher, Language switcher, Search */}
-                  <div className="flex items-center justify-center space-x-6 px-4 py-3 border-b border-gray-200 dark:border-gray-700">
-                    <ThemeSwitcher />
+                <div
+                  className="absolute right-0 top-full w-30 shadow-lg -mt-1 border border-gray-600 z-50"
+                  style={{ backgroundColor: headerBgColor }}
+                >
+                  {/* First row: Language switcher, Search */}
+                  <div className="flex items-center justify-center space-x-6 px-4 py-3 border-b border-gray-700">
                     <LanguageSwitcher />
                     <Search onStateChange={handleSearchStateChange} />
                   </div>
@@ -200,14 +198,14 @@ export function Intro() {
                   <div className="py-1">
                     <Link
                       href="/about"
-                      className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 hover:scale-105 transition-all duration-300"
+                      className="block px-4 py-2 text-sm text-white hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                     >
                       {t("nav.about")}
                     </Link>
                     <Link
                       href="/team"
-                      className="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 hover:scale-105 transition-all duration-300"
+                      className="block px-4 py-2 text-sm text-white hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                     >
                       {t("nav.team")}

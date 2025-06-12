@@ -115,6 +115,7 @@ export default function ChinesePostPage(props: Params) {
                 <Container>
                     <PostProvider
                         slug={slug}
+                        backgroundColor={post?.backgroundColor}
                         bilingualInfo={bilingualInfo}
                         onLanguageUnavailable={handleLanguageUnavailable}
                     >
@@ -135,10 +136,11 @@ export default function ChinesePostPage(props: Params) {
     }
 
     return (
-        <main>
+        <main style={{ backgroundColor: post.backgroundColor || undefined }}>
             <Container>
                 <PostProvider
                     slug={slug}
+                    backgroundColor={post.backgroundColor}
                     bilingualInfo={bilingualInfo}
                     onLanguageUnavailable={handleLanguageUnavailable}
                 >

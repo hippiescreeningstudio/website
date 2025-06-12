@@ -9,7 +9,7 @@ export function RSSIcon() {
     return (
         <button
             onClick={handleClick}
-            className="text-black dark:text-white hover:scale-110 transition-all duration-300 p-1"
+            className="text-white hover:scale-110 transition-all duration-300 p-1"
             aria-label="Subscribe to RSS feed"
             title="Subscribe to RSS feed"
         >

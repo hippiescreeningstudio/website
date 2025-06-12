@@ -9,12 +9,16 @@ type Props = {
 };
 
 export function MoreStories({ posts }: Props) {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+
+  if (!posts.length) {
+    return null;
+  }
 
   return (
     <section>
       <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
-        {t("posts.more")}
+        {language === "en" ? "More Stories" : "更多文章"}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
         {posts.map((post) => (
@@ -23,9 +27,10 @@ export function MoreStories({ posts }: Props) {
             title={post.title}
             coverImages={post.coverImages}
             date={post.date}
+            excerpt={post.excerpt}
             author={post.author}
             slug={post.slug}
-            excerpt={post.excerpt}
+            backgroundColor={post.backgroundColor}
           />
         ))}
       </div>

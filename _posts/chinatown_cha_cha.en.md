@@ -1,6 +1,7 @@
 ---
-title: "Monthly Screening 2025/4: Chinatown Cha-Cha 女人世界"
+title: "Monthly Screening 2015/4: Chinatown Cha-Cha"
 excerpt: "The 92-year-old previous nightclub dancer Coby Yee decides to get back on stage again after joining the senior dance troupe Grant Avenue Follies. Together they go on a tour for the last time, bridging once isolated Chinese communities in the US, Cuba and China."
+backgroundColor: "#2d1b42"
 coverImages:
   - "/assets/blog/chinatown_cha/00.jpg"
   - "/assets/blog/chinatown_cha/01.jpg"
@@ -130,4 +131,4 @@ CHINATOWN CHA-CHA explores the lesser-known history of San Francisco's Chinatown
 
 **Learn more**
 
-• &nbsp; <a href="https://youtu.be/6gUCRgL1lCE?feature=shared" class="text-black dark:text-white  hover:underline duration-200">Yuanyuan Yangs' Yixi talk</a>
+• &nbsp; <a href="https://youtu.be/6gUCRgL1lCE?feature=shared" class="text-white hover:underline duration-200">Yuanyuan Yangs' Yixi talk</a>

@@ -14,4 +14,5 @@ export type Post = {
   content: string;
   preview?: boolean;
   language?: "en" | "zh";
+  backgroundColor?: string; // Optional background color for the post
 };
