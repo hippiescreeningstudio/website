@@ -131,4 +131,4 @@ CHINATOWN CHA-CHA explores the lesser-known history of San Francisco's Chinatown
 
 **Learn more**
 
-• &nbsp; <a href="https://youtu.be/6gUCRgL1lCE?feature=shared" class="text-white hover:underline duration-200">Yuanyuan Yangs' Yixi talk</a>
+• &nbsp; <a href="https://youtu.be/6gUCRgL1lCE?feature=shared" class="text-white hover:underline duration-200">Yuanyuan Yang's Yixi talk</a>
