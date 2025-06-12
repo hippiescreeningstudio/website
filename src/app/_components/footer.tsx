@@ -12,7 +12,7 @@ export function Footer() {
 
   // Generate color palette based on post background color
   const colorPalette = backgroundColor ? generateColorPalette(backgroundColor) : null;
-  const footerBgColor = colorPalette ? colorPalette.footer : '#1f1f1f';
+  const footerBgColor = colorPalette ? colorPalette.footer : '#181818';
 
   return (
     <footer
