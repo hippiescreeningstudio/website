@@ -71,11 +71,11 @@ export default function ChineseTeam() {
             <Container>
                 <Intro />
                 <section className="mb-32">
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tighter leading-tight mb-8">
+                    <h1 className="text-lg md:text-lg font-bold tracking-tighter leading-tight mb-8">
                         我们的团队
                     </h1>
                     <div className="prose prose-lg dark:prose-invert max-w-none">
-                        <p className="text-lg leading-relaxed mb-12">
+                        <p className="text-base leading-relaxed mb-12">
                             认识嬉皮放映室的团队成员
                         </p>
 

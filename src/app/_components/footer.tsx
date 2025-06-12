@@ -22,7 +22,7 @@ export function Footer() {
       <Container>
         <div className="py-8 lg:py-12 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:gap-40 gap-12">
           <div className="flex flex-col items-center w-full lg:w-auto">
-            <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-3 text-white">
+            <h3 className="text-base lg:text-xl font-normal tracking-tighter leading-tight mb-3 text-white">
               {t("footer.follow")}
             </h3>
             <div className="flex flex-row gap-6 items-center justify-center">
@@ -81,16 +81,16 @@ export function Footer() {
             </div>
           </div>
           <div className="flex flex-col items-center w-full lg:w-auto">
-            <h3 className="text-lg lg:text-2xl font-normal tracking-tighter leading-tight mb-3 text-white">
+            <h3 className="text-base lg:text-xl font-normal tracking-tighter leading-tight mb-3 text-white">
               {t("footer.contact")}
             </h3>
             <div className="flex items-center justify-center">
-              <p className="text-sm lg:text-lg text-white">info@hss-munich.com</p>
+              <p className="text-xs lg:text-base text-white">info@hss-munich.com</p>
             </div>
           </div>
         </div>
         <div className="py-3 mt-2">
-          <div className="text-center text-sm text-neutral-400">
+          <div className="text-center text-xs text-neutral-400">
             © {new Date().getFullYear()} {t("footer.copyright")}
           </div>
         </div>

@@ -15,7 +15,7 @@ export function Intro() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const desktopNavRef = useRef<HTMLDivElement>(null);
   const mobileNavRef = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { backgroundColor } = usePost();
 
   // Generate color palette based on post background color
@@ -129,14 +129,14 @@ export function Intro() {
                   <LanguageSwitcher />
                   <Search onStateChange={handleSearchStateChange} />
                   <Link
-                    href="/about"
+                    href={language === 'zh' ? '/zh/about' : '/about'}
                     className={`text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                       }`}
                   >
                     {t("nav.about")}
                   </Link>
                   <Link
-                    href="/team"
+                    href={language === 'zh' ? '/zh/team' : '/team'}
                     className={`text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
                       }`}
                   >
@@ -195,14 +195,14 @@ export function Intro() {
                   {/* Navigation links */}
                   <div className="py-1">
                     <Link
-                      href="/about"
+                      href={language === 'zh' ? '/zh/about' : '/about'}
                       className="block px-4 py-2 text-sm text-white hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                     >
                       {t("nav.about")}
                     </Link>
                     <Link
-                      href="/team"
+                      href={language === 'zh' ? '/zh/team' : '/team'}
                       className="block px-4 py-2 text-sm text-white hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                     >
