@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 type CarouselImage = {
@@ -21,6 +21,8 @@ export function ImageCarousel({
     className = ""
 }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const touchStartX = useRef<number | null>(null);
+    const touchEndX = useRef<number | null>(null);
 
     // Auto-advance carousel
     useEffect(() => {
@@ -48,6 +50,36 @@ export function ImageCarousel({
         setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
     };
 
+    // Touch event handlers for swipe functionality
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStartX.current || !touchEndX.current) return;
+
+        const swipeDistance = touchStartX.current - touchEndX.current;
+        const minSwipeDistance = 50; // Minimum distance for a swipe to be registered
+
+        if (Math.abs(swipeDistance) > minSwipeDistance) {
+            if (swipeDistance > 0) {
+                // Swiped left, go to next image
+                goToNext();
+            } else {
+                // Swiped right, go to previous image
+                goToPrevious();
+            }
+        }
+
+        // Reset touch positions
+        touchStartX.current = null;
+        touchEndX.current = null;
+    };
+
     if (images.length === 0) return null;
 
     // Single image - no carousel needed
@@ -68,7 +100,12 @@ export function ImageCarousel({
     return (
         <figure className={`relative ${className}`}>
             {/* Main carousel container */}
-            <div className="relative overflow-hidden rounded-lg bg-transparent">
+            <div
+                className="relative overflow-hidden rounded-lg bg-transparent"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+            >
                 {/* Images container */}
                 <div
                     className="flex transition-transform duration-500 ease-in-out"
