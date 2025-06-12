@@ -2,6 +2,7 @@
 
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
+import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect } from "react";
 
@@ -17,7 +18,7 @@ export default function ChineseAbout() {
         <main>
             <Container>
                 <Intro />
-                <section className="mb-32">
+                <section className="mb-64">
                     <h1 className="text-lg md:text-lg font-bold tracking-tighter leading-tight mb-8">
                         关于我们
                     </h1>
@@ -32,6 +33,7 @@ export default function ChineseAbout() {
                     </div>
                 </section>
             </Container>
+            <Footer />
         </main>
     );
 } 

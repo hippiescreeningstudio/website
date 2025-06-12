@@ -18,7 +18,7 @@ export default function About() {
         <main>
             <Container>
                 <Intro />
-                <section className="mb-32">
+                <section className="mb-64">
                     <h1 className="text-lg md:text-lg font-bold tracking-tighter leading-tight mb-8">
                         About Us
                     </h1>
