@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import cn from "classnames";
 import { LanguageProvider } from "@/contexts/language-context";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 import "./globals.css";
@@ -76,6 +77,7 @@ export default function RootLayout({
           <div className="min-h-screen">{children}</div>
         </LanguageProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
