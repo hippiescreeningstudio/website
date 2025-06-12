@@ -62,7 +62,7 @@ export const LanguageSwitcher = () => {
             onClick={handleLanguageSwitch}
             aria-label={`Switch to ${language === "en" ? "Chinese" : "English"}`}
         >
-            <span className="text-sm font-semibold">
+            <span className="text-sm">
                 {language === "en" ? "中" : "EN"}
             </span>
         </button>
