@@ -20,7 +20,7 @@ In celebration of Pride Month, join us for a special <span class="pride-month-ra
 | Director | Ben Mullinkosson |
 | Genre| Documentary |
 | Year| 2023 |
-| Runtime| 95 minutes |
+| Duration| 95 minutes |
 
 | Screening Info | |
 |---|---|

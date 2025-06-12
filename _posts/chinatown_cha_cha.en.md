@@ -24,17 +24,18 @@ ogImage:
 
 **About the film**
 
+
 | Film Details| |
 |---|---|
-| Title| [Chinatown Cha-Cha 女人世界](https://www.chinatownchacha.com/) |
-| Director | Luka Yuanyuan Yang 杨圆圆|
+| Title|<a href="https://www.chinatownchacha.com" class="text-black dark:text-white  hover:underline duration-200">Chinatown Cha-Cha 女人世界</a> |
+| Director | <a href="https://www.lukayangworks.com/" class="text-black dark:text-white  hover:underline duration-200">Luka Yuanyuan Yang 杨圆圆</a> |
 | Language| Madarin, Cantonese, English |
 | Year| 2024 |
-| Runtime| 85 minutes |
+| Duration| 85 minutes |
 
 | Screening Info | |
 |---|---|
-| Time | Sun Apr 27 13:00 |
+| Date | Sun Apr 27 13:00 |
 | Cinema | Neues Rottmann (Rottmannstraße 15, 80333 München) |
 
 
@@ -125,3 +126,8 @@ If I had made this into an essay film focusing purely on historical issues, the 
 _What do you think the relevance of the film is to the current Asian American experience?_
 
 CHINATOWN CHA-CHA explores the lesser-known history of San Francisco's Chinatown nightclub scene while celebrating the resilience of aging Asian American artists who continue to break barriers. It preserves their untold stories and inspires younger generations to honor and continue this rich legacy. In a time of rising anti-Asian violence and threats to Chinatowns, it brings generations together within the AAPI community through film, dance, and dialogue, fostering meaningful discussions on identity, belonging, and activism. We also hope to create spaces for younger AAPIs to learn from and care for their elders.
+
+
+**Learn more**
+
+• &nbsp; <a href="https://youtu.be/6gUCRgL1lCE?feature=shared" class="text-black dark:text-white  hover:underline duration-200">Yuanyuan Yangs' Yixi talk</a>

@@ -9,7 +9,7 @@ export async function GET() {
         // Site metadata
         const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://hss-munich.com';
         const siteTitle = 'Hippie Screening Studio';
-        const siteDescription = 'Bringing you Asian arthouse films in Munich';
+        const siteDescription = 'Sinophone & Asian film screenings in Munich since 2022';
 
         // Get the most recent post date for channel pubDate
         const mostRecentPostDate = allPosts.length > 0
