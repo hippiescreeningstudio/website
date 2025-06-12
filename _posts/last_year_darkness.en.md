@@ -1,7 +1,7 @@
 ---
 title: "Special CSD Screening: The Last Year of Darkness 午夜出走"
 excerpt: "A vibrant documentary exploring five years inside Chengdu's underground club scene. Through the lens of DJs, drag queens, skaters, and artists at the legendary Funky Town, this film captures a generation's pursuit of identity, freedom, and connection-against the backdrop of a rapidly transforming city."
-backgroundColor: "#131326"
+backgroundColor: "#151530"
 coverImages:
   - "/assets/blog/last_year/tlyod_1.jpg"
   - "/assets/blog/last_year/tlyod_2.jpg"

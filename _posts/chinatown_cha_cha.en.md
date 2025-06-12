@@ -1,5 +1,5 @@
 ---
-title: "Monthly Screening 2015/4: Chinatown Cha-Cha"
+title: "Monthly Screening 2025/4: Chinatown Cha-Cha"
 excerpt: "The 92-year-old previous nightclub dancer Coby Yee decides to get back on stage again after joining the senior dance troupe Grant Avenue Follies. Together they go on a tour for the last time, bridging once isolated Chinese communities in the US, Cuba and China."
 backgroundColor: "#4b2812"
 coverImages:
