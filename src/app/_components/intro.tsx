@@ -18,9 +18,6 @@ export function Intro() {
   const { t, language } = useLanguage();
   const { backgroundColor } = usePost();
 
-  // Generate color palette based on post background color
-  const colorPalette = backgroundColor ? generateColorPalette(backgroundColor) : null;
-  const headerBgColor = colorPalette ? colorPalette.header : '#000000';
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -89,9 +86,9 @@ export function Intro() {
 
       {/* Full-width header */}
       <section className="sticky top-0 z-50 transition-all duration-300">
-        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen" style={{ backgroundColor: headerBgColor }}>
+        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen backdrop-blur-md bg-black/30 ">
           <div className="container mx-auto px-5">
-            <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-1 min-h-[32px]' : 'py-2 md:py-2'
+            <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-0.5 min-h-[24px]' : 'py-2 md:py-2'
               }`}>
               <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'pl-2 md:-ml-2' : 'pl-1 md:-ml-3'}`}>
                 {/* Logo for dark mode only */}
@@ -184,8 +181,7 @@ export function Intro() {
               {/* Mobile Dropdown Menu */}
               {isOpen && (
                 <div
-                  className="absolute right-0 top-full w-30 shadow-lg -mt-1 z-50"
-                  style={{ backgroundColor: headerBgColor }}
+                  className="absolute right-0 top-full w-30 shadow-lg  z-50 backdrop-blur-md bg-black/40"
                 >
                   {/* First row: Language switcher, Search */}
                   <div className="flex items-center justify-center space-x-6 px-4 py-3">
@@ -196,14 +192,14 @@ export function Intro() {
                   <div className="py-1">
                     <Link
                       href={language === 'zh' ? '/zh/about' : '/about'}
-                      className="block px-4 py-2 text-sm text-white hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
+                      className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                     >
                       {t("nav.about")}
                     </Link>
                     <Link
                       href={language === 'zh' ? '/zh/team' : '/team'}
-                      className="block px-4 py-2 text-sm text-white hover:bg-gray-800/50 hover:scale-105 transition-all duration-300"
+                      className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                     >
                       {t("nav.team")}
