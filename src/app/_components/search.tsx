@@ -139,7 +139,7 @@ export function Search({ onStateChange }: SearchProps) {
 
             {/* Search Dropdown */}
             {isOpen && (
-                <div className="absolute right-0 top-full mt-2 w-80 bg-white dark:bg-black rounded-md shadow-lg border border-gray-200 dark:border-gray-700 z-20">
+                <div className="absolute right-0 top-full mt-2 w-80 backdrop-blur-md bg-black/40 rounded-md shadow-lg border-2 border-white/10 z-20">
                     <div className="p-4">
                         <div className="relative">
                             <input
@@ -149,11 +149,11 @@ export function Search({ onStateChange }: SearchProps) {
                                 onChange={handleInputChange}
                                 onKeyPress={handleKeyPress}
                                 placeholder={t("search.placeholder")}
-                                className="w-full px-3 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                className="w-full px-3 py-2 text-sm border border-white/20 rounded-md bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40"
                             />
                             <button
                                 onClick={handleSearchClick}
-                                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white/60 hover:text-white/80"
                             >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -163,15 +163,15 @@ export function Search({ onStateChange }: SearchProps) {
                     </div>
 
                     {/* Search Results */}
-                    <div className="max-h-96 overflow-y-auto border-t border-gray-200 dark:border-gray-700">
+                    <div className="max-h-96 overflow-y-auto border-t border-white/10">
                         {loading && (
-                            <div className="p-4 text-center text-gray-500 dark:text-gray-400">
+                            <div className="p-4 text-center text-white/60">
                                 {t("search.loading")}
                             </div>
                         )}
 
                         {!loading && query && results.length === 0 && (
-                            <div className="p-4 text-center text-gray-500 dark:text-gray-400">
+                            <div className="p-4 text-center text-white/60">
                                 {t("search.noResults")}
                             </div>
                         )}
@@ -189,15 +189,15 @@ export function Search({ onStateChange }: SearchProps) {
                                             key={`${result.slug}-${result.language}`}
                                             href={postUrl}
                                             onClick={handleResultClick}
-                                            className="block px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                            className="block px-4 py-3 hover:bg-white/10 transition-colors"
                                         >
-                                            <div className="text-sm font-medium text-black dark:text-white mb-1">
+                                            <div className="text-sm font-medium text-white mb-1">
                                                 {result.title}
                                             </div>
-                                            <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                                            <div className="text-xs text-white/60 mb-1">
                                                 <DateFormatter dateString={result.date} />
                                             </div>
-                                            <div className="text-xs text-gray-600 dark:text-gray-300 line-clamp-2">
+                                            <div className="text-xs text-white/80 line-clamp-2">
                                                 {result.excerpt}
                                             </div>
                                         </Link>
