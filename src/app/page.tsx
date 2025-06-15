@@ -1,9 +1,9 @@
 "use client";
 
 import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
 import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
+import { HeroPostsCarousel } from "@/app/_components/hero-posts-carousel";
+import { PostGrid } from "@/app/_components/post-grid";
 import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
@@ -72,23 +72,26 @@ export default function Index() {
     );
   }
 
-  const heroPost = posts[0];
-  const morePosts = posts.slice(1);
+  // Split posts into hero posts and regular posts
+  const heroPosts = posts.filter(post => post.isHero);
+  const regularPosts = posts.filter(post => !post.isHero);
 
   return (
     <main>
       <Container>
         <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImages={heroPost.coverImages}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-          backgroundColor={heroPost.backgroundColor}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        {/* Hero Posts Carousel */}
+        {heroPosts.length > 0 && (
+          <div className="mb-16">
+            <HeroPostsCarousel posts={heroPosts} />
+          </div>
+        )}
+        {/* Regular Posts Grid */}
+        {regularPosts.length > 0 && (
+          <div className="mb-16">
+            <PostGrid posts={regularPosts} />
+          </div>
+        )}
       </Container>
       <Footer />
     </main>

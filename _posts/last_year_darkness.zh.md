@@ -2,6 +2,10 @@
 title: "CSD特别放映: 午夜出走"
 excerpt: "故事从成都一个名为 Funky Town 的小俱乐部展开，这是一个年轻人欢聚的地方。在这家被起重机遮掩在不起眼街角的酒吧里，电影导演和五个当地人一起用夜晚的狂欢来逃避生活的压力。然而，当太阳升起，起重机再次开始运转时，我们的主人公们不得不面对那些他们试图逃避的现实。"
 backgroundColor: "#131326"
+isHero: true
+overlayText:
+    title: "午夜出走"
+    subtitle: "Neues Rottmann Kino 6月22日 13:00"
 coverImages:
   - "/assets/blog/last_year/tlyod_1.jpg"
   - "/assets/blog/last_year/tlyod_2.jpg"

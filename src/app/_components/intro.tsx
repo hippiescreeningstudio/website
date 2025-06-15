@@ -18,7 +18,6 @@ export function Intro() {
   const { t, language } = useLanguage();
   const { backgroundColor } = usePost();
 
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -79,144 +78,113 @@ export function Intro() {
 
   return (
     <>
-      {/* Blur Backdrop */}
-      {(isOpen || isSearchOpen) && (
-        <div className="fixed inset-0 backdrop-blur-sm bg-black/20 z-40 transition-all duration-300" />
-      )}
-
-      {/* Full-width header */}
-      <section className="sticky top-0 z-50 transition-all duration-300">
-        <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen backdrop-blur-md bg-black/30 ">
-          <div className="container mx-auto px-5">
-            <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-0.5 min-h-[24px]' : 'py-2 md:py-2'
-              }`}>
-              <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'pl-2 md:-ml-2' : 'pl-1 md:-ml-3'}`}>
-                {/* Logo for dark mode only */}
-                <Link href="/" className={`hover:opacity-80 transition-all duration-300 ${isScrolled ? 'mr-1.5' : 'mr-3 md:mr-4'
-                  }`}>
-                  <Image
-                    src="/favicon/logo_white.png"
-                    alt="HSS Logo"
-                    width={isScrolled ? 28 : 40}
-                    height={isScrolled ? 28 : 40}
-                    className={`transition-all duration-300 ${isScrolled ? 'md:w-8 md:h-8' : 'md:w-16 md:h-16'
-                      }`}
-                  />
-                </Link>
-
-                {/* Title and subtitle - conditionally render */}
-                {!isScrolled && (
-                  <div className="flex flex-col transition-all duration-300 -ml-2">
-                    <Link href="/" className="hover:opacity-80 transition-opacity">
-                      <h1 className="text-lg md:text-2xl font-bold tracking-tighter leading-tight text-white">
+      <section className="relative z-50">
+        <div className="fixed top-0 left-0 right-0">
+          <nav className={`transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-sm' : 'bg-transparent'}`}>
+            <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`}>
+                  {/* Logo and Title */}
+                  <div className="flex items-center space-x-3">
+                    <Link href={language === "zh" ? "/zh" : "/"} className="hover:opacity-80 transition-all duration-300">
+                      <Image
+                        src="/favicon/logo_white.png"
+                        alt="HSS Logo"
+                        width={isScrolled ? 28 : 40}
+                        height={isScrolled ? 28 : 40}
+                        className={`transition-all duration-300 ${isScrolled ? 'md:w-8 md:h-8' : 'md:w-16 md:h-16'}`}
+                      />
+                    </Link>
+                    <Link href={language === "zh" ? "/zh" : "/"} className="text-white hover:opacity-80 transition-all duration-300">
+                      <h1 className={`font-bold transition-all duration-300 ${isScrolled ? 'text-lg' : 'text-xl md:text-2xl'}`}>
                         {t("site.title")}
                       </h1>
                     </Link>
-                    <h4 className="text-[10px] md:text-sm mt-0 text-white">
-                      {t("site.subtitle")}
-                    </h4>
                   </div>
-                )}
-              </div>
 
-              {/* Desktop Navigation */}
-              <nav className="hidden md:block relative" ref={desktopNavRef}>
-                <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-3' : 'space-x-4'
-                  }`}>
-                  <LanguageSwitcher />
-                  <Search onStateChange={handleSearchStateChange} />
-                  <Link
-                    href={language === 'zh' ? '/zh/about' : '/about'}
-                    className={`text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
-                      }`}
-                  >
-                    {t("nav.about")}
-                  </Link>
-                  <Link
-                    href={language === 'zh' ? '/zh/team' : '/team'}
-                    className={`text-white hover:scale-105 transition-all duration-300 ${isScrolled ? 'text-sm' : 'text-lg'
-                      }`}
-                  >
-                    {t("nav.team")}
-                  </Link>
-                </div>
-              </nav>
-            </div>
-          </div>
-
-          {/* Mobile Navigation - positioned absolutely to reach the edge */}
-          <nav className="md:hidden absolute top-0 right-0 h-full flex items-center" ref={mobileNavRef}>
-            <div className={`flex items-center transition-all duration-300 ${isScrolled ? 'space-x-1.5 mr-2' : 'space-x-1 mr-2'
-              }`}>
-              {/* Hamburger Button */}
-              <button
-                onClick={toggleMenu}
-                className={`text-white hover:text-gray-300 transition-all duration-300 ${isScrolled ? 'p-1' : 'p-2'
-                  }`}
-                aria-label="Toggle menu"
-              >
-                <svg
-                  className={`fill-none stroke-current transition-all duration-300 ${isScrolled ? 'w-4 h-4' : 'w-6 h-6'
-                    }`}
-                  viewBox="0 0 24 24"
-                >
-                  {isOpen ? (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  ) : (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  )}
-                </svg>
-              </button>
-
-              {/* Mobile Dropdown Menu */}
-              {isOpen && (
-                <div
-                  className="absolute right-0 top-full w-30 shadow-lg  z-50 backdrop-blur-md bg-black/40"
-                >
-                  {/* First row: Language switcher, Search */}
-                  <div className="flex items-center justify-center space-x-6 px-4 py-3">
+                  {/* Desktop Navigation */}
+                  <div className="hidden md:flex items-center space-x-4">
                     <LanguageSwitcher />
                     <Search onStateChange={handleSearchStateChange} />
-                  </div>
-                  {/* Navigation links */}
-                  <div className="py-1">
                     <Link
-                      href={language === 'zh' ? '/zh/about' : '/about'}
-                      className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
-                      onClick={() => setIsOpen(false)}
+                      href={language === "zh" ? "/zh/about" : "/about"}
+                      className="text-white hover:text-gray-300 transition-colors"
                     >
                       {t("nav.about")}
                     </Link>
                     <Link
-                      href={language === 'zh' ? '/zh/team' : '/team'}
-                      className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
-                      onClick={() => setIsOpen(false)}
+                      href={language === "zh" ? "/zh/team" : "/team"}
+                      className="text-white hover:text-gray-300 transition-colors"
                     >
                       {t("nav.team")}
                     </Link>
                   </div>
+
+                  {/* Mobile Navigation */}
+                  <div className="md:hidden flex items-center">
+                    <button
+                      onClick={toggleMenu}
+                      className="text-white hover:text-gray-300 transition-colors"
+                      aria-label="Toggle menu"
+                    >
+                      <svg
+                        className="h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        {isOpen ? (
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        ) : (
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 6h16M4 12h16M4 18h16"
+                          />
+                        )}
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              )}
+
+                {/* Mobile Menu */}
+                <div className="md:hidden">
+                  {isOpen && (
+                    <div className="absolute right-0 top-full w-30 shadow-lg z-50 backdrop-blur-md bg-black/40">
+                      {/* First row: Language switcher, Search */}
+                      <div className="flex items-center justify-center space-x-6 px-4 py-3">
+                        <LanguageSwitcher />
+                        <Search onStateChange={handleSearchStateChange} />
+                      </div>
+                      {/* Navigation links */}
+                      <div className="py-1">
+                        <Link
+                          href={language === 'zh' ? '/zh/about' : '/about'}
+                          className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {t("nav.about")}
+                        </Link>
+                        <Link
+                          href={language === 'zh' ? '/zh/team' : '/team'}
+                          className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {t("nav.team")}
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           </nav>
-
-          {/* Overlay for mobile menu - click to close */}
-          {isOpen && (
-            <div
-              className="fixed inset-0 z-0 md:hidden"
-              onClick={() => setIsOpen(false)}
-            />
-          )}
         </div>
       </section>
     </>

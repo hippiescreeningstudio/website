@@ -1,9 +1,9 @@
 "use client";
 
 import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
 import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
+import { HeroPostsCarousel } from "@/app/_components/hero-posts-carousel";
+import { PostGrid } from "@/app/_components/post-grid";
 import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
@@ -72,23 +72,16 @@ export default function ChineseIndex() {
         );
     }
 
-    const heroPost = posts[0];
-    const morePosts = posts.slice(1);
+    // Filter posts into hero and regular posts
+    const heroPosts = posts.filter(post => post.isHero);
+    const regularPosts = posts.filter(post => !post.isHero);
 
     return (
         <main>
             <Container>
                 <Intro />
-                <HeroPost
-                    title={heroPost.title}
-                    coverImages={heroPost.coverImages}
-                    date={heroPost.date}
-                    author={heroPost.author}
-                    slug={heroPost.slug}
-                    excerpt={heroPost.excerpt}
-                    backgroundColor={heroPost.backgroundColor}
-                />
-                {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+                {heroPosts.length > 0 && <HeroPostsCarousel posts={heroPosts} />}
+                {regularPosts.length > 0 && <PostGrid posts={regularPosts} />}
             </Container>
             <Footer />
         </main>

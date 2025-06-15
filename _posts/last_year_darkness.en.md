@@ -2,6 +2,10 @@
 title: "Special CSD Screening: The Last Year of Darkness 午夜出走"
 excerpt: This film revolves around a small club called Funky Town, the go-to party space for a group of twenty-year-old DJ’s, drag performers, lovers, ravers and skaters in China. In this unassuming corner bar hidden by Chengdu’s construction cranes, five locals escape their stress, even if it’s only for the night. But as the sun rises and the cranes begin to move again, our protagonists are forced to face what brought them to the party in the first place. "
 backgroundColor: "#151530"
+isHero: true
+overlayText:
+    title: "午夜出走"
+    subtitle: "Neues Rottmann Kino 6月22日 13:00"
 coverImages:
   - "/assets/blog/last_year/tlyod_1.jpg"
   - "/assets/blog/last_year/tlyod_2.jpg"
