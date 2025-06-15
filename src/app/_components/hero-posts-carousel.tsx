@@ -114,14 +114,16 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                                         className="w-full h-[100vh] object-cover hover:opacity-90 transition-opacity duration-200"
                                     />
                                     {post.overlayText && (
-                                        <div className="absolute bottom-8 left-0 right-0 p-4">
-                                            <div className="space-y-1">
-                                                <p className="text-white text-2xl md:text-3xl font-bold">
-                                                    {post.overlayText.title}
-                                                </p>
-                                                <p className="text-white text-base md:text-lg">
-                                                    {post.overlayText.subtitle}
-                                                </p>
+                                        <div className="absolute bottom-8 left-0 right-0">
+                                            <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8">
+                                                <div className="space-y-1">
+                                                    <p className="text-white text-2xl md:text-3xl font-bold">
+                                                        {post.overlayText.title}
+                                                    </p>
+                                                    <p className="text-white text-base md:text-lg">
+                                                        {post.overlayText.subtitle}
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     )}

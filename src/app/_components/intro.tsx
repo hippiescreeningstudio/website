@@ -7,7 +7,7 @@ import { LanguageSwitcher } from "./language-switcher";
 import { Search } from "./search";
 import { useLanguage } from "@/contexts/language-context";
 import { usePost } from "@/contexts/post-context";
-import { generateColorPalette } from "@/lib/color-utils";
+import { usePathname } from "next/navigation";
 
 export function Intro() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +17,9 @@ export function Intro() {
   const mobileNavRef = useRef<HTMLDivElement>(null);
   const { t, language } = useLanguage();
   const { backgroundColor } = usePost();
+  const pathname = usePathname();
+  const isHomePage = pathname === "/" || pathname === "/zh";
+  const isPostPage = pathname.includes("/posts/") || pathname.includes("/zh/posts/");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -78,11 +81,17 @@ export function Intro() {
 
   return (
     <>
+      {/* Blur backdrop for post pages */}
+      {isPostPage && isOpen && (
+        <div className="fixed inset-0 backdrop-blur-md bg-black/20 z-40 transition-all duration-300" />
+      )}
+
       <section className="relative z-50">
         <div className="fixed top-0 left-0 right-0">
-          <nav className={`transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-sm' : 'bg-transparent'}`}>
+          <nav className={`transition-all duration-300 ${isPostPage && !isHomePage && isOpen ? 'md:bg-transparent bg-black/80 backdrop-blur-md' : 'bg-transparent'
+            }`}>
             <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`}>
                   {/* Logo and Title */}
                   <div className="flex items-center space-x-3">
@@ -95,11 +104,13 @@ export function Intro() {
                         className={`transition-all duration-300 ${isScrolled ? 'md:w-8 md:h-8' : 'md:w-16 md:h-16'}`}
                       />
                     </Link>
-                    <Link href={language === "zh" ? "/zh" : "/"} className="text-white hover:opacity-80 transition-all duration-300">
-                      <h1 className={`font-bold transition-all duration-300 ${isScrolled ? 'text-lg' : 'text-xl md:text-2xl'}`}>
-                        {t("site.title")}
-                      </h1>
-                    </Link>
+                    {!isScrolled && (
+                      <Link href={language === "zh" ? "/zh" : "/"} className="text-white hover:opacity-80 transition-all duration-300">
+                        <h1 className="font-bold text-xl md:text-2xl">
+                          {t("site.title")}
+                        </h1>
+                      </Link>
+                    )}
                   </div>
 
                   {/* Desktop Navigation */}
@@ -156,7 +167,8 @@ export function Intro() {
                 {/* Mobile Menu */}
                 <div className="md:hidden">
                   {isOpen && (
-                    <div className="absolute right-0 top-full w-30 shadow-lg z-50 backdrop-blur-md bg-black/40">
+                    <div className={`absolute right-0 top-full w-30 shadow-lg z-50 ${isPostPage ? 'bg-black/80' : 'backdrop-blur-md bg-black/40'
+                      }`}>
                       {/* First row: Language switcher, Search */}
                       <div className="flex items-center justify-center space-x-6 px-4 py-3">
                         <LanguageSwitcher />

@@ -146,7 +146,7 @@ export default function PostPage(props: Params) {
       >
         <Container>
           <Intro />
-          <article className="mb-32">
+          <article className="mb-32 mt-16">
             <PostHeader
               title={post.title}
               coverImages={post.coverImages}

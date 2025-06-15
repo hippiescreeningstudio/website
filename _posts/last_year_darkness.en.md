@@ -4,7 +4,7 @@ excerpt: This film revolves around a small club called Funky Town, the go-to par
 backgroundColor: "#151530"
 isHero: true
 overlayText:
-    title: "午夜出走"
+    title: "The Last Year of Darkness"
     subtitle: "Neues Rottmann Kino 6月22日 13:00"
 coverImages:
   - "/assets/blog/last_year/tlyod_1.jpg"
