@@ -19,7 +19,7 @@ export function PostHeader({ title, coverImages, date, author }: Props) {
 
   return (
     <>
-      <div className="mt-8 md:mt-12">
+      <div className="mt-16 md:mt-20">
         <PostTitle>{title}</PostTitle>
       </div>
       {author && (

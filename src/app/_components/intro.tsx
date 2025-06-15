@@ -88,7 +88,9 @@ export function Intro() {
 
       <section className="relative z-50">
         <div className="fixed top-0 left-0 right-0">
-          <nav className={`transition-all duration-300 ${isPostPage && !isHomePage && isOpen ? 'md:bg-transparent bg-black/80 backdrop-blur-md' : 'bg-transparent'
+          <nav className={`transition-all duration-300 ${isPostPage && !isHomePage && (isOpen || (isScrolled && window.innerWidth < 768))
+            ? 'md:bg-transparent backdrop-blur-md'
+            : 'bg-transparent'
             }`}>
             <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
               <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8">

@@ -137,16 +137,16 @@ export default function PostPage(props: Params) {
   }
 
   return (
-    <main style={{ backgroundColor: post.backgroundColor || undefined, minHeight: '100vh' }}>
+    <div style={{ backgroundColor: post.backgroundColor || undefined, minHeight: '100vh' }}>
       <PostProvider
         slug={slug}
         backgroundColor={post.backgroundColor}
         bilingualInfo={bilingualInfo}
         onLanguageUnavailable={handleLanguageUnavailable}
       >
+        <Intro />
         <Container>
-          <Intro />
-          <article className="mb-32 mt-16">
+          <article className="mb-32">
             <PostHeader
               title={post.title}
               coverImages={post.coverImages}
@@ -163,6 +163,6 @@ export default function PostPage(props: Params) {
         isVisible={notification.isVisible}
         onClose={closeNotification}
       />
-    </main>
+    </div>
   );
 }
