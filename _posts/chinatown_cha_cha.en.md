@@ -4,7 +4,7 @@ excerpt: "The 92-year-old previous nightclub dancer Coby Yee decides to get back
 backgroundColor: "#4b2812"
 overlayText:
   title: "Chinatown Cha-Cha 女人世界"
-  subtitle: "Luka Yuanyuan Yang | Apr 27 13:00 @ Neues Rottmann Kino"
+  subtitle: "Luka Yuanyuan Yang | Apr 27 2025 @ Neues Rottmann Kino"
 coverImages:
   - "/assets/blog/chinatown_cha/00.jpg"
   - "/assets/blog/chinatown_cha/01.jpg"
