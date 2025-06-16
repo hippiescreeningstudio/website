@@ -89,7 +89,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
     if (posts.length === 0) return null;
 
     return (
-        <div className={`relative -mx-5 md:-mx-8 lg:-mx-12 ${className}`}>
+        <div className={`relative -mx-[calc(50vw-50%)] -mt-[calc(50vw-50%)] w-screen ${className}`}>
             {/* Main carousel container */}
             <div
                 className="relative overflow-hidden bg-transparent"
@@ -111,7 +111,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                                         alt={post.title}
                                         width={1920}
                                         height={1080}
-                                        className="w-full h-[70vh] md:h-[80vh] object-cover hover:opacity-90 transition-opacity duration-200"
+                                        className="w-full h-[100vh] object-cover hover:opacity-90 transition-opacity duration-200"
                                     />
                                     {post.overlayText && (
                                         <div className="absolute bottom-8 left-0 right-0">

@@ -137,7 +137,7 @@ export default function ChinesePostPage(props: Params) {
     }
 
     return (
-        <main style={{ backgroundColor: post.backgroundColor || undefined, minHeight: '100vh' }}>
+        <main style={{ backgroundColor: post.backgroundColor || undefined, minHeight: '100vh', marginTop: '-64px' }}>
             <PostProvider
                 slug={slug}
                 backgroundColor={post.backgroundColor}
@@ -146,7 +146,7 @@ export default function ChinesePostPage(props: Params) {
             >
                 <Container>
                     <Intro />
-                    <article className="mb-32">
+                    <article className="mb-32 pt-16">
                         <PostHeader
                             title={post.title}
                             coverImages={post.coverImages}

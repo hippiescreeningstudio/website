@@ -19,7 +19,7 @@ export function PostHeader({ title, coverImages, date, author }: Props) {
 
   return (
     <>
-      <div className="mt-16 md:mt-20">
+      <div className="mt-8 md:mt-12">
         <PostTitle>{title}</PostTitle>
       </div>
       {author && (
@@ -28,18 +28,16 @@ export function PostHeader({ title, coverImages, date, author }: Props) {
         </div>
       )}
 
-      {/* Full-width image carousel that breaks out of container */}
-      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen mb-4 md:mb-8">
+      {/* Image carousel with margins */}
+      <div className="mb-4 md:mb-8">
         {shouldUseCarousel ? (
           <ImageCarousel
             images={coverImages.map(img => ({ src: img, alt: title }))}
             autoplayInterval={4000}
-            className="rounded-none overflow-hidden m-0"
+            className="rounded-lg overflow-hidden"
           />
         ) : (
-          <div className="px-5 max-w-7xl mx-auto">
-            <CoverImage title={title} src={coverImage} />
-          </div>
+          <CoverImage title={title} src={coverImage} />
         )}
       </div>
 
