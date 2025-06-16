@@ -1,7 +1,7 @@
 ---
 title: "Monthly Screening 2025/8: K-Family Affairs - Arum Nam"
 excerpt: "A wave of national protests in South Korea presents Arum Nam with a stark choice: will she be a patriot like her father or an activist like her mother?"
-backgroundColor: "##202020"
+backgroundColor: "#6e5a5b"
 isHero: true
 overlayText:
     title: "K-Family Affairs 애국소녀"

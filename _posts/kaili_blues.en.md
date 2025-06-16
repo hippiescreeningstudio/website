@@ -1,7 +1,7 @@
 ---
 title: "Monthly Screening 2025/7: Kaili Blues - Bi Gan"
 excerpt: "Chen Sheng goes off in search of his nephew who has been abandoned by his father. Along the way, he encounters numerous people from his past and also those from his future."
-backgroundColor: "##202020"
+backgroundColor: "#016769"
 isHero: true
 overlayText:
     title: "Kaili Blues 路边野餐"
