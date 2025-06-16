@@ -108,7 +108,7 @@ export function Intro() {
                     </Link>
                     {!isScrolled && (
                       <Link href={language === "zh" ? "/zh" : "/"} className="text-white hover:opacity-80 transition-all duration-300">
-                        <h1 className="font-bold text-xl md:text-2xl">
+                        <h1 className="font-bold text-xl md:text-2xl -ml-2">
                           {t("site.title")}
                         </h1>
                       </Link>

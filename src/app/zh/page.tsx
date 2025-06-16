@@ -80,8 +80,18 @@ export default function ChineseIndex() {
         <main>
             <Container>
                 <Intro />
-                {heroPosts.length > 0 && <HeroPostsCarousel posts={heroPosts} />}
-                {regularPosts.length > 0 && <PostGrid posts={regularPosts} />}
+                {/* Hero Posts Carousel */}
+                {heroPosts.length > 0 && (
+                    <div className="mb-16">
+                        <HeroPostsCarousel posts={heroPosts} />
+                    </div>
+                )}
+                {/* Regular Posts Grid */}
+                {regularPosts.length > 0 && (
+                    <div className="mb-16">
+                        <PostGrid posts={regularPosts} />
+                    </div>
+                )}
             </Container>
             <Footer />
         </main>
