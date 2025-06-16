@@ -4,6 +4,7 @@ import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect } from "react";
+import { Footer } from "@/app/_components/footer";
 
 export default function ChineseTeam() {
     const { setLanguage } = useLanguage();
@@ -67,7 +68,7 @@ export default function ChineseTeam() {
     ];
 
     return (
-        <main>
+        <main style={{ marginTop: '80px' }}>
             <Container>
                 <Intro />
                 <section className="mb-32">
@@ -109,6 +110,7 @@ export default function ChineseTeam() {
                     </div>
                 </section>
             </Container>
+            <Footer />
         </main>
     );
 } 

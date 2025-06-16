@@ -15,10 +15,10 @@ export default function ChineseAbout() {
     }, [setLanguage]);
 
     return (
-        <main>
+        <main style={{ marginTop: '150px' }}>
             <Container>
                 <Intro />
-                <section className="mb-64">
+                <section className="mb-64 ml-3">
                     <h1 className="text-lg md:text-lg font-bold tracking-tighter leading-tight mb-8">
                         关于我们
                     </h1>

@@ -94,7 +94,7 @@ export function Intro() {
             }`}>
             <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
               <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8">
-                <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`}>
+                <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'h-8' : 'h-16'}`}>
                   {/* Logo and Title */}
                   <div className="flex items-center space-x-3">
                     <Link href={language === "zh" ? "/zh" : "/"} className="hover:opacity-80 transition-all duration-300">
