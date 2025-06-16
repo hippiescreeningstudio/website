@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-base leading-normal md:leading-relaxed;
+  @apply text-base md:text-lg leading-normal md:leading-relaxed text-justify;
 }
 
 .markdown p,
@@ -46,7 +46,7 @@
 
 .markdown table th,
 .markdown table td {
-  @apply border border-gray-300 dark:border-gray-600 px-4 py-2 text-left;
+  @apply border border-gray-300 text-base md:text-lg dark:border-gray-600 px-4 py-1 text-left;
 }
 
 .markdown table th {
