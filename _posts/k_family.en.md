@@ -4,8 +4,8 @@ excerpt: "A wave of national protests in South Korea presents Arum Nam with a st
 backgroundColor: "#6e5a5b"
 isHero: true
 overlayText:
-    title: "K-Family Affairs 애국소녀"
-    subtitle: "Arum Nam | Aug 9, 14:00 @ Neues Rottmann Kino"
+    title: "K-Family Affairs 애국소녀 "
+    subtitle: "Screening and Q&A with Director Arum Nam | Aug 9, 14:00 @ Neues Rottmann Kino"
 coverImages:
   - "/assets/blog/k_family/still1.jpg"
   - "/assets/blog/k_family/still2.jpg"

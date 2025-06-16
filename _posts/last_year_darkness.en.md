@@ -9,7 +9,7 @@ overlayText:
 coverImages:
   - "/assets/blog/last_year/tlyod_1.jpg"
   - "/assets/blog/last_year/tlyod_2.jpg"
-  - "/assets/blog/last_year/tlyod_3.jpg"
+  - "/assets/blog/last_year/tlyod_3.png"
   - "/assets/blog/last_year/tlyod_4.jpg"
 date: "2025-06-10T00:00:00.000Z"
 ogImage:

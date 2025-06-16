@@ -45,7 +45,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
             setCurrentIndex((prevIndex) =>
                 prevIndex === imageSequence.length - 1 ? 0 : prevIndex + 1
             );
-        }, 4000);
+        }, 7000);
 
         return () => clearInterval(interval);
     }, [imageSequence.length]);
@@ -99,8 +99,11 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
             >
                 {/* Images container */}
                 <div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    className="flex transition-transform ease-in-out"
+                    style={{
+                        transform: `translateX(-${currentIndex * 100}%)`,
+                        transitionDuration: '3000ms'
+                    }}
                 >
                     {imageSequence.map(({ image, post }, index) => (
                         <div key={`${post.slug}-${index}`} className="w-full flex-shrink-0">
@@ -111,7 +114,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                                         alt={post.title}
                                         width={1920}
                                         height={1080}
-                                        className="w-full h-[100vh] object-cover hover:opacity-90 transition-opacity duration-200"
+                                        className="w-full h-[100vh] object-cover"
                                     />
                                     {post.overlayText && (
                                         <div className="absolute bottom-12 left-0 right-0">

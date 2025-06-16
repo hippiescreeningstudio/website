@@ -41,13 +41,10 @@ export function PostGrid({ posts, className = "" }: Props) {
                                 className="w-full h-full object-cover md:object-cover object-center transition-transform duration-300 group-hover:scale-105"
                             />
                             {post.overlayText && (
-                                <div className="absolute bottom-2 left-0 right-0 p-1">
+                                <div className="absolute bottom-2 left-5 right-0 p-1">
                                     <div className="space-y-1">
-                                        <p className="text-white text-base md:text-2xl font-bold">
+                                        <p className="text-white text-base md:text-2xl">
                                             {post.overlayText.title}
-                                        </p>
-                                        <p className="text-white text-sm md:text-base">
-                                            {post.overlayText.subtitle}
                                         </p>
                                     </div>
                                 </div>
