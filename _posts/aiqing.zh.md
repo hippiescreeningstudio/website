@@ -1,6 +1,9 @@
 ---
 title: "月度放映-2023/5: 陈翠梅《爱情征服一切》"
 excerpt: "在这部90分钟的电影中，马来西亚导演陈翠梅讲述了一个关于爱情，关于选择，和爱情之中丧失选择的故事。"
+overlayText:
+    title: "爱情征服一切"
+    subtitle: "陈翠梅 | 2023年5月20日 14:30 @ Werkstattkino"
 coverImages:
 - "/assets/blog/images/aiqing.jpg"
 date: "2023-05-20T22:43:26.000Z"

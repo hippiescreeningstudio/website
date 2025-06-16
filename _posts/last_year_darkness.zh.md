@@ -5,7 +5,7 @@ backgroundColor: "#131326"
 isHero: true
 overlayText:
     title: "午夜出走"
-    subtitle: "Neues Rottmann Kino 6月22日 13:00"
+    subtitle: "Ben Mullinkosson | 6月22日 13:00 @ Neues Rottmann Kino"
 coverImages:
   - "/assets/blog/last_year/tlyod_1.jpg"
   - "/assets/blog/last_year/tlyod_2.jpg"

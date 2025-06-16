@@ -1,6 +1,8 @@
 ---
 title: "2023年第76届戛纳电影节精选片单"
 excerpt: "我们从看过的几十部影片中精心为大家挑选了一些展映影片，每部推荐影片均附有评分及推荐语"
+overlayText:
+    title: "2023年戛纳电影节精选片单"
 coverImages:
 - "/assets/blog/images/cannes_23.jpg"
 date: "2023-05-16T00:00:00.000Z"

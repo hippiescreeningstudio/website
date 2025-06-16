@@ -1,6 +1,9 @@
 ---
 title: "月度放映-2023/11: 娄烨回顾展3：《苏州河》全新4K数位修复版"
 excerpt: "「拍《苏州河》是我第一次获得自由的感觉。我可以忘掉所有的技术问题语言问题，可以只关心故事，只关心那些有意思的那些细节……」 ——娄烨"
+overlayText:
+    title: "苏州河"
+    subtitle: "娄烨 | 2023年11月25日 11:30 @ ASTOR Film"
 coverImages:
 - "/assets/blog/images/suzhou_river.jpg"
 date: "2023-11-25T00:00:00.000Z"

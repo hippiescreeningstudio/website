@@ -1,9 +1,13 @@
 ---
 title: "Monthly Program 2023/5: Tan Chui Mui's Love Conquers All"
 excerpt: "In this 90-minute film, Malaysian director Tan Chui Mui tells a story about love, choice, and the loss of choice in love."
+overlayText:
+    title: "Love Conquers All"
+    subtitle: "Tan Chui Mui | May 20 2023, 14:30 @ Werkstattkino"
 coverImages:
 - "/assets/blog/images/aiqing.jpg"
 date: "2023-05-20T22:43:26.000Z"
+
 ogImage:
   url: "/assets/blog/images/aiqing.jpg"
 ---

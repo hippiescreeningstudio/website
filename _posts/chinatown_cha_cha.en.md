@@ -3,12 +3,8 @@ title: "Monthly Screening 2025/4: Chinatown Cha-Cha"
 excerpt: "The 92-year-old previous nightclub dancer Coby Yee decides to get back on stage again after joining the senior dance troupe Grant Avenue Follies. Together they go on a tour for the last time, bridging once isolated Chinese communities in the US, Cuba and China."
 backgroundColor: "#4b2812"
 overlayText:
-  en: 
-    title: "Chinatown Cha-Cha"
-    subtitle: "Neues Rottmann Kino Apr 27 13:00"
-  zh: 
-    title: "女人世界"
-    subtitle: "Neues Rottmann Kino 4月27日 13:00"
+  title: "Chinatown Cha-Cha 女人世界"
+  subtitle: "Luka Yuanyuan Yang | Apr 27 13:00 @ Neues Rottmann Kino"
 coverImages:
   - "/assets/blog/chinatown_cha/00.jpg"
   - "/assets/blog/chinatown_cha/01.jpg"

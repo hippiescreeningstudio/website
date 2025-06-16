@@ -2,6 +2,9 @@
 title: "Monthly Screening 2025/5: An Unfinished Film - Lou Ye"
 excerpt: "On the eve of the 2020 lockdown, a film crew in Wuhan restarts a long-abandoned project—only to collide with a historic moment. A powerful reflection on interrupted art, resilience, and the poetry of unfinished stories."
 backgroundColor: "##202020"
+overlayText:
+    title: "An Unfinished Film"
+    subtitle: "Lou Ye | May 17&24, Jun 1 2025 @ Neues Rottmann Kino"
 coverImages:
   - "/assets/blog/unfinished_film/still_1.png"
   - "/assets/blog/unfinished_film/still_2.png"

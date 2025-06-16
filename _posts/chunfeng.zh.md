@@ -1,6 +1,9 @@
 ---
 title: "月度放映-2023/9: 娄烨回顾展2：《春风沉醉的夜晚》"
 excerpt: "当这样的无可奈何，春风沉醉的晚上，我每要在各处乱走，走到天将明的时候。——郁达夫，一九二三年"
+overlayText:
+    title: "春风沉醉的夜晚"
+    subtitle: "娄烨 | 2023年9月30日 11:00 @ Neues Rottmann Kino"
 coverImages:
 - "/assets/blog/images/chunfeng.jpg"
 date: "2023-09-30T00:00:00.000Z"

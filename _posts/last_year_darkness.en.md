@@ -5,7 +5,7 @@ backgroundColor: "#151530"
 isHero: true
 overlayText:
     title: "The Last Year of Darkness"
-    subtitle: "Neues Rottmann Kino 6月22日 13:00"
+    subtitle: "Ben Mullinkosson | Jun 22, 13:00 @ Neues Rottmann Kino"
 coverImages:
   - "/assets/blog/last_year/tlyod_1.jpg"
   - "/assets/blog/last_year/tlyod_2.jpg"

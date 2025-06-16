@@ -44,10 +44,10 @@ export function PostGrid({ posts, className = "" }: Props) {
                                 <div className="absolute bottom-8 left-0 right-0 p-4">
                                     <div className="space-y-1">
                                         <p className="text-white text-xl md:text-2xl font-bold">
-                                            {post.overlayText[language].title}
+                                            {post.overlayText.title}
                                         </p>
                                         <p className="text-white text-sm md:text-base">
-                                            {post.overlayText[language].subtitle}
+                                            {post.overlayText.subtitle}
                                         </p>
                                     </div>
                                 </div>

@@ -1,6 +1,9 @@
 ---
 title: "月度放映-2023/10&12: 胡波《大象席地而坐》"
 excerpt: "「满州里动物园有一头大象，每天坐在那里。」"
+overlayText:
+    title: "大象席地而坐"
+    subtitle: "胡波 | 2023年10月14日 11:30 @ Neues Rottmann Kino"
 coverImages:
   - "/assets/blog/images/elephant.jpg"
 date: "2023-10-14T00:00:00.000Z"
