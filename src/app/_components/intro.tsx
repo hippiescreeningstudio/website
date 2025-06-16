@@ -116,7 +116,7 @@ export function Intro() {
                   </div>
 
                   {/* Desktop Navigation */}
-                  <div className="hidden md:flex items-center space-x-4">
+                  <div className="hidden text-lg md:flex items-center space-x-4">
                     <LanguageSwitcher />
                     <Search onStateChange={handleSearchStateChange} />
                     <Link
