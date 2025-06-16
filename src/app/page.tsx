@@ -44,7 +44,7 @@ export default function Index() {
 
   if (loading) {
     return (
-      <main>
+      <main className="min-h-screen">
         <Container>
           <Intro />
           <div className="text-center py-8">
@@ -59,7 +59,7 @@ export default function Index() {
 
   if (posts.length === 0) {
     return (
-      <main>
+      <main className="min-h-screen">
         <Container>
           <Intro />
           <div className="text-center py-8">
@@ -77,22 +77,24 @@ export default function Index() {
   const regularPosts = posts.filter(post => !post.isHero);
 
   return (
-    <main>
+    <main className="min-h-screen">
       <Container>
         <Intro />
-        {/* Hero Posts Carousel */}
-        {heroPosts.length > 0 && (
-          <div className="mb-16">
-            <HeroPostsCarousel posts={heroPosts} />
-          </div>
-        )}
-        {/* Regular Posts Grid */}
-        {regularPosts.length > 0 && (
+      </Container>
+      {/* Hero Posts Carousel */}
+      {heroPosts.length > 0 && (
+        <div className="mb-16">
+          <HeroPostsCarousel posts={heroPosts} />
+        </div>
+      )}
+      {/* Regular Posts Grid */}
+      {regularPosts.length > 0 && (
+        <Container>
           <div className="mb-16">
             <PostGrid posts={regularPosts} />
           </div>
-        )}
-      </Container>
+        </Container>
+      )}
       <Footer />
     </main>
   );

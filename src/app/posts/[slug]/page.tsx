@@ -112,7 +112,7 @@ export default function PostPage(props: Params) {
 
   if (loading) {
     return (
-      <main>
+      <main className="min-h-screen" style={{ backgroundColor: post?.backgroundColor || '#000000' }}>
         <Container>
           <PostProvider
             slug={slug}
@@ -137,7 +137,7 @@ export default function PostPage(props: Params) {
   }
 
   return (
-    <div style={{ backgroundColor: post.backgroundColor || undefined, minHeight: '100vh' }}>
+    <main className="min-h-screen" style={{ backgroundColor: post.backgroundColor || '#000000' }}>
       <PostProvider
         slug={slug}
         backgroundColor={post.backgroundColor}
@@ -163,6 +163,6 @@ export default function PostPage(props: Params) {
         isVisible={notification.isVisible}
         onClose={closeNotification}
       />
-    </div>
+    </main>
   );
 }
