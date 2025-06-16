@@ -89,7 +89,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
     if (posts.length === 0) return null;
 
     return (
-        <div className={`relative -mx-[calc(50vw-50%)] -mt-[calc(50vw-50%)] w-screen ${className}`}>
+        <div className={`relative -mx-[calc(50vw-50%)] w-screen ${className}`}>
             {/* Main carousel container */}
             <div
                 className="relative overflow-hidden bg-transparent"
