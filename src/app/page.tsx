@@ -9,6 +9,44 @@ import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
 import { Post } from "@/interfaces/post";
 
+function ScreeningTable() {
+  const { language } = useLanguage();
+
+  return (
+    <div className="mb-16">
+      <h2 className="text-2xl font-bold mb-4">
+        {language === "en" ? "Upcoming Screenings" : "即将放映"}
+      </h2>
+      <div className="overflow-x-auto">
+        <div className="prose dark:prose-invert max-w-none">
+          <table className="min-w-full">
+            <thead>
+              <tr>
+                <th className="w-1/3">{language === "en" ? "Film" : "电影"}</th>
+                <th className="w-1/4">{language === "en" ? "Screening Time" : "放映时间"}</th>
+                <th className="w-1/4">{language === "en" ? "Venue" : "地点"}</th>
+                <th className="w-1/6">{language === "en" ? "Ticket" : "购票"}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="whitespace-normal">The Last Year of Darkness 午夜出走</td>
+                <td className="whitespace-nowrap">March 15, 2024 19:00</td>
+                <td className="whitespace-nowrap">Cinema Hall</td>
+                <td className="whitespace-nowrap">
+                  <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline">
+                    {language === "en" ? "Get Tickets" : "购票"}
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Index() {
   const { language, setLanguage } = useLanguage();
   const [posts, setPosts] = useState<Post[]>([]);
@@ -86,6 +124,8 @@ export default function Index() {
             <HeroPostsCarousel posts={heroPosts} />
           </div>
         )}
+        {/* Screening Table */}
+        <ScreeningTable />
         {/* Regular Posts Grid */}
         {regularPosts.length > 0 && (
           <div className="mb-16">

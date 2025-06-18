@@ -13,6 +13,8 @@ type Props = {
 
 export function HeroPostsCarousel({ posts, className = "" }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isTouching, setIsTouching] = useState(false);
+    const [isClicking, setIsClicking] = useState(false);
     const { language } = useLanguage();
     const touchStartX = useRef<number | null>(null);
     const touchEndX = useRef<number | null>(null);
@@ -62,6 +64,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
     // Touch event handlers for swipe functionality
     const handleTouchStart = (e: React.TouchEvent) => {
         touchStartX.current = e.touches[0].clientX;
+        setIsTouching(true);
     };
 
     const handleTouchMove = (e: React.TouchEvent) => {
@@ -84,6 +87,12 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
 
         touchStartX.current = null;
         touchEndX.current = null;
+        setIsTouching(false);
+    };
+
+    const handleClick = () => {
+        setIsClicking(true);
+        setTimeout(() => setIsClicking(false), 300); // Reset after animation
     };
 
     if (posts.length === 0) return null;
@@ -107,7 +116,10 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                 >
                     {imageSequence.map(({ image, post }, index) => (
                         <div key={`${post.slug}-${index}`} className="w-full flex-shrink-0">
-                            <Link href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}>
+                            <Link
+                                href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}
+                                onClick={handleClick}
+                            >
                                 <div className="relative">
                                     <Image
                                         src={image}
@@ -120,8 +132,9 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                                         <div className="absolute bottom-12 left-0 right-0">
                                             <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8">
                                                 <div className="space-y-1">
-                                                    <p className="text-white text-2xl md:text-4xl font-bold">
+                                                    <p className="text-white text-2xl md:text-4xl font-bold relative inline-block group">
                                                         {post.overlayText.title}
+                                                        <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${isTouching || isClicking ? 'w-full' : 'w-0'} group-hover:w-full`}></span>
                                                     </p>
                                                     <p className="text-white text-xl md:text-2xl">
                                                         {post.overlayText.subtitle}

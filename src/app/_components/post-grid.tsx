@@ -4,6 +4,7 @@ import { Post } from "@/interfaces/post";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/language-context";
+import { useState } from "react";
 
 type Props = {
     posts: Post[];
@@ -12,8 +13,14 @@ type Props = {
 
 export function PostGrid({ posts, className = "" }: Props) {
     const { language } = useLanguage();
+    const [clickedPost, setClickedPost] = useState<string | null>(null);
 
     if (posts.length === 0) return null;
+
+    const handleClick = (slug: string) => {
+        setClickedPost(slug);
+        setTimeout(() => setClickedPost(null), 300); // Reset after animation
+    };
 
     return (
         <div className={className}>
@@ -32,6 +39,7 @@ export function PostGrid({ posts, className = "" }: Props) {
                             key={post.slug}
                             href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}
                             className="group relative block aspect-[16/9] overflow-hidden"
+                            onClick={() => handleClick(post.slug)}
                         >
                             <Image
                                 src={mainImage}
@@ -43,8 +51,9 @@ export function PostGrid({ posts, className = "" }: Props) {
                             {post.overlayText && (
                                 <div className="absolute bottom-2 left-5 right-0 p-1">
                                     <div className="space-y-1">
-                                        <p className="text-white text-base md:text-2xl">
+                                        <p className="text-white text-base md:text-2xl relative inline-block group">
                                             {post.overlayText.title}
+                                            <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${clickedPost === post.slug ? 'w-full' : 'w-0'} group-hover:w-full`}></span>
                                         </p>
                                     </div>
                                 </div>
