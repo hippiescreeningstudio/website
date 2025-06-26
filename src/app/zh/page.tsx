@@ -32,7 +32,7 @@ function ScreeningTable() {
                 <td className="break-words py-3"><a href="/posts/kaili_blues" className="underline break-words">
                 路边野餐
                   </a></td>
-                <td className="break-words py-3">七月19日, 14:00</td>
+                <td className="break-words py-3">7月19日, 14:00</td>
                 <td className="break-words py-3">ASTOR Film Lounge</td>
                 <td className="break-words py-3"> Coming soon
                 </td>
@@ -41,7 +41,7 @@ function ScreeningTable() {
                 <td className="break-words py-3"><a href="/posts/k_family" className="underline break-words">
                 南韩民主家政课
                   </a></td>
-                <td className="break-words py-3">八月9日, 14:00</td>
+                <td className="break-words py-3">8月9日, 14:00</td>
                 <td className="break-words py-3">Neues Rottmann</td>
                 <td className="break-words py-3">
                   <a href="https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109" className="text-blue-400 hover:underline break-words">
