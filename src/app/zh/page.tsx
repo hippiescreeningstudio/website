@@ -18,7 +18,7 @@ function ScreeningTable() {
           {language === "en" ? "Upcoming Screenings" : "即将放映"}
         </h2>
         <div className="w-full overflow-x-auto">
-          <table className="table-fixed w-full text-lg">
+        <table className="table-fixed w-full text-base md:text-lg">
             <thead>
               <tr>
                 <th className="w-4/10 text-left font-semibold py-3">{language === "en" ? "Film" : "电影"}</th>

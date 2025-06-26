@@ -18,7 +18,7 @@ function ScreeningTable() {
         {language === "en" ? "Upcoming Screenings" : "即将放映"}
       </h2>
       <div className="w-full overflow-x-auto">
-        <table className="table-fixed w-full text-lg">
+        <table className="table-fixed w-full text-base md:text-lg">
           <thead>
             <tr>
               <th className="w-4/10 text-left font-semibold py-3">{language === "en" ? "Film" : "电影"}</th>
@@ -30,7 +30,7 @@ function ScreeningTable() {
           <tbody>
           <tr>
               <td className="break-words py-3"><a href="/posts/kaili_blues" className="underline break-words">
-              Kaili Blues 路边野餐
+              Kaili Blues<span className="block md:hidden"></span><span className="hidden md:inline"> </span>路边野餐
                 </a></td>
               <td className="break-words py-3">Jul 19, 14:00</td>
               <td className="break-words py-3">ASTOR Film Lounge</td>
