@@ -4,8 +4,8 @@ excerpt: "A wave of national protests in South Korea presents Arum Nam with a st
 backgroundColor: "#6e5a5b"
 isHero: true
 overlayText:
-    title: "K-Family Affairs 애국소녀 "
-    subtitle: "Screening and Q&A with Director Arum Nam | Aug 9, 14:00 @ Neues Rottmann Kino"
+  title: "K-Family Affairs 애국소녀 "
+  subtitle: "Screening and Q&A with Director Arum Nam | Aug 9, 14:00 @ Neues Rottmann Kino"
 coverImages:
   - "/assets/blog/k_family/still1.jpg"
   - "/assets/blog/k_family/still2.jpg"
@@ -19,19 +19,21 @@ ogImage:
 
 **About the film**
 
-| Film Details| |
-|---|---|
-| Title| K-Family Affairs 애국소녀 |
-| Director | Arum Nam 남아름|
-| Year| 2023 |
-| Duration| 91 minutes |
-| Genre| Documentary |
+| Film Details |                           |
+| ------------ | ------------------------- |
+| Title        | K-Family Affairs 애국소녀 |
+| Director     | Arum Nam 남아름      |
+| Year         | 2023                      |
+| Duration     | 91 minutes                |
+| Genre        | Documentary               |
 
-| Screening Info | |
-|---|---|
-| Time | Aug 9, 14:00 |
-| Cinema | Neues Rottmann Kino (Rottmannstraße 15, 80333 München) |
-| Language| Korean with English subtitles (OmeU) |
+| Screening Info |                                                                                                                                                                           |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Time           | Aug 9, 14:00                                                                                                                                                              |
+| Cinema         | Neues Rottmann Kino (Rottmannstraße 15, 80333 München)                                                                                                                    |
+| Language       | Korean with English subtitles (OmeU)                                                                                                                                      |
+| Prices         | 13€, 12€ for students                                                                                                                                                     |
+| Tickets        | Buy [<strong style="color:rgb(255, 255, 255); text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/k-family-affairs) or at the box office |
 
 <figure>
   <img src="/assets/blog/k_family/poster.jpg" alt="K-Family Affairs" />

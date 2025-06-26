@@ -4,8 +4,8 @@ excerpt: "Chen Sheng goes off in search of his nephew who has been abandoned by 
 backgroundColor: "#016769"
 isHero: true
 overlayText:
-    title: "Kaili Blues 路边野餐"
-    subtitle: "Bi Gan | Jul 19, 14:00 @ ASTOR Film Lounge"
+  title: "Kaili Blues 路边野餐"
+  subtitle: "Bi Gan | Jul 19, 14:00 @ ASTOR Film Lounge"
 coverImages:
   - "/assets/blog/kaili_blues/still_1.png"
   - "/assets/blog/kaili_blues/still_2.jpg"
@@ -18,18 +18,19 @@ ogImage:
 
 **About the film**
 
-| Film Details| |
-|---|---|
-| Title| Kaili Blues 路边野餐 |
-| Director | Bi Gan 毕赣 |
-| Year| 2015 |
-| Duration| 113 minutes |
+| Film Details |                      |
+| ------------ | -------------------- |
+| Title        | Kaili Blues 路边野餐 |
+| Director     | Bi Gan 毕赣          |
+| Year         | 2015                 |
+| Duration     | 113 minutes          |
 
-| Screening Info | |
-|---|---|
-| Time | Jul 19, 14:00 |
-| Cinema | ASTOR Film Lounge in ARRI (Türkenstraße 91, 80799 München) |
-| Language| Chinese with English subtitles (OmeU) |
+| Screening Info |                                                            |
+| -------------- | ---------------------------------------------------------- |
+| Time           | Jul 19, 14:00                                              |
+| Cinema         | ASTOR Film Lounge in ARRI (Türkenstraße 91, 80799 München) |
+| Language       | Chinese with English subtitles (OmeU)                      |
+| Tickets        | Coming soon                                                |
 
 <figure>
   <img src="/assets/blog/kaili_blues/poster.jpg" alt="Kaili Blues" />

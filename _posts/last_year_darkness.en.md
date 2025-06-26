@@ -2,10 +2,10 @@
 title: "Special CSD Screening: The Last Year of Darkness 午夜出走"
 excerpt: This film revolves around a small club called Funky Town, the go-to party space for a group of twenty-year-old DJ’s, drag performers, lovers, ravers and skaters in China. In this unassuming corner bar hidden by Chengdu’s construction cranes, five locals escape their stress, even if it’s only for the night. But as the sun rises and the cranes begin to move again, our protagonists are forced to face what brought them to the party in the first place. "
 backgroundColor: "#151530"
-isHero: true
+isHero: false
 overlayText:
-    title: "The Last Year of Darkness"
-    subtitle: "Ben Mullinkosson | Jun 22, 13:00 @ Neues Rottmann Kino"
+  title: "The Last Year of Darkness"
+  subtitle: "Ben Mullinkosson | Jun 22, 13:00 @ Neues Rottmann Kino"
 coverImages:
   - "/assets/blog/last_year/tlyod_1.jpg"
   - "/assets/blog/last_year/tlyod_2.jpg"
@@ -15,25 +15,26 @@ date: "2025-06-10T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/last_year/tlyod_1.jpg"
 ---
+
 In celebration of Pride Month, join us for a special <span class="pride-month-rainbow">CSD</span> screening and Q&A with the director Ben Mullinkosson.
 
 **About the film**
 
-| Film Details| |
-|---|---|
-| Title| The Last Year of Darkness 午夜出走|
-| Director | Ben Mullinkosson |
-| Genre| Documentary |
-| Year| 2023 |
-| Duration| 95 minutes |
+| Film Details |                                    |
+| ------------ | ---------------------------------- |
+| Title        | The Last Year of Darkness 午夜出走 |
+| Director     | Ben Mullinkosson                   |
+| Genre        | Documentary                        |
+| Year         | 2023                               |
+| Duration     | 95 minutes                         |
 
-| Screening Info | |
-|---|---|
-| Time | Sun June 22 13:00 |
-| Venue | Neues Rottmann Kino, Rottmannstr. 15, 80333, München |
-| Language| Chinese with English subtitles (OmeU) |
-| Prices | 13€, 12€ for students |
-| Tickets | Buy [<strong style="color:rgb(255, 255, 255); text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness) or at the box office |
+| Screening Info |                                                                                                                                                                                    |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Time           | Sun June 22 13:00                                                                                                                                                                  |
+| Venue          | Neues Rottmann Kino, Rottmannstr. 15, 80333, München                                                                                                                               |
+| Language       | Chinese with English subtitles (OmeU)                                                                                                                                              |
+| Prices         | 13€, 12€ for students                                                                                                                                                              |
+| Tickets        | Buy [<strong style="color:rgb(255, 255, 255); text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/the-last-year-of-darkness) or at the box office |
 
 <figure>
   <img src="/assets/blog/last_year/poster.jpg" alt="The Last Year of Darkness" />
@@ -56,7 +57,6 @@ there.
 
 THE LAST YEAR OF DARKNESS is a coming-of-age film that celebrates the ephemerality of
 youth—from love to loss, from throwing up to growing up.
-
 
 **About the director**
 
@@ -97,4 +97,3 @@ our protagonists' control, they have all been pushed into the next stage of thei
 is meant to be a time capsule dedicated to all of the Funkytown emotion of the past. I hope that
 audiences will be pleasantly surprised by how much they can relate to each character in the film
 and I hope they can feel the level of intimacy and vulnerability present on screen.
-         

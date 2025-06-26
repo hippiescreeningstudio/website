@@ -127,13 +127,13 @@ table td {
     color: #ffffff;
 }
 
-table td:first-child,
-table th:first-child {
+article table td:first-child,
+article table th:first-child {
     width: 30%;
 }
 
-table td:last-child,
-table th:last-child {
+article table td:last-child,
+article table th:last-child {
     width: 70%;
 }
 

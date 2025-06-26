@@ -17,31 +17,40 @@ function ScreeningTable() {
       <h2 className="text-2xl font-bold mb-4">
         {language === "en" ? "Upcoming Screenings" : "即将放映"}
       </h2>
-      <div className="overflow-x-auto">
-        <div className="prose dark:prose-invert max-w-none">
-          <table className="min-w-full">
-            <thead>
-              <tr>
-                <th className="w-1/3">{language === "en" ? "Film" : "电影"}</th>
-                <th className="w-1/4">{language === "en" ? "Screening Time" : "放映时间"}</th>
-                <th className="w-1/4">{language === "en" ? "Venue" : "地点"}</th>
-                <th className="w-1/6">{language === "en" ? "Ticket" : "购票"}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="whitespace-normal">The Last Year of Darkness 午夜出走</td>
-                <td className="whitespace-nowrap">March 15, 2024 19:00</td>
-                <td className="whitespace-nowrap">Cinema Hall</td>
-                <td className="whitespace-nowrap">
-                  <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline">
-                    {language === "en" ? "Get Tickets" : "购票"}
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div className="w-full overflow-x-auto">
+        <table className="table-fixed w-full text-lg">
+          <thead>
+            <tr>
+              <th className="w-4/10 text-left font-semibold py-3">{language === "en" ? "Film" : "电影"}</th>
+              <th className="w-1/10 text-left font-semibold py-3">{language === "en" ? "Time" : "时间"}</th>
+              <th className="w-3/10 text-left font-semibold py-3">{language === "en" ? "Venue" : "地点"}</th>
+              <th className="w-2/10 text-left font-semibold py-3">{language === "en" ? "Tickets" : "购票"}</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td className="break-words py-3"><a href="/posts/kaili_blues" className="underline break-words">
+              Kaili Blues 路边野餐
+                </a></td>
+              <td className="break-words py-3">Jul 19, 14:00</td>
+              <td className="break-words py-3">ASTOR Film Lounge</td>
+              <td className="break-words py-3"> Coming soon
+              </td>
+            </tr>
+            <tr>
+              <td className="break-words py-3"><a href="/posts/k_family" className="underline break-words">
+                  K-Family Affairs
+                </a></td>
+              <td className="break-words py-3">Aug 9, 14:00</td>
+              <td className="break-words py-3">Neues Rottmann</td>
+              <td className="break-words py-3">
+                <a href="https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109" className="text-blue-400 hover:underline break-words">
+                  {language === "en" ? "Buy online" : "购票"}
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
