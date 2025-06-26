@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Post } from "@/interfaces/post";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,11 +13,8 @@ type Props = {
 
 export function HeroPostsCarousel({ posts, className = "" }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isTouching, setIsTouching] = useState(false);
     const [isClicking, setIsClicking] = useState(false);
     const { language } = useLanguage();
-    const touchStartX = useRef<number | null>(null);
-    const touchEndX = useRef<number | null>(null);
 
     // Generate the image carousel sequence
     const generateImageSequence = () => {
@@ -61,35 +58,6 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
         setCurrentIndex(currentIndex === imageSequence.length - 1 ? 0 : currentIndex + 1);
     };
 
-    // Touch event handlers for swipe functionality
-    const handleTouchStart = (e: React.TouchEvent) => {
-        touchStartX.current = e.touches[0].clientX;
-        setIsTouching(true);
-    };
-
-    const handleTouchMove = (e: React.TouchEvent) => {
-        touchEndX.current = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = () => {
-        if (!touchStartX.current || !touchEndX.current) return;
-
-        const swipeDistance = touchStartX.current - touchEndX.current;
-        const minSwipeDistance = 50;
-
-        if (Math.abs(swipeDistance) > minSwipeDistance) {
-            if (swipeDistance > 0) {
-                goToNext();
-            } else {
-                goToPrevious();
-            }
-        }
-
-        touchStartX.current = null;
-        touchEndX.current = null;
-        setIsTouching(false);
-    };
-
     const handleClick = () => {
         setIsClicking(true);
         setTimeout(() => setIsClicking(false), 300); // Reset after animation
@@ -100,12 +68,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
     return (
         <div className={`relative -mx-[calc(50vw-50%)] w-screen ${className}`}>
             {/* Main carousel container */}
-            <div
-                className="relative overflow-hidden bg-transparent"
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-            >
+            <div className="relative overflow-hidden bg-transparent">
                 {/* Images container */}
                 <div
                     className="flex transition-transform ease-in-out"
@@ -119,6 +82,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                             <Link
                                 href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}
                                 onClick={handleClick}
+                                onTouchStart={handleClick}
                             >
                                 <div className="relative">
                                     <Image
@@ -134,7 +98,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                                                 <div className="space-y-1">
                                                     <p className="text-white text-2xl md:text-4xl font-bold relative inline-block group">
                                                         {post.overlayText.title}
-                                                        <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${isTouching || isClicking ? 'w-full' : 'w-0'} group-hover:w-full`}></span>
+                                                        <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${isClicking ? 'w-full' : 'w-0'} group-hover:w-full`}></span>
                                                     </p>
                                                     <p className="text-white text-xl md:text-2xl">
                                                         {post.overlayText.subtitle}
