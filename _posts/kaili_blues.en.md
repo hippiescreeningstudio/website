@@ -25,12 +25,13 @@ ogImage:
 | Year         | 2015                 |
 | Duration     | 113 minutes          |
 
-| Screening Info |                                                            |
-| -------------- | ---------------------------------------------------------- |
-| Time           | Jul 19, 14:00                                              |
-| Cinema         | ASTOR Film Lounge in ARRI (Türkenstraße 91, 80799 München) |
-| Language       | Chinese with English subtitles (OmeU)                      |
-| Tickets        | Coming soon                                                |
+| Screening Info |                                                                                                                                                          |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Time           | Jul 19, 14:00                                                                                                                                            |
+| Cinema         | ASTOR Film Lounge in ARRI (Türkenstraße 91, 80799 München)                                                                                               |
+| Language       | Chinese with English subtitles (OmeU)                                                                                                                    |
+| Tickets        | [<strong style="color:rgb(255, 255, 255); text-decoration: underline;">Buy online</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8) |
+| Prices         | from 14.45€                                                                                                                                              |
 
 <figure>
   <img src="/assets/blog/kaili_blues/poster.jpg" alt="Kaili Blues" />
