@@ -35,7 +35,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
         
         // Sort posts by date (most recent first)
         const sortedPosts = [...posts].sort((a, b) => {
-            return new Date(b.date).getTime() - new Date(a.date).getTime();
+            return new Date(a.date).getTime() - new Date(b.date).getTime();
         });
         
         // Use mobileCoverImages for mobile if available, otherwise fallback to coverImages
