@@ -33,6 +33,11 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
     const generateImageSequence = () => {
         const sequence: { image: string; post: Post }[] = [];
         
+        // Sort posts by date (most recent first)
+        const sortedPosts = [...posts].sort((a, b) => {
+            return new Date(b.date).getTime() - new Date(a.date).getTime();
+        });
+        
         // Use mobileCoverImages for mobile if available, otherwise fallback to coverImages
         const getImagesForPost = (post: Post) => {
             if (isMobile && post.mobileCoverImages && post.mobileCoverImages.length > 0) {
@@ -41,10 +46,10 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
             return post.coverImages;
         };
 
-        const maxImages = Math.max(...posts.map(post => getImagesForPost(post).length));
+        const maxImages = Math.max(...sortedPosts.map(post => getImagesForPost(post).length));
 
         for (let i = 0; i < maxImages; i++) {
-            posts.forEach(post => {
+            sortedPosts.forEach(post => {
                 const images = getImagesForPost(post);
                 const imageIndex = i % images.length;
                 sequence.push({

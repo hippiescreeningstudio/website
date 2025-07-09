@@ -22,7 +22,7 @@ mobileCoverImages:
   - "/assets/blog/kaili_blues/still_4_mobile.png"
   - "/assets/blog/kaili_blues/still_5.jpg"
   - "/assets/blog/kaili_blues/still_6.jpg"
-date: "2025-06-16T00:00:00.000Z"
+date: "2025-07-19T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/kaili_blues/still_1.jpg"
 ---
