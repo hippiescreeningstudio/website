@@ -12,6 +12,12 @@ coverImages:
   - "/assets/blog/k_family/still3.jpg"
   - "/assets/blog/k_family/still4.jpg"
   - "/assets/blog/k_family/still5.png"
+mobileCoverImages:
+  - "/assets/blog/k_family/still1.jpg"
+  - "/assets/blog/k_family/still2.jpg"
+  - "/assets/blog/k_family/still3_mobile.png"
+  - "/assets/blog/k_family/still4.jpg"
+  - "/assets/blog/k_family/still5.png"
 date: "2025-06-16T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/k_family/still1.jpg"

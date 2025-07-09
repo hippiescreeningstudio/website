@@ -7,13 +7,24 @@ overlayText:
   title: "Kaili Blues 路边野餐"
   subtitle: "Bi Gan | Jul 19, 14:00 @ ASTOR Film Lounge"
 coverImages:
+  - "/assets/blog/kaili_blues/still_1.jpg"
   - "/assets/blog/kaili_blues/still_1.png"
   - "/assets/blog/kaili_blues/still_2.jpg"
   - "/assets/blog/kaili_blues/still_3.jpg"
   - "/assets/blog/kaili_blues/still_4.jpg"
+  - "/assets/blog/kaili_blues/still_5.jpg"
+  - "/assets/blog/kaili_blues/still_6.jpg"
+mobileCoverImages:
+  - "/assets/blog/kaili_blues/still_1_mobile.png"
+  - "/assets/blog/kaili_blues/still_1.png"
+  - "/assets/blog/kaili_blues/still_2.jpg"
+  - "/assets/blog/kaili_blues/still_3.jpg"
+  - "/assets/blog/kaili_blues/still_4_mobile.png"
+  - "/assets/blog/kaili_blues/still_5.jpg"
+  - "/assets/blog/kaili_blues/still_6.jpg"
 date: "2025-06-16T00:00:00.000Z"
 ogImage:
-  url: "/assets/blog/kaili_blues/still_1.png"
+  url: "/assets/blog/kaili_blues/still_1.jpg"
 ---
 
 **About the film**

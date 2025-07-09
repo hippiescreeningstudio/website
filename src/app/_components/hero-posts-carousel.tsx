@@ -14,18 +14,41 @@ type Props = {
 export function HeroPostsCarousel({ posts, className = "" }: Props) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isClicking, setIsClicking] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const { language } = useLanguage();
+
+    // Detect mobile screen size
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768); // Tailwind's md breakpoint
+        };
+        
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     // Generate the image carousel sequence
     const generateImageSequence = () => {
         const sequence: { image: string; post: Post }[] = [];
-        const maxImages = Math.max(...posts.map(post => post.coverImages.length));
+        
+        // Use mobileCoverImages for mobile if available, otherwise fallback to coverImages
+        const getImagesForPost = (post: Post) => {
+            if (isMobile && post.mobileCoverImages && post.mobileCoverImages.length > 0) {
+                return post.mobileCoverImages;
+            }
+            return post.coverImages;
+        };
+
+        const maxImages = Math.max(...posts.map(post => getImagesForPost(post).length));
 
         for (let i = 0; i < maxImages; i++) {
             posts.forEach(post => {
-                const imageIndex = i % post.coverImages.length;
+                const images = getImagesForPost(post);
+                const imageIndex = i % images.length;
                 sequence.push({
-                    image: post.coverImages[imageIndex],
+                    image: images[imageIndex],
                     post
                 });
             });
@@ -35,6 +58,11 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
     };
 
     const imageSequence = generateImageSequence();
+
+    // Reset current index when mobile state changes to avoid out-of-bounds issues
+    useEffect(() => {
+        setCurrentIndex(0);
+    }, [isMobile]);
 
     // Auto-advance carousel
     useEffect(() => {
