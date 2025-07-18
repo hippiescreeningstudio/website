@@ -23,6 +23,12 @@ ogImage:
   url: "/assets/blog/k_family/still1.jpg"
 ---
 
+Arum, the director, delves into her parents' integral roles in shaping
+Korea's democratization, using their family history as a lens
+to examine the broader political landscape of the country.
+
+We will have an online Q&A with the director after the screening.
+
 **About the film**
 
 | Film Details |                           |
@@ -48,4 +54,40 @@ ogImage:
 
 **Watch the Trailer**
 
+Refresh if not showing
+
 <div class="youtube-embed" data-video-id="YGVPH5sesEY" data-title="K-Family Affairs"></div>
+
+**Synopsis**
+
+Arum’s parents belong to the pivotal generation that led South Korea’s democratization
+through the student movements of the 1980s. Eager to pass on a better world to their
+daughter, her father chose the path of a public servant, while her mother became a feminist
+activist. Inspired by their commitment to building a better Korea, Arum embraced the idea of
+becoming a patriotic girl. But at the age of 18, Arum witnessed the Sewol ferry disaster—a
+national tragedy that claimed countless lives due to systemic failures. As she uncovered her
+father's involvement in the aftermath, Arum began to question the democracy her parents'
+generation had fought so ardently to establish. Through the lens of her family’s journey,
+Arum delves into the political history of South Korea, grappling with the role her own
+generation must assume
+
+**About the Director**
+
+<figure>
+  <img src="/assets/blog/k_family/ArumNam.png" alt="Arum Nam" />
+  <figcaption>Arum Nam</figcaption>
+</figure>
+
+**Arum Nam** is a documentary director from Seoul, South Korea, holds a Master's degree in Documentary Filmmaking from the Korea National University of Arts. She directed a short documentary "Pink Femi", which tells the story of a feminist mother, and co-directed "Teleporting" with Japanese directors during the pandemic. "K-family affairs" is her first feature documentary.
+
+**Director's Statement**
+
+Why did I become a passive adult, who couldn't fight injustice like my parents did in their
+youth? I even held back from attending protests due to my father's role as a public servant, all
+while questioning my failure to emulate my mother's feminism.
+
+"K-family Affairs" is my personal confession, a journey unearthing a long-neglected aspect of
+my life. It explores the dilemmas I've faced, which haven't been discussed in a political context
+for years. This film is a reflection of my quest to find my own political voice, navigating the
+fine line between 'critique' and 'advocacy' for the previous generation. I hope "K-family
+Affairs" inspires sharing stories about the next democracy.
