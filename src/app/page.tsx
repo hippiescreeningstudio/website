@@ -11,48 +11,90 @@ import { Post } from "@/interfaces/post";
 function ScreeningTable() {
   const { language } = useLanguage();
 
+  // Screening data with poster images and additional metadata
+  const screenings = [
+    {
+      id: 1,
+      title: "Kaili Blues 路边野餐",
+      slug: "kaili_blues",
+      poster: "/assets/blog/kaili_blues/poster.jpg",
+      duration: "113 min",
+      genre: "Drama, Mystery",
+      venue: "ASTOR Film Lounge",
+      time: "Jul 19, 14:00",
+      ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
+    },
+    {
+      id: 2,
+      title: "K-Family Affairs 애국소녀",
+      slug: "k_family",
+      poster: "/assets/blog/k_family/poster.jpg",
+      duration: "90 min",
+      genre: "Drama, Family",
+      venue: "Neues Rottmann",
+      time: "Aug 9, 14:00",
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109"
+    }
+  ];
+
   return (
     <div className="mb-16">
-      <h2 className="text-2xl font-bold mb-4">
+      <h2 className="text-2xl font-bold mb-6">
         {language === "en" ? "Upcoming Screenings" : "即将放映"}
       </h2>
-      <div className="w-full overflow-x-auto">
-        <table className="table-fixed w-full text-base md:text-lg">
-          <thead>
-            <tr>
-              <th className="w-4/10 text-left font-semibold py-3">Film</th>
-              <th className="w-1/10 text-left font-semibold py-3">Time</th>
-              <th className="w-3/10 text-left font-semibold py-3">Venue</th>
-              <th className="w-2/10 text-left font-semibold py-3">Tickets</th>
-            </tr>
-          </thead>
-          <tbody>
-          <tr>
-              <td className="break-words py-3"><a href="/posts/kaili_blues" className="underline break-words">
-              Kaili Blues<span className="block md:hidden"></span><span className="hidden md:inline"> </span>路边野餐
-                </a></td>
-              <td className="break-words py-3">Jul 19, 14:00</td>
-              <td className="break-words py-3">ASTOR Film Lounge</td>
-              <td className="break-words py-3">
-                <a href="https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8" className="text-blue-400 hover:underline break-words">
-                  Buy online
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        {screenings.map((screening) => (
+          <div key={screening.id} className="flex bg-black shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            {/* First Column - Poster */}
+            <div className="flex-shrink-0 w-40 md:w-60">
+              <a href={`/posts/${screening.slug}`} className="block h-full">
+                <img
+                  src={screening.poster}
+                  alt={`${screening.title} poster`}
+                  className="w-full h-full object-cover hover:scale-110 transition-all duration-300"
+                />
+              </a>
+            </div>
+            
+            {/* Second Column - Film Information */}
+            <div className="flex-1 p-4 md:p-5 flex flex-col justify-end space-y-4">
+              {/* Film Title */}
+              <div>
+                <a 
+                  href={`/posts/${screening.slug}`} 
+                  className="text-lg md:text-xl font-bold text-white hover:underline transition-colors duration-300 block"
+                >
+                  {screening.title}
                 </a>
-              </td>
-            </tr>
-            <tr>
-              <td className="break-words py-3"><a href="/posts/k_family" className="underline break-words">
-                  K-Family Affairs
-                </a></td>
-              <td className="break-words py-3">Aug 9, 14:00</td>
-              <td className="break-words py-3">Neues Rottmann</td>
-              <td className="break-words py-3">
-                <a href="https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109" className="text-blue-400 hover:underline break-words">
-                  Buy online
+                {/* Duration and Genre */}
+                <p className="text-sm md:text-base text-gray-200 mt-1">
+                  {screening.duration} • {screening.genre}
+                </p>
+              </div>
+              
+              {/* Venue and Time */}
+              <div>
+                <p className="text-sm md:text-base text-white">
+                  <span className="font-medium">{screening.venue}</span>
+                  <span className="mx-2">•</span>
+                  <span>{screening.time}</span>
+                </p>
+              </div>
+              
+              {/* Get Ticket Button */}
+              <div>
+                <a
+                  href={screening.ticketUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-3 md:px-4 rounded-lg transition-colors duration-300 text-xs md:text-sm"
+                >
+                  {language === "en" ? "Get Tickets" : "购买门票"}
                 </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
