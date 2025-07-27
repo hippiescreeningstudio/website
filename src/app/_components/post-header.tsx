@@ -1,7 +1,6 @@
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import { ImageCarousel } from "./image-carousel";
-import DateFormatter from "./date-formatter";
 import { PostTitle } from "@/app/_components/post-title";
 import { type Author } from "@/interfaces/author";
 
@@ -22,12 +21,6 @@ export function PostHeader({ title, coverImages, date, author }: Props) {
       <div className="mt-8 md:mt-12">
         <PostTitle>{title}</PostTitle>
       </div>
-      {author && (
-        <div className="hidden md:block md:mb-12">
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
-      )}
-
       {/* Image carousel with margins */}
       <div className="mb-4 md:mb-8">
         {shouldUseCarousel ? (

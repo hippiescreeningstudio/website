@@ -31,9 +31,6 @@ export function Intro() {
     setIsSearchOpen(searchOpen);
   };
 
-  const togglePastScreeningsDropdown = () => {
-    setIsPastScreeningsDropdownOpen(!isPastScreeningsDropdownOpen);
-  };
 
   const years = [2025, 2024, 2023, 2022];
 
@@ -88,8 +85,8 @@ export function Intro() {
 
       <section className="relative z-50">
         <div className="fixed top-0 left-0 right-0">
-          <nav className={`transition-all duration-300 ${isPostPage && !isHomePage && (isOpen || (isScrolled && window.innerWidth < 768))
-            ? 'md:bg-transparent backdrop-blur-md'
+          <nav className={`transition-all duration-300 ${isPostPage && !isHomePage && isScrolled && !isOpen
+            ? 'md:bg-transparent md:backdrop-blur-md'
             : 'bg-transparent'
             }`}>
             <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
@@ -133,7 +130,7 @@ export function Intro() {
                       </button>
                       
                                               {isPastScreeningsDropdownOpen && (
-                          <div className="absolute top-full left-0 -mt-0.5 w-40 backdrop-blur-md bg-black/40 border border-white/30 z-50">
+                          <div className="absolute top-full left-0 -mt-0.5 w-full backdrop-blur-md bg-black/40 border border-white/30 z-50">
                             <div className="py-2">
                             {years.map((year) => (
                               <Link
@@ -199,13 +196,23 @@ export function Intro() {
                 {/* Mobile Menu */}
                 <div className="md:hidden">
                   {isOpen && (
-                    <div className={`absolute right-0 top-full -mt-5 w-60 shadow-lg z-50 ${isPostPage ? 'bg-black/80' : 'backdrop-blur-md bg-black/40'
+                    <>
+                      {/* Backdrop with blur effect */}
+                      <div 
+                        className={`fixed inset-0 z-40 backdrop-blur-md bg-black/20`}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setIsPastScreeningsDropdownOpen(false);
+                        }}
+                      />
+                      {/* Mobile Menu Content */}
+                      <div className={`absolute right-0 top-full -mt-5 w-60 shadow-lg z-50 backdrop-blur-md bg-black/40
                       }`}>
-                      {/* First row: Language switcher, Search */}
-                      <div className="flex items-center justify-left space-x-6 px-4 py-3">
-                        <LanguageSwitcher />
-                        <Search onStateChange={handleSearchStateChange} />
-                      </div>
+                        {/* First row: Language switcher, Search */}
+                        <div className="flex items-center justify-left space-x-6 px-4 py-3">
+                          <LanguageSwitcher />
+                          <Search onStateChange={handleSearchStateChange} />
+                        </div>
                       {/* Navigation links */}
                       <div className="py-1">
                         {/* Past Screenings Mobile Dropdown */}
@@ -233,7 +240,8 @@ export function Intro() {
                           </button>
                           
                           {isPastScreeningsDropdownOpen && (
-                            <div className="bg-black/60 relative z-[70] pointer-events-auto">
+                            <div className={`relative z-[70] pointer-events-auto bg-black/60
+                            }`}>
                               {years.map((year) => (
                                 <button
                                   key={year}
@@ -268,7 +276,8 @@ export function Intro() {
                           {t("nav.team")}
                         </Link>
                       </div>
-                    </div>
+                      </div>
+                    </>
                   )}
                 </div>
               </div>
