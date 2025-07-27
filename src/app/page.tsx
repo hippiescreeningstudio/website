@@ -14,7 +14,7 @@ function ScreeningTable() {
 
   // Screening data with poster images and additional metadata
   const screenings = [
-
+ 
     {
       id: 2,
       title: "K-Family Affairs 애국소녀",
@@ -44,7 +44,7 @@ function ScreeningTable() {
       <h2 className="text-2xl font-bold mb-6">
         {language === "en" ? "Upcoming Screenings" : "即将放映"}
       </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         {screenings.map((screening) => (
           <div key={screening.id} className="flex bg-black shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* First Column - Poster */}
@@ -76,10 +76,11 @@ function ScreeningTable() {
               
               {/* Venue and Time */}
               <div>
+                <p className="text-sm md:text-base text-white font-medium">
+                  {screening.venue}
+                </p>
                 <p className="text-sm md:text-base text-white">
-                  <span className="font-medium">{screening.venue}</span>
-                  <span className="mx-2">•</span>
-                  <span>{screening.time}</span>
+                  {screening.time}
                 </p>
               </div>
               
@@ -109,21 +110,21 @@ function ScreeningTable() {
   );
 }
 
-export default function Index() {
+function SharedIndexPage({ targetLanguage }: { targetLanguage: "en" | "zh" }) {
   const { language, setLanguage } = useLanguage();
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Set language to English when component mounts
+  // Set language when component mounts
   useEffect(() => {
-    setLanguage("en");
-  }, [setLanguage]);
+    setLanguage(targetLanguage);
+  }, [setLanguage, targetLanguage]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`/api/posts?language=en`);
+        const response = await fetch(`/api/posts?language=${targetLanguage}`);
         if (response.ok) {
           const fetchedPosts = await response.json();
           setPosts(fetchedPosts);
@@ -140,7 +141,7 @@ export default function Index() {
     };
 
     fetchPosts();
-  }, []);
+  }, [targetLanguage]);
 
   if (loading) {
     return (
@@ -149,7 +150,7 @@ export default function Index() {
           <Intro />
           <div className="text-center py-8">
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              {language === "en" ? "Loading..." : "加载中..."}
+              {targetLanguage === "en" ? "Loading..." : "加载中..."}
             </p>
           </div>
         </Container>
@@ -164,7 +165,7 @@ export default function Index() {
           <Intro />
           <div className="text-center py-8">
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              {language === "en" ? "No posts available" : "暂无文章"}
+              {targetLanguage === "en" ? "No posts available" : "暂无文章"}
             </p>
           </div>
         </Container>
@@ -192,3 +193,9 @@ export default function Index() {
     </main>
   );
 }
+
+export default function Index() {
+  return <SharedIndexPage targetLanguage="en" />;
+}
+
+export { SharedIndexPage };
