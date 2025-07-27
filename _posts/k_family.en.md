@@ -5,7 +5,7 @@ backgroundColor: "#6e5a5b"
 isHero: true
 overlayText:
   title: "K-Family Affairs 애국소녀"
-  subtitle: "Fiminist mom * bureaucrat dad = ?"
+  subtitle: "Feminist mom * bureaucrat dad = ?"
 coverImages:
   - "/assets/blog/k_family/still1.jpg"
   - "/assets/blog/k_family/still2.jpg"
