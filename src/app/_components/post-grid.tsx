@@ -41,8 +41,8 @@ export function PostGrid({ posts, className = "" }: Props) {
                             <Image
                                 src={mainImage}
                                 alt={post.title}
-                                width={800}
-                                height={450}
+                                width={400}
+                                height={850}
                                 className="w-full h-full object-cover md:object-cover object-center transition-transform duration-300 group-hover:scale-105"
                             />
                             {post.overlayText && (

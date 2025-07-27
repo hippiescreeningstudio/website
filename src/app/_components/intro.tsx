@@ -13,8 +13,10 @@ export function Intro() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isPastScreeningsDropdownOpen, setIsPastScreeningsDropdownOpen] = useState(false);
   const desktopNavRef = useRef<HTMLDivElement>(null);
   const mobileNavRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const { t, language } = useLanguage();
   const { backgroundColor } = usePost();
   const pathname = usePathname();
@@ -28,6 +30,12 @@ export function Intro() {
   const handleSearchStateChange = (searchOpen: boolean) => {
     setIsSearchOpen(searchOpen);
   };
+
+  const togglePastScreeningsDropdown = () => {
+    setIsPastScreeningsDropdownOpen(!isPastScreeningsDropdownOpen);
+  };
+
+  const years = [2025, 2024, 2023, 2022];
 
   // Track scroll position with hysteresis to prevent flickering
   useEffect(() => {
@@ -55,36 +63,25 @@ export function Intro() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isScrolled]);
 
-  // Close menu when clicking outside
+  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        mobileNavRef.current &&
-        !mobileNavRef.current.contains(event.target as Node) &&
-        desktopNavRef.current &&
-        !desktopNavRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsPastScreeningsDropdownOpen(false);
       }
     };
 
-    if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [isOpen]);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <>
-      {/* Blur backdrop for post pages */}
-      {isPostPage && isOpen && (
-        <div className="fixed inset-0 backdrop-blur-md bg-black/20 z-40 transition-all duration-300" />
-      )}
+      <style jsx global>{`
+        .header-image {
+          background-color: ${backgroundColor || '#000000'};
+        }
+      `}</style>
 
       <section className="relative z-50">
         <div className="fixed top-0 left-0 right-0">
@@ -119,12 +116,36 @@ export function Intro() {
                   <div className="hidden text-lg md:flex items-center space-x-4">
                     <LanguageSwitcher />
                     <Search onStateChange={handleSearchStateChange} />
-                    <Link
-                      href={language === "zh" ? "/zh/previous-screenings" : "/previous-screenings"}
-                      className="text-white hover:underline transition-colors"
+                    
+                    {/* Past Screenings Dropdown */}
+                    <div 
+                      className="relative"
+                      ref={dropdownRef}
+                      onMouseEnter={() => setIsPastScreeningsDropdownOpen(true)}
+                      onMouseLeave={() => setIsPastScreeningsDropdownOpen(false)}
                     >
-                      {language === "zh" ? "往期放映" : "Past Screenings"}
-                    </Link>
+                      <button className="text-white hover:underline transition-colors flex items-center">
+                        {language === "zh" ? "往期放映" : "Past Screenings"}
+
+                      </button>
+                      
+                                              {isPastScreeningsDropdownOpen && (
+                          <div className="absolute top-full left-0 -mt-0.5 w-40 backdrop-blur-md bg-black/40 border border-white/30 z-50">
+                            <div className="py-2">
+                            {years.map((year) => (
+                              <Link
+                                key={year}
+                                href={language === "zh" ? `/zh/past-screenings/${year}` : `/past-screenings/${year}`}
+                                className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+                              >
+                                {year}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
                     <Link
                       href={language === "zh" ? "/zh/about" : "/about"}
                       className="text-white hover:underline transition-colors"
@@ -184,13 +205,43 @@ export function Intro() {
                       </div>
                       {/* Navigation links */}
                       <div className="py-1">
-                        <Link
-                          href={language === 'zh' ? '/zh/previous-screenings' : '/previous-screenings'}
-                          className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {language === "zh" ? "往期放映" : "Past Screenings"}
-                        </Link>
+                        {/* Past Screenings Mobile Dropdown */}
+                        <div>
+                          <button
+                            onClick={togglePastScreeningsDropdown}
+                            className="flex items-center justify-between w-full px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                          >
+                            <span>{language === "zh" ? "往期放映" : "Past Screenings"}</span>
+                            <svg 
+                              className="h-4 w-4 transition-transform duration-200"
+                              style={{ transform: isPastScreeningsDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                              fill="none" 
+                              stroke="currentColor" 
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </button>
+                          
+                          {isPastScreeningsDropdownOpen && (
+                            <div className="bg-black/60">
+                              {years.map((year) => (
+                                <Link
+                                  key={year}
+                                  href={language === "zh" ? `/zh/past-screenings/${year}` : `/past-screenings/${year}`}
+                                  className="block px-8 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+                                  onClick={() => {
+                                    setIsOpen(false);
+                                    setIsPastScreeningsDropdownOpen(false);
+                                  }}
+                                >
+                                  {year}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
                         <Link
                           href={language === 'zh' ? '/zh/about' : '/about'}
                           className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
