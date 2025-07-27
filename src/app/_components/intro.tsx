@@ -99,7 +99,7 @@ export function Intro() {
                   <div className="flex items-center space-x-3">
                     <Link href={language === "zh" ? "/zh" : "/"} className="hover:opacity-80 transition-all duration-300">
                       <Image
-                        src="/favicon/logo_white.png"
+                        src="/favicon/logo_white_xipi.png"
                         alt="HSS Logo"
                         width={isScrolled ? 28 : 40}
                         height={isScrolled ? 28 : 40}
