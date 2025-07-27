@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Post } from "@/interfaces/post";
 import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/language-context";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 type Props = {
     posts: Post[];
@@ -12,10 +14,27 @@ type Props = {
 };
 
 export function HeroPostsCarousel({ posts, className = "" }: Props) {
-    const [currentIndex, setCurrentIndex] = useState(0);
     const [isClicking, setIsClicking] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const { language } = useLanguage();
+
+    // Embla carousel setup with autoplay
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+        { 
+            loop: true,
+            duration: 30, // 3 seconds transition (30 * 100ms)
+            dragFree: false,
+            containScroll: "trimSnaps"
+        },
+        [
+            Autoplay({
+                delay: 7000, // 7 seconds between transitions
+                stopOnInteraction: false,
+                stopOnMouseEnter: false,
+                stopOnFocusIn: false
+            })
+        ]
+    );
 
     // Detect mobile screen size
     useEffect(() => {
@@ -64,32 +83,21 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
 
     const imageSequence = generateImageSequence();
 
-    // Reset current index when mobile state changes to avoid out-of-bounds issues
+    // Navigation callbacks
+    const scrollPrev = useCallback(() => {
+        if (emblaApi) emblaApi.scrollPrev();
+    }, [emblaApi]);
+
+    const scrollNext = useCallback(() => {
+        if (emblaApi) emblaApi.scrollNext();
+    }, [emblaApi]);
+
+    // Reset carousel when mobile state changes
     useEffect(() => {
-        setCurrentIndex(0);
-    }, [isMobile]);
-
-    // Auto-advance carousel
-    useEffect(() => {
-        if (imageSequence.length <= 1) return;
-
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) =>
-                prevIndex === imageSequence.length - 1 ? 0 : prevIndex + 1
-            );
-        }, 7000);
-
-        return () => clearInterval(interval);
-    }, [imageSequence.length]);
-
-    // Handle manual navigation
-    const goToPrevious = () => {
-        setCurrentIndex(currentIndex === 0 ? imageSequence.length - 1 : currentIndex - 1);
-    };
-
-    const goToNext = () => {
-        setCurrentIndex(currentIndex === imageSequence.length - 1 ? 0 : currentIndex + 1);
-    };
+        if (emblaApi) {
+            emblaApi.reInit();
+        }
+    }, [emblaApi, isMobile]);
 
     const handleClick = () => {
         setIsClicking(true);
@@ -102,48 +110,43 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
         <div className={`relative -mx-[calc(50vw-50%)] w-screen ${className}`}>
             {/* Main carousel container */}
             <div className="relative overflow-hidden bg-transparent">
-                {/* Images container */}
-                <div
-                    className="flex transition-transform ease-in-out"
-                    style={{
-                        transform: `translateX(-${currentIndex * 100}%)`,
-                        transitionDuration: '3000ms'
-                    }}
-                >
-                    {imageSequence.map(({ image, post }, index) => (
-                        <div key={`${post.slug}-${index}`} className="w-full flex-shrink-0">
-                            <Link
-                                href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}
-                                onClick={handleClick}
-                                onTouchStart={handleClick}
-                            >
-                                <div className="relative">
-                                    <Image
-                                        src={image}
-                                        alt={post.title}
-                                        width={1920}
-                                        height={1080}
-                                        className="w-full h-[100vh] object-cover"
-                                    />
-                                    {post.overlayText && (
-                                        <div className="absolute bottom-12 left-0 right-0">
-                                            <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8">
-                                                <div className="space-y-1">
-                                                    <p className="text-white text-2xl md:text-4xl font-bold relative inline-block group">
-                                                        {post.overlayText.title}
-                                                        <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${isClicking ? 'w-full' : 'w-0'} group-hover:w-full`}></span>
-                                                    </p>
-                                                    <p className="text-white text-xl md:text-2xl">
-                                                        {post.overlayText.subtitle}
-                                                    </p>
+                <div className="embla" ref={emblaRef}>
+                    <div className="embla__container flex">
+                        {imageSequence.map(({ image, post }, index) => (
+                            <div key={`${post.slug}-${index}`} className="embla__slide flex-[0_0_100%] min-w-0">
+                                <Link
+                                    href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}
+                                    onClick={handleClick}
+                                    onTouchStart={handleClick}
+                                >
+                                    <div className="relative">
+                                        <Image
+                                            src={image}
+                                            alt={post.title}
+                                            width={1920}
+                                            height={1080}
+                                            className="w-full h-[100vh] object-cover"
+                                        />
+                                        {post.overlayText && (
+                                            <div className="absolute bottom-12 left-0 right-0">
+                                                <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8">
+                                                    <div className="space-y-1">
+                                                        <p className="text-white text-2xl md:text-4xl font-bold relative inline-block group">
+                                                            {post.overlayText.title}
+                                                            <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${isClicking ? 'w-full' : 'w-0'} group-hover:w-full`}></span>
+                                                        </p>
+                                                        <p className="text-white text-xl md:text-2xl">
+                                                            {post.overlayText.subtitle}
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    )}
-                                </div>
-                            </Link>
-                        </div>
-                    ))}
+                                        )}
+                                    </div>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Navigation arrows */}
@@ -151,7 +154,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                     onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        goToPrevious();
+                        scrollPrev();
                     }}
                     className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 opacity-80 hover:opacity-100"
                     aria-label="Previous image"
@@ -164,7 +167,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                     onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        goToNext();
+                        scrollNext();
                     }}
                     className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 opacity-80 hover:opacity-100"
                     aria-label="Next image"
