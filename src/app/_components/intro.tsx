@@ -63,17 +63,20 @@ export function Intro() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isScrolled]);
 
-  // Close dropdown when clicking outside
+  // Close dropdown when clicking outside (only for desktop)
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      // Only handle desktop dropdown close, not mobile
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node) && window.innerWidth >= 768) {
         setIsPastScreeningsDropdownOpen(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    if (isPastScreeningsDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => document.removeEventListener('mousedown', handleClickOutside);
+    }
+  }, [isPastScreeningsDropdownOpen]);
 
   return (
     <>
@@ -196,20 +199,26 @@ export function Intro() {
                 {/* Mobile Menu */}
                 <div className="md:hidden">
                   {isOpen && (
-                    <div className={`absolute right-0 top-full w-30 shadow-lg z-50 ${isPostPage ? 'bg-black/80' : 'backdrop-blur-md bg-black/40'
+                    <div className={`absolute right-0 top-full -mt-5 w-60 shadow-lg z-50 ${isPostPage ? 'bg-black/80' : 'backdrop-blur-md bg-black/40'
                       }`}>
                       {/* First row: Language switcher, Search */}
-                      <div className="flex items-center justify-center space-x-6 px-4 py-3">
+                      <div className="flex items-center justify-left space-x-6 px-4 py-3">
                         <LanguageSwitcher />
                         <Search onStateChange={handleSearchStateChange} />
                       </div>
                       {/* Navigation links */}
                       <div className="py-1">
                         {/* Past Screenings Mobile Dropdown */}
-                        <div>
+                        <div className="relative">
                           <button
-                            onClick={togglePastScreeningsDropdown}
-                            className="flex items-center justify-between w-full px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                            type="button"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              console.log('Past Screenings button clicked, current state:', isPastScreeningsDropdownOpen);
+                              setIsPastScreeningsDropdownOpen(!isPastScreeningsDropdownOpen);
+                            }}
+                            className="flex items-center justify-between w-full px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300 relative z-[55]"
                           >
                             <span>{language === "zh" ? "往期放映" : "Past Screenings"}</span>
                             <svg 
@@ -224,19 +233,21 @@ export function Intro() {
                           </button>
                           
                           {isPastScreeningsDropdownOpen && (
-                            <div className="bg-black/60">
+                            <div className="bg-black/60 relative z-[70] pointer-events-auto">
                               {years.map((year) => (
-                                <Link
+                                <button
                                   key={year}
-                                  href={language === "zh" ? `/zh/past-screenings/${year}` : `/past-screenings/${year}`}
-                                  className="block px-8 py-2 text-sm text-white hover:bg-white/10 transition-colors"
-                                  onClick={() => {
-                                    setIsOpen(false);
-                                    setIsPastScreeningsDropdownOpen(false);
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    console.log('Year clicked:', year);
+                                    window.location.href = language === "zh" ? `/zh/past-screenings/${year}` : `/past-screenings/${year}`;
                                   }}
+                                  className="block w-full text-left px-8 py-2 text-sm text-white hover:bg-white/10 transition-colors relative z-[71] pointer-events-auto"
                                 >
                                   {year}
-                                </Link>
+                                </button>
                               ))}
                             </div>
                           )}
