@@ -15,6 +15,7 @@ coverImages:
   - "/assets/blog/kaili_blues/still_5.jpg"
   - "/assets/blog/kaili_blues/still_6.jpg"
 mobileCoverImages:
+  - "/assets/blog/kaili_blues/poster.jpg"
   - "/assets/blog/kaili_blues/still_1_mobile.png"
   - "/assets/blog/kaili_blues/still_1.png"
   - "/assets/blog/kaili_blues/still_2.jpg"

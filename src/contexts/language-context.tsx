@@ -22,7 +22,7 @@ const translations = {
         "footer.follow": "Follow us on",
         "footer.contact": "Contact",
         "footer.copyright": "Hippie Screening Studio. All rights reserved.",
-        "posts.more": "Previous screenings",
+        "posts.more": "Past screenings",
         "post.read": "Read More",
         "search.button": "Search",
         "search.placeholder": "Search posts...",

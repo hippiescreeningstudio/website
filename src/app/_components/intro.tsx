@@ -120,14 +120,20 @@ export function Intro() {
                     <LanguageSwitcher />
                     <Search onStateChange={handleSearchStateChange} />
                     <Link
+                      href={language === "zh" ? "/zh/previous-screenings" : "/previous-screenings"}
+                      className="text-white hover:underline transition-colors"
+                    >
+                      {language === "zh" ? "往期放映" : "Past Screenings"}
+                    </Link>
+                    <Link
                       href={language === "zh" ? "/zh/about" : "/about"}
-                      className="text-white hover:text-gray-300 transition-colors"
+                      className="text-white hover:underline transition-colors"
                     >
                       {t("nav.about")}
                     </Link>
                     <Link
                       href={language === "zh" ? "/zh/team" : "/team"}
-                      className="text-white hover:text-gray-300 transition-colors"
+                      className="text-white hover:underline transition-colors"
                     >
                       {t("nav.team")}
                     </Link>
@@ -137,7 +143,7 @@ export function Intro() {
                   <div className="md:hidden flex items-center">
                     <button
                       onClick={toggleMenu}
-                      className="text-white hover:text-gray-300 transition-colors"
+                      className="text-white hover:underline transition-colors"
                       aria-label="Toggle menu"
                     >
                       <svg
@@ -178,6 +184,13 @@ export function Intro() {
                       </div>
                       {/* Navigation links */}
                       <div className="py-1">
+                        <Link
+                          href={language === 'zh' ? '/zh/previous-screenings' : '/previous-screenings'}
+                          className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {language === "zh" ? "往期放映" : "Past Screenings"}
+                        </Link>
                         <Link
                           href={language === 'zh' ? '/zh/about' : '/about'}
                           className="block px-4 py-2 text-sm text-white hover:bg-white/10 hover:scale-105 transition-all duration-300"

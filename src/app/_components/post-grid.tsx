@@ -24,9 +24,6 @@ export function PostGrid({ posts, className = "" }: Props) {
 
     return (
         <div className={className}>
-            <h2 className="text-2xl font-bold mb-4">
-        {language === "en" ? "Previous Screenings" : "过往放映"}
-            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                 {posts.map((post) => {
                     const images = typeof window !== 'undefined' && window.innerWidth < 768
