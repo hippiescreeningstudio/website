@@ -23,7 +23,7 @@ ogImage:
 
 Snow in Midsummer is set in Kuala Lumpur at two different periods of time: first on May 13, 1969, and then, on May 13, 2018; it revolves around Ah Eng, a young woman, and her mother who lose contact with the father and brother of the first amid political riots, in the first part, and, in a second chapter, the remembrance of this moment 49 years later.
 
-The film is a contemporary re-imagining of one of the most famous Classical Chinese dramas, in which a young widow curses those who execute her for a crime she did not commit.
+The film is a contemporary re-imagining of one of the most famous classical Chinese dramas, in which a young widow curses those who execute her for a crime she did not commit.
 
 Join us for a highly anticipated screening of the award-winning film "Snow in Midsummer 《五月雪》".
 
