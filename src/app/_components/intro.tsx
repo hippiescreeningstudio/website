@@ -112,8 +112,8 @@ export function Intro() {
 
                   {/* Desktop Navigation */}
                   <div className="hidden text-lg md:flex items-center space-x-4">
-                    <LanguageSwitcher />
                     <Search onStateChange={handleSearchStateChange} />
+                    <LanguageSwitcher />
                     
                     {/* Past Screenings Dropdown */}
                     <div 
@@ -208,8 +208,8 @@ export function Intro() {
                       }`}>
                         {/* First row: Language switcher, Search */}
                         <div className="flex items-center justify-left space-x-6 px-4 py-3">
+                        <Search onStateChange={handleSearchStateChange} />
                           <LanguageSwitcher />
-                          <Search onStateChange={handleSearchStateChange} />
                         </div>
                       {/* Navigation links */}
                       <div className="py-1">
