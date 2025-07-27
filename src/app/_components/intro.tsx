@@ -14,8 +14,6 @@ export function Intro() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isPastScreeningsDropdownOpen, setIsPastScreeningsDropdownOpen] = useState(false);
-  const desktopNavRef = useRef<HTMLDivElement>(null);
-  const mobileNavRef = useRef<HTMLDivElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { t, language } = useLanguage();
   const { backgroundColor } = usePost();

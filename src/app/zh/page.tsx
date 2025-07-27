@@ -3,7 +3,6 @@
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/intro";
 import { HeroPostsCarousel } from "@/app/_components/hero-posts-carousel";
-import { PostGrid } from "@/app/_components/post-grid";
 import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
@@ -123,7 +122,6 @@ export default function ChineseIndex() {
 
     // Filter posts into hero and regular posts
     const heroPosts = posts.filter(post => post.isHero);
-    const regularPosts = posts.filter(post => !post.isHero);
 
     return (
         <main>
@@ -137,12 +135,6 @@ export default function ChineseIndex() {
                 )}
                 {/* Screening Table */}
                 <ScreeningTable />
-                {/* Regular Posts Grid */}
-                {regularPosts.length > 0 && (
-                    <div className="mb-16">
-                        <PostGrid posts={regularPosts} />
-                    </div>
-                )}
             </Container>
             <Footer />
         </main>
