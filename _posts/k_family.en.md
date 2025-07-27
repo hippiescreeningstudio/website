@@ -5,7 +5,7 @@ backgroundColor: "#6e5a5b"
 isHero: true
 overlayText:
   title: "K-Family Affairs 애국소녀"
-  subtitle: "Screening and Q&A with Director Arum Nam | Aug 9, 14:00 @ Neues Rottmann Kino"
+  subtitle: "Fiminist mom * bureaucrat dad = ?"
 coverImages:
   - "/assets/blog/k_family/still1.jpg"
   - "/assets/blog/k_family/still2.jpg"
@@ -13,7 +13,6 @@ coverImages:
   - "/assets/blog/k_family/still4.jpg"
   - "/assets/blog/k_family/still5.png"
 mobileCoverImages:
-  - "/assets/blog/k_family/poster.jpg"
   - "/assets/blog/k_family/still1.jpg"
   - "/assets/blog/k_family/still2.jpg"
   - "/assets/blog/k_family/still4.jpg"

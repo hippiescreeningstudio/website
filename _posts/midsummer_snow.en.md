@@ -5,14 +5,13 @@ backgroundColor: "#4d100f"
 isHero: true
 overlayText:
   title: "Snow in Midsummer 五月雪"
-  subtitle: "Aug 24"
+  subtitle: "a historical drama revisiting Malaysia’s 13 May Incident in 1969 and its lingering scars"
 coverImages:
   - "/assets/blog/midsummer_snow/still1.png"
   - "/assets/blog/midsummer_snow/still2.png"
   - "/assets/blog/midsummer_snow/still3.png"
   - "/assets/blog/midsummer_snow/still4.png"
 mobileCoverImages:
-  - "/assets/blog/midsummer_snow/poster.png"
   - "/assets/blog/midsummer_snow/still1_mobile.png"
   - "/assets/blog/midsummer_snow/still2_mobile.png"
   - "/assets/blog/midsummer_snow/still3_mobile.png"

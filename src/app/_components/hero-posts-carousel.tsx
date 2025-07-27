@@ -14,21 +14,21 @@ type Props = {
 };
 
 export function HeroPostsCarousel({ posts, className = "" }: Props) {
-    const [isClicking, setIsClicking] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
+    const [hoveredButton, setHoveredButton] = useState<string | null>(null);
     const { language } = useLanguage();
 
     // Embla carousel setup with autoplay
     const [emblaRef, emblaApi] = useEmblaCarousel(
         { 
             loop: true,
-            duration: 30, // 3 seconds transition (30 * 100ms)
+            duration: 30, // 30 ms
             dragFree: false,
             containScroll: "trimSnaps"
         },
         [
             Autoplay({
-                delay: 7000, // 7 seconds between transitions
+                delay: 6000, // 6 seconds between transitions
                 stopOnInteraction: false,
                 stopOnMouseEnter: false,
                 stopOnFocusIn: false
@@ -99,11 +99,6 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
         }
     }, [emblaApi, isMobile]);
 
-    const handleClick = () => {
-        setIsClicking(true);
-        setTimeout(() => setIsClicking(false), 300); // Reset after animation
-    };
-
     if (posts.length === 0) return null;
 
     return (
@@ -114,36 +109,42 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                     <div className="embla__container flex">
                         {imageSequence.map(({ image, post }, index) => (
                             <div key={`${post.slug}-${index}`} className="embla__slide flex-[0_0_100%] min-w-0">
-                                <Link
-                                    href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}
-                                    onClick={handleClick}
-                                    onTouchStart={handleClick}
-                                >
-                                    <div className="relative">
-                                        <Image
-                                            src={image}
-                                            alt={post.title}
-                                            width={1920}
-                                            height={1080}
-                                            className="w-full h-[100vh] object-cover"
-                                        />
-                                        {post.overlayText && (
-                                            <div className="absolute bottom-12 left-0 right-0">
-                                                <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8">
-                                                    <div className="space-y-1">
-                                                        <p className="text-white text-2xl md:text-4xl font-bold relative inline-block group">
+                                <div className="relative">
+                                    <Image
+                                        src={image}
+                                        alt={post.title}
+                                        width={1920}
+                                        height={1080}
+                                        className="w-full h-[100vh] object-cover"
+                                    />
+                                    {post.overlayText && (
+                                        <div className="absolute bottom-36 left-0 right-0">
+                                            <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                                                <div className="space-y-6">
+                                                    <div className="space-y-0 md:space-y-2">
+                                                        <p className="text-white text-3xl md:text-6xl font-bold">
                                                             {post.overlayText.title}
-                                                            <span className={`absolute bottom-0 left-0 h-0.5 bg-white transition-all duration-300 ${isClicking ? 'w-full' : 'w-0'} group-hover:w-full`}></span>
                                                         </p>
-                                                        <p className="text-white text-xl md:text-2xl">
+                                                        <p className="text-white text-xl md:text-xl">
                                                             {post.overlayText.subtitle}
                                                         </p>
                                                     </div>
+                                                    <Link
+                                                        href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}
+                                                        className="inline-block text-white px-6 py-2 rounded-3xl transition-all duration-200 font-medium"
+                                                        style={{ 
+                                                            backgroundColor: hoveredButton === `${post.slug}-${index}` ? '#e9327a' : '#960d00'
+                                                        }}
+                                                        onMouseEnter={() => setHoveredButton(`${post.slug}-${index}`)}
+                                                        onMouseLeave={() => setHoveredButton(null)}
+                                                    >
+                                                        Details
+                                                    </Link>
                                                 </div>
                                             </div>
-                                        )}
-                                    </div>
-                                </Link>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         ))}
                     </div>
