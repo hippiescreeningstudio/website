@@ -1,7 +1,9 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 type CarouselImage = {
     src: string;
@@ -20,65 +22,54 @@ export function ImageCarousel({
     autoplayInterval = 4000,
     className = ""
 }: Props) {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const touchStartX = useRef<number | null>(null);
-    const touchEndX = useRef<number | null>(null);
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
-    // Auto-advance carousel
+    // Embla carousel setup with autoplay
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+        { 
+            loop: true,
+            duration: 20, // 500ms transition (20 * 25ms)
+            dragFree: false,
+            containScroll: "trimSnaps"
+        },
+        images.length > 1 ? [
+            Autoplay({
+                delay: autoplayInterval,
+                stopOnInteraction: false,
+                stopOnMouseEnter: true,
+                stopOnFocusIn: true
+            })
+        ] : []
+    );
+
+    // Update selected index when slide changes
+    const onSelect = useCallback(() => {
+        if (!emblaApi) return;
+        setSelectedIndex(emblaApi.selectedScrollSnap());
+    }, [emblaApi, setSelectedIndex]);
+
     useEffect(() => {
-        if (images.length <= 1) return;
+        if (!emblaApi) return;
+        onSelect();
+        emblaApi.on('select', onSelect);
+        
+        return () => {
+            emblaApi.off('select', onSelect);
+        };
+    }, [emblaApi, onSelect]);
 
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) =>
-                prevIndex === images.length - 1 ? 0 : prevIndex + 1
-            );
-        }, autoplayInterval);
+    // Navigation callbacks
+    const scrollPrev = useCallback(() => {
+        if (emblaApi) emblaApi.scrollPrev();
+    }, [emblaApi]);
 
-        return () => clearInterval(interval);
-    }, [images.length, autoplayInterval]);
+    const scrollNext = useCallback(() => {
+        if (emblaApi) emblaApi.scrollNext();
+    }, [emblaApi]);
 
-    // Handle manual navigation
-    const goToSlide = (index: number) => {
-        setCurrentIndex(index);
-    };
-
-    const goToPrevious = () => {
-        setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
-    };
-
-    const goToNext = () => {
-        setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
-    };
-
-    // Touch event handlers for swipe functionality
-    const handleTouchStart = (e: React.TouchEvent) => {
-        touchStartX.current = e.touches[0].clientX;
-    };
-
-    const handleTouchMove = (e: React.TouchEvent) => {
-        touchEndX.current = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = () => {
-        if (!touchStartX.current || !touchEndX.current) return;
-
-        const swipeDistance = touchStartX.current - touchEndX.current;
-        const minSwipeDistance = 50; // Minimum distance for a swipe to be registered
-
-        if (Math.abs(swipeDistance) > minSwipeDistance) {
-            if (swipeDistance > 0) {
-                // Swiped left, go to next image
-                goToNext();
-            } else {
-                // Swiped right, go to previous image
-                goToPrevious();
-            }
-        }
-
-        // Reset touch positions
-        touchStartX.current = null;
-        touchEndX.current = null;
-    };
+    const scrollTo = useCallback((index: number) => {
+        if (emblaApi) emblaApi.scrollTo(index);
+    }, [emblaApi]);
 
     if (images.length === 0) return null;
 
@@ -100,29 +91,22 @@ export function ImageCarousel({
     return (
         <figure className={`relative ${className}`}>
             {/* Main carousel container */}
-            <div
-                className="relative overflow-hidden rounded-lg bg-transparent"
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-            >
-                {/* Images container */}
-                <div
-                    className="flex transition-transform duration-500 ease-in-out"
-                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                >
-                    {images.map((image, index) => (
-                        <div key={index} className="w-full flex-shrink-0">
-                            <Image
-                                src={image.src}
-                                alt={image.alt}
-                                width={1200}
-                                height={600}
-                                className="w-full h-auto object-cover"
-                                priority={index === 0}
-                            />
-                        </div>
-                    ))}
+            <div className="relative overflow-hidden rounded-lg bg-transparent">
+                <div className="embla" ref={emblaRef}>
+                    <div className="embla__container flex">
+                        {images.map((image, index) => (
+                            <div key={index} className="embla__slide flex-[0_0_100%] min-w-0">
+                                <Image
+                                    src={image.src}
+                                    alt={image.alt}
+                                    width={1200}
+                                    height={600}
+                                    className="w-full h-auto object-cover"
+                                    priority={index === 0}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Navigation arrows */}
@@ -130,7 +114,7 @@ export function ImageCarousel({
                     onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        goToPrevious();
+                        scrollPrev();
                     }}
                     className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 opacity-80 hover:opacity-100"
                     aria-label="Previous image"
@@ -143,7 +127,7 @@ export function ImageCarousel({
                     onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        goToNext();
+                        scrollNext();
                     }}
                     className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 opacity-80 hover:opacity-100"
                     aria-label="Next image"
@@ -162,9 +146,9 @@ export function ImageCarousel({
                         onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            goToSlide(index);
+                            scrollTo(index);
                         }}
-                        className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex
+                        className={`w-3 h-3 rounded-full transition-all duration-200 ${index === selectedIndex
                             ? 'bg-white opacity-100'
                             : 'bg-white/50 hover:bg-white/75'
                             }`}
@@ -172,8 +156,6 @@ export function ImageCarousel({
                     />
                 ))}
             </div>
-
-
         </figure>
     );
 } 
