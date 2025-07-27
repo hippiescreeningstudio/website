@@ -17,7 +17,7 @@ mobileCoverImages:
   - "/assets/blog/midsummer_snow/still2_mobile.png"
   - "/assets/blog/midsummer_snow/still3_mobile.png"
   - "/assets/blog/midsummer_snow/still4_mobile.png"
-date: "2025-08-09T00:00:00.000Z"
+date: "2025-08-24T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/midsummer_snow/poster.png"
 ---
