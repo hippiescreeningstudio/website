@@ -36,7 +36,7 @@ Join us for a highly anticipated screening of the award-winning film "Snow in Mi
 | Year         | 2023                        |
 | Countries    | Malaysia, Singapore, Taiwan |
 | Duration     | 116 minutes                 |
-| Genre        | Drama, Hisgory              |
+| Genre        | Drama, History              |
 
 | Screening Info |                                        |
 | -------------- | -------------------------------------- |

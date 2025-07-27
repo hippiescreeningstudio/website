@@ -10,31 +10,33 @@ import { Post } from "@/interfaces/post";
 
 function ScreeningTable() {
   const { language } = useLanguage();
+  const [hoveredButton, setHoveredButton] = useState<number | null>(null);
 
   // Screening data with poster images and additional metadata
   const screenings = [
-    {
-      id: 1,
-      title: "Kaili Blues 路边野餐",
-      slug: "kaili_blues",
-      poster: "/assets/blog/kaili_blues/poster.jpg",
-      duration: "113 min",
-      genre: "Drama, Mystery",
-      venue: "ASTOR Film Lounge",
-      time: "Jul 19, 14:00",
-      ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
-    },
+
     {
       id: 2,
       title: "K-Family Affairs 애국소녀",
       slug: "k_family",
       poster: "/assets/blog/k_family/poster.jpg",
-      duration: "90 min",
-      genre: "Drama, Family",
+      duration: "91 min",
+      genre: "Documentary, Political",
       venue: "Neues Rottmann",
       time: "Aug 9, 14:00",
       ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109"
-    }
+    },
+    {
+      id: 3,
+      title: "Snow in Midsummer 五月雪",
+      slug: "midsummer_snow",
+      poster: "/assets/blog/midsummer_snow/poster.png",
+      duration: "116 min",
+      genre: "Drama, History",
+      venue: "To be announced",
+      time: "Aug 24",
+      // ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
+    },
   ];
 
   return (
@@ -68,7 +70,7 @@ function ScreeningTable() {
                 </a>
                 {/* Duration and Genre */}
                 <p className="text-sm md:text-base text-gray-200 mt-1">
-                  {screening.duration} • {screening.genre}
+                  {screening.duration} | {screening.genre}
                 </p>
               </div>
               
@@ -82,16 +84,23 @@ function ScreeningTable() {
               </div>
               
               {/* Get Ticket Button */}
-              <div>
-                <a
-                  href={screening.ticketUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-3 md:px-4 rounded-lg transition-colors duration-300 text-xs md:text-sm"
-                >
-                  {language === "en" ? "Get Tickets" : "购买门票"}
-                </a>
-              </div>
+              {screening.ticketUrl && (
+                <div>
+                  <a
+                    href={screening.ticketUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-white font-medium py-2 px-3 md:px-4 rounded-3xl transition-all duration-200 text-xs md:text-sm"
+                    style={{ 
+                      backgroundColor: hoveredButton === screening.id ? '#59b300' : '#008009'
+                    }}
+                    onMouseEnter={() => setHoveredButton(screening.id)}
+                    onMouseLeave={() => setHoveredButton(null)}
+                  >
+                    {language === "en" ? "Get Tickets" : "购买门票"}
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         ))}
