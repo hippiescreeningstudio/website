@@ -40,7 +40,7 @@ We will have an online Q&A with the director after the screening.
 
 | Screening Info |                                                                                                                                                                          |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Cinema         | Neues Rottmann Kino (Rottmannstraße 15, 80333 München)                                                                                                                   |
+| Cinema         | Neues Rottmann Kino, Rottmannstraße 15, 80333 München                                                                                                                    |
 | Language       | Korean with English subtitles (OmeU)                                                                                                                                     |
 | Prices         | 13€, 12€ for students                                                                                                                                                    |
 | Tickets        | Buy [<strong style="color:rgb(255, 255, 255);text-decoration: underline;">online</strong>](https://neuesrottmann.de/programm/film/k-family-affairs) or at the box office |

@@ -25,7 +25,7 @@ Snow in Midsummer is set in Kuala Lumpur at two different periods of time: first
 
 The film is a contemporary re-imagining of one of the most famous classical Chinese dramas, in which a young widow curses those who execute her for a crime she did not commit.
 
-Join us for a highly anticipated screening of the award-winning film "Snow in Midsummer 《五月雪》".
+Join us for a highly anticipated screening of this award-winning film.
 
 **About the film**
 
