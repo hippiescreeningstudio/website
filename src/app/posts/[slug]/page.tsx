@@ -7,6 +7,7 @@ import { Intro } from "@/app/_components/navigation";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 import { Notification } from "@/app/_components/notification";
+import { Sticker } from "@/app/_components/sticker";
 import { PostProvider } from "@/contexts/post-context";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
@@ -158,6 +159,14 @@ export default function PostPage(props: Params) {
         </Container>
         <Footer />
       </PostProvider>
+      {post.sticker && (
+        <Sticker 
+          text={post.sticker.text} 
+          color={post.sticker.color} 
+          textColor={post.sticker.textColor}
+          link={post.sticker.link}
+        />
+      )}
       <Notification
         message={notification.message}
         isVisible={notification.isVisible}

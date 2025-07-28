@@ -21,4 +21,10 @@ export type Post = {
     title: string;
     subtitle: string;
   };
+  sticker?: {
+    text: string;
+    color: string;
+    textColor?: string;
+    link?: string;
+  };
 };
