@@ -48,7 +48,7 @@ function ScreeningTable() {
         {screenings.map((screening) => (
           <div key={screening.id} className="flex bg-black shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* First Column - Poster */}
-            <div className="flex-shrink-0 w-40 md:w-60">
+            <div className="flex-shrink-0 w-32 md:w-72">
                               <a href={`/films/${screening.slug}`} className="block h-full">
                 <img
                   src={screening.poster}
