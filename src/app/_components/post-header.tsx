@@ -1,8 +1,8 @@
 import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import { ImageCarousel } from "./image-carousel";
-import { PostTitle } from "@/app/_components/post-title";
 import { type Author } from "@/interfaces/author";
+
 
 type Props = {
   title: string;
@@ -19,7 +19,9 @@ export function PostHeader({ title, coverImages, date, author }: Props) {
   return (
     <>
       <div className="mt-8 md:mt-12">
-        <PostTitle>{title}</PostTitle>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left mt-8">
+        {title}
+        </h1>
       </div>
       {/* Image carousel with margins */}
       <div className="mb-4 md:mb-8">
