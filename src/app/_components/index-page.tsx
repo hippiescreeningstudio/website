@@ -19,7 +19,7 @@ function ScreeningTable() {
       id: 2,
       title: "K-Family Affairs 애국소녀",
       slug: "k_family",
-      poster: "/assets/blog/k_family/poster.jpg",
+      poster: "/assets/blog/k_family/poster_ori.jpg",
       duration: "91 min",
       genre: "Documentary, Political",
       venue: "Neues Rottmann",
@@ -48,8 +48,8 @@ function ScreeningTable() {
         {screenings.map((screening) => (
           <div key={screening.id} className="flex bg-black shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* First Column - Poster */}
-            <div className="flex-shrink-0 w-32 md:w-72">
-                              <a href={`/films/${screening.slug}`} className="block h-full">
+            <div className="flex-shrink-0 w-32 md:w-72 h-48 md:h-96">
+              <a href={`/films/${screening.slug}`} className="block h-full">
                 <img
                   src={screening.poster}
                   alt={`${screening.title} poster`}
