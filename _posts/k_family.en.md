@@ -21,7 +21,7 @@ date: "2025-08-09T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/k_family/poster.jpg"
 sticker:
-  text: "Get tickets!"
+  text: "Get ticket here"
   color: "#fcef17"
   textColor: "#992252"
   link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109"
