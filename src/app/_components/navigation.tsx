@@ -111,7 +111,7 @@ export function Intro() {
                   </div>
 
                   {/* Desktop Navigation */}
-                  <div className="hidden text-lg md:flex items-center space-x-4">
+                  <div className="hidden text-lg font-bold md:flex items-center space-x-4">
                     <Search onStateChange={handleSearchStateChange} />
                     <LanguageSwitcher />
                     
@@ -122,7 +122,7 @@ export function Intro() {
                       onMouseEnter={() => setIsPastScreeningsDropdownOpen(true)}
                       onMouseLeave={() => setIsPastScreeningsDropdownOpen(false)}
                     >
-                      <button className="text-white hover:underline transition-colors flex items-center">
+                      <button className="text-white  hover:underline transition-colors flex items-center">
                         {language === "zh" ? "往期放映" : "Past Screenings"}
 
                       </button>
@@ -146,13 +146,13 @@ export function Intro() {
 
                     <Link
                       href={language === "zh" ? "/zh/about" : "/about"}
-                      className="text-white hover:underline transition-colors"
+                      className="text-white  hover:underline transition-colors"
                     >
                       {t("nav.about")}
                     </Link>
                     <Link
                       href={language === "zh" ? "/zh/team" : "/team"}
-                      className="text-white hover:underline transition-colors"
+                      className="text-whit hover:underline transition-colors"
                     >
                       {t("nav.team")}
                     </Link>
