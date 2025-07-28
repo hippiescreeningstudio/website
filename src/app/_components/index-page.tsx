@@ -100,7 +100,7 @@ function ScreeningTable() {
                       onMouseEnter={() => setHoveredButton(screening.id)}
                       onMouseLeave={() => setHoveredButton(null)}
                     >
-                      {language === "en" ? "Get Tickets" : "购买门票"}
+                      {language === "en" ? "Get Tickets" : "购票"}
                     </a>
                   </div>
                 )}
