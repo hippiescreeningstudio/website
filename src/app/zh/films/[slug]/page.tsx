@@ -7,6 +7,7 @@ import { Intro } from "@/app/_components/navigation";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 import { Notification } from "@/app/_components/notification";
+import { Sticker } from "@/app/_components/sticker";
 import { PostProvider } from "@/contexts/post-context";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
@@ -34,11 +35,55 @@ export default function ChinesePostPage(props: Params) {
         hasEn: boolean;
         hasZh: boolean;
     }>({ hasEn: false, hasZh: false });
+    const [showSticker, setShowSticker] = useState(false);
 
     // Set language to Chinese when component mounts
     useEffect(() => {
         setLanguage("zh");
     }, [setLanguage]);
+
+    // Track scroll position to show sticker after header (desktop only)
+    useEffect(() => {
+        const handleScroll = () => {
+            // Check if we're on desktop (medium screens and up)
+            const isDesktop = window.innerWidth >= 768; // md breakpoint
+            
+            if (!isDesktop) {
+                // Always show sticker on mobile
+                setShowSticker(true);
+                return;
+            }
+
+            // Desktop behavior: show after scrolling past header
+            const article = document.querySelector('article');
+            if (article) {
+                const articleTop = article.offsetTop;
+                const headerHeight = 200; // Approximate height of the header section
+                const scrollPosition = window.scrollY;
+                
+                // Show sticker when user scrolls past the header
+                setShowSticker(scrollPosition > articleTop + headerHeight);
+            }
+        };
+
+        // Handle window resize to check screen size
+        const handleResize = () => {
+            handleScroll();
+        };
+
+        // Add listeners
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
+        
+        // Check initial position
+        handleScroll();
+
+        // Cleanup
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [post]); // Depend on post so it recalculates when post loads
 
     useEffect(() => {
         const getParams = async () => {
@@ -137,7 +182,7 @@ export default function ChinesePostPage(props: Params) {
     }
 
     return (
-        <main style={{ backgroundColor: post.backgroundColor || undefined, minHeight: '100vh' }}>
+        <div style={{ backgroundColor: post.backgroundColor || undefined, minHeight: '100vh' }}>
             <PostProvider
                 slug={slug}
                 backgroundColor={post.backgroundColor}
@@ -158,11 +203,19 @@ export default function ChinesePostPage(props: Params) {
                 </Container>
                 <Footer />
             </PostProvider>
+            {post.sticker && showSticker && (
+                <Sticker 
+                    text={post.sticker.text} 
+                    color={post.sticker.color} 
+                    textColor={post.sticker.textColor}
+                    link={post.sticker.link}
+                />
+            )}
             <Notification
                 message={notification.message}
                 isVisible={notification.isVisible}
                 onClose={closeNotification}
             />
-        </main>
+        </div>
     );
 } 

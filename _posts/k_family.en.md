@@ -43,13 +43,13 @@ We will have an online Q&A with the director after the screening.
 | Duration     | 91 minutes                |
 | Genre        | Documentary               |
 
-| Screening Info |                                                                                                                                                                                                       |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Cinema         | Neues Rottmann Kino, Rottmannstraße 15, 80333 München                                                                                                                                                 |
-| Time           | Aug 9, 13:45                                                                                                                                                                                          |
-| Language       | Korean with English subtitles (OmeU)                                                                                                                                                                  |
-| Prices         | 13€, 12€ for students                                                                                                                                                                                 |
-| Tickets        | Buy [<strong style="color:rgb(255, 255, 255);text-decoration: underline;">online</strong>](https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109) or at the box office |
+| Screening Info |                                                                                                                                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cinema         | Neues Rottmann Kino, Rottmannstraße 15, 80333 München                                                                                                                                       |
+| Time           | Aug 9, 13:45                                                                                                                                                                                |
+| Language       | Korean with English subtitles (OmeU)                                                                                                                                                        |
+| Prices         | 13€, 12€ for students                                                                                                                                                                       |
+| Tickets        | [<strong style="color:#fcef17;text-decoration: underline;"> Buy online</strong>](https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109) or at the box office |
 
 <figure>
   <img src="/assets/blog/k_family/poster.png" alt="K-Family Affairs" />
