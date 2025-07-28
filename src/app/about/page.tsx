@@ -24,15 +24,30 @@ export default function About() {
                     </h1>
                     <div className="prose prose-lg dark:prose-invert max-w-none">
                         <p className="text-base leading-relaxed mb-6 text-justify">
-                            Founded in 2022, Hippie Screening Studio e.V. is a registered non-profit organization dedicated
-                            to screening independent Singophone and Asian films in Munich. We partner with arthouse cinemas,
-                            film organizations, and festivals in Munich and throughout Germany to curate a monthly selection
-                            of high-quality, creative, and thought-provoking films from the Sinophone and broader Asian world.
+                        Hippie Screening Studio e.V. (HSS) is a non-profit organization dedicated to curating and 
+                        screening Chinese-language and Asian films in Munich since 2022.
                         </p>
 
                         <p className="text-base leading-relaxed mb-6 text-justify">
-                            Join us in exploring the vibrant world of Asian cinema—
-                            and discover stories that resonate long after the credits roll.
+                        Originally founded as a film screening subgroup of the community “706 Munich Hippies,” 
+                        HSS began organizing screenings in late 2022. It has since evolved into an independent 
+                        curatorial and screening organization and was officially registered as a non-profit association in Munich in January 2024.
+                        </p>
+
+                        <p className="text-base leading-relaxed mb-6 text-justify">
+                        Run by a collective of young Chinese students and cinephiles, HSS focuses on arthouse films from Chinese-speaking 
+                        regions and across Asia. The association's mission is to enrich Munich’s cinematic landscape with diverse 
+                        Asian voices while fostering cultural exchange and dialogue. As of June 2025, HSS has hosted 33 film screenings 
+                        in collaboration with arthouse cinemas  such as Neues Rottmann Kino, Werkstattkino, and Astor Kino,
+                         as well as film festivals including Filmkunstwochen and the Chinese Film Festival Munich.
+                          Through post-screening Q&A sessions, we actively facilitate conversations between Asian filmmakers and Munich audiences.
+                        </p>
+
+                        <p className="text-base leading-relaxed mb-6 text-justify">
+                        In addition, HSS maintains an active online presence through this website,
+                         a WeChat group of nearly 500 film enthusiasts, as well as Instagram and Rednote accounts. 
+                         On these platforms, HSS regularly publishes film news, essays and reviews by young critics, 
+                         film students, and cinephiles, aiming to strengthen knowledge exchange and community-building among Munich’s film lovers.
                         </p>
                     </div>
                 </section>
