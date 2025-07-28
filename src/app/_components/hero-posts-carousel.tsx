@@ -122,10 +122,10 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                                             <div className="max-w-[95vw] mx-auto px-4 sm:px-6 lg:px-8 text-center">
                                                 <div className="space-y-6">
                                                     <div className="space-y-0 md:space-y-2">
-                                                        <p className="text-white text-3xl md:text-6xl font-bold" style={{ textShadow: '4px 4px 20px rgba(0, 0, 0, 1)' }}>
+                                                        <p className="text-white text-2xl md:text-6xl font-bold" style={{ textShadow: '4px 4px 20px rgba(0, 0, 0, 1)' }}>
                                                             {post.overlayText.title}
                                                         </p>
-                                                        <p className="text-white text-xl md:text-xl" style={{ textShadow: '2px 2px 10px rgba(0, 0, 0, 1)' }}>
+                                                        <p className="text-white text-base md:text-xl" style={{ textShadow: '2px 2px 10px rgba(0, 0, 0, 1)' }}>
                                                             {post.overlayText.subtitle}
                                                         </p>
                                                     </div>
