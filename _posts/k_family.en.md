@@ -19,7 +19,7 @@ mobileCoverImages:
   - "/assets/blog/k_family/still5.png"
 date: "2025-08-09T00:00:00.000Z"
 ogImage:
-  url: "/assets/blog/k_family/poster.jpg"
+  url: "/assets/blog/k_family/poster.png"
 sticker:
   text: "Get ticket here"
   color: "#fcef17"
@@ -52,7 +52,7 @@ We will have an online Q&A with the director after the screening.
 | Tickets        | Buy [<strong style="color:rgb(255, 255, 255);text-decoration: underline;">online</strong>](https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109) or at the box office |
 
 <figure>
-  <img src="/assets/blog/k_family/poster.jpg" alt="K-Family Affairs" />
+  <img src="/assets/blog/k_family/poster.png" alt="K-Family Affairs" />
   <figcaption>K-Family Affairs</figcaption>
 </figure>
 

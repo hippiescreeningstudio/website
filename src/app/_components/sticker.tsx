@@ -14,7 +14,7 @@ export function Sticker({ text, color, textColor = '#FFFFFF', link }: Props) {
 
   return (
     <div
-      className={`fixed right-4 md:right-48 top-3/4 transform z-50 w-20 h-20 rounded-full flex items-center justify-center font-bold text-center shadow-lg ${
+      className={`fixed right-2 md:left-80 top-3/4 transform z-50 w-16 h-16 md:w-28 md:h-28 rounded-full flex items-center justify-center font-bold text-center animate-pulse ${
         link ? 'cursor-pointer hover:scale-110 transition-transform duration-200' : ''
       }`}
       style={{ backgroundColor: color }}
@@ -29,12 +29,11 @@ export function Sticker({ text, color, textColor = '#FFFFFF', link }: Props) {
       } : undefined}
     >
       <span 
-        className="leading-tight text-center"
+        className="leading-tight text-center text-sm md:text-xl"
         style={{ 
           transform: 'rotate(-20deg)',
           color: textColor,
           fontWeight: 'bold',
-          fontSize: '16px',
           wordBreak: 'break-word',
           hyphens: 'none',
           lineHeight: '1.1'
