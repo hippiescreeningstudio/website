@@ -52,8 +52,6 @@ Join us for a highly anticipated screening of this award-winning film.
 
 **Watch the Trailer**
 
-Refresh if not showing
-
 <div class="youtube-embed" data-video-id="oZtgGSRTYac" data-title="Snow in Midsummer"></div>
 
 **About the Director**

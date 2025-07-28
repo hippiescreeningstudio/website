@@ -52,8 +52,6 @@ We will have an online Q&A with the director after the screening.
 
 **Watch the Trailer**
 
-Refresh if not showing
-
 <div class="youtube-embed" data-video-id="YGVPH5sesEY" data-title="K-Family Affairs"></div>
 
 **Synopsis**

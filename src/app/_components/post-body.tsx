@@ -1,5 +1,5 @@
 import markdownStyles from "./markdown-styles.module.css";
-import { YouTubeProcessor } from "./youtube-processor";
+import { YouTubeProcessor } from "./youtube";
 
 type Props = {
   content: string;
