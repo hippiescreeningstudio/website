@@ -59,49 +59,52 @@ function ScreeningTable() {
             </div>
             
             {/* Second Column - Film Information */}
-            <div className="flex-1 p-4 md:p-5 flex flex-col justify-end space-y-4">
-              {/* Film Title */}
-              <div>
-                <a 
-                  href={`/films/${screening.slug}`} 
-                  className="text-lg md:text-xl font-bold text-white hover:underline transition-colors duration-300 block"
-                >
-                  {screening.title}
-                </a>
-                {/* Duration and Genre */}
-                <p className="text-sm md:text-base text-gray-200 mt-1">
-                  {screening.duration} | {screening.genre}
-                </p>
-              </div>
-              
-              {/* Venue and Time */}
-              <div>
-                <p className="text-sm md:text-base text-white font-medium">
-                  {screening.venue}
-                </p>
-                <p className="text-sm md:text-base text-white">
-                  {screening.time}
-                </p>
-              </div>
-              
-              {/* Get Ticket Button */}
-              {screening.ticketUrl && (
+            <div className="flex-1 p-4 md:p-5 flex flex-col justify-between h-48 md:h-96">
+              <div className="flex-1"></div>
+              <div className="space-y-4">
+                {/* Film Title */}
                 <div>
-                  <a
-                    href={screening.ticketUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-white font-medium py-2 px-3 md:px-4 rounded-3xl transition-all duration-200 text-xs md:text-sm"
-                    style={{ 
-                      backgroundColor: hoveredButton === screening.id ? '#59b300' : '#008009'
-                    }}
-                    onMouseEnter={() => setHoveredButton(screening.id)}
-                    onMouseLeave={() => setHoveredButton(null)}
+                  <a 
+                    href={`/films/${screening.slug}`} 
+                    className="text-base md:text-xl font-bold text-white hover:underline transition-colors duration-300 block"
                   >
-                    {language === "en" ? "Get Tickets" : "购买门票"}
+                    {screening.title}
                   </a>
+                  {/* Duration and Genre */}
+                  <p className="text-xs md:text-base text-gray-200 mt-1">
+                    {screening.duration} | {screening.genre}
+                  </p>
                 </div>
-              )}
+                
+                {/* Venue and Time */}
+                <div>
+                  <p className="text-sm md:text-base text-white font-medium">
+                    {screening.venue}
+                  </p>
+                  <p className="text-sm md:text-base text-white">
+                    {screening.time}
+                  </p>
+                </div>
+                
+                {/* Get Ticket Button */}
+                {screening.ticketUrl && (
+                  <div>
+                    <a
+                      href={screening.ticketUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-white font-medium py-2 px-3 md:px-4 rounded-3xl transition-all duration-200 text-xs md:text-sm"
+                      style={{ 
+                        backgroundColor: hoveredButton === screening.id ? '#59b300' : '#008009'
+                      }}
+                      onMouseEnter={() => setHoveredButton(screening.id)}
+                      onMouseLeave={() => setHoveredButton(null)}
+                    >
+                      {language === "en" ? "Get Tickets" : "购买门票"}
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ))}

@@ -52,7 +52,7 @@ ogImage:
 
 **Watch the Trailer**
 
-Refresh if not showing
+<span style="color: #cccccc; font-size: 14px;">Refresh if not showing</span>
 
 <div class="youtube-embed" data-video-id="5ZVFtE10aK4" data-title="Kaili Blues"></div>
 
