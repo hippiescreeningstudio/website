@@ -19,7 +19,7 @@ export function Intro() {
   const { backgroundColor } = usePost();
   const pathname = usePathname();
   const isHomePage = pathname === "/" || pathname === "/zh";
-  const isPostPage = pathname.includes("/posts/") || pathname.includes("/zh/posts/");
+  const isPostPage = pathname.includes("/films/") || pathname.includes("/zh/films/");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

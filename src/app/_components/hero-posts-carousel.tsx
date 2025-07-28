@@ -130,7 +130,7 @@ export function HeroPostsCarousel({ posts, className = "" }: Props) {
                                                         </p>
                                                     </div>
                                                     <Link
-                                                        href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}
+                                                        href={language === "zh" ? `/zh/films/${post.slug}` : `/films/${post.slug}`}
                                                         className="inline-block text-white px-6 py-2 rounded-3xl transition-all duration-200 font-medium"
                                                         style={{ 
                                                             backgroundColor: hoveredButton === `${post.slug}-${index}` ? '#e9327a' : '#960d00'

@@ -27,7 +27,7 @@ export function PastScreeningsByYear({ language: pageLanguage, year }: PastScree
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`/api/posts?language=${pageLanguage}`);
+        const response = await fetch(`/api/films?language=${pageLanguage}`);
         if (response.ok) {
           const fetchedPosts = await response.json();
           setPosts(fetchedPosts);

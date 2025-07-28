@@ -181,8 +181,8 @@ export function Search({ onStateChange }: SearchProps) {
                                 {results.map((result) => {
                                     // Generate language-specific URL
                                     const postUrl = result.language === "zh"
-                                        ? `/zh/posts/${result.slug}`
-                                        : `/posts/${result.slug}`;
+                                                          ? `/zh/films/${result.slug}`
+                  : `/films/${result.slug}`;
 
                                     return (
                                         <Link

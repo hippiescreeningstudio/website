@@ -16,7 +16,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
 
   // Generate language-specific URL
   const postUrl = slug
-    ? (language === "zh" ? `/zh/posts/${slug}` : `/posts/${slug}`)
+          ? (language === "zh" ? `/zh/films/${slug}` : `/films/${slug}`)
     : undefined;
 
   const image = (

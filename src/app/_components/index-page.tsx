@@ -49,7 +49,7 @@ function ScreeningTable() {
           <div key={screening.id} className="flex bg-black shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* First Column - Poster */}
             <div className="flex-shrink-0 w-40 md:w-60">
-              <a href={`/posts/${screening.slug}`} className="block h-full">
+                              <a href={`/films/${screening.slug}`} className="block h-full">
                 <img
                   src={screening.poster}
                   alt={`${screening.title} poster`}
@@ -63,7 +63,7 @@ function ScreeningTable() {
               {/* Film Title */}
               <div>
                 <a 
-                  href={`/posts/${screening.slug}`} 
+                  href={`/films/${screening.slug}`} 
                   className="text-lg md:text-xl font-bold text-white hover:underline transition-colors duration-300 block"
                 >
                   {screening.title}
@@ -124,7 +124,7 @@ export function SharedIndexPage({ targetLanguage }: { targetLanguage: "en" | "zh
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`/api/posts?language=${targetLanguage}`);
+        const response = await fetch(`/api/films?language=${targetLanguage}`);
         if (response.ok) {
           const fetchedPosts = await response.json();
           setPosts(fetchedPosts);

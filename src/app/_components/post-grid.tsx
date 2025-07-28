@@ -34,7 +34,7 @@ export function PostGrid({ posts, className = "" }: Props) {
                     return (
                         <Link
                             key={post.slug}
-                            href={language === "zh" ? `/zh/posts/${post.slug}` : `/posts/${post.slug}`}
+                            href={language === "zh" ? `/zh/films/${post.slug}` : `/films/${post.slug}`}
                             className="group relative block aspect-[16/9] overflow-hidden"
                             onClick={() => handleClick(post.slug)}
                         >

@@ -30,8 +30,8 @@ export async function GET() {
     <ttl>60</ttl>
     ${allPosts.map(post => {
             const postUrl = post.language === 'zh'
-                ? `${siteUrl}/zh/posts/${post.slug}`
-                : `${siteUrl}/posts/${post.slug}`;
+                        ? `${siteUrl}/zh/films/${post.slug}`
+        : `${siteUrl}/films/${post.slug}`;
 
             return `
     <item>
