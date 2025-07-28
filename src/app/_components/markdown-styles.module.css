@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-base md:text-lg leading-normal md:leading-relaxed text-justify;
+  @apply text-base md:text-lg leading-normal md:leading-relaxed text-left;
 }
 
 .markdown p,
