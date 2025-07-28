@@ -1,7 +1,7 @@
 "use client";
 
 import Container from "@/app/_components/container";
-import { Intro } from "@/app/_components/intro";
+import { Intro } from "@/app/_components/navigation";
 import { HeroPostsCarousel } from "@/app/_components/hero-posts-carousel";
 import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";

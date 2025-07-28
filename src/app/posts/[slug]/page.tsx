@@ -3,7 +3,7 @@
 import { notFound } from "next/navigation";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Container from "@/app/_components/container";
-import { Intro } from "@/app/_components/intro";
+import { Intro } from "@/app/_components/navigation";
 import { PostBody } from "@/app/_components/post-body";
 import { PostHeader } from "@/app/_components/post-header";
 import { Notification } from "@/app/_components/notification";

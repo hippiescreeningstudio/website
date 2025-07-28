@@ -103,10 +103,6 @@ export function YouTubeEmbed({
                             </div>
                         </button>
 
-                        {/* Duration badge (you could extend this to fetch actual duration) */}
-                        <div className="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-2 py-1 rounded">
-                            Video
-                        </div>
                     </div>
                 ) : (
                     // Actual YouTube iframe
@@ -115,7 +111,6 @@ export function YouTubeEmbed({
                         height="100%"
                         src={embedUrl}
                         title={title}
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
                         className="bg-transparent m-0 p-0"
