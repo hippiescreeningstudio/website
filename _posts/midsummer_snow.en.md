@@ -38,12 +38,12 @@ Join us for a highly anticipated screening of this award-winning film.
 | Duration     | 116 minutes                 |
 | Genre        | Drama, History              |
 
-| Screening Info |                                        |
-| -------------- | -------------------------------------- |
-| Time           | Aug 24                                 |
-| Cinema         | To be announced                        |
-| Language       | Original with English subtitles (OmeU) |
-| Tickets        | To be announced                        |
+| Screening Info |                                                  |
+| -------------- | ------------------------------------------------ |
+| Time           | To be announced                                  |
+| Cinema         | Neues Rottmann, Rottmannstraße 15, 80333 München |
+| Language       | Original with English subtitles (OmeU)           |
+| Tickets        | To be announced                                  |
 
 <figure>
   <img src="/assets/blog/midsummer_snow/poster.png" alt="Snow in Midsummer" />

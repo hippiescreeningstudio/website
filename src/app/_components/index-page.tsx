@@ -33,8 +33,8 @@ function ScreeningTable() {
       poster: "/assets/blog/midsummer_snow/poster.png",
       duration: "116 min",
       genre: "Drama, History",
-      venue: "To be announced",
-      time: "Aug 24",
+      venue: "Neues Rottmann",
+      time: "To be announced",
       // ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
     },
   ];
