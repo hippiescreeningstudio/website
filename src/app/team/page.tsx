@@ -6,6 +6,7 @@ import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect } from "react";
 import Image from "next/image";
+import { teamMembers } from "@/lib/team";
 
 export default function Team() {
     const { setLanguage } = useLanguage();
@@ -14,59 +15,6 @@ export default function Team() {
     useEffect(() => {
         setLanguage("en");
     }, [setLanguage]);
-
-    const teamMembers = [
-        {
-            name: "Yiwen Miao",
-            nameZh: "Yiwen Miao",
-            photo: "/assets/team/member1.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Luca",
-            nameZh: "Luca",
-            photo: "/assets/team/member2.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Wenlan Shen",
-            nameZh: "Wenlan Shen",
-            photo: "/assets/team/member3.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Jianyu Zhao",
-            nameZh: "Jianyu Zhao",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Tina",
-            nameZh: "Tina",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Zhuolun Zhou",
-            nameZh: "Zhuolun Zhou",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Tong Liu",
-            nameZh: "Tong Liu",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "и",
-            nameZh: "и",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Ze Huang",
-            nameZh: "Ze Huang",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Yimeng",
-            nameZh: "Yimeng",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-    ];
 
     return (
         <main style={{ marginTop: '80px' }}>
@@ -86,25 +34,23 @@ export default function Team() {
                                 <div key={index} className="text-center">
                                     <div className="relative w-32 h-32 mx-auto mb-4">
                                         <div className="w-full h-full rounded-full bg-white p-1">
-                                            <div className="w-full h-full rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                                {/* Placeholder for when actual photos are added */}
-                                                <div className="text-2xl font-bold text-gray-500 dark:text-gray-400">
-                                                    {member.name.split(' ').map(n => n[0]).join('')}
-                                                </div>
-                                                {/* Uncomment this when actual photos are available:
+                                            <div className="w-full h-full rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700">
                                                 <Image
                                                     src={member.photo}
                                                     alt={member.name}
                                                     fill
-                                                    className="object-cover"
+                                                    className="object-cover rounded-full"
+                                                    style={{ objectPosition: 'center' }}
                                                 />
-                                                */}
                                             </div>
                                         </div>
                                     </div>
                                     <h3 className="text-lg font-bold mb-1">
                                         {member.name}
                                     </h3>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                                        {member.title}
+                                    </p>
                                 </div>
                             ))}
                         </div>

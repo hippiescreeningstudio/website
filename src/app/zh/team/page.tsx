@@ -5,6 +5,8 @@ import { Intro } from "@/app/_components/navigation";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect } from "react";
 import { Footer } from "@/app/_components/footer";
+import Image from "next/image";
+import { teamMembers } from "@/lib/team";
 
 export default function ChineseTeam() {
     const { setLanguage } = useLanguage();
@@ -14,70 +16,17 @@ export default function ChineseTeam() {
         setLanguage("zh");
     }, [setLanguage]);
 
-    const teamMembers = [
-        {
-            name: "Yiwen Miao",
-            nameZh: "Yiwen Miao",
-            photo: "/assets/team/member1.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Luca",
-            nameZh: "Luca",
-            photo: "/assets/team/member2.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Wenlan Shen",
-            nameZh: "Wenlan Shen",
-            photo: "/assets/team/member3.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Jianyu Zhao",
-            nameZh: "Jianyu Zhao",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Tina",
-            nameZh: "Tina",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Zhuolun Zhou",
-            nameZh: "Zhuolun Zhou",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Tong Liu",
-            nameZh: "Tong Liu",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "и",
-            nameZh: "и",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Ze Huang",
-            nameZh: "Ze Huang",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-        {
-            name: "Yimeng",
-            nameZh: "Yimeng",
-            photo: "/assets/team/member4.jpg", // Placeholder - replace with actual photos
-        },
-    ];
-
     return (
         <main style={{ marginTop: '80px' }}>
             <Container>
                 <Intro />
-                <section className="mb-32">
+                <section className="mb-32 pt-16 ">
                     <h1 className="text-lg md:text-lg font-bold tracking-tighter leading-tight mb-8">
                         我们的团队
                     </h1>
                     <div className="prose prose-lg dark:prose-invert max-w-none">
                         <p className="text-base leading-relaxed mb-12">
-                            认识嬉皮放映室的团队成员
+                            认识放映室背后的每个成员。
                         </p>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 not-prose">
@@ -85,25 +34,23 @@ export default function ChineseTeam() {
                                 <div key={index} className="text-center">
                                     <div className="relative w-32 h-32 mx-auto mb-4">
                                         <div className="w-full h-full rounded-full bg-white p-1">
-                                            <div className="w-full h-full rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                                                {/* Placeholder for when actual photos are added */}
-                                                <div className="text-2xl font-bold text-gray-500 dark:text-gray-400">
-                                                    {member.name.split(' ').map(n => n[0]).join('')}
-                                                </div>
-                                                {/* Uncomment this when actual photos are available:
+                                            <div className="w-full h-full rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700">
                                                 <Image
                                                     src={member.photo}
-                                                    alt={member.name}
+                                                    alt={member.nameZh}
                                                     fill
-                                                    className="object-cover"
+                                                    className="object-cover rounded-full"
+                                                    style={{ objectPosition: 'center' }}
                                                 />
-                                                */}
                                             </div>
                                         </div>
                                     </div>
                                     <h3 className="text-lg font-bold mb-1">
                                         {member.nameZh}
                                     </h3>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                                        {member.title}
+                                    </p>
                                 </div>
                             ))}
                         </div>
