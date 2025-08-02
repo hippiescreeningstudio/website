@@ -9,14 +9,14 @@ export const teamMembers = [
         photo: "/assets/team/Yiwen_Miao.jpg",
     },
     {
-        name: "Luca",
+        name: "Liangquan Li",
         nameZh: "李良泉",
         title: "Lead Curator",
         photo: "/assets/team/Liangquan_Li.jpg",
     },
     {
-        name: "Tina",
-        nameZh: "陈天绮",
+        name: "Tina Chen",
+        nameZh: "Tina Chen",
         title: "Finance Manager",
         photo: "/assets/team/Tina.jpg",
     },
