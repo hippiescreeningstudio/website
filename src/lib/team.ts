@@ -84,7 +84,7 @@ export const teamMembers = [
         name: "Tong Liu",
         nameZh: "刘通",
         title: "Programs Coordinator",
-        photo: "/assets/team/Tong_Liu.png",
+        photo: "/assets/team/default.png",
     },
     {
         name: "Yimeng",
