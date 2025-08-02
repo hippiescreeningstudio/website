@@ -46,7 +46,7 @@ export const teamMembers = [
     },
     {
         name: "Fei",
-        nameZh: "Fei",
+        nameZh: "李非",
         title: "Programs Coordinator",
         photo: "/assets/team/Fei_Li.jpg",
     },
