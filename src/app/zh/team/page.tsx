@@ -48,7 +48,7 @@ export default function ChineseTeam() {
                                     <h3 className="text-lg font-bold mb-1">
                                         {member.nameZh}
                                     </h3>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                                    <p className="text-base text-gray-400 italic">
                                         {member.title}
                                     </p>
                                 </div>
