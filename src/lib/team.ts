@@ -36,7 +36,7 @@ export const teamMembers = [
         name: "Zhuolun Zhou",
         nameZh: "周卓伦",
         title: "Programs Coordinator & Tech Support",
-        photo: "/assets/team/zzhuolun.png",
+        photo: "/assets/team/Zhuolun_Zhou.jpg",
     },
     {
         name: "Ze Huang",
@@ -51,6 +51,12 @@ export const teamMembers = [
         photo: "/assets/team/Fei_Li.jpg",
     },
     {
+        name: "Weijian Niu",
+        nameZh: "牛玮健",
+        title: "Programs Coordinator",
+        photo: "/assets/team/Weijian_Niu.jpg",
+    },
+    {
         name: "Yuyang Zhao",
         nameZh: "赵宇阳",
         title: "Programs Coordinator",
@@ -61,12 +67,6 @@ export const teamMembers = [
         nameZh: "樊雪晨",
         title: "Programs Coordinator",
         photo: "/assets/team/Xuechen_Fan.jpg",
-    },
-    {
-        name: "Weijian Niu",
-        nameZh: "牛玮健",
-        title: "Programs Coordinator",
-        photo: "/assets/team/Weijian_Niu.jpg",
     },
     {
         name: "Ziyi Guo",

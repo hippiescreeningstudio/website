@@ -32,9 +32,9 @@ export default function ChineseTeam() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 not-prose">
                             {teamMembers.map((member, index) => (
                                 <div key={index} className="text-center">
-                                    <div className="relative w-32 h-32 mx-auto mb-4">
-                                        <div className="w-full h-full rounded-full bg-white p-1">
-                                            <div className="w-full h-full rounded-full overflow-hidden bg-gray-200 dark:bg-gray-700">
+                                    <div className="relative w-48 h-48 md:w-44 md:h-44 mx-auto mb-4">
+                                        <div className="w-full h-full rounded-full p-1">
+                                            <div className="w-full h-full rounded-full overflow-hidden ">
                                                 <Image
                                                     src={member.photo}
                                                     alt={member.nameZh}
