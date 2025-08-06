@@ -40,10 +40,10 @@ Join us for a highly anticipated screening of this award-winning film.
 
 | Screening Info |                                                  |
 | -------------- | ------------------------------------------------ |
-| Time           | To be announced                                  |
+| Time           | Aug 30, 12:45                                    |
 | Cinema         | Neues Rottmann, Rottmannstraße 15, 80333 München |
 | Language       | Original with English subtitles (OmeU)           |
-| Tickets        | To be announced                                  |
+| Tickets        | Coming soon                                      |
 
 <figure>
   <img src="/assets/blog/midsummer_snow/poster.png" alt="Snow in Midsummer" />

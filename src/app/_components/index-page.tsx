@@ -34,7 +34,7 @@ function ScreeningTable() {
       duration: "116 min",
       genre: "Drama, History",
       venue: "Neues Rottmann",
-      time: "To be announced",
+      time: "Aug 30, 12:45",
       // ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
     },
   ];
