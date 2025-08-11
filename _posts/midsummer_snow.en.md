@@ -16,7 +16,7 @@ mobileCoverImages:
   - "/assets/blog/midsummer_snow/still2_mobile.png"
   - "/assets/blog/midsummer_snow/still3_mobile.png"
   - "/assets/blog/midsummer_snow/still4_mobile.png"
-date: "2025-08-24T00:00:00.000Z"
+date: "2025-08-30T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/midsummer_snow/poster.png"
 ---
@@ -52,7 +52,7 @@ Join us for a highly anticipated screening of this award-winning film.
 
 **Watch the Trailer**
 
-<span style="color: #cccccc; font-size: 14px;">Refresh if not showing</span>
+<span style="color: #cccccc; font-size: 14px;">Click <a href="https://youtu.be/oZtgGSRTYac?feature=shared" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">this link</a> if not showing</span>
 
 <div class="youtube-embed" data-video-id="oZtgGSRTYac" data-title="Snow in Midsummer"></div>
 

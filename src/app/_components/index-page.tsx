@@ -14,20 +14,8 @@ function ScreeningTable() {
 
   // Screening data with poster images and additional metadata
   const screenings = [
- 
     {
-      id: 2,
-      title: "K-Family Affairs 애국소녀",
-      slug: "k_family",
-      poster: "/assets/blog/k_family/poster_ori.jpg",
-      duration: "91 min",
-      genre: "Documentary, Political",
-      venue: "Neues Rottmann",
-      time: "Aug 9, 14:00",
-      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109"
-    },
-    {
-      id: 3,
+      id: 1,
       title: "Snow in Midsummer 五月雪",
       slug: "midsummer_snow",
       poster: "/assets/blog/midsummer_snow/poster.png",
@@ -36,6 +24,17 @@ function ScreeningTable() {
       venue: "Neues Rottmann",
       time: "Aug 30, 12:45",
       // ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
+    },
+    {
+      id: 2,
+      title: "Love and Bruises 花",
+      slug: "love_and_bruises",
+      poster: "/assets/blog/love_and_bruises/poster.png",
+      duration: "105 min",
+      genre: "Drama, Romance",
+      venue: "To be announced",
+      time: "September",
+      // ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109"
     },
   ];
 

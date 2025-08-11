@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
-
+import { YouTubeEmbed as NextYouTubeEmbed } from "@next/third-parties/google";
 
 
 type Props = {
@@ -15,7 +15,9 @@ type Props = {
     className?: string;
 };
 
-function YouTubeEmbed({
+
+
+function YouTubeEmbedAdapter({
     videoId,
     title = "YouTube video",
     width = 560,
@@ -24,49 +26,23 @@ function YouTubeEmbed({
     className = ""
 }: Props) {
 
-    // Extract video ID from various YouTube URL formats
-    const extractVideoId = (input: string): string => {
-        // If it's already just an ID (11 characters), return it
-        if (input.length === 11 && !input.includes('/')) {
-            return input;
-        }
-
-        // Handle various YouTube URL formats
-        const patterns = [
-            /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
-            /youtube\.com\/watch\?.*v=([^&\n?#]+)/,
-        ];
-
-        for (const pattern of patterns) {
-            const match = input.match(pattern);
-            if (match) {
-                return match[1];
-            }
-        }
-
-        return input; // Return as-is if no pattern matches
-    };
-
-    const cleanVideoId = extractVideoId(videoId);
-    const embedUrl = `https://www.youtube.com/embed/${cleanVideoId}${autoplay ? '?autoplay=1' : ''}`;
+    const paramsParts: string[] = [];
+    if (autoplay) {
+        paramsParts.push("autoplay=1", "mute=1", "playsinline=1");
+    }
+    const params = paramsParts.join("&");
 
     return (
         <div className={`${className} m-0 p-0`} style={{ margin: 0, padding: 0 }}>
-            <div className="relative w-full bg-transparent m-0 p-0" style={{ aspectRatio: `${width}/${height}`, margin: 0, padding: 0 }}>
-                    <iframe
-                        width="100%"
-                        height="100%"
-                        src={embedUrl}
-                        title={title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen
-                        className="bg-transparent m-0 p-0"
-                        style={{ margin: 0, padding: 0, display: 'block' }}
-                    />
-            </div>
+            <NextYouTubeEmbed
+                videoid={videoId}
+                playlabel={title}
+                params={params}
+                style={`aspect-ratio: ${width}/${height}; width: 100%;`}
+            />
         </div>
     );
-} 
+}
 
 export function YouTubeProcessor({ children }: { children: React.ReactNode }) {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -81,7 +57,7 @@ export function YouTubeProcessor({ children }: { children: React.ReactNode }) {
             const videoId = div.getAttribute('data-video-id');
             const title = div.getAttribute('data-title') || undefined;
             const autoplay = div.getAttribute('data-autoplay') === 'true';
-            const showTitle = div.getAttribute('data-show-title') !== 'false';
+            // const showTitle = div.getAttribute('data-show-title') !== 'false'; // intentionally unused
 
             if (videoId) {
                 // Create a new container for the React component
@@ -91,11 +67,10 @@ export function YouTubeProcessor({ children }: { children: React.ReactNode }) {
                 // Render the YouTube component
                 const root = createRoot(reactContainer);
                 root.render(
-                    <YouTubeEmbed
+                    <YouTubeEmbedAdapter
                         videoId={videoId}
                         title={title}
                         autoplay={autoplay}
-                        showTitle={showTitle}
                     />
                 );
             }
