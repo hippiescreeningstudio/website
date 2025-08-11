@@ -25,7 +25,7 @@ ogImage:
 
 In September, we will screen another Lou Ye film, _Love and Bruises_.
 
-Lou Ye made Love and Bruises during a five-year, government-imposed ban on filmmaking in China—a fittingly turbulent backdrop for this tale of l’amour fou, set in Paris.
+Lou Ye made Love and Bruises during a five-year, government-imposed ban on filmmaking in China—a backdrop for this tale of l’amour fou, set in Paris.
 
 The film is adapted from Naked (裸), a semi-autobiographical novel by Beijing film researcher and teacher Jie Liu-Falin (刘捷). First written in Paris in 2002, the work was reimagined as a screenplay in 2005, then rewritten by Liu and Lou in 2007.
 

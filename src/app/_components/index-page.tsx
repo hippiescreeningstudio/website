@@ -13,7 +13,18 @@ function ScreeningTable() {
   const [hoveredButton, setHoveredButton] = useState<number | null>(null);
 
   // Screening data with poster images and additional metadata
-  const screenings = [
+  type Screening = {
+    id: number;
+    title: string;
+    slug: string;
+    poster: string;
+    duration: string;
+    genre: string;
+    venue: string;
+    time: string;
+    ticketUrl?: string;
+  };
+  const screenings: Screening[] = [
     {
       id: 1,
       title: "Snow in Midsummer 五月雪",
