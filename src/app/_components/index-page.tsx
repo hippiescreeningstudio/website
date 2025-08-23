@@ -34,7 +34,7 @@ function ScreeningTable() {
       genre: "Drama, History",
       venue: "Neues Rottmann",
       time: "Aug 30, 12:45",
-      // ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
     },
     {
       id: 2,

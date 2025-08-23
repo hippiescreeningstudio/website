@@ -8,17 +8,26 @@ overlayText:
   subtitle: "a historical drama revisiting Malaysia’s 13 May Incident in 1969 and its lingering scars"
 coverImages:
   - "/assets/blog/midsummer_snow/still1.png"
+  - "/assets/blog/midsummer_snow/still6.jpeg"
+  - "/assets/blog/midsummer_snow/still7.jpeg"
   - "/assets/blog/midsummer_snow/still2.png"
   - "/assets/blog/midsummer_snow/still3.png"
   - "/assets/blog/midsummer_snow/still4.png"
 mobileCoverImages:
   - "/assets/blog/midsummer_snow/still1_mobile.png"
+  - "/assets/blog/midsummer_snow/still6_mobile.jpeg"
+  - "/assets/blog/midsummer_snow/still7_mobile.jpeg"
   - "/assets/blog/midsummer_snow/still2_mobile.png"
   - "/assets/blog/midsummer_snow/still3_mobile.png"
   - "/assets/blog/midsummer_snow/still4_mobile.png"
 date: "2025-08-30T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/midsummer_snow/poster.png"
+sticker:
+  text: "Get ticket here"
+  color: "#fcef17"
+  textColor: "#992252"
+  link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
 ---
 
 1969 年 5 月 13 日，第三届马来西亚大选后第三天，小英和母亲在吉隆坡某社区庙会欣赏酬神大戏《六月雪》，父亲则带着哥哥，赶赴邻近的大华戏院观赏台湾电影《负心的人》。此前，马来西亚向来以马来人、华人、印度人间兼容并蓄的民主政治关系，是多元种族和谐共处的成功典范。未料，大选后社会氛围急转直下，这夜，党派暴徒突袭华人社区、不分青红皂白血溅无辜的消息传得满城风雨。慌乱中，小英和母亲只能彻夜躲藏戏台后，静待事件平息；暴力事件一夜间蔓延至全国各地，就在马来西亚首相宣布戒严之际，小英的父兄也从此断了音讯。
@@ -38,12 +47,12 @@ ogImage:
 | 时长     | 116 分钟               |
 | 类型     | 剧情, 历史             |
 
-| 放映信息 |                                                  |
-| -------- | ------------------------------------------------ |
-| 时间     | Aug 30, 12:45                                    |
-| 地点     | Neues Rottmann, Rottmannstraße 15, 80333 München |
-| 语言     | 原声，英文字幕                                   |
-| 购票     | 即将公布                                         |
+| 放映信息 |                                                                                                                                                                                                                                     |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 时间     | Aug 30, 12:45                                                                                                                                                                                                                       |
+| 地点     | Neues Rottmann, Rottmannstraße 15, 80333 München                                                                                                                                                                                    |
+| 语言     | 原声，英文字幕                                                                                                                                                                                                                      |
+| 购票     | [<strong style="background-color:#fcef17;color:#992252"> 在线购票</strong>](https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900) 或现场购票 |
 
 <figure>
   <img src="/assets/blog/midsummer_snow/poster.png" alt="Snow in Midsummer" />

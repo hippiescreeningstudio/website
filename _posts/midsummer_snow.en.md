@@ -8,17 +8,26 @@ overlayText:
   subtitle: "a historical drama revisiting Malaysia’s 13 May Incident in 1969 and its lingering scars"
 coverImages:
   - "/assets/blog/midsummer_snow/still1.png"
+  - "/assets/blog/midsummer_snow/still6.jpeg"
+  - "/assets/blog/midsummer_snow/still7.jpeg"
   - "/assets/blog/midsummer_snow/still2.png"
   - "/assets/blog/midsummer_snow/still3.png"
   - "/assets/blog/midsummer_snow/still4.png"
 mobileCoverImages:
   - "/assets/blog/midsummer_snow/still1_mobile.png"
+  - "/assets/blog/midsummer_snow/still6_mobile.jpeg"
+  - "/assets/blog/midsummer_snow/still7_mobile.jpeg"
   - "/assets/blog/midsummer_snow/still2_mobile.png"
   - "/assets/blog/midsummer_snow/still3_mobile.png"
   - "/assets/blog/midsummer_snow/still4_mobile.png"
 date: "2025-08-30T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/midsummer_snow/poster.png"
+sticker:
+  text: "Get ticket here"
+  color: "#fcef17"
+  textColor: "#992252"
+  link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
 ---
 
 Snow in Midsummer is set in Kuala Lumpur at two different periods of time: first on May 13, 1969, and then, on May 13, 2018; it revolves around Ah Eng, a young woman, and her mother who lose contact with the father and brother of the first amid political riots, in the first part, and, in a second chapter, the remembrance of this moment 49 years later.
@@ -38,12 +47,12 @@ Join us for a highly anticipated screening of this award-winning film.
 | Duration     | 116 minutes                 |
 | Genre        | Drama, History              |
 
-| Screening Info |                                                  |
-| -------------- | ------------------------------------------------ |
-| Time           | Aug 30, 12:45                                    |
-| Cinema         | Neues Rottmann, Rottmannstraße 15, 80333 München |
-| Language       | Original with English subtitles (OmeU)           |
-| Tickets        | Coming soon                                      |
+| Screening Info |                                                                                                                                                                                                                                                 |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Time           | Aug 30, 12:45                                                                                                                                                                                                                                   |
+| Cinema         | Neues Rottmann, Rottmannstraße 15, 80333 München                                                                                                                                                                                                |
+| Language       | Original with English subtitles (OmeU)                                                                                                                                                                                                          |
+| Tickets        | [<strong style="background-color:#fcef17;color:#992252"> Buy online</strong>](https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900) or at the box office |
 
 <figure>
   <img src="/assets/blog/midsummer_snow/poster.png" alt="Snow in Midsummer" />
