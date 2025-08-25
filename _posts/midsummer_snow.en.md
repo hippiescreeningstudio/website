@@ -30,7 +30,7 @@ sticker:
   link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
 ---
 
-Snow in Midsummer is set in Kuala Lumpur at two different periods of time: first on May 13, 1969, and then, on May 13, 2018; it revolves around Ah Eng, a young woman, and her mother who lose contact with the father and brother of the first amid political riots, in the first part, and, in a second chapter, the remembrance of this moment 49 years later.
+Snow in Midsummer unfolds in Kuala Lumpur on two fateful days: May 13, 1969, and May 13, 2018. In the first, Ah Eng and her mother are torn from her father and brother amid the chaos of political riots. Nearly half a century later, on the same date, Ah Eng looks back on that day, carrying the weight of memory across generations.
 
 The film is a contemporary re-imagining of one of the most famous classical Chinese dramas, in which a young widow curses those who execute her for a crime she did not commit.
 
