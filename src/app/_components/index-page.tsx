@@ -27,25 +27,25 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Snow in Midsummer 五月雪",
-      slug: "midsummer_snow",
-      poster: "/assets/blog/midsummer_snow/poster.png",
-      duration: "116 min",
-      genre: "Drama, History",
-      venue: "Neues Rottmann",
-      time: "Aug 30, 12:45",
-      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
-    },
-    {
-      id: 2,
       title: "Love and Bruises 花",
       slug: "love_and_bruises",
       poster: "/assets/blog/love_and_bruises/poster.png",
       duration: "105 min",
       genre: "Drama, Romance",
-      venue: "To be announced",
-      time: "September",
+      venue: "Werkstatt Kino",
+      time: "September, to be announced",
       // ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109"
+    },
+    {
+      id: 2,
+      title: "Nest 巢",
+      slug: "nest",
+      poster: "/assets/blog/nest/poster.jpg",
+      duration: "90 minutes",
+      genre: "Documentary",
+      venue: "Werkstatt Kino",
+      time: "October, to be announced",
+      // ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
     },
   ];
 
