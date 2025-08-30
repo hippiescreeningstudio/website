@@ -59,7 +59,7 @@ function ScreeningTable() {
           <div key={screening.id} className="flex bg-black shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* First Column - Poster */}
             <div className="flex-shrink-0 w-32 md:w-72 h-48 md:h-96">
-              <a href={`/films/${screening.slug}`} className="block h-full">
+              <a href={`${language === "zh" ? "/zh" : ""}/films/${screening.slug}`} className="block h-full">
                 <img
                   src={screening.poster}
                   alt={`${screening.title} poster`}
@@ -75,7 +75,7 @@ function ScreeningTable() {
                 {/* Film Title */}
                 <div>
                   <a 
-                    href={`/films/${screening.slug}`} 
+                    href={`${language === "zh" ? "/zh" : ""}/films/${screening.slug}`} 
                     className="text-base md:text-xl font-bold text-white hover:underline transition-colors duration-300 block"
                   >
                     {screening.title}
