@@ -46,12 +46,12 @@ Their relationship is intense—driven by raw sexual attraction, tinged with mis
 | Duration     | 105 minutes         |
 | Language     | French, Chinese     |
 
-| Screening Info |                                        |
-| -------------- | -------------------------------------- |
-| Time           | September                              |
-| Cinema         | Coming soon                            |
-| Language       | Original with English subtitles (OmeU) |
-| Tickets        | Coming soon                            |
+| Screening Info |                                                  |
+| -------------- | ------------------------------------------------ |
+| Time           | September                                        |
+| Cinema         | Werkstattkino, Fraunhoferstraße 9, 80469 München |
+| Language       | Original with English subtitles (OmeU)           |
+| Tickets        | Coming soon                                      |
 
 <figure>
   <img src="/assets/blog/love_and_bruises/poster.png" alt="Love and Bruises" />
