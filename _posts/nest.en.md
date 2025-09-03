@@ -44,12 +44,12 @@ NEST is director Qin Xiaoyue's first feature-length documentary. It won the Best
 | Duration     | 90 minutes         |
 | Genre        | Documentary        |
 
-| Screening Info |                                                   |
-| -------------- | ------------------------------------------------- |
-| Time           | October, to be announced                          |
-| Cinema         | Werkstatt Kino, Fraunhoferstraße 9, 80469 München |
-| Language       | Chinese with English subtitles (OmeU)             |
-| Tickets        | Coming soon                                       |
+| Screening Info |                                                  |
+| -------------- | ------------------------------------------------ |
+| Time           | October, to be announced                         |
+| Cinema         | Werkstattkino, Fraunhoferstraße 9, 80469 München |
+| Language       | Chinese with English subtitles (OmeU)            |
+| Tickets        | Coming soon                                      |
 
 <figure>
     <img src="/assets/blog/nest/poster.jpg" alt="Nest 巢" />

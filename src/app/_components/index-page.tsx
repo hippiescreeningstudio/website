@@ -32,7 +32,7 @@ function ScreeningTable() {
       poster: "/assets/blog/love_and_bruises/poster.png",
       duration: "105 min",
       genre: "Drama, Romance",
-      venue: "Werkstatt Kino",
+      venue: "Werkstattkino",
       time: "September, to be announced",
       // ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109"
     },
@@ -43,7 +43,7 @@ function ScreeningTable() {
       poster: "/assets/blog/nest/poster.jpg",
       duration: "90 minutes",
       genre: "Documentary",
-      venue: "Werkstatt Kino",
+      venue: "Werkstattkino",
       time: "October, to be announced",
       // ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
     },
