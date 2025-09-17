@@ -180,9 +180,11 @@ export default function ChineseQuestionnaire() {
                                     ].map(option => (
                                         <label key={option} className="flex items-center">
                                             <input
-                                                type="checkbox"
-                                                checked={(formData.question2 || []).includes(option)}
-                                                onChange={() => handleCheckboxChange('question2', option)}
+                                                type="radio"
+                                                name="question2"
+                                                value={option}
+                                                checked={formData.question2 === option}
+                                                onChange={() => handleInputChange('question2', option)}
                                                 className="mr-2 accent-white"
                                             />
                                             {option}
