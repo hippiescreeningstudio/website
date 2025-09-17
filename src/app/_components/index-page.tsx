@@ -208,11 +208,14 @@ export function SharedIndexPage({ targetLanguage }: { targetLanguage: "en" | "zh
         <div className="my-16 w-full h-px bg-white/40"></div>
         
         {/* Survey and Feedback Sections */}
-        <div className="mb-16 grid grid-cols-1 gap-16 md:grid-cols-2">
+        <div className="mb-16 grid grid-cols-1 md:gap-8 md:grid-cols-2">
           {/* Questionnaire Section */}
           <div className="md:pr-32">
             <QuestionnaireSection />
           </div>
+          
+          {/* Mobile Divider */}
+          <div className="md:hidden my-16 w-full h-px bg-white/40"></div>
           
           {/* Feedback Section */}
           
