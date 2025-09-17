@@ -13,7 +13,7 @@ coverImages:
   - "/assets/blog/last_year/tlyod_4.jpg"
 date: "2025-06-10T00:00:00.000Z"
 ogImage:
-  url: "/assets/blog/last_year/tlyod_1.jpg"
+  url: "/assets/blog/last_year/poster.jpg"
 ---
 
 In celebration of Pride Month, join us for a special <span class="pride-month-rainbow">CSD</span> screening and Q&A with the director Ben Mullinkosson.

@@ -2,7 +2,7 @@
 
 import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/navigation";
-import { PostGrid } from "@/app/_components/post-grid";
+import { PastScreeningsGrid } from "@/app/_components/past-screenings-grid";
 import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
@@ -107,7 +107,7 @@ export function PastScreeningsByYear({ language: pageLanguage, year }: PastScree
             {pageLanguage === "en" ? `Past Screenings ${year}` : `${year}年往期放映`}
           </h1>
           <div className="mb-16">
-            <PostGrid posts={yearPosts} />
+            <PastScreeningsGrid posts={yearPosts} />
           </div>
         </section>
       </Container>

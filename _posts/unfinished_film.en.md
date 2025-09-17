@@ -12,7 +12,7 @@ coverImages:
   - "/assets/blog/unfinished_film/still_4.png"
 date: "2025-05-10T00:00:00.000Z"
 ogImage:
-  url: "/assets/blog/unfinished_film/still_1.png"
+  url: "/assets/blog/unfinished_film/poster.jpg"
 ---
 Blending documentary and fiction, Lou Ye and Ma Yingli explore the fragile boundary between reality and cinema.
 

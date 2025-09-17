@@ -13,7 +13,7 @@ coverImages:
   - "/assets/blog/last_year/tlyod_4.jpg"
 date: "2025-06-10T00:00:00.000Z"
 ogImage:
-  url: "/assets/blog/last_year/tlyod_1.jpg"
+  url: "/assets/blog/last_year/poster.jpg"
 ---
 
 我们邀请您观看<span class="pride-month-rainbow">CSD</span>特别放映，并与导演 Ben Mullinkosson 映后交流。
