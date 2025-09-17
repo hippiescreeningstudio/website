@@ -2,6 +2,7 @@
 
 import Container from "@/app/_components/container";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 import { usePost } from "@/contexts/post-context";
 import { generateColorPalette } from "@/lib/color-utils";
@@ -91,7 +92,13 @@ export function Footer() {
         </div>
         <div className="py-3 mt-2">
           <div className="text-center text-xs text-neutral-400">
-            © {new Date().getFullYear()} {t("footer.copyright")}
+            © {new Date().getFullYear()} {t("footer.copyright")}  {" "}
+            <Link 
+              href="/impressum"
+              className="hover:opacity-75 transition-opacity underline"
+            >
+              Impressum
+            </Link>
           </div>
         </div>
       </Container>
