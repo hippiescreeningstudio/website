@@ -23,7 +23,7 @@ export function QuestionnaireSection() {
         <div className="mt-auto">
           <Link
             href={language === "zh" ? "/zh/questionnaire" : "/questionnaire"}
-            className="inline-block bg-white text-black font-medium py-3 px-6 md:px-8 rounded-full hover:bg-gray-200 transition-colors duration-300 text-base md:text-lg"
+            className="inline-block bg-white text-black font-medium py-3 px-6 md:px-8 rounded-full hover:bg-gray-400 transition-colors duration-300 text-base md:text-lg active:bg-black active:border-white active:text-white"
           >
             {language === "en" ? "Take Our Survey" : "参与问卷调查"}
           </Link>

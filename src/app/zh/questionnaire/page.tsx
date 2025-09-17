@@ -5,17 +5,38 @@ import { Intro } from "@/app/_components/navigation";
 import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ChineseQuestionnaire() {
     const { setLanguage } = useLanguage();
+    const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [formData, setFormData] = useState<Record<string, any>>({});
+    const [countdown, setCountdown] = useState(3);
 
     // Set language to Chinese when component mounts
     useEffect(() => {
         setLanguage("zh");
     }, [setLanguage]);
+
+    // Redirect to main page after countdown when submitted
+    useEffect(() => {
+        if (isSubmitted) {
+            const interval = setInterval(() => {
+                setCountdown((prev) => {
+                    if (prev <= 1) {
+                        clearInterval(interval);
+                        router.push('/zh');
+                        return 0;
+                    }
+                    return prev - 1;
+                });
+            }, 1000);
+
+            return () => clearInterval(interval);
+        }
+    }, [isSubmitted, router]);
 
     const handleCheckboxChange = (questionKey: string, value: string) => {
         setFormData(prev => {
@@ -78,6 +99,11 @@ export default function ChineseQuestionnaire() {
                             <p className="text-lg leading-relaxed mb-6">
                                 您的回复已成功提交。感谢您的反馈！
                             </p>
+                            <div className="flex items-center justify-center gap-2 text-gray-400 text-lg">
+                                <span>将在</span>
+                                <span>{countdown}</span>
+                                <span>秒后跳转到主页</span>
+                            </div>
                         </div>
                     </section>
                 </Container>
@@ -140,7 +166,7 @@ export default function ChineseQuestionnaire() {
                                 )}
                             </div>
 
-                            {/* Question 5 */}
+                            {/* Question 2 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
                                     2. 对于我们每月在小红书发布的「慕尼黑月度影讯」和「影展推荐」，您是否感兴趣？
@@ -155,8 +181,8 @@ export default function ChineseQuestionnaire() {
                                         <label key={option} className="flex items-center">
                                             <input
                                                 type="checkbox"
-                                                checked={(formData.question5 || []).includes(option)}
-                                                onChange={() => handleCheckboxChange('question5', option)}
+                                                checked={(formData.question2 || []).includes(option)}
+                                                onChange={() => handleCheckboxChange('question2', option)}
                                                 className="mr-2 accent-white"
                                             />
                                             {option}
@@ -165,21 +191,21 @@ export default function ChineseQuestionnaire() {
                                 </div>
                             </div>
                             
-                            {/* Question 9 */}
+                            {/* Question 3 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
                                     3. 您希望我们未来放映什么样的电影？（题材/国家/导演/主题等）或哪部电影？
                                 </label>
                                 <textarea
-                                    value={formData.question9 || ''}
-                                    onChange={(e) => handleInputChange('question9', e.target.value)}
+                                    value={formData.question3 || ''}
+                                    onChange={(e) => handleInputChange('question3', e.target.value)}
                                     className="w-full p-3 border border-white rounded bg-black text-white"
                                     rows={3}
                                     placeholder="建议您希望在我们未来放映中看到的电影..."
                                 />
                             </div>
 
-                            {/* Question 6 */}
+                            {/* Question 4 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
                                     4. 电影放映之外，期待我们组织什么活动？
@@ -195,33 +221,33 @@ export default function ChineseQuestionnaire() {
                                         <label key={option} className="flex items-center">
                                             <input
                                                 type="checkbox"
-                                                checked={(formData.question6 || []).includes(option)}
-                                                onChange={() => handleCheckboxChange('question6', option)}
+                                                checked={(formData.question4 || []).includes(option)}
+                                                onChange={() => handleCheckboxChange('question4', option)}
                                                 className="mr-2 accent-white"
                                             />
                                             {option}
                                         </label>
                                     ))}
                                 </div>
-                                {(formData.question6 || []).includes('其他') && (
+                                {(formData.question4 || []).includes('其他') && (
                                     <input
                                         type="text"
-                                        value={formData.question6_other || ''}
-                                        onChange={(e) => handleInputChange('question6_other', e.target.value)}
+                                        value={formData.question4_other || ''}
+                                        onChange={(e) => handleInputChange('question4_other', e.target.value)}
                                         className="mt-2 w-full p-2 border border-white rounded bg-black text-white"
                                         placeholder="请说明其他活动..."
                                     />
                                 )}
                             </div>
 
-                            {/* Question 8 */}
+                            {/* Question 5 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
                                     5. 对过往电影放映的建议和意见
                                 </label>
                                 <textarea
-                                    value={formData.question8 || ''}
-                                    onChange={(e) => handleInputChange('question8', e.target.value)}
+                                    value={formData.question5 || ''}
+                                    onChange={(e) => handleInputChange('question5', e.target.value)}
                                     className="w-full p-3 border border-white rounded bg-black text-white"
                                     rows={3}
                                     placeholder="告诉我们您对过往电影放映的建议..."
@@ -229,14 +255,14 @@ export default function ChineseQuestionnaire() {
                             </div>
 
 
-                            {/* Question 8 */}
+                            {/* Question 6 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
                                     6. 请留下您的姓名或联系方式（非必填）
                                 </label>
                                 <textarea
-                                    value={formData.question8 || ''}
-                                    onChange={(e) => handleInputChange('question8', e.target.value)}
+                                    value={formData.question6 || ''}
+                                    onChange={(e) => handleInputChange('question6', e.target.value)}
                                     className="w-full p-3 border border-white rounded bg-black text-white"
                                     rows={3}
                                 />

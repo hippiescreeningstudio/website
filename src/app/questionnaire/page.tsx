@@ -5,17 +5,38 @@ import { Intro } from "@/app/_components/navigation";
 import { Footer } from "@/app/_components/footer";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Questionnaire() {
     const { setLanguage } = useLanguage();
+    const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [formData, setFormData] = useState<Record<string, any>>({});
+    const [countdown, setCountdown] = useState(3);
 
     // Set language to English when component mounts
     useEffect(() => {
         setLanguage("en");
     }, [setLanguage]);
+
+    // Redirect to main page after countdown when submitted
+    useEffect(() => {
+        if (isSubmitted) {
+            const interval = setInterval(() => {
+                setCountdown((prev) => {
+                    if (prev <= 1) {
+                        clearInterval(interval);
+                        router.push('/');
+                        return 0;
+                    }
+                    return prev - 1;
+                });
+            }, 1000);
+
+            return () => clearInterval(interval);
+        }
+    }, [isSubmitted, router]);
 
     const handleCheckboxChange = (questionKey: string, value: string) => {
         setFormData(prev => {
@@ -78,6 +99,11 @@ export default function Questionnaire() {
                             <p className="text-lg leading-relaxed mb-6">
                                 Your response has been submitted successfully. Thank you for your feedback!
                             </p>
+                            <div className="flex items-center justify-center gap-2 text-gray-400 text-lg">
+                                <span>Redirecting to main page in</span>
+                                <span>{countdown}</span>
+                                <span>seconds</span>
+                            </div>
                         </div>
                     </section>
                 </Container>
@@ -140,7 +166,7 @@ export default function Questionnaire() {
                             </div>
 
                             
-                            {/* Question 9 */}
+                            {/* Question 2 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
                                     2. What kind of films would you like us to screen in the future? (genre/country/director/theme, etc.) Or which specific film?
@@ -154,7 +180,7 @@ export default function Questionnaire() {
                                 />
                             </div>
 
-                            {/* Question 6 */}
+                            {/* Question 3 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
                                     3. Beyond film screenings, what activities would you like us to organize?
@@ -170,46 +196,46 @@ export default function Questionnaire() {
                                         <label key={option} className="flex items-center">
                                             <input
                                                 type="checkbox"
-                                                checked={(formData.question6 || []).includes(option)}
-                                                onChange={() => handleCheckboxChange('question6', option)}
+                                                checked={(formData.question3 || []).includes(option)}
+                                                onChange={() => handleCheckboxChange('question3', option)}
                                                 className="mr-2 accent-white"
                                             />
                                             {option}
                                         </label>
                                     ))}
                                 </div>
-                                {(formData.question6 || []).includes('Other') && (
+                                {(formData.question3 || []).includes('Other') && (
                                     <input
                                         type="text"
-                                        value={formData.question6_other || ''}
-                                        onChange={(e) => handleInputChange('question6_other', e.target.value)}
+                                        value={formData.question3_other || ''}
+                                        onChange={(e) => handleInputChange('question3_other', e.target.value)}
                                         className="mt-2 w-full p-2 border border-white rounded bg-black text-white"
                                         placeholder="Please specify other activities..."
                                     />
                                 )}
                             </div>
 
-                            {/* Question 8 */}
+                            {/* Question 4 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
                                     4. Suggestions and feedback on our past film screenings
                                 </label>
                                 <textarea
-                                    value={formData.question8 || ''}
-                                    onChange={(e) => handleInputChange('question8', e.target.value)}
+                                    value={formData.question4 || ''}
+                                    onChange={(e) => handleInputChange('question4', e.target.value)}
                                     className="w-full p-3 border border-white rounded bg-black text-white"
                                     rows={3}
                                     placeholder="Tell us your suggestions about our past film screenings..."
                                 />
                             </div>
-                                {/* Question 8 */}
+                                {/* Question 5 */}
                                 <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
                                     5. Please leave your name and contact (Optional)
                                 </label>
                                 <textarea
-                                    value={formData.question8 || ''}
-                                    onChange={(e) => handleInputChange('question8', e.target.value)}
+                                    value={formData.question5 || ''}
+                                    onChange={(e) => handleInputChange('question5', e.target.value)}
                                     className="w-full p-3 border border-white rounded bg-black text-white"
                                     rows={3}
                                 />
