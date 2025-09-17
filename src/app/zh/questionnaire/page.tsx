@@ -276,7 +276,7 @@ export default function ChineseQuestionnaire() {
                                     disabled={isSubmitting}
                                     className="bg-white text-black py-3 px-6 rounded-full font-medium hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    {isSubmitting ? '提交中...' : '提交问卷'}
+                                    {isSubmitting ? '提交中...' : '提交'}
                                 </button>
                             </div>
                         </form>

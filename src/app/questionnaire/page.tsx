@@ -246,7 +246,7 @@ export default function Questionnaire() {
                                     disabled={isSubmitting}
                                     className="bg-white text-black py-3 px-6 rounded-full font-medium hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    {isSubmitting ? 'Submitting...' : 'Submit Survey'}
+                                    {isSubmitting ? 'Submitting...' : 'Submit'}
                                 </button>
                             </div>
                         </form>
