@@ -17,6 +17,7 @@ const translations = {
     en: {
         "nav.about": "About",
         "nav.team": "Team",
+        "nav.questionnaire": "Questionnaire",
         "site.title": "Hippie Screening Studio",
         "site.subtitle": "Sinophone & Asian film screenings in Munich",
         "footer.follow": "Follow us on",
@@ -36,6 +37,7 @@ const translations = {
     zh: {
         "nav.about": "关于我们",
         "nav.team": "团队成员",
+        "nav.questionnaire": "问卷调查",
         "site.title": "嬉皮放映室",
         "site.subtitle": "独立策划华语及亚洲电影放映活动",
         "footer.follow": "关注我们",

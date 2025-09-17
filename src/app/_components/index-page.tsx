@@ -4,6 +4,8 @@ import Container from "@/app/_components/container";
 import { Intro } from "@/app/_components/navigation";
 import { HeroPostsCarousel } from "@/app/_components/hero-posts-carousel";
 import { Footer } from "@/app/_components/footer";
+import { QuestionnaireSection } from "@/app/_components/questionnaire-section";
+import { FeedbackSection } from "@/app/_components/feedback-section";
 import { useLanguage } from "@/contexts/language-context";
 import { useEffect, useState } from "react";
 import { Post } from "@/interfaces/post";
@@ -201,6 +203,21 @@ export function SharedIndexPage({ targetLanguage }: { targetLanguage: "en" | "zh
         )}
         {/* Screening Table */}
         <ScreeningTable />
+        
+        {/* Segmentation Line */}
+        <div className="my-16 w-full h-px bg-white/40"></div>
+        
+        {/* Survey and Feedback Sections */}
+        <div className="mb-16 grid grid-cols-1 gap-16 md:grid-cols-2">
+          {/* Questionnaire Section */}
+          <div className="md:pr-32">
+            <QuestionnaireSection />
+          </div>
+          
+          {/* Feedback Section */}
+          
+            <FeedbackSection />
+        </div>
       </Container>
       <Footer />
     </main>
