@@ -62,7 +62,7 @@ export function FeedbackSection() {
 
   return (
     <div className="h-full">
-      <div className="bg-black p-6 md:p-8 h-full flex flex-col">
+      <div className="bg-black p-6 md:p-4 h-full flex flex-col">
         {/* Feedback Form */}
         <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
           {/* Optional Fields Row */}
@@ -105,7 +105,7 @@ export function FeedbackSection() {
             <button
               type="submit"
               disabled={isSubmitting || !feedback.trim()}
-              className="bg-white text-black border border-white font-medium py-3 px-6 md:px-8 rounded-full hover:bg-gray-200 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-base md:text-lg active:bg-black active:text-white active:border-white"
+              className="bg-white text-black border border-white font-medium py-3 px-4 md:px-5 rounded-full hover:bg-gray-200 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base  active:bg-black active:text-white active:border-white"
             >
               {isSubmitting 
                 ? (language === "en" ? "Sending..." : "发送中...")
