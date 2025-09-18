@@ -19,7 +19,7 @@ export default function Impressum() {
                         </p>
 
                         <p className="text-base leading-relaxed mb-6">
-                            Postanschrift: Ohlmüllerstr. 17, 81541 München<br />
+                            Postanschrift: Postfach 950322, 81519 München<br />
                             Email: info@hss-munich.com
                         </p>
 
