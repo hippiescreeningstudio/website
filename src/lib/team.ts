@@ -46,7 +46,7 @@ export const teamMembers = [
     },
     {
         name: "Fei",
-        nameZh: "李非",
+        nameZh: "Fei",
         title: "Programs Coordinator",
         photo: "/assets/team/Fei_Li.jpg",
     },
@@ -63,8 +63,8 @@ export const teamMembers = [
         photo: "/assets/team/Yuyang_Zhao.jpg",
     },
     {
-        name: "Xuechen Fan",
-        nameZh: "樊雪晨",
+        name: "Charlotte Fan",
+        nameZh: "Charlotte Fan",
         title: "Programs Coordinator",
         photo: "/assets/team/Xuechen_Fan.jpg",
     },
