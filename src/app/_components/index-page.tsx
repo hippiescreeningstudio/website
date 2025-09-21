@@ -35,7 +35,7 @@ function ScreeningTable() {
       duration: "105 min",
       genre: "Drama, Romance",
       venue: "Werkstattkino",
-      time: "September, to be announced",
+      time: "September 28, 15:00",
       // ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109"
     },
     {

@@ -48,7 +48,7 @@ Their relationship is intense—driven by raw sexual attraction, tinged with mis
 
 | Screening Info |                                                  |
 | -------------- | ------------------------------------------------ |
-| Time           | September                                        |
+| Time           | September 28, 15:00                              |
 | Cinema         | Werkstattkino, Fraunhoferstraße 9, 80469 München |
 | Language       | Original with English subtitles (OmeU)           |
 | Tickets        | Coming soon                                      |
