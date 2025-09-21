@@ -36,7 +36,7 @@ function ScreeningTable() {
       genre: "Drama, Romance",
       venue: "Werkstattkino",
       time: "September 28, 15:00",
-      // ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3256995109"
+      ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
     },
     {
       id: 2,

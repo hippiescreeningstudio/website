@@ -21,6 +21,11 @@ mobileCoverImages:
 date: "2025-09-07T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/love_and_bruises/poster.png"
+sticker:
+  text: "在线购票"
+  color: "#fcef17"
+  textColor: "#992252"
+  link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
 ---
 
 一段绽放在北京的中法恋情凋谢后，花（任洁 饰）决定辞去在北京当老师的工作，前往巴黎寻回男友，但终究还是没能令其回心转意。
@@ -40,12 +45,12 @@ ogImage:
 | 时长     | 105 分钟   |
 | 语言     | 法语, 汉语 |
 
-| 放映信息 |                                                  |
-| -------- | ------------------------------------------------ |
-| 时间     | 九月 28 日, 15:00                                |
-| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München |
-| 语言     | 原声，英文字幕                                   |
-| 购票     | 待定                                             |
+| 放映信息 |                                                                                                                                                                                |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 时间     | 九月 28 日, 15:00                                                                                                                                                              |
+| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                                                               |
+| 语言     | 原声，英文字幕                                                                                                                                                                 |
+| 购票     | [<strong style="background-color:#fcef17;color:#992252"> 在线购票</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957) 或现场购票 |
 
 <figure>
   <img src="/assets/blog/love_and_bruises/poster.png" alt="Love and Bruises" />
