@@ -23,8 +23,8 @@ ogImage:
   url: "/assets/blog/love_and_bruises/poster.png"
 sticker:
   text: "Get ticket here"
-  color: "#fcef17"
-  textColor: "#992252"
+  color: "#007a07"
+  textColor: "#ffffff"
   link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
 ---
 
@@ -51,12 +51,12 @@ Their relationship is intense—driven by raw sexual attraction, tinged with mis
 | Duration     | 105 minutes         |
 | Language     | French, Chinese     |
 
-| Screening Info |                                                                                                                                                                                            |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Time           | September 28, 15:00                                                                                                                                                                        |
-| Cinema         | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                                                                           |
-| Language       | Original with English subtitles (OmeU)                                                                                                                                                     |
-| Tickets        | [<strong style="background-color:#fcef17;color:#992252"> Buy online</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957) or at the box office |
+| Screening Info |                                                                                                                                                                                                                                                              |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Time           | September 28, 15:00                                                                                                                                                                                                                                          |
+| Cinema         | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                                                                                                                                             |
+| Language       | Original with English subtitles (OmeU)                                                                                                                                                                                                                       |
+| Tickets        | [<span style="background-color:#007a07;color:#ffffff;rounded-full;display:inline-block;padding:6px 14px;border-radius:20px;">Buy online</span>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957) or at the box office |
 
 <figure>
   <img src="/assets/blog/love_and_bruises/poster.png" alt="Love and Bruises" />
