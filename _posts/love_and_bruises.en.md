@@ -9,7 +9,6 @@ overlayText:
 coverImages:
   - "/assets/blog/love_and_bruises/28.png"
   - "/assets/blog/love_and_bruises/8.png"
-  - "/assets/blog/love_and_bruises/2.png"
   - "/assets/blog/love_and_bruises/53.png"
   - "/assets/blog/love_and_bruises/51.png"
   - "/assets/blog/love_and_bruises/56.png"
