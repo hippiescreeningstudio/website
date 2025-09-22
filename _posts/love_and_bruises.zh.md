@@ -23,8 +23,8 @@ ogImage:
   url: "/assets/blog/love_and_bruises/poster.png"
 sticker:
   text: "在线购票"
-  color: "#fcef17"
-  textColor: "#992252"
+  color: "#007a07"
+  textColor: "#ffffff"
   link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
 ---
 
@@ -45,12 +45,12 @@ sticker:
 | 时长     | 105 分钟   |
 | 语言     | 法语, 汉语 |
 
-| 放映信息 |                                                                                                                                                                                |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 时间     | 九月 28 日, 15:00                                                                                                                                                              |
-| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                                                               |
-| 语言     | 原声，英文字幕                                                                                                                                                                 |
-| 购票     | [<strong style="background-color:#fcef17;color:#992252"> 在线购票</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957) 或现场购票 |
+| 放映信息 |                                                                                                                                                                                                                                                                      |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 时间     | 九月 28 日, 15:00                                                                                                                                                                                                                                                    |
+| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                                                                                                                                                     |
+| 语言     | 原声，英文字幕                                                                                                                                                                                                                                                       |
+| 购票     | [<span style="background-color:#007a07;color:#ffffff;rounded-full;display:inline-block;md:padding:8px 14px;padding:4px 10px;border-radius:20px;">在线购票</span>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957) 或现场购票 |
 
 <figure>
   <img src="/assets/blog/love_and_bruises/poster.png" alt="Love and Bruises" />
