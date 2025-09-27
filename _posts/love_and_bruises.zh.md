@@ -1,5 +1,5 @@
 ---
-title: "月度放映 2025/9: 娄烨 - 花"
+title: "月度放映 2025/10: 娄烨 - 花"
 excerpt: "Hua, a woman in her late twenties, goes against her family to become a teacher in Paris. She falls in love with men who physically abuse her. Will she ever find her true love?"
 backgroundColor: "#0c0e11"
 isHero: true
@@ -20,11 +20,11 @@ mobileCoverImages:
 date: "2025-09-07T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/love_and_bruises/poster.png"
-sticker:
-  text: "线上购票"
-  color: "#007a07"
-  textColor: "#ffffff"
-  link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
+# sticker:
+#   text: "线上购票"
+#   color: "#007a07"
+#   textColor: "#ffffff"
+#   link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
 ---
 
 一段绽放在北京的中法恋情凋谢后，花（任洁 饰）决定辞去在北京当老师的工作，前往巴黎寻回男友，但终究还是没能令其回心转意。
@@ -44,12 +44,12 @@ sticker:
 | 时长     | 105 分钟   |
 | 语言     | 法语, 汉语 |
 
-| 放映信息 |                                                                                                                                                                                                                                                                      |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 时间     | 九月 28 日, 15:00                                                                                                                                                                                                                                                    |
-| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                                                                                                                                                     |
-| 语言     | 原声，英文字幕                                                                                                                                                                                                                                                       |
-| 购票     | [<span style="background-color:#007a07;color:#ffffff;rounded-full;display:inline-block;md:padding:8px 14px;padding:4px 10px;border-radius:20px;">线上购票</span>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957) 或现场购票 |
+| 放映信息 |                                                  |
+| -------- | ------------------------------------------------ |
+| 时间     | 十月，待定                                       |
+| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München |
+| 语言     | 原声，英文字幕                                   |
+| 购票     | 待定                                             |
 
 <figure>
   <img src="/assets/blog/love_and_bruises/poster.png" alt="Love and Bruises" />
