@@ -17,7 +17,7 @@ mobileCoverImages:
   - "/assets/blog/love_and_bruises/8_mb.png"
   - "/assets/blog/love_and_bruises/53.png"
   - "/assets/blog/love_and_bruises/56.png"
-date: "2025-09-07T00:00:00.000Z"
+date: "2025-11-07T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/love_and_bruises/poster.png"
 # sticker:

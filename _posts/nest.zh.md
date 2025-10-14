@@ -19,14 +19,14 @@ mobileCoverImages:
   - "/assets/blog/nest/still3_mobile.jpg"
   - "/assets/blog/nest/still4_mobile.jpg"
   - "/assets/blog/nest/still5_mobile.jpg"
-date: "2025-10-01T00:00:00.000Z"
+date: "2025-10-26T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/nest/poster.jpg"
-# sticker:
-#   text: "Get ticket here"
-#   color: "#fcef17"
-#   textColor: "#992252"
-#   link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
+sticker:
+  text: "Get ticket here"
+  color: "#fcef17"
+  textColor: "#992252"
+  link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68e03cee87a05c1620073c79"
 ---
 
 一个立志做文物修复的三十岁上海青年房君睿，在一次纪录片放映会后，邀请导演进入家里拍摄他郁郁不得志的心路历程，却被父亲在镜头前打击教育。父亲认为，懒惰又不愿接受现实才是导致儿子人生越来越失败的原因。沦为医院的一名保安，房君睿交不到女朋友，抱怨命运的不公，甚至开始质疑他的宗教信仰。镜头成为他倾诉内心痛苦的一个出口，也记录了一家人的痛苦纠葛。父亲的祖辈当年通过买办生意发家，母亲的家族也曾风光一时，如今一家三口蜗居在市中心 30 多平米的老公房里，细数过去的辉煌和对未来的迷茫。教友杨光和导演的介入，让房君睿又看到生活的希望。他的命运是否会因此改变？
@@ -44,12 +44,12 @@ NEST 是导演秦潇越的第一部长片纪录片,获第 17 届 FIRST 电影节
 | 时长     | 90 分钟            |
 | 类型     | 纪录片             |
 
-| 放映信息 |                                                  |
-| -------- | ------------------------------------------------ |
-| 时间     | 十月，具体待定                                   |
-| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München |
-| 语言     | 中声，中英字幕                                   |
-| 购票     | 待定                                             |
+| 放映信息 |                                                                                                                                                                                |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 时间     | 10 月 26 日 17:00                                                                                                                                                              |
+| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                                                               |
+| 语言     | 中声，中英字幕                                                                                                                                                                 |
+| 购票     | [<strong style="background-color:#fcef17;color:#992252"> 在线购票</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68e03cee87a05c1620073c79) 或现场购票 |
 
 <figure>
     <img src="/assets/blog/nest/poster.jpg" alt="Nest 巢" />

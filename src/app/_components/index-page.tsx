@@ -29,25 +29,25 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Love and Bruises 花",
-      slug: "love_and_bruises",
-      poster: "/assets/blog/love_and_bruises/poster.png",
-      duration: "105 min",
-      genre: "Drama, Romance",
-      venue: "Werkstattkino",
-      time: "October, to be announced",
-      // ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
-    },
-    {
-      id: 2,
       title: "Nest 巢",
       slug: "nest",
       poster: "/assets/blog/nest/poster.jpg",
       duration: "90 minutes",
       genre: "Documentary",
       venue: "Werkstattkino",
-      time: "October, to be announced",
-      // ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
+      time: "October 26, 17:00",
+      ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68e03cee87a05c1620073c79"
+    },
+    {
+      id: 2,
+      title: "Love and Bruises 花",
+      slug: "love_and_bruises",
+      poster: "/assets/blog/love_and_bruises/poster.png",
+      duration: "105 min",
+      genre: "Drama, Romance",
+      venue: "Werkstattkino",
+      time: "November, to be announced",
+      // ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
     },
   ];
 

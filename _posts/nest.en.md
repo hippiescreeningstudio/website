@@ -19,14 +19,14 @@ mobileCoverImages:
   - "/assets/blog/nest/still3_mobile.jpg"
   - "/assets/blog/nest/still4_mobile.jpg"
   - "/assets/blog/nest/still5_mobile.jpg"
-date: "2025-10-01T00:00:00.000Z"
+date: "2025-10-26T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/nest/poster.jpg"
-# sticker:
-#   text: "Get ticket here"
-#   color: "#fcef17"
-#   textColor: "#992252"
-#   link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3291158900&bgswitch=false&resize=false#/show/750223040/3291158900"
+sticker:
+  text: "Get ticket here"
+  color: "#fcef17"
+  textColor: "#992252"
+  link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68e03cee87a05c1620073c79"
 ---
 
 Fang Junrui, a 30-year-old man, lives with his parents in a cramped Shanghai flat—a space that mirrors his own sense of suffocation under family, societal, and cultural pressures. A passionate relic restorer unable to find work in his field, he drifts through life with growing disappointment. His small apartment fills with art and history books he obsessively collects, sparking constant conflict with his parents. Just as his world seems to close in, an unexpected encounter with a church friend—and the film director—breathes new life into him, guiding him toward faith, purpose, and the possibility of renewal.
@@ -44,12 +44,12 @@ NEST is director Qin Xiaoyue's first feature-length documentary. It won the Best
 | Duration     | 90 minutes         |
 | Genre        | Documentary        |
 
-| Screening Info |                                                  |
-| -------------- | ------------------------------------------------ |
-| Time           | October, to be announced                         |
-| Cinema         | Werkstattkino, Fraunhoferstraße 9, 80469 München |
-| Language       | Chinese with English subtitles (OmeU)            |
-| Tickets        | Coming soon                                      |
+| Screening Info |                                                                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Time           | October 26 17:00                                                                                                                                                                           |
+| Cinema         | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                                                                           |
+| Language       | Chinese with English subtitles (OmeU)                                                                                                                                                      |
+| Tickets        | [<strong style="background-color:#fcef17;color:#992252"> Buy online</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68e03cee87a05c1620073c79) or at the box office |
 
 <figure>
     <img src="/assets/blog/nest/poster.jpg" alt="Nest 巢" />
