@@ -52,7 +52,7 @@ NEST 是导演秦潇越的第一部长片纪录片,获第 17 届 FIRST 电影节
 | 购票     | [<strong style="background-color:#fcef17;color:#992252"> 在线购票</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68e03cee87a05c1620073c79) 或现场购票 |
 
 <figure>
-    <img src="/assets/blog/nest/poster.jpg" alt="Nest 巢" />
+    <img src="/assets/blog/nest/poster.png" alt="Nest 巢" />
     <figcaption>Nest 巢</figcaption>
 </figure>
 

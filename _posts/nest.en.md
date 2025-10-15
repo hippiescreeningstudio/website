@@ -52,7 +52,7 @@ NEST is director Qin Xiaoyue's first feature-length documentary. It won the Best
 | Tickets        | [<strong style="background-color:#fcef17;color:#992252"> Buy online</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68e03cee87a05c1620073c79) or at the box office |
 
 <figure>
-    <img src="/assets/blog/nest/poster.jpg" alt="Nest 巢" />
+    <img src="/assets/blog/nest/poster.png" alt="Nest 巢" />
     <figcaption>Nest 巢</figcaption>
 </figure>
 

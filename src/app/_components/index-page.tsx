@@ -31,7 +31,7 @@ function ScreeningTable() {
       id: 1,
       title: "Nest 巢",
       slug: "nest",
-      poster: "/assets/blog/nest/poster.jpg",
+      poster: "/assets/blog/nest/poster.png",
       duration: "90 minutes",
       genre: "Documentary",
       venue: "Werkstattkino",
