@@ -40,6 +40,17 @@ function ScreeningTable() {
     },
     {
       id: 2,
+      title: "Carefree Days 逍遥·游",
+      slug: "carefree_days",
+      poster: "/assets/blog/carefree_days/poster.jpg",
+      duration: "122 minutes",
+      genre: "Drama, Romance",
+      venue: "Neues Rottmann",
+      time: "November 15, 12:30",
+      ticketUrl: "https://neuesrottmann.de/programm/film/carefree-days-omeu"
+    },
+    {
+      id: 3,
       title: "Love and Bruises 花",
       slug: "love_and_bruises",
       poster: "/assets/blog/love_and_bruises/poster.png",
