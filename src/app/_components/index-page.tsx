@@ -29,17 +29,6 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Nest 巢",
-      slug: "nest",
-      poster: "/assets/blog/nest/poster.png",
-      duration: "90 minutes",
-      genre: "Documentary",
-      venue: "Werkstattkino",
-      time: "October 26, 17:00",
-      ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68e03cee87a05c1620073c79"
-    },
-    {
-      id: 2,
       title: "Carefree Days 逍遥·游",
       slug: "carefree_days",
       poster: "/assets/blog/carefree_days/poster.jpg",
@@ -50,7 +39,7 @@ function ScreeningTable() {
       ticketUrl: "https://neuesrottmann.de/programm/film/carefree-days-omeu"
     },
     {
-      id: 3,
+      id: 2,
       title: "Love and Bruises 花",
       slug: "love_and_bruises",
       poster: "/assets/blog/love_and_bruises/poster.png",

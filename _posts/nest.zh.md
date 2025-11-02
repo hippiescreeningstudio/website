@@ -2,7 +2,7 @@
 title: "月度放映 2025/10: Nest 巢"
 excerpt: "Fang Junrui is a 30-year-old hospital guard who lives in an old tiny flat with his parents in the center of Shanghai. He has been passionate about relic restoration but couldn’t find a related job for years. That has led to his disappointment in life. He routinely buys arts and history books but runs out of space to store them, irritating his parents who own the flat. Things started to change when a friend from the church and the film director came to his life. He felt like that his life was moving again at God’s will."
 backgroundColor: "#835525"
-isHero: true
+isHero: false
 overlayText:
   title: "Nest 巢"
   subtitle: "上海青年精神与物质夹缝中的挣扎"
