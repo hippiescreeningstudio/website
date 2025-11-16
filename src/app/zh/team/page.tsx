@@ -37,7 +37,7 @@ export default function ChineseTeam() {
                                             <div className="w-full h-full rounded-full overflow-hidden ">
                                                 <Image
                                                     src={member.photo}
-                                                    alt={member.nameZh}
+                                                    alt={member.name}
                                                     fill
                                                     className="object-cover rounded-full"
                                                     style={{ objectPosition: 'center' }}
@@ -46,7 +46,7 @@ export default function ChineseTeam() {
                                         </div>
                                     </div>
                                     <h3 className="text-lg font-bold mb-1">
-                                        {member.nameZh}
+                                        {member.name}
                                     </h3>
                                     <p className="text-base text-gray-400 italic">
                                         {member.title}
