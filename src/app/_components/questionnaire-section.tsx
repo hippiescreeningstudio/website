@@ -21,7 +21,7 @@ export function QuestionnaireSection() {
         {/* CTA Button */}
         <div>
           <Link
-            href={language === "zh" ? "/zh/questionnaire" : "/questionnaire"}
+            href={"/zh/questionnaire"}
             className="inline-block bg-white text-black font-medium py-3 px-4 md:px-5 rounded-full hover:bg-gray-400 transition-colors duration-300 text-sm md:text-base active:bg-black active:border-white active:text-white"
           >
             {language === "en" ? "Take Our Survey" : "问卷调查"}

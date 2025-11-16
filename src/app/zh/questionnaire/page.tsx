@@ -122,26 +122,21 @@ export default function ChineseQuestionnaire() {
                     </h1>
                     <div className="prose prose-lg dark:prose-invert max-w-none">
                         <p className="text-base leading-relaxed mb-8">
-                            请通过分享您的偏好和反馈来帮助我们改善电影放映体验。
-                            <br />
-                            Use the navigation bar at the top right to switch to English survey.
+                        欢迎参加嬉皮放映室的观影调查！我们是一家位于慕尼黑的非营利电影放映组织，致力于为本地华语观众带来优质的影片与观影体验。我们的选片主要集中在华语及亚洲地区的文艺片、纪录片和艺术片，由组织成员共同讨论决定。为了更好地了解大家的观影兴趣和喜好，我们特此发起本次调查，诚邀您分享喜欢的影片类型或主题，与我们一起探索电影的独特魅力。若您有其他建议或想法，也欢迎随时通过我们网站的意见栏反馈。感谢您的支持与参与！
                         </p>
 
                         <form onSubmit={handleSubmit} className="space-y-8">
                             {/* Question 1 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
-                                    1. 您怎么了解到我们的?
+                                    1. 您通常是通过什么途径了解电影的放映信息呢(多选)
                                 </label>
                                 <div className="space-y-2">
                                     {[
-                                        '慕尼黑影迷群',
                                         '小红书',
                                         'Instagram',
-                                        '朋友推荐',
-                                        '线下海报/传单',
-                                        '影院官网',
-                                        '慕尼黑本地活动网站',
+                                        '相关影讯网站',
+                                        '影院海报/杂志手册',
                                         '其他'
                                     ].map(option => (
                                         <label key={option} className="flex items-center">
@@ -169,14 +164,13 @@ export default function ChineseQuestionnaire() {
                             {/* Question 2 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
-                                    2. 对于我们每月在小红书发布的「慕尼黑月度影讯」和「影展推荐」，您是否感兴趣？
+                                    2. 您对华语电影的语言偏好（单选）
                                 </label>
                                 <div className="space-y-2">
                                     {[
-                                        '看过，感兴趣',
-                                        '看过，但不感兴趣',
-                                        '没看过，感兴趣',
-                                        '没看过，不感兴趣'
+                                        '普通话',
+                                        '方言',
+                                        '无所谓，有字幕即可',
                                     ].map(option => (
                                         <label key={option} className="flex items-center">
                                             <input
@@ -196,28 +190,52 @@ export default function ChineseQuestionnaire() {
                             {/* Question 3 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
-                                    3. 您希望我们未来放映什么样的电影？（题材/国家/导演/主题等）或哪部电影？
+                                    3. 电影选择的考量因素(多选)
                                 </label>
-                                <textarea
-                                    value={formData.question3 || ''}
-                                    onChange={(e) => handleInputChange('question3', e.target.value)}
-                                    className="w-full p-3 border border-white rounded bg-black text-white"
-                                    rows={3}
-                                    placeholder="建议您希望在我们未来放映中看到的电影..."
-                                />
+                                <div className="space-y-2">
+                                    {[
+                                        '导演/主创阵容',
+                                        '剧情题材',
+                                        '电影口碑/奖项',
+                                        '类型/风格',
+                                        '推荐/朋友分享',
+                                        '其他'
+                                    ].map(option => (
+                                        <label key={option} className="flex items-center">
+                                            <input
+                                                type="checkbox"
+                                                checked={(formData.question3 || []).includes(option)}
+                                                onChange={() => handleCheckboxChange('question3', option)}
+                                                className="mr-2 accent-white"
+                                            />
+                                            {option}
+                                        </label>
+                                    ))}
+                                </div>
+                                {(formData.question3 || []).includes('其他') && (
+                                    <input
+                                        type="text"
+                                        value={formData.question3_other || ''}
+                                        onChange={(e) => handleInputChange('question3_other', e.target.value)}
+                                        className="mt-2 w-full p-2 border border-white rounded bg-black text-white"
+                                        placeholder="请说明其他因素..."
+                                    />
+                                )}
                             </div>
 
                             {/* Question 4 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
-                                    4. 电影放映之外，期待我们组织什么活动？
+                                    4. 感兴趣的电影主题/类型(多选)
                                 </label>
                                 <div className="space-y-2">
                                     {[
-                                        '映后讨论',
-                                        '导演Q&A',
-                                        '系列回顾展',
-                                        '无需要，看电影即可',
+                                        '知名导演的经典佳作',
+                                        '艺术气息浓厚的文艺片',
+                                        '现实向纪录片',
+                                        'QUEER群体',
+                                        '超现实主义、奇幻类',
+                                        '实验电影/先锋主义',
                                         '其他'
                                     ].map(option => (
                                         <label key={option} className="flex items-center">
@@ -237,7 +255,7 @@ export default function ChineseQuestionnaire() {
                                         value={formData.question4_other || ''}
                                         onChange={(e) => handleInputChange('question4_other', e.target.value)}
                                         className="mt-2 w-full p-2 border border-white rounded bg-black text-white"
-                                        placeholder="请说明其他活动..."
+                                        placeholder="请说明其他主题/类型..."
                                     />
                                 )}
                             </div>
@@ -245,28 +263,127 @@ export default function ChineseQuestionnaire() {
                             {/* Question 5 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
-                                    5. 对过往电影放映的建议和意见
+                                    5. 您更愿意到电影院影院观看电影的原因(多选)
                                 </label>
-                                <textarea
-                                    value={formData.question5 || ''}
-                                    onChange={(e) => handleInputChange('question5', e.target.value)}
-                                    className="w-full p-3 border border-white rounded bg-black text-white"
-                                    rows={3}
-                                    placeholder="告诉我们您对过往电影放映的建议..."
-                                />
+                                <div className="space-y-2">
+                                    {[
+                                        '影院设备（音效画质等）',
+                                        '影院氛围',
+                                        '与朋友/家人的娱乐活动',
+                                        '结识交流电影的同好',
+                                        '支持电影创作者和电影票房'
+                                    ].map(option => (
+                                        <label key={option} className="flex items-center">
+                                            <input
+                                                type="checkbox"
+                                                checked={(formData.question5 || []).includes(option)}
+                                                onChange={() => handleCheckboxChange('question5', option)}
+                                                className="mr-2 accent-white"
+                                            />
+                                            {option}
+                                        </label>
+                                    ))}
+                                </div>
                             </div>
-
 
                             {/* Question 6 */}
                             <div className="mb-6">
                                 <label className="block text-base font-medium mb-3">
-                                    6. 请留下您的姓名或联系方式（非必填）
+                                    6. 在电影院更倾向看（多选）
+                                </label>
+                                <div className="space-y-2">
+                                    {[
+                                        '名作的经典回放',
+                                        '视角独特的小众佳片',
+                                        '国内无法上映或删减过多的电影'
+                                    ].map(option => (
+                                        <label key={option} className="flex items-center">
+                                            <input
+                                                type="checkbox"
+                                                checked={(formData.question6 || []).includes(option)}
+                                                onChange={() => handleCheckboxChange('question6', option)}
+                                                className="mr-2 accent-white"
+                                            />
+                                            {option}
+                                        </label>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Question 7 */}
+                            <div className="mb-6">
+                                <label className="block text-base font-medium mb-3">
+                                    7. 您可能会对放映之外的哪些活动感兴趣呢？(多选)
+                                </label>
+                                <div className="space-y-2">
+                                    {[
+                                        '映后讨论',
+                                        '导演Q&A',
+                                        '电影影展',
+                                        '无需要，看电影即可',
+                                        '其他'
+                                    ].map(option => (
+                                        <label key={option} className="flex items-center">
+                                            <input
+                                                type="checkbox"
+                                                checked={(formData.question7 || []).includes(option)}
+                                                onChange={() => handleCheckboxChange('question7', option)}
+                                                className="mr-2 accent-white"
+                                            />
+                                            {option}
+                                        </label>
+                                    ))}
+                                </div>
+                                {(formData.question7 || []).includes('其他') && (
+                                    <input
+                                        type="text"
+                                        value={formData.question7_other || ''}
+                                        onChange={(e) => handleInputChange('question7_other', e.target.value)}
+                                        className="mt-2 w-full p-2 border border-white rounded bg-black text-white"
+                                        placeholder="请说明其他活动..."
+                                    />
+                                )}
+                            </div>
+
+                            {/* Question 8 */}
+                            <div className="mb-6">
+                                <label className="block text-base font-medium mb-3">
+                                    8. 印象最深刻的华语或亚洲电影
                                 </label>
                                 <textarea
-                                    value={formData.question6 || ''}
-                                    onChange={(e) => handleInputChange('question6', e.target.value)}
+                                    value={formData.question8 || ''}
+                                    onChange={(e) => handleInputChange('question8', e.target.value)}
                                     className="w-full p-3 border border-white rounded bg-black text-white"
                                     rows={3}
+                                    placeholder="请分享您印象最深刻的华语或亚洲电影..."
+                                />
+                            </div>
+
+                            {/* Question 9 */}
+                            <div className="mb-6">
+                                <label className="block text-base font-medium mb-3">
+                                    9. 喜欢的导演和电影类型
+                                </label>
+                                <textarea
+                                    value={formData.question9 || ''}
+                                    onChange={(e) => handleInputChange('question9', e.target.value)}
+                                    className="w-full p-3 border border-white rounded bg-black text-white"
+                                    rows={3}
+                                    placeholder="请分享您喜欢的导演和电影类型..."
+                                />
+                            </div>
+
+                            {/* Question 10 */}
+                            <div className="mb-6">
+                                <label className="block text-base font-medium mb-3">
+                                    10. 希望我们将来放映哪部影片
+                                </label>
+                                <textarea
+                                    value={formData.question10 || ''}
+                                    onChange={(e) => handleInputChange('question10', e.target.value)}
+                                    className="w-full p-3 border border-white rounded bg-black text-white"
+                                    rows={3}
+                                    placeholder="请告诉我们您希望我们将来放映的影片..."
                                 />
                             </div>
 
