@@ -21,7 +21,7 @@ mobileCoverImages:
   - "/assets/blog/nest/still5_mobile.jpg"
 date: "2025-10-26T00:00:00.000Z"
 ogImage:
-  url: "/assets/blog/nest/poster.jpg"
+  url: "/assets/blog/nest/poster.png"
 sticker:
   text: "Get ticket here"
   color: "#fcef17"
