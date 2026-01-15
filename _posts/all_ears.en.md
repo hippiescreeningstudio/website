@@ -48,7 +48,7 @@ Wen Shan is a mediocre screenwriter struggling to make a living in Beijing. Comm
 
 <figure>
     <img src="/assets/blog/all_ears/poster.jpg" alt="all_ears 不虚此行" />
-    <figcaption>all_ears 不虚此行</figcaption>
+    <figcaption>All Ears 不虚此行</figcaption>
 </figure>
 
 **Watch the Trailer**
