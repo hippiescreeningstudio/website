@@ -3,7 +3,7 @@ title: "Monthly Screening 2025/11: Carefree Days 逍遥·游"
 excerpt: "Xu Lingling, a quintessential Northeastern girl who longs for love and family, is grappling
 with uremia. As her life falls apart, she yearns to discover a place that feels like home."
 backgroundColor: "#123574"
-isHero: true
+isHero: false
 overlayText:
   title: "Carefree Days 逍遥·游"
   subtitle: "In a decaying city, three souls find life’s warmth in the shadow of death"

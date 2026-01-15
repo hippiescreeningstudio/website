@@ -29,25 +29,14 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Carefree Days 逍遥·游",
-      slug: "carefree_days",
-      poster: "/assets/blog/carefree_days/poster.jpg",
-      duration: "122 minutes",
-      genre: "Drama, Romance",
+      title: "All Ears 不虚此行",
+      slug: "all_ears",
+      poster: "/assets/blog/all_ears/poster.jpg",
+      duration: "119 minutes",
+      genre: "Drama",
       venue: "Neues Rottmann",
-      time: "November 15, 12:30",
-      ticketUrl: "https://neuesrottmann.de/programm/film/carefree-days-omeu"
-    },
-    {
-      id: 2,
-      title: "Love and Bruises 花",
-      slug: "love_and_bruises",
-      poster: "/assets/blog/love_and_bruises/poster.png",
-      duration: "105 min",
-      genre: "Drama, Romance",
-      venue: "Werkstattkino",
-      time: "November, to be announced",
-      // ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
+      time: "Jan 24, 13:00",
+      ticketUrl: "https://www.neuesrottmann.de/de/programm/687243"
     },
   ];
 
