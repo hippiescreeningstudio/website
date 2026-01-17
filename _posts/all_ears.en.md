@@ -7,14 +7,17 @@ overlayText:
   title: "All Ears 不虚此行"
   subtitle: "What does it mean to have truly lived?"
 coverImages:
+  - "/assets/blog/all_ears/Allears4.jpg"
+  - "/assets/blog/all_ears/Allears5.jpg"
   - "/assets/blog/all_ears/Allears3.jpg"
   - "/assets/blog/all_ears/Allears1.jpg"
   - "/assets/blog/all_ears/Allears2.jpg"
 
 mobileCoverImages:
+  - "/assets/blog/all_ears/Allears4.jpg"
   - "/assets/blog/all_ears/Allears3.jpg"
-  - "/assets/blog/all_ears/Allears1.jpg"
-  - "/assets/blog/all_ears/Allears2_m.jpg"
+  - "/assets/blog/all_ears/Allears1_m.jpg"
+  - "/assets/blog/all_ears/Allears2.jpg"
 
 date: "2026-01-24T00:00:00.000Z"
 ogImage:
@@ -60,7 +63,7 @@ Wen Shan is a mediocre screenwriter struggling to make a living in Beijing. Comm
 **About the Director**
 
 <figure>
-  <img src="/assets/blog/all_ears/liujiayin.jpg" alt="Liu Jiayin" />
+  <img src="/assets/blog/all_ears/liujiayin.jpeg" alt="Liu Jiayin" />
   <figcaption>Qin Xiaoyue</figcaption>
 </figure>
 
