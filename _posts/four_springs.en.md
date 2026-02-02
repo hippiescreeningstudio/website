@@ -5,7 +5,7 @@ backgroundColor: "#5c2422"
 isHero: true
 overlayText:
   title: "Four Springs 四个春天"
-  subtitle: "Epic of the everyday in a southern town"
+  subtitle: "Portrait of a family in a southern town"
 coverImages:
   - "/assets/blog/four_springs/still_8.png"
   - "/assets/blog/four_springs/still_4.png"
