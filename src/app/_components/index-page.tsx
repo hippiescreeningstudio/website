@@ -29,14 +29,14 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "All Ears 不虚此行",
-      slug: "all_ears",
-      poster: "/assets/blog/all_ears/poster.jpg",
-      duration: "119 minutes",
-      genre: "Drama",
+      title: "Four Springs 四个春天",
+      slug: "four_springs",
+      poster: "/assets/blog/four_springs/poster.png",
+      duration: "105 minutes",
+      genre: "Documentary",
       venue: "Neues Rottmann",
-      time: "Jan 24, 13:00",
-      ticketUrl: "https://www.neuesrottmann.de/de/programm/687243"
+      time: "Feb 15, 11:00",
+      // ticketUrl: 
     },
   ];
 

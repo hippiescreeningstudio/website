@@ -30,7 +30,7 @@ export function Intro() {
   };
 
 
-  const years = [2025, 2024, 2023, 2022];
+  const years = [2026, 2025, 2024, 2023, 2022];
 
   // Track scroll position with hysteresis to prevent flickering
   useEffect(() => {

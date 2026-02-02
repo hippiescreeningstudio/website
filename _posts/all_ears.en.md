@@ -2,7 +2,7 @@
 title: "Monthly Screening 2026/01: All Ears 不虚此行"
 excerpt: "The life story of a former writer who wrote eulogies for others."
 backgroundColor: "#0e0e0e"
-isHero: true
+isHero: false
 overlayText:
   title: "All Ears 不虚此行"
   subtitle: "What does it mean to have truly lived?"
