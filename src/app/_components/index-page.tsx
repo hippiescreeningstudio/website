@@ -36,7 +36,7 @@ function ScreeningTable() {
       genre: "Documentary",
       venue: "Neues Rottmann",
       time: "Feb 15, 11:00",
-      // ticketUrl: 
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3431933484&bgswitch=false&resize=false#/show/750223040/3431933484"
     },
   ];
 

@@ -22,11 +22,11 @@ mobileCoverImages:
 date: "2026-02-15T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/four_springs/poster.png"
-# sticker:
-#   text: "Get ticket here"
-#   color: "#fcef17"
-#   textColor: "#992252"
-#   link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3407722712&bgswitch=false&resize=false#/show/750223040/3407722712"
+sticker:
+  text: "Get ticket here"
+  color: "#fcef17"
+  textColor: "#992252"
+  link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3431933484&bgswitch=false&resize=false#/show/750223040/3431933484"
 ---
 
 Four Springs is a documentary film that presented a family’s daily life in the remote town of Dushan in the Guizhou province in southwest China. From a subjective angle, the camera induced the flow of life out of the screen: the quotidian toils, singing, excursions in nature, visits among friends and extended families, funerals, reunions and departures. It presented the state of being of the two main characters, the director’s own parents, and their attitude when facing irretrievable loss in life.
