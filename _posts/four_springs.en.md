@@ -42,12 +42,12 @@ Four Springs is a documentary film that presented a family’s daily life in the
 | Duration     | 105 minutes           |
 | Genre        | Documentary           |
 
-| Screening Info |                                                  |
-| -------------- | ------------------------------------------------ |
-| Time           | Feb 15, 11:00                                    |
-| Cinema         | Neues Rottmann, Rottmannstraße 15, 80333 München |
-| Language       | Chinese with English subtitles (OmeU)            |
-| Tickets        | Comming soon                                     |
+| Screening Info |                                                                                                                                                     |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Time           | Feb 15, 11:00                                                                                                                                       |
+| Cinema         | Neues Rottmann, Rottmannstraße 15, 80333 München                                                                                                    |
+| Language       | Chinese with English subtitles (OmeU)                                                                                                               |
+| Tickets        | [<strong style="background-color:#fcef17;color:#992252"> Buy online</strong>](https://www.neuesrottmann.de/en/program/1824720) or at the box office |
 
 <figure>
     <img src="/assets/blog/four_springs/poster.png" alt="Four Springs 四个春天" />
