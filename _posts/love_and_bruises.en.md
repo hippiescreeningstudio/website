@@ -1,8 +1,8 @@
 ---
-title: "Monthly Screening 2025/11: Love and Bruises 花"
+title: "Monthly Screening 2026/03: Love and Bruises 花"
 excerpt: "Hua, a woman in her late twenties, goes against her family to become a teacher in Paris. She falls in love with men who physically abuse her. Will she ever find her true love?"
 backgroundColor: "#0c0e11"
-isHero: false
+isHero: true
 overlayText:
   title: "Love and Bruises 花"
   subtitle: "Lou Ye's film about a fierce love"
@@ -17,17 +17,17 @@ mobileCoverImages:
   - "/assets/blog/love_and_bruises/8_mb.png"
   - "/assets/blog/love_and_bruises/53.png"
   - "/assets/blog/love_and_bruises/56.png"
-date: "2025-11-27T00:00:00.000Z"
+date: "2026-03-28T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/love_and_bruises/poster.png"
-# sticker:
-#   text: "Get ticket here"
-#   color: "#007a07"
-#   textColor: "#ffffff"
-#   link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
+sticker:
+  text: "Get ticket here"
+  color: "#007a07"
+  textColor: "#ffffff"
+  link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
 ---
 
-In October, we will screen another Lou Ye film, _Love and Bruises_.
+This March, we will screen _Love and Bruises_, another Lou Ye film.
 
 Lou Ye made _Love and Bruises_ during a five-year, government-imposed ban on filmmaking in China—a backdrop for this tale of _l’amour fou_, set in Paris.
 
@@ -50,12 +50,12 @@ Their relationship is intense—driven by raw sexual attraction, tinged with mis
 | Duration     | 105 minutes         |
 | Language     | French, Chinese     |
 
-| Screening Info |                                                  |
-| -------------- | ------------------------------------------------ |
-| Time           | October, to be announced                         |
-| Cinema         | Werkstattkino, Fraunhoferstraße 9, 80469 München |
-| Language       | Original with English subtitles (OmeU)           |
-| Tickets        | To be announced                                  |
+| Screening Info |                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Time           | Mar 28, 15:00                                                                                                                              |
+| Cinema         | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                           |
+| Language       | Original with English subtitles (OmeU)                                                                                                     |
+| Tickets        | [<strong style="background-color:#007a07;color:#ffffff"> Buy online</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8) |
 
 <figure>
   <img src="/assets/blog/love_and_bruises/poster.png" alt="Love and Bruises" />

@@ -2,7 +2,7 @@
 title: "Monthly Screening 2026/02: Four Springs 四个春天"
 excerpt: "Portrait of a family in a southern town."
 backgroundColor: "#5c2422"
-isHero: true
+isHero: false
 overlayText:
   title: "Four Springs 四个春天"
   subtitle: "Portrait of a family in a southern town"

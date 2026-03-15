@@ -29,14 +29,14 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Four Springs 四个春天",
-      slug: "four_springs",
-      poster: "/assets/blog/four_springs/poster.png",
+      title: "Love and Bruises 花",
+      slug: "love_and_bruises",
+      poster: "/assets/blog/love_and_bruises/poster.png",
       duration: "105 minutes",
-      genre: "Documentary",
-      venue: "Neues Rottmann",
-      time: "Feb 15, 11:00",
-      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3431933484&bgswitch=false&resize=false#/show/750223040/3431933484"
+      genre: "Drama",
+      venue: "Werkstattkino",
+      time: "Mar 28, 15:00",
+      ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
     },
   ];
 

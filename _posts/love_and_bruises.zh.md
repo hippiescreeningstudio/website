@@ -1,8 +1,8 @@
 ---
-title: "月度放映 2025/11: 娄烨 - 花"
+title: "月度放映 2026/03: 娄烨 - 花"
 excerpt: "Hua, a woman in her late twenties, goes against her family to become a teacher in Paris. She falls in love with men who physically abuse her. Will she ever find her true love?"
 backgroundColor: "#0c0e11"
-isHero: false
+isHero: true
 overlayText:
   title: "花"
   subtitle: "Lou Ye's film about a fierce love"
@@ -17,14 +17,14 @@ mobileCoverImages:
   - "/assets/blog/love_and_bruises/8_mb.png"
   - "/assets/blog/love_and_bruises/53.png"
   - "/assets/blog/love_and_bruises/56.png"
-date: "2025-11-27T00:00:00.000Z"
+date: "2026-03-28T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/love_and_bruises/poster.png"
-# sticker:
-#   text: "线上购票"
-#   color: "#007a07"
-#   textColor: "#ffffff"
-#   link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8/e/68cff401a5c93f571da08957"
+sticker:
+  text: "线上购票"
+  color: "#007a07"
+  textColor: "#ffffff"
+  link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
 ---
 
 一段绽放在北京的中法恋情凋谢后，花（任洁 饰）决定辞去在北京当老师的工作，前往巴黎寻回男友，但终究还是没能令其回心转意。
@@ -44,12 +44,12 @@ ogImage:
 | 时长     | 105 分钟   |
 | 语言     | 法语, 汉语 |
 
-| 放映信息 |                                                  |
-| -------- | ------------------------------------------------ |
-| 时间     | 十月，待定                                       |
-| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München |
-| 语言     | 原声，英文字幕                                   |
-| 购票     | 待定                                             |
+| 放映信息 |                                                                                                                                          |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| 时间     | 3月28日, 15:00                                                                                                                           |
+| 地点     | Werkstattkino, Fraunhoferstraße 9, 80469 München                                                                                         |
+| 语言     | 原声，英文字幕                                                                                                                           |
+| 购票     | [<strong style="background-color:#007a07;color:#ffffff"> 在线购票</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8) |
 
 <figure>
   <img src="/assets/blog/love_and_bruises/poster.png" alt="Love and Bruises" />
