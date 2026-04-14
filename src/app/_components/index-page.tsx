@@ -29,14 +29,14 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Love and Bruises 花",
-      slug: "love_and_bruises",
-      poster: "/assets/blog/love_and_bruises/poster.png",
-      duration: "105 minutes",
-      genre: "Drama",
-      venue: "Werkstattkino",
-      time: "Mar 28, 15:00",
-      ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
+      title: "The Shadow Play 风中有朵雨做的云",
+      slug: "shadow_play",
+      poster: "/assets/blog/shadow_play/poster.png",
+      duration: "125 minutes",
+      genre: "Thriller",
+      venue: "Neues Rottmann",
+      time: "April 25, 16:30",
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3502546045&bgswitch=false&resize=false#/show/750223040/3502546045"
     },
   ];
 

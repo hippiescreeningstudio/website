@@ -2,7 +2,7 @@
 title: "Monthly Screening 2026/03: Love and Bruises 花"
 excerpt: "Hua, a woman in her late twenties, goes against her family to become a teacher in Paris. She falls in love with men who physically abuse her. Will she ever find her true love?"
 backgroundColor: "#0c0e11"
-isHero: true
+isHero: false
 overlayText:
   title: "Love and Bruises 花"
   subtitle: "Lou Ye's film about a fierce love"
