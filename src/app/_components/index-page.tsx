@@ -35,7 +35,7 @@ function ScreeningTable() {
       duration: "125 minutes",
       genre: "Thriller",
       venue: "Neues Rottmann",
-      time: "April 25, 16:30",
+      time: "April 25, 14:30",
       ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3502546045&bgswitch=false&resize=false#/show/750223040/3502546045"
     },
   ];

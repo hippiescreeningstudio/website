@@ -48,7 +48,7 @@ In the guise of a film noir, replete with a lonely hero who believes in justice,
 
 | Screening Info |                                                                                                                                                                                                                            |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Time           | April 25, 16:30                                                                                                                                                                                                            |
+| Time           | April 25, 14:30                                                                                                                                                                                                            |
 | Cinema         | Neues Rottmann, Rottmannstraße 15, 80333                                                                                                                                                                                   |
 | Language       | Original with English subtitles (OmeU)                                                                                                                                                                                     |
 | Tickets        | [<strong style="background-color:#007a07;color:#ffffff"> Buy online</strong>](https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3502546045&bgswitch=false&resize=false#/show/750223040/3502546045) |
