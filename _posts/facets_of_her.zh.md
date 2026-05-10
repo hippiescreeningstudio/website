@@ -5,7 +5,7 @@ backgroundColor: "#2a4a5e"
 isHero: true
 overlayText:
   title: "Facets of Her 女性的切面"
-  subtitle: "华语短片系列 · FIRST 主动放映"
+  subtitle: "短片系列展映 · FIRST 主动放映"
 coverImages:
   - "/assets/blog/facets_of_her/01_orlo_with_karma_still1.jpeg"
   - "/assets/blog/facets_of_her/04_meijin_jaebeom_still1.jpeg"
