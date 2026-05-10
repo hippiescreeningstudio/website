@@ -1,5 +1,5 @@
 ---
-title: "FIRST 主动放映 · 短篇系列｜女性的切面"
+title: "FIRST主动放映 • 女性的切面"
 excerpt: "九部华语短片，呈现当代女性在情感、代际、社会结构与自我认知之间的真实切面。含《杀死艾达》导演蔡坤宇映后 Q&A。"
 backgroundColor: "#2a4a5e"
 isHero: true

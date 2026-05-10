@@ -1,5 +1,5 @@
 ---
-title: "FIRST short films screening | Facets of Her"
+title: "FIRST Public Programming • Facets of Her"
 excerpt: "Nine Chinese short films tracing women's lived experiences through intimacy, social structures, generational restraints, and selfhood. With a post-screening Q&A by Django Kun, director of Kill Ada."
 backgroundColor: "#2a4a5e"
 isHero: true
