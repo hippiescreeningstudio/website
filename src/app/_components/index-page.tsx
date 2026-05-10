@@ -29,14 +29,14 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "The Shadow Play 风中有朵雨做的云",
-      slug: "shadow_play",
-      poster: "/assets/blog/shadow_play/poster.png",
-      duration: "125 minutes",
-      genre: "Thriller",
-      venue: "Neues Rottmann",
-      time: "April 25, 14:30",
-      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3502546045&bgswitch=false&resize=false#/show/750223040/3502546045"
+      title: "Facets of Her 女性的切面",
+      slug: "facets_of_her",
+      poster: "/assets/blog/facets_of_her/event_poster.png",
+      duration: "82 minutes",
+      genre: "Short Film Series",
+      venue: "Werkstattkino",
+      time: "May 17, 15:00",
+      // ticketUrl: ""  -- to be added once booking link exists
     },
   ];
 

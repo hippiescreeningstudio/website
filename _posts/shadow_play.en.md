@@ -2,7 +2,7 @@
 title: "Monthly Screening 2026/04: The Shadow Play"
 excerpt: "The Chief of Construction Committee leaps to his death from a tall building. Yang Jiadong, a rookie cop, begins investigating it. Forced out of his job and to the safety of Hong Kong, he endeavors to discover the truth."
 backgroundColor: "#4f0507"
-isHero: true
+isHero: false
 overlayText:
   title: "The Shadow Play 风中有朵雨做的云"
   subtitle: "A thriller set in a criminal case to reflect China’s most recent history"
