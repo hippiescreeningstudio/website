@@ -7,14 +7,14 @@ overlayText:
   title: "Facets of Her 女性的切面"
   subtitle: "Chinese short films screening · FIRST Public Programming"
 coverImages:
+  - "/assets/blog/facets_of_her/05_kill_ada_still3.jpeg"
   - "/assets/blog/facets_of_her/01_orlo_with_karma_still1.jpeg"
   - "/assets/blog/facets_of_her/04_meijin_jaebeom_still1.jpeg"
-  - "/assets/blog/facets_of_her/05_kill_ada_still3.jpeg"
 mobileCoverImages:
   - "/assets/blog/facets_of_her/poster_front.png"
+  - "/assets/blog/facets_of_her/05_kill_ada_still3.jpeg"
   - "/assets/blog/facets_of_her/01_orlo_with_karma_still1.jpeg"
   - "/assets/blog/facets_of_her/04_meijin_jaebeom_still1_m.png"
-  - "/assets/blog/facets_of_her/05_kill_ada_still3.jpeg"
 date: "2026-05-17T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/facets_of_her/event_poster.png"
