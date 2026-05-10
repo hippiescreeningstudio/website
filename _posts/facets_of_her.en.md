@@ -29,7 +29,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 **Screening Info**
 
-| Screening Info |                                                                                                |
+|                |                                                                                                |
 | -------------- | ---------------------------------------------------------------------------------------------- |
 | Time           | May 17 (Sun),  15:00-17:00         |
 | Venue          | Werkstattkino, Rückgebäude, Fraunhoferstraße 9, 80469 München                                   |
