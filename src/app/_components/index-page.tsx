@@ -36,7 +36,7 @@ function ScreeningTable() {
       genre: "Short Film Series",
       venue: "Werkstattkino",
       time: "May 17, 15:00",
-      // ticketUrl: ""  -- to be added once booking link exists
+      ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
     },
   ];
 

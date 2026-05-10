@@ -18,11 +18,11 @@ mobileCoverImages:
 date: "2026-05-17T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/facets_of_her/event_poster.png"
-# sticker:
-#   text: "在线购票"
-#   color: "#007a07"
-#   textColor: "#ffffff"
-#   link: ""
+sticker:
+  text: "在线购票"
+  color: "#007a07"
+  textColor: "#ffffff"
+  link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
 ---
 
 “女性的切面”将九部短片化为棱镜，折射当代女性生存的多维底色。本单元将女性经验拆解为具体的切面：社会秩序的摩擦、代际枷锁的重量、以及自我觉醒的锋芒。影像不求统一的答案，旨在通过不同维度的切入，使被忽视的真实经验清晰可见。
@@ -35,7 +35,7 @@ ogImage:
 | 地点     | Werkstattkino, Rückgebäude, Fraunhoferstraße 9, 80469 München |
 | 语言     | 中文原声，中英字幕                                         |
 | 时长     | 9 部短片，共 82 分钟                                         |
-| 票价     | 普通票 €5 / 学生票 €4（购票链接稍后公布）                     |
+| 票价     | 普通票 €5 / 学生票 €4 [<strong style="background-color:#007a07;color:#ffffff">点此购票</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8)                |
 
 <figure>
   <img src="/assets/blog/facets_of_her/event_poster.png" alt="女性的切面" />

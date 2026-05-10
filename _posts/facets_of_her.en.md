@@ -18,11 +18,11 @@ mobileCoverImages:
 date: "2026-05-17T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/facets_of_her/event_poster.png"
-# sticker:
-#   text: "Get ticket here"
-#   color: "#007a07"
-#   textColor: "#ffffff"
-#   link: ""
+sticker:
+  text: "Get ticket here"
+  color: "#007a07"
+  textColor: "#ffffff"
+  link: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
 ---
 
 Moving beyond singular stereotypes, Facets of Her presents nine short films as prisms of contemporary womanhood. The programme dissects the female experience into concrete slices: the friction of social structures, the weight of generational ties, and the sharp edge of self-awakening. These films do not offer a unified narrative, but a collective visibility of ignored realities
@@ -35,7 +35,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 | Venue          | Werkstattkino, Rückgebäude, Fraunhoferstraße 9, 80469 München                                   |
 | Language       | Chinese audio with English subtitles (OmeU)                                           |
 | Runtime        | 9 short films, ~82 minutes total                                                                |
-| Tickets        | Regular €5 / Student €4                                            |
+| Tickets        | Regular €5 / Student €4  [<strong style="background-color:#007a07;color:#ffffff">Buy Online</strong>](https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8)                                        |
 
 <figure>
   <img src="/assets/blog/facets_of_her/event_poster.png" alt="Facets of Her" />
