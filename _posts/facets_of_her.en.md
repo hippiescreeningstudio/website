@@ -1,6 +1,6 @@
 ---
 title: "FIRST Public Programming • Facets of Her"
-excerpt: "Nine Chinese short films tracing women's lived experiences through intimacy, social structures, generational restraints, and selfhood. With a post-screening Q&A by Django Kun, director of Kill Ada."
+excerpt: "Nine Chinese short films tracing women's lived experiences through intimacy, social structures, generational restraints, and selfhood. With a post-screening Q&A by Kun Tsai, director of Kill Ada."
 backgroundColor: "#2a4a5e"
 isHero: true
 overlayText:
@@ -108,7 +108,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
     <p style="margin:0 0 0.25rem; font-weight:bold;">
       <a href="https://movie.douban.com/subject/37046416/" target="_blank" rel="noopener noreferrer">Kill Ada 杀死艾达</a> <em>(Q&A session)</em>
     </p>
-    <p style="margin:0 0 0.5rem; opacity:0.8;">Director: Django Kun 蔡坤宇 · 13 min </p>
+    <p style="margin:0 0 0.5rem; opacity:0.8;">Director: Kun Tsai 蔡坤宇 · 13 min </p>
     <p style="margin:0 0 0.5rem;">A housewife NPC can no longer tolerate the player's wanton destruction in her own house, so she decides to rebel.</p>
     <p style="margin:0;"><a href="https://movie.douban.com/subject/37046416/" target="_blank" rel="noopener noreferrer">View on Douban →</a></p>
   </div>
@@ -172,9 +172,9 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 **Q&A Guest**
 
-Django Kun, director of *Kill Ada*, will attend this screening for a roughly 30-minute post-screening conversation with the audience.
+Kun Tsai, director of *Kill Ada*, will attend this screening for a roughly 30-minute post-screening conversation with the audience.
 
-_Django Kun_ (蔡坤宇) was born in Fujian in 1997. A director and cinematographer, he holds an MFA in Directing from the Beijing Film Academy. His work explores the intersection of social issues and genre cinema, and has been selected for international film festivals including the Taipei Golden Horse Film Festival.
+_Kun Tsai_ (蔡坤宇) was born in Fujian in 1997. A director and cinematographer, he holds an MFA in Directing from the Beijing Film Academy. His work explores the intersection of social issues and genre cinema, and has been selected for international film festivals including the Taipei Golden Horse Film Festival.
 
 **About FIRST International Film Festival**
 
