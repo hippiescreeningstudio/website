@@ -182,4 +182,4 @@ Established in 2006, the FIRST International Film Festival (FIRST IFF) is dedica
 
 **About FIRST Public Programming**
 
-"The destiny of film is to be watched." FIRST Public Programming is the non-profit screening initiative of the FIRST International Film Festival, dedicated to presenting works by emerging filmmakers beyond the mainstream gaze. Through public screenings and film-related events, it seeks to connect with new audiences, revive cinephile culture, and create spaces for diverse cinematic dialogue.
+"Films are meant to be watched." FIRST Public Programming is the non-profit screening initiative of the FIRST International Film Festival, dedicated to presenting works by emerging filmmakers beyond the mainstream gaze. Through public screenings and film-related events, it seeks to connect with new audiences, revive cinephile culture, and create spaces for diverse cinematic dialogue.
