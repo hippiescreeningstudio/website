@@ -2,7 +2,7 @@
 title: "FIRST主动放映 • 女性的切面"
 excerpt: "九部华语短片，呈现当代女性在情感、代际、社会结构与自我认知之间的真实切面。含《杀死艾达》导演蔡坤宇映后 Q&A。"
 backgroundColor: "#2a4a5e"
-isHero: true
+isHero: false
 overlayText:
   title: "Facets of Her 女性的切面"
   subtitle: "短片系列展映 · FIRST 主动放映"
@@ -46,7 +46,7 @@ sticker:
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37040150/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/01_orlo_with_karma_poster.jpeg" alt="甜茶馆女孩 海报" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/01_orlo_with_karma_poster.jpeg" alt="甜茶馆女孩 海报" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -60,7 +60,7 @@ sticker:
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37425276/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/02_signed_your_watcher_poster.webp" alt="凝视者的来信 海报" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/02_signed_your_watcher_poster.webp" alt="凝视者的来信 海报" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -74,7 +74,7 @@ sticker:
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37426252/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/03_after_class_poster.webp" alt="课间休息 海报" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/03_after_class_poster.webp" alt="课间休息 海报" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -88,7 +88,7 @@ sticker:
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37426165/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/04_meijin_jaebeom_poster.png" alt="穿外套的人 海报" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/04_meijin_jaebeom_poster.png" alt="穿外套的人 海报" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -102,7 +102,7 @@ sticker:
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37046416/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/05_kill_ada_poster.png" alt="杀死艾达 海报" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/05_kill_ada_poster.png" alt="杀死艾达 海报" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -116,7 +116,7 @@ sticker:
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/10439266/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/06_upward_downward_poster.jpg" alt="上下 海报" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/06_upward_downward_poster.jpg" alt="上下 海报" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -130,7 +130,7 @@ sticker:
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/36464842/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/07_mom_poster.jpg" alt="宝儿 海报" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/07_mom_poster.jpg" alt="宝儿 海报" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -144,7 +144,7 @@ sticker:
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37425743/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/08_princesses_poster.jpg" alt="家庭套餐 海报" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/08_princesses_poster.jpg" alt="家庭套餐 海报" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -158,7 +158,7 @@ sticker:
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37424820/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/09_i_cancel_myself_poster.jpg" alt="我取消我自己 海报" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/09_i_cancel_myself_poster.jpg" alt="我取消我自己 海报" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">

@@ -2,7 +2,7 @@
 title: "FIRST Public Programming • Facets of Her"
 excerpt: "Nine Chinese short films tracing women's lived experiences through intimacy, social structures, generational restraints, and selfhood. With a post-screening Q&A by Kun Tsai, director of Kill Ada."
 backgroundColor: "#2a4a5e"
-isHero: true
+isHero: false
 overlayText:
   title: "Facets of Her 女性的切面"
   subtitle: "Chinese short films screening · FIRST Public Programming"
@@ -46,7 +46,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37040150/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/01_orlo_with_karma_poster.jpeg" alt="Orlo with Karma poster" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/01_orlo_with_karma_poster.jpeg" alt="Orlo with Karma poster" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -60,7 +60,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37425276/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/02_signed_your_watcher_poster.webp" alt="Signed, Your Watcher poster" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/02_signed_your_watcher_poster.webp" alt="Signed, Your Watcher poster" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -74,7 +74,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37426252/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/03_after_class_poster.webp" alt="After Class poster" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/03_after_class_poster.webp" alt="After Class poster" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -88,7 +88,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37426165/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/04_meijin_jaebeom_poster.png" alt="Mei-Jin and Jae-Beom poster" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/04_meijin_jaebeom_poster.png" alt="Mei-Jin and Jae-Beom poster" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -102,7 +102,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37046416/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/05_kill_ada_poster.png" alt="Kill Ada poster" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/05_kill_ada_poster.png" alt="Kill Ada poster" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -116,7 +116,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/10439266/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/06_upward_downward_poster.jpg" alt="Upward Downward poster" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/06_upward_downward_poster.jpg" alt="Upward Downward poster" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -130,7 +130,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/36464842/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/07_mom_poster.jpg" alt="Mom poster" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/07_mom_poster.jpg" alt="Mom poster" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -144,7 +144,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37425743/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/08_princesses_poster.jpg" alt="Princesses poster" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/08_princesses_poster.jpg" alt="Princesses poster" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
@@ -158,7 +158,7 @@ Moving beyond singular stereotypes, Facets of Her presents nine short films as p
 
 <div style="display:flex; gap:1.5rem; margin-bottom:2.5rem; align-items:flex-start; flex-wrap:wrap;">
   <a href="https://movie.douban.com/subject/37424820/" target="_blank" rel="noopener noreferrer" style="flex:0 0 160px;">
-    <img src="/assets/blog/facets_of_her/09_i_cancel_myself_poster.jpg" alt="I Cancel Myself poster" style="width:160px; height:auto; display:block;" />
+    <img src="/assets/blog/facets_of_her/09_i_cancel_myself_poster.jpg" alt="I Cancel Myself poster" style="width:160px; height:auto; display:block; margin:0;" />
   </a>
   <div style="flex:1 1 320px; min-width:0;">
     <p style="margin:0 0 0.25rem; font-weight:bold;">
