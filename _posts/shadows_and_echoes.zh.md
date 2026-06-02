@@ -2,7 +2,7 @@
 title: "FIRST主动放映 • 生活的声影"
 excerpt: "十四部华语短片，捕捉疫情余波、AI 时代与日常缝隙中的内心震荡。含《2024：瑞士漫游》导演吴悦琪与 Kyrylo Alferiev 映后 Q&A。"
 backgroundColor: "#000000"
-isHero: true
+isHero: false
 overlayText:
   title: "Shadows and Echoes 生活的声影"
   subtitle: "短片系列展映 · FIRST 主动放映"

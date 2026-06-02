@@ -29,26 +29,15 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Shadows and Echoes 生活的声影",
-      slug: "shadows_and_echoes",
-      poster: "/assets/blog/shadows_and_echoes/event_poster.png",
-      duration: "91 minutes",
-      genre: "Short Film Series",
-      venue: "Werkstattkino",
-      time: "May 24, 15:00",
-      ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
+      title: "Blue Gate Crossing 蓝色大门",
+      slug: "blue_gate",
+      poster: "/assets/blog/blue_gate/poster.png",
+      duration: "85 minutes",
+      genre: "Drama, Romance",
+      venue: "Neues Rottmann Kino",
+      time: "Jun 20, 13:00",
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3548613060&bgswitch=false&resize=false#/show/750223040/3548613060"
     },
-    {
-      id: 2,
-      title: "Facets of Her 女性的切面",
-      slug: "facets_of_her",
-      poster: "/assets/blog/facets_of_her/event_poster.png",
-      duration: "82 minutes",
-      genre: "Short Film Series",
-      venue: "Werkstattkino",
-      time: "May 17, 15:00",
-      // ticketUrl: "https://www.eventim-light.com/de/a/65330d104b070869ec1cb7b8"
-    }
   ];
 
   return (

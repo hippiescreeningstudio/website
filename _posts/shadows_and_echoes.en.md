@@ -2,7 +2,7 @@
 title: "FIRST Public Programming • Shadows and Echoes"
 excerpt: "Fourteen Chinese short films threading through pandemic aftershocks, AI-driven uncertainty, and unbounded fantasy. With a post-screening Q&A by Yueqi Wu and Kyrylo Alferiev, directors of 2024: A Swiss Odyssey."
 backgroundColor: "#000000"
-isHero: true
+isHero: false
 overlayText:
   title: "Shadows and Echoes 生活的声影"
   subtitle: "Chinese short films screening · FIRST Public Programming"
