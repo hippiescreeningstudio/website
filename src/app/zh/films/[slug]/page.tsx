@@ -194,7 +194,8 @@ export default function ChinesePostPage(props: Params) {
                     <article className="mb-32 pt-16">
                         <PostHeader
                             title={post.title}
-                            coverImages={post.coverImages}
+                            coverImages={post.carouselImages || post.coverImages}
+                            uniformCarouselHeight={!!post.carouselImages}
                             date={post.date}
                             author={post.author}
                         />

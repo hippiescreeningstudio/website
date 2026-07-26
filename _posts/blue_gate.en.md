@@ -2,7 +2,7 @@
 title: "Special CSD Screening 2026/6: Blue Gate Crossing 蓝色大门"
 excerpt: "Yueh-chen has an obsession with her classmate Shihao"
 backgroundColor: "#082101"
-isHero: true
+isHero: false
 overlayText:
   title: "Blue Gate Crossing"
   subtitle: "Before we learn who we love, we learn who we are"
@@ -14,12 +14,12 @@ mobileCoverImages:
   - "/assets/blog/blue_gate/still2.jpg"
 date: "2026-06-20T00:00:00.000Z"
 ogImage:
-  url: "/assets/blog/k_family/poster.png"
-sticker:
-  text: "Get ticket here"
-  color: "#fcef17"
-  textColor: "#992252"
-  link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3548613060&bgswitch=false&resize=false#/show/750223040/3548613060"
+  url: "/assets/blog/blue_gate/poster.png"
+# sticker:
+#   text: "Get ticket here"
+#   color: "#fcef17"
+#   textColor: "#992252"
+#   link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3548613060&bgswitch=false&resize=false#/show/750223040/3548613060"
 ---
 
 

@@ -9,9 +9,10 @@ type Props = {
   coverImages: string[];
   date: string;
   author?: Author;
+  uniformCarouselHeight?: boolean;
 };
 
-export function PostHeader({ title, coverImages, date, author }: Props) {
+export function PostHeader({ title, coverImages, date, author, uniformCarouselHeight }: Props) {
   // Use carousel if multiple images are provided
   const shouldUseCarousel = coverImages && coverImages.length > 1;
   const coverImage = coverImages?.[0] || "/default-cover.jpg"; // First image as cover
@@ -30,6 +31,7 @@ export function PostHeader({ title, coverImages, date, author }: Props) {
             images={coverImages.map(img => ({ src: img, alt: title }))}
             autoplayInterval={4000}
             className="rounded-lg overflow-hidden"
+            uniformHeight={uniformCarouselHeight}
           />
         ) : (
           <CoverImage title={title} src={coverImage} />

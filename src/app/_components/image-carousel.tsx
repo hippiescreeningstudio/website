@@ -15,12 +15,14 @@ type Props = {
     images: CarouselImage[];
     autoplayInterval?: number; // in milliseconds, default 4000ms
     className?: string;
+    uniformHeight?: boolean; // Fit every slide into one height, for mixed portrait/landscape sets
 };
 
 export function ImageCarousel({
     images,
     autoplayInterval = 4000,
-    className = ""
+    className = "",
+    uniformHeight = false
 }: Props) {
     const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -95,13 +97,16 @@ export function ImageCarousel({
                 <div className="embla" ref={emblaRef}>
                     <div className="embla__container flex">
                         {images.map((image, index) => (
-                            <div key={index} className="embla__slide flex-[0_0_100%] min-w-0">
+                            <div
+                                key={index}
+                                className={`embla__slide flex-[0_0_100%] min-w-0 ${uniformHeight ? "h-[50vh] md:h-[70vh]" : ""}`}
+                            >
                                 <Image
                                     src={image.src}
                                     alt={image.alt}
                                     width={1200}
                                     height={600}
-                                    className="w-full h-auto object-cover"
+                                    className={uniformHeight ? "w-full h-full object-contain" : "w-full h-auto object-cover"}
                                     priority={index === 0}
                                 />
                             </div>

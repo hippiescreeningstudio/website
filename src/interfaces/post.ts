@@ -7,6 +7,7 @@ export type Post = {
   coverImage?: string; // Optional, derived from first image in coverImages
   coverImages: string[]; // Primary array of all images for desktop
   mobileCoverImages?: string[]; // Optional array of images for mobile
+  carouselImages?: string[]; // Optional array for the film page carousel, defaults to coverImages
   author?: Author;
   excerpt: string;
   ogImage: {

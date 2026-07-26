@@ -29,14 +29,14 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Blue Gate Crossing 蓝色大门",
-      slug: "blue_gate",
-      poster: "/assets/blog/blue_gate/poster.png",
-      duration: "85 minutes",
+      title: "Lust, Caution 色戒",
+      slug: "lust_caution",
+      poster: "/assets/blog/lust_caution/poster.png",
+      duration: "158 minutes",
       genre: "Drama, Romance",
       venue: "Neues Rottmann Kino",
-      time: "Jun 20, 13:00",
-      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3548613060&bgswitch=false&resize=false#/show/750223040/3548613060"
+      time: "Aug 9, 17:00",
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3569479739&bgswitch=false&resize=false#/show/750223040/3569479739"
     },
   ];
 
