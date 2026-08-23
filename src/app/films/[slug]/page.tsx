@@ -199,7 +199,7 @@ export default function PostPage(props: Params) {
               date={post.date}
               author={post.author}
             />
-            <PostBody content={content} enableYouTube={!!post.isHero} />
+            <PostBody content={content} />
           </article>
         </Container>
         <Footer />
