@@ -2,7 +2,7 @@
 title: "Monthly Screening 2026/08: Lust, Caution 色戒"
 excerpt: "A student actress is sent to seduce a collaborator in occupied Shanghai. The role begins to fit her too well."
 backgroundColor: "#3d0b0b"
-isHero: true
+isHero: false
 overlayText:
   title: "Lust, Caution 色戒"
   subtitle: "In occupied Shanghai, desire is the deadliest disguise"
@@ -22,11 +22,11 @@ carouselImages:
 date: "2026-08-09T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/lust_caution/poster.png"
-sticker:
-  text: "Get ticket here"
-  color: "#fcef17"
-  textColor: "#992252"
-  link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3569479739&bgswitch=false&resize=false#/show/750223040/3569479739"
+# sticker:
+#   text: "Get ticket here"
+#   color: "#fcef17"
+#   textColor: "#992252"
+#   link: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3569479739&bgswitch=false&resize=false#/show/750223040/3569479739"
 ---
 
 This August, we return to Neues Rottmann with Ang Lee's _Lust, Caution_, adapted from Eileen Chang's razor-thin novella of espionage and desire.

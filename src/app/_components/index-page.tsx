@@ -29,14 +29,14 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Lust, Caution 色戒",
-      slug: "lust_caution",
-      poster: "/assets/blog/lust_caution/poster.png",
-      duration: "158 minutes",
-      genre: "Drama, Romance",
+      title: "Happyend",
+      slug: "happyend",
+      poster: "/assets/blog/happyend/poster.png",
+      duration: "113 minutes",
+      genre: "Drama, Coming-of-age",
       venue: "Neues Rottmann Kino",
-      time: "Aug 9, 17:00",
-      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3569479739&bgswitch=false&resize=false#/show/750223040/3569479739"
+      time: "Sep 13, 12:00",
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3613174848&bgswitch=false&resize=false#/show/750223040/3613174848"
     },
   ];
 
