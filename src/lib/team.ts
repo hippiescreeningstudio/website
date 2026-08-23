@@ -9,16 +9,16 @@ export const teamMembers = [
         photo: "/assets/team/Yiwen_Miao.jpg",
     },
     {
-        name: "Liangquan Li",
+        name: "Luca",
         nameZh: "李良泉",
-        title: "Lead Curator",
+        title: "Board Member & Lead Curator",
         photo: "/assets/team/Liangquan_Li.jpg",
     },
     {
-        name: "Tina Chen",
-        nameZh: "Tina Chen",
-        title: "Finance Manager",
-        photo: "/assets/team/Tina.jpg",
+        name: "Fei",
+        nameZh: "Fei",
+        title: "Board Member & Co-curator",
+        photo: "/assets/team/Fei_Li.jpg",
     },
     {
         name: "Wenlan Shen",
@@ -39,18 +39,6 @@ export const teamMembers = [
         photo: "/assets/team/Zhuolun_Zhou.jpg",
     },
     {
-        name: "Ze Huang",
-        nameZh: "黄泽",
-        title: "Programs Coordinator",
-        photo: "/assets/team/Ze_Huang.jpg",
-    },
-    {
-        name: "Fei",
-        nameZh: "Fei",
-        title: "Programs Coordinator",
-        photo: "/assets/team/Fei_Li.jpg",
-    },
-    {
         name: "Weijian Niu",
         nameZh: "牛玮健",
         title: "Programs Coordinator",
@@ -69,6 +57,12 @@ export const teamMembers = [
         photo: "/assets/team/Xuechen_Fan.jpg",
     },
     {
+        name: "Ze Huang",
+        nameZh: "黄泽",
+        title: "Programs Coordinator",
+        photo: "/assets/team/Ze_Huang.jpg",
+    },
+    {
         name: "Ziyi Guo",
         nameZh: "子仪",
         title: "Programs Coordinator",
@@ -79,6 +73,12 @@ export const teamMembers = [
         nameZh: "尹子彬",
         title: "Programs Coordinator",
         photo: "/assets/team/Zibin_Yin.jpg",
+    },
+    {
+        name: "Tina Chen",
+        nameZh: "Tina Chen",
+        title: "Programs Coordinator",
+        photo: "/assets/team/Tina.jpg",
     },
     {
         name: "Tong Liu",
