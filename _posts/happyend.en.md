@@ -7,24 +7,21 @@ overlayText:
   title: "Happyend"
   subtitle: "The last summer of friendship, under constant watch"
 coverImages:
-  - "/assets/blog/happyend/still_5.jpg"
   - "/assets/blog/happyend/still_2.png"
-  - "/assets/blog/happyend/still_4.png"
   - "/assets/blog/happyend/still_10.png"
+  - "/assets/blog/happyend/still_7.png"
+  - "/assets/blog/happyend/still_4.png"
 mobileCoverImages:
   - "/assets/blog/happyend/still_1_m.png"
+  - "/assets/blog/happyend/still_7.png"
   - "/assets/blog/happyend/still_2_m.png"
-  - "/assets/blog/happyend/still_3_m.jpg"
 carouselImages:
   - "/assets/blog/happyend/still_5.jpg"
   - "/assets/blog/happyend/still_2.png"
   - "/assets/blog/happyend/still_4.png"
-  - "/assets/blog/happyend/still_7.jpg"
+  - "/assets/blog/happyend/still_7.png"
   - "/assets/blog/happyend/still_6.jpg"
   - "/assets/blog/happyend/still_10.png"
-  - "/assets/blog/happyend/still_1_m.png"
-  - "/assets/blog/happyend/still_2_m.png"
-  - "/assets/blog/happyend/still_3_m.jpg"
 date: "2026-09-13T00:00:00.000Z"
 ogImage:
   url: "/assets/blog/happyend/poster.png"
