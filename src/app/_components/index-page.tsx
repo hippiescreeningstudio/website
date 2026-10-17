@@ -33,8 +33,8 @@ function ScreeningTable() {
       title: "Crows and Sparrows 乌鸦与麻雀",
       slug: "echoes_of_times",
       poster: "/assets/blog/echoes_of_times/poster/crows_and_sparrows.jpg",
-      duration: "111 minutes",
-      genre: "Echoes of Times · Drama, Satire",
+      duration: "111 min",
+      genre: "1949 · Drama, Satire",
       venue: "Neues Rottmann Kino",
       time: "Oct 24, 13:00",
       omeu: true,
@@ -45,8 +45,8 @@ function ScreeningTable() {
       title: "Big Li, Little Li and Old Li 大李小李和老李",
       slug: "echoes_of_times",
       poster: "/assets/blog/echoes_of_times/poster/big_little_old_li.jpg",
-      duration: "83 minutes",
-      genre: "Echoes of Times · Comedy",
+      duration: "83 min",
+      genre: "1962 · Comedy",
       venue: "Neues Rottmann Kino",
       time: "Oct 25, 11:00",
       omeu: true,
@@ -57,8 +57,8 @@ function ScreeningTable() {
       title: "The Legend of Tianyun Mountain 天云山传奇",
       slug: "echoes_of_times",
       poster: "/assets/blog/echoes_of_times/poster/legend_of_tianyun_mountain.jpg",
-      duration: "126 minutes",
-      genre: "Echoes of Times · Drama",
+      duration: "126 min",
+      genre: "1980 · Drama",
       venue: "Neues Rottmann Kino",
       time: "Oct 25, 13:15",
       omeu: true,
@@ -99,12 +99,13 @@ function ScreeningTable() {
                   </a>
                   {/* Duration and Genre */}
                   <p className="text-xs md:text-base text-gray-200 mt-1">
-                    {screening.duration} | {screening.genre}
+                    {screening.omeu ? `${screening.duration} · ${screening.genre}` : `${screening.duration} | ${screening.genre}`}
                   </p>
                   {screening.omeu && (
-                    <span className="inline-block mt-2 px-2 py-0.5 border border-white text-white text-xs md:text-sm font-bold tracking-wide">
-                      OmeU · {language === "en" ? "original language, English subtitles" : "原声 · 英文字幕"}
-                    </span>
+                    <p className="text-xs md:text-base text-gray-200 mt-1">
+                      <span className="font-bold text-white">OmeU</span>
+                      {language === "en" ? " (with English subtitles)" : "（英文字幕）"} · {language === "en" ? "4K restoration" : "4K修复版"}
+                    </p>
                   )}
                 </div>
                 
