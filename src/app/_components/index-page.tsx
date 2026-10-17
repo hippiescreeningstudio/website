@@ -20,34 +20,49 @@ function ScreeningTable() {
     title: string;
     slug: string;
     poster: string;
-    posters?: string[];
-    tickets?: { label: string; url: string }[];
     duration: string;
     genre: string;
     venue: string;
     time: string;
     ticketUrl?: string;
+    omeu?: boolean;
   };
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Echoes of Times 时代回响",
+      title: "Crows and Sparrows 乌鸦与麻雀",
       slug: "echoes_of_times",
       poster: "/assets/blog/echoes_of_times/poster/crows_and_sparrows.jpg",
-      posters: [
-        "/assets/blog/echoes_of_times/poster/crows_and_sparrows.jpg",
-        "/assets/blog/echoes_of_times/poster/big_little_old_li.jpg",
-        "/assets/blog/echoes_of_times/poster/legend_of_tianyun_mountain.jpg",
-      ],
-      duration: "3 films, 4K restorations",
-      genre: "Classic Chinese Cinema",
+      duration: "111 minutes",
+      genre: "Echoes of Times · Drama, Satire",
       venue: "Neues Rottmann Kino",
-      time: "Oct 24 – 25",
-      tickets: [
-        { label: "Oct 24 · Crows and Sparrows", url: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3674378069&bgswitch=false&resize=false#/show/750223040/3674378069" },
-        { label: "Oct 25 · Big Li, Little Li and Old Li", url: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3674378546&bgswitch=false&resize=false#/show/750223040/3674378546" },
-        { label: "Oct 25 · Legend of Tianyun Mountain", url: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3675619408&bgswitch=false&resize=false" },
-      ],
+      time: "Oct 24, 13:00",
+      omeu: true,
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3674378069&bgswitch=false&resize=false#/show/750223040/3674378069"
+    },
+    {
+      id: 2,
+      title: "Big Li, Little Li and Old Li 大李小李和老李",
+      slug: "echoes_of_times",
+      poster: "/assets/blog/echoes_of_times/poster/big_little_old_li.jpg",
+      duration: "83 minutes",
+      genre: "Echoes of Times · Comedy",
+      venue: "Neues Rottmann Kino",
+      time: "Oct 25, 11:00",
+      omeu: true,
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3674378546&bgswitch=false&resize=false#/show/750223040/3674378546"
+    },
+    {
+      id: 3,
+      title: "The Legend of Tianyun Mountain 天云山传奇",
+      slug: "echoes_of_times",
+      poster: "/assets/blog/echoes_of_times/poster/legend_of_tianyun_mountain.jpg",
+      duration: "126 minutes",
+      genre: "Echoes of Times · Drama",
+      venue: "Neues Rottmann Kino",
+      time: "Oct 25, 13:15",
+      omeu: true,
+      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3675619408&bgswitch=false&resize=false#/show/750223040/3675619408"
     },
   ];
 
@@ -58,18 +73,15 @@ function ScreeningTable() {
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         {screenings.map((screening) => (
-          <div key={screening.id} className={`flex bg-black ${screening.posters ? "lg:col-span-2" : ""} shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300`}>
+          <div key={screening.id} className="flex bg-black shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
             {/* First Column - Poster */}
-            <div className={`flex-shrink-0 h-48 md:h-96 ${screening.posters ? "w-48 md:w-[36rem]" : "w-32 md:w-72"}`}>
-              <a href={`${language === "zh" ? "/zh" : ""}/films/${screening.slug}`} className="flex h-full">
-                {(screening.posters ?? [screening.poster]).map((src) => (
-                  <img
-                    key={src}
-                    src={src}
-                    alt={`${screening.title} poster`}
-                    className="min-w-0 flex-1 h-full object-cover hover:scale-110 transition-all duration-300"
-                  />
-                ))}
+            <div className="flex-shrink-0 w-32 md:w-72 h-48 md:h-96">
+              <a href={`${language === "zh" ? "/zh" : ""}/films/${screening.slug}`} className="block h-full">
+                <img
+                  src={screening.poster}
+                  alt={`${screening.title} poster`}
+                  className="w-full h-full object-cover hover:scale-110 transition-all duration-300"
+                />
               </a>
             </div>
             
@@ -89,6 +101,11 @@ function ScreeningTable() {
                   <p className="text-xs md:text-base text-gray-200 mt-1">
                     {screening.duration} | {screening.genre}
                   </p>
+                  {screening.omeu && (
+                    <span className="inline-block mt-2 px-2 py-0.5 border border-white text-white text-xs md:text-sm font-bold tracking-wide">
+                      OmeU · {language === "en" ? "original language, English subtitles" : "原声 · 英文字幕"}
+                    </span>
+                  )}
                 </div>
                 
                 {/* Venue and Time */}
@@ -101,23 +118,6 @@ function ScreeningTable() {
                   </p>
                 </div>
                 
-                {/* Per-showing ticket buttons */}
-                {screening.tickets && (
-                  <div className="flex flex-col items-start gap-2">
-                    {screening.tickets.map((t) => (
-                      <a
-                        key={t.url}
-                        href={t.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block text-white font-medium py-1 px-3 md:px-4 rounded-3xl transition-all duration-200 text-xs md:text-sm bg-[#008009] hover:bg-[#59b300]"
-                      >
-                        {t.label}
-                      </a>
-                    ))}
-                  </div>
-                )}
-
                 {/* Get Ticket Button */}
                 {screening.ticketUrl && (
                   <div>
