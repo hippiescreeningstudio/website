@@ -2,7 +2,7 @@
 title: "Monthly Screening 2026/09: Happyend"
 excerpt: "A city waits for the earthquake. Two best friends wait for everything else."
 backgroundColor: "#0e1a26"
-isHero: true
+isHero: false
 overlayText:
   title: "Happyend"
   subtitle: "The last summer of friendship, under constant watch"
