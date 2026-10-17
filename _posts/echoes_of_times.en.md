@@ -19,9 +19,9 @@ ogImage:
   url: "/assets/blog/echoes_of_times/poster/crows_and_sparrows.jpg"
 ---
 
-In late October, Shanghai Film Technology Factory (上海电影技术厂) and Hippie Screening Studio present **Echoes of Times**, a programme of 4K restored classics: *Crows and Sparrows* by Zheng Junli, starring Shangguan Yunzhu, and two films by Xie Jin, *Big Li, Little Li and Old Li* and *The Legend of Tianyun Mountain*. Three films from three eras, from the eve of 1949 to the early years of reform, each an echo of its time.
+This October, Shanghai Film Technology Factory and Hippie Screening Studio present **Echoes of Times**, a programme of 4K restored classics: *Crows and Sparrows* by Zheng Junli, starring Shangguan Yunzhu, and two films by Xie Jin, *Big Li, Little Li and Old Li* and *The Legend of Tianyun Mountain*. Three films from three eras, from the eve of 1949 to the early years of reform, each an echo of its time.
 
-10月下旬，上海电影技术厂将和嬉皮放映室联合带来【Echoes of Time时代回响】4K修复电影展，展映由郑君里导演、上官云珠参演的《乌鸦与麻雀》，以及谢晋导演的《大李小李和老李》和《天云山传奇》。
+10月下旬，上海电影技术厂将和嬉皮放映室联合带来 Echoes of Time时代回响 4K修复电影展，展映由郑君里导演、上官云珠参演的《乌鸦与麻雀》，以及谢晋导演的《大李小李和老李》和《天云山传奇》。
 
 **Screening Info**
 
