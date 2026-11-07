@@ -30,39 +30,15 @@ function ScreeningTable() {
   const screenings: Screening[] = [
     {
       id: 1,
-      title: "Crows and Sparrows 乌鸦与麻雀",
-      slug: "echoes_of_times",
-      poster: "/assets/blog/echoes_of_times/poster/crows_and_sparrows.jpg",
-      duration: "111 min",
-      genre: "1949 · Drama, Satire",
+      title: "Farewell My Concubine 霸王别姬",
+      slug: "farewell_my_concubine",
+      poster: "/assets/blog/farewell_my_concubine/poster.png",
+      duration: "171 min",
+      genre: "1993 · Drama, Romance",
       venue: "Neues Rottmann Kino",
-      time: "Oct 24, 13:00",
+      time: "Nov 28, 12:00",
       omeu: true,
-      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3674378069&bgswitch=false&resize=false#/show/750223040/3674378069"
-    },
-    {
-      id: 2,
-      title: "Big Li, Little Li and Old Li 大李小李和老李",
-      slug: "echoes_of_times",
-      poster: "/assets/blog/echoes_of_times/poster/big_little_old_li.jpg",
-      duration: "83 min",
-      genre: "1962 · Comedy",
-      venue: "Neues Rottmann Kino",
-      time: "Oct 25, 11:00",
-      omeu: true,
-      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3674378546&bgswitch=false&resize=false#/show/750223040/3674378546"
-    },
-    {
-      id: 3,
-      title: "The Legend of Tianyun Mountain 天云山传奇",
-      slug: "echoes_of_times",
-      poster: "/assets/blog/echoes_of_times/poster/legend_of_tianyun_mountain.jpg",
-      duration: "126 min",
-      genre: "1980 · Drama",
-      venue: "Neues Rottmann Kino",
-      time: "Oct 25, 13:15",
-      omeu: true,
-      ticketUrl: "https://booking.cinetixx.de/frontend/index.html?cinemaId=750223040&showId=3675619408&bgswitch=false&resize=false#/show/750223040/3675619408"
+      ticketUrl: "https://luma.com/qwzaz6zh"
     },
   ];
 
@@ -104,7 +80,7 @@ function ScreeningTable() {
                   {screening.omeu && (
                     <p className="text-xs md:text-base text-gray-200 mt-1">
                       <span className="font-bold text-white">OmeU</span>
-                      {language === "en" ? " (with English subtitles)" : "（英文字幕）"} · {language === "en" ? "4K restoration" : "4K修复版"}
+                      {language === "en" ? " (with English subtitles)" : "（英文字幕）"}
                     </p>
                   )}
                 </div>

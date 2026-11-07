@@ -2,7 +2,7 @@
 title: "Special Screening 2026/10: Echoes of Times 时代回响"
 excerpt: "Three 4K-restored Shanghai Film Studio classics on two days: Crows and Sparrows, Big Li, Little Li and Old Li, and The Legend of Tianyun Mountain."
 backgroundColor: "#1c1a17"
-isHero: true
+isHero: false
 overlayText:
   title: "Echoes of Times 时代回响"
   subtitle: "4K restored classics of Chinese cinema"
