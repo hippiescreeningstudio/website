@@ -71,9 +71,7 @@ function ScreeningTable() {
                     href={`${language === "zh" ? "/zh" : ""}/films/${screening.slug}`} 
                     className="text-base md:text-xl font-bold text-white hover:underline transition-colors duration-300 block"
                   >
-                    {screening.title.split(/\s(?=[\u4e00-\u9fff])/).map((part, i) => (
-                      <span key={i} className="block">{part}</span>
-                    ))}
+                    {screening.title}
                   </a>
                   {/* Duration and Genre */}
                   <p className="text-xs md:text-base text-gray-200 mt-1">
