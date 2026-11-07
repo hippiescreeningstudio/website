@@ -31,8 +31,8 @@ sticker:
 ---
 
 <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap">
+  <span>Funded by</span>
   <img src="/assets/blog/farewell_my_concubine/Kulturreferat-Muenchen.png" alt="Landeshauptstadt München Kulturreferat" style="height:48px;width:auto;filter:invert(1)" />
-  <span>This event is funded by the Landeshauptstadt München Kulturreferat.</span>
 </div>
 
 This November, we screen _Farewell My Concubine_ (霸王别姬), Chen Kaige's 1993 epic, as the 50th screening of Hippie Screening Studio. It is one of the most important classics of Chinese cinema, and the first Chinese-language film to win the Palme d'Or at Cannes.
