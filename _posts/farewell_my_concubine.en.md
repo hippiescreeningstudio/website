@@ -30,7 +30,7 @@ sticker:
   link: "https://luma.com/qwzaz6zh"
 ---
 
-<div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap">
+<div style="display:flex;align-items:center;gap:4px;margin-bottom:24px;flex-wrap:wrap">
   <span>Funded by</span>
   <img src="/assets/blog/farewell_my_concubine/Kulturreferat-Muenchen.png" alt="Landeshauptstadt München Kulturreferat" style="height:48px;width:auto;filter:invert(1)" />
 </div>
